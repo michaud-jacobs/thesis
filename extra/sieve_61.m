@@ -12,8 +12,10 @@ EC,mu:= EllipticCurve(C, C ! [0,1,0]);
 E,pi:= SimplifiedModel(EC);
 psi:=Expand(rho*mu*pi);
 assert Degree(psi) eq 2;
+// Divide out by factor of 9 in all equations, to allow reduction mod 3
+psi := map<X -> E | [ee / 9 : ee in DefiningEquations(psi)]>;
 
-test_ls := [l : l in PrimesInInterval(5,1000) | l ne 61];
+test_ls := [l : l in PrimesInInterval(3,3000) | l ne 61];
 all_ls := [];
 for l in test_ls do
     Fl := GF(l);
@@ -122,7 +124,7 @@ for i in [2..#mls] do
         break;
     end if;
 end for;
-if #Newms ne 0 then print d, "no"; end if;
+if #Newms ne 0 then print d, "no", #Newms; end if;
 
 
 
@@ -132,13 +134,13 @@ if #Newms ne 0 then print d, "no"; end if;
 
 
 
-
+/*
 R := E ! [1,0,1];
 for m in [-10..10]  do
     dec := Decomposition(Pullback(psi,Place(m*R)));
     <m,Discriminant(Integers(ResidueClassField(dec[1][1])))>;
 end for;
-
+*/
 /*
 <-10, -38539698755581703>
 <-9, -20302210497651>
