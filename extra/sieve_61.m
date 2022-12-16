@@ -225,3 +225,17 @@ for d in [d : d in [-200..200] | d ne 0 and d ne 1 and IsSquarefree(d)] do
     <d,twist_check_new(d,p)>;
 end for;
 */
+
+
+
+
+/* Can use this for Hasse principle violation:
+let d = 57, K = Q(root d), only primes that ramify are 3 and 19.
+the the twist check theorem fails, so X0(61)^57 has points locally at 3 and 19.
+for the other primes we use theorem 1.1,
+-- if l splits in K we have a local point
+-- if l is inert in K and does not divide 61 (i.e. ne 61) we have a local point
+-- the prime l = 61 splits in K, so we are covered by the first case
+So we have points everywhere locally, but no global point by the the sieve, violation of Hasse
+See paper for how this might be due to Brauer Manin obstruction.
+*/
