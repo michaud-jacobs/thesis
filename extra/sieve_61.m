@@ -233,6 +233,7 @@ end for;
 
 /* Can use this for Hasse principle violation:
 ** might be a smaller d now that twist check has been adapted **
+* Maybe easier to use 97 as it is prime, and same checks seem to hold *
 let d = 57, K = Q(root d), only primes that ramify are 3 and 19.
 the the twist check theorem fails, so X0(61)^57 has points locally at 3 and 19.
 for the other primes we use theorem 1.1,
