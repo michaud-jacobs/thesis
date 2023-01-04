@@ -27,74 +27,49 @@ for l in test_ls do
     end if;
 end for;
 
-d:= 61;
+for d in [d : d in [-200..200] | d ne 0 and d ne 1 and IsSquarefree(d)] do
 
-// for d in [d : d in [-200..200] | d ne 0 and d ne 1 and IsSquarefree(d)] do
+
+//F:= -4*y^2 - 4*x*z + z^2;
+
+ls := [l : l in all_ls | (d mod l) ne 0];
 
 K := QuadraticField(d);
 OK := Integers(K);
 
-F:= -4*y^2 - 4*x*z + z^2;
-
-ls := [l : l in all_ls | (d mod l) ne 0];
 mls:=[* *];
 Nls:=[];
 
 i := 0;
 for l in ls do
     i := i + 1;
-    //print "Considering l =", l;
     Fl:=GF(l);
     S<b> := PolynomialRing(Fl);
-    // We reduce the curves and j-map mod l.
+    // We reduce the curves mod l.
     Xl:=ChangeRing(X,Fl);
     El:=ChangeRing(E,Fl);
     psil:=map<Xl->El | DefiningEquations(psi) >;
     Rl:=El ! [1,0,1];  // [1,0,1] Generates E(Q)
-    Cl := El ! [0,1,1];
     Nl:=Order(Rl);     // Order modulo l
     Nls:=Nls cat [Nl];
     ms:=[];
     for m in [0..Nl-1] do
-        //if d eq 61 and (l eq 977 or l eq 1709) and m ne 2 then continue; end if;
-        //if m*Rl eq Cl then print "Cusp", m; end if;
         D:=Decomposition(Pullback(psil,Place(m*Rl)));
         if (D[1][2] eq 1) and (#D eq 1) then // point defined over extension of Fl
-            if IsSplit(l,OK) then continue; end if;
-            P:=Eltseq(RepresentativePoint(D[1][1]));
-            if P[1] notin Fl then
-                x1:=1;
-                y1:=P[2]/P[1];
-                z1:=P[3]/P[1];
-                triple := [x1,y1,z1];
-            end if;
-            if (P[2] notin Fl) and (P[1] in Fl) then
-                x1:=P[1]/P[2];
-                y1:=1;
-                z1:=P[3]/P[2];
-                triple := [x1,y1,z1];
-            end if;
-            if (P[3] notin Fl) and (P[1] in Fl) and (P[2] in Fl) then
-                x1:=P[1]/P[3];
-                y1:=P[2]/P[3];
-                z1:=1;
-                triple := [x1,y1,z1];
+            if IsSplit(l,OK) then
+                continue;
             end if;
         end if;
         if ((D[1][2] eq 1) and (#D eq 2)) or (D[1][2] eq 2)  then // pair of distinct points over Fl or a double point over Fl
             P :=Eltseq(RepresentativePoint(D[1][1]));
-            if IsInert(l,OK) and P[4] ne 0 then continue; end if;
-            triple :=[P[1],P[2],P[3]];
+            if IsInert(l,OK) and P[4] ne 0 then
+                continue;
+            end if;
         end if;
-
-        Fel := Fl ! (Evaluate(F,triple cat [0]));
-        t:=d*b^2-Fel;
-        Roo:=Set([Roots(t)[i][1] : i in [1..#Roots(t)]]);
-        if #Roo gt 0 then
-            ms := ms cat [m];
-        end if;
+        ms := ms cat [m];
     end for;
     mls:=mls cat [*ms*];
+
 
 // Now carry out CRT steps (within sieve)
 
@@ -126,7 +101,7 @@ for l in ls do
 end for;
 if #Newms ne 0 then print d, "no >>>>>>>>>>>>>>", #Newms; end if;
 
-
+end for;
 
 
 
