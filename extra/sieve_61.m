@@ -15,7 +15,7 @@ assert Degree(psi) eq 2;
 // Divide out by factor of 9 in all equations, to allow reduction mod 3
 psi := map<X -> E | [ee / 9 : ee in DefiningEquations(psi)]>;
 
-test_ls := [l : l in PrimesInInterval(3,3000) | l ne 61];
+test_ls := [l : l in PrimesInInterval(3,1000) | l ne 61];
 all_ls := [];
 for l in test_ls do
     Fl := GF(l);
@@ -29,7 +29,7 @@ end for;
 
 d:= 61;
 
-// for d in [d : d in [-10..10] | d ne 0 and d ne 1 and IsSquarefree(d)] do
+// for d in [d : d in [-200..200] | d ne 0 and d ne 1 and IsSquarefree(d)] do
 
 K := QuadraticField(d);
 OK := Integers(K);
@@ -40,8 +40,9 @@ ls := [l : l in all_ls | (d mod l) ne 0];
 mls:=[* *];
 Nls:=[];
 
-
+i := 0;
 for l in ls do
+    i := i + 1;
     //print "Considering l =", l;
     Fl:=GF(l);
     S<b> := PolynomialRing(Fl);
@@ -93,38 +94,38 @@ for l in ls do
             ms := ms cat [m];
         end if;
     end for;
-mls:=mls cat [*ms*];
-end for;
+    mls:=mls cat [*ms*];
 
+// Now carry out CRT steps (within sieve)
 
-// need to put this part inside the sieve really
-
-// We now apply the Chinese Remainder Theorem to try and obtain a contradiction.
-//print "Number of solutions at each step:";
-Newms:=[* [mls[1][j]] : j in [1..#mls[1]]*];
-//#Newms;
-for i in [2..#mls] do
-    ml :=mls[i];
-    Ai:=[1 : j in [1..i]];
-    Ni:=[Nls[j] : j in [1..i]];
-    NNewms:=[* *];
-    for j in [1..#Newms] do
-        u:=[* *];
-        for m in ml do
-            w:=Newms[j] cat [m];
-            u:=u cat [*w*];
+    if l eq ls[1] then
+        Newms:=[* [mls[1][j]] : j in [1..#mls[1]]*];
+        if #Newms eq 0 then // If Newms is empty, then we have a contradiction.
+            print d, "yes";
+        end if;
+    else
+        ml := mls[i];
+        Ai:=[1 : j in [1..i]];
+        Ni:=[Nls[j] : j in [1..i]];
+        NNewms:=[* *];
+        for j in [1..#Newms] do
+            u:=[* *];
+            for m in ml do
+                w:=Newms[j] cat [m];
+                u:=u cat [*w*];
+            end for;
+            NNewms:=NNewms cat u;
         end for;
-        NNewms:=NNewms cat u;
-    end for;
-    Newms:=NNewms;
-    Newms:=[P : P in Newms | Solution(Ai,P,Ni) ne -1];
-    //#Newms;
-    if #Newms eq 0 then // If Newms is empty, then we have a contradiction.
-        print d, "yes";
-        break;
+        Newms:=NNewms;
+        Newms:=[P : P in Newms | Solution(Ai,P,Ni) ne -1];
+        if #Newms eq 0 then // If Newms is empty, then we have a contradiction.
+            print d, "yes", l;
+            break;
+        end if;
     end if;
 end for;
-if #Newms ne 0 then print d, "no", #Newms; end if;
+if #Newms ne 0 then print d, "no >>>>>>>>>>>>>>", #Newms; end if;
+
 
 
 
@@ -195,9 +196,13 @@ twist_check_new := function(d,p);
     pass := 0;
     K := QuadraticField(d);
     OK := Integers(K);
+    DOK := Discriminant(OK);
+
     M := QuadraticField(-p);
     OM := Integers(M);
-    ls := [l : l in PrimeFactors(Discriminant(OK)) | IsZero(p mod l) eq false];
+    DOM := Discriminant(OM);
+
+    ls := [l : l in PrimeFactors(DOK) | IsZero(DOM mod l) eq false];
     for l in ls do
         ll := Factorisation(l*OM)[1][1];
         if IsPrincipal(ll) eq false then
@@ -221,15 +226,13 @@ end function;
 
 /*
 p := 61;
-for d in [d : d in [-200..200] | d ne 0 and d ne 1 and IsSquarefree(d)] do
+for d in [d : d in [-100..100] | d ne 0 and d ne 1 and IsSquarefree(d)] do
     <d,twist_check_new(d,p)>;
 end for;
 */
 
-
-
-
 /* Can use this for Hasse principle violation:
+** might be a smaller d now that twist check has been adapted **
 let d = 57, K = Q(root d), only primes that ramify are 3 and 19.
 the the twist check theorem fails, so X0(61)^57 has points locally at 3 and 19.
 for the other primes we use theorem 1.1,
