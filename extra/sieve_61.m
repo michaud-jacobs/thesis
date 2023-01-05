@@ -106,8 +106,8 @@ end for;
 
 
 
-
-
+// for -199 and ls < 200
+// for i in [1..9] do Solution([1 : j in [1..17]],Newms[i],Nls); end for;
 
 
 /*
@@ -217,4 +217,17 @@ for the other primes we use theorem 1.1,
 -- the prime l = 61 splits in K, so we are covered by the first case
 So we have points everywhere locally, but no global point by the the sieve, violation of Hasse
 See paper for how this might be due to Brauer Manin obstruction.
+*/
+
+
+
+
+/*
+// Checking local points directly at 97 twist
+R<x,y,z,t> := PolynomialRing(Rationals(),4);
+eq1 := 4*x*z + 4*y^2 - z^2 + 97*t^2;
+eq2 := 4*x^3 - 4*x^2*y + 8*x^2*z + 4*x*y*z - 7*x*z^2 + 3*x*61*t^2 - 4*y*z^2 + z^3 - z*61*t^2;
+Xd := Curve(ProjectiveSpace(R),[eq1,eq2]);
+X97 := ChangeRing(Xd,GF(97));
+Points(X97); // Plenty of points
 */
