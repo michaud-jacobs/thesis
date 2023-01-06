@@ -5,7 +5,7 @@ S:=CuspForms(N);
 R<q>:=PowerSeriesRing(Integers());
 
 J:=JZero(N);
-dec:=Decomposition(J); // the decomposition of J_0(74)
+dec:=Decomposition(J); // the decomposition of J_0(122)
 
 /* Output:
 [
