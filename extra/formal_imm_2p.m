@@ -1,4 +1,4 @@
-for p in PrimesInInterval(29,500) do
+for p in PrimesInInterval(29,100) do
 print "p = ", p;
 N := 2*p;
 S:=CuspForms(N);
@@ -23,7 +23,8 @@ for m in ALs do
         K:= CoefficientField(f);
         RK:= ChangeRing(R,K);
         SK:= BaseChange(S,K);
-        fexp := qExpansion(f,50); // Increase precision to uniquely determine form
+        prec := Max(100,Ceiling(N /3));
+        fexp := qExpansion(f,prec); // Increase precision to uniquely determine form
         fK:= SK ! (RK ! fexp);
         fKm:=AtkinLehnerOperator(m,fK);
         CE:= CE cat [*fKm*];
@@ -31,18 +32,42 @@ for m in ALs do
      CuspExps:=CuspExps cat [CE];
 end for;
 
-Cusp1:=1; // 1 <--> infinity,
 for i in [2,3,4] do
     Cusp2 := i; // i <--> ALs[i](infinity) for i = 2,3,4.
     Col2 := [Integers() ! Coefficient(f,1) : f in CuspExps[Cusp2]]; // Second column of matrix
-    Col2min := [Col2[i] - Col2[1] : i in [1..#Col2]];
-    assert IsZero(Col2min) eq false;
+    Col1 := [1 : i in [1..#Col2]];
+    M := Transpose(Matrix(Integers(), [Col1,Col2]));
+    //Col2min := [Col2[i] - Col2[1] : i in [1..#Col2]];
+    //assert IsZero(Col2min) eq false;
+    M;
+    assert IsSubsequence(PrimeFactors(GCD(Minors(M,2))),[2]);
+    print("++++++");
 end for;
+print("+++++++++++++++++++++");
+
+// Up to p = 100 we can check inf + inf using the trace form for all primes q
+// if we wish to completely avoid working over larger fields
+/*
+M := Matrix(Integers(), [[Trace(Coefficient(f,1)),Trace(Coefficient(f,2))] : f in Nfs]);
+// <N, GCD(Minors(M,2))>;
+assert GCD(Minors(M,2)) ne 0;
+assert IsSubsequence(PrimeFactors(GCD(Minors(M,2))),[2]);
+*/
+
+// Let's see what happens if we use the Trace form for all forms:
+// Mainly works fine, a few issues at 3 and 5 for some p < 100.
+
+for i in [2,3,4] do
+Cusp2 := i; // i <--> ALs[i](infinity) for i = 2,3,4.
+Col2 := [Integers() ! Trace(Coefficient(f,1)) : f in CuspExps[Cusp2]]; // Second column of matrix
+Col1 := [Integers() ! Trace(Coefficient(f,1)) : f in CuspExps[1]];
+M := Transpose(Matrix(Integers(), [Col1,Col2]));
+M;
+PrimeFactors(GCD(Minors(M,2)));
+print("++++++");
 end for;
-
-
-
-
+print("+++++++++++++++++++++");
+end for;
 
 /*
 p := 37;
@@ -107,6 +132,83 @@ Es := [*Basis(Eigenspace(Tq,c))[1] : c in coeffs_q *];
 
 NB := [   &+[e[i]*B[i] : i in [1..#B]] : e in Es] cat [S ! (R !f) : f in smallfs];
 */
+
+
+
+
+// Try using integral bases by working with conjugates
+for p in PrimesInInterval(29,300) do
+print "p = ", p;
+N := 2*p;
+S:=CuspForms(N);
+R<q>:=PowerSeriesRing(Integers());
+J:=JZero(N);
+dec := Decomposition(J);
+Nfs := [* *];
+for d in dec do
+    if IsZeroAt(LSeries(d),1) eq false then
+        Nfs := Nfs cat [*Newform(d)*];
+    end if;
+end for;
+basis := [ ];
+for f in Nfs do
+    K:= CoefficientField(f);
+    RK:= ChangeRing(R,K);
+    SK:= BaseChange(S,K);
+    prec := Max(100,Ceiling(N /3));
+    fexp := qExpansion(f,prec); // Increase precision to uniquely determine form
+    fK:= SK ! (RK ! fexp);
+    OK := Integers(K);
+    bOK := Basis(OK);
+    for b in bOK do
+        bfK := b*fK;
+        tr_bfK := S ! (R ! (&+[Trace(Coefficient(bfK,i))*q^i : i in [1..prec-1]] + O(q^(prec-1))));
+        basis := basis cat [tr_bfK];
+    end for;
+end for;
+
+CuspExps:=[*basis*]; // Initial list
+ALs:=[ m : m in Divisors(N) | GCD(m,N div m) eq 1 and m gt 1];
+for m in ALs do
+    CE:=[* *];
+    for f in basis do
+        fm:=AtkinLehnerOperator(m,f);
+        CE:= CE cat [*fm*];
+     end for;
+     CuspExps:=CuspExps cat [*CE*];
+end for;
+
+for i in [2,3,4] do
+    Cusp2 := i; // i <--> ALs[i](infinity) for i = 2,3,4.
+    Col2 := [Integers() ! Coefficient(f,1) : f in CuspExps[Cusp2]]; // Second column of matrix
+    Col1 := [1 : i in [1..#Col2]];
+    M := Transpose(Matrix(Integers(), [Col1,Col2]));
+    //M;
+    assert IsSubsequence(PrimeFactors(GCD(Minors(M,2))),[2]);
+    print("++++++");
+end for;
+print("+++++++++++++++++++++");
+end for;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
