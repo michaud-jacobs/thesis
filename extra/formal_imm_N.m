@@ -1,7 +1,6 @@
 // We compute formal immersion matrices
 // Tests formal immersion criterion for N = mp for a prime m.
 
-
 m := 2;
 for p in PrimesInInterval(17,100) do
     // print "p = ", p;
