@@ -137,9 +137,9 @@ NB := [   &+[e[i]*B[i] : i in [1..#B]] : e in Es] cat [S ! (R !f) : f in smallfs
 
 
 // Try using integral bases by working with conjugates
-for p in PrimesInInterval(29,300) do
+for p in PrimesInInterval(17,100) do
 print "p = ", p;
-N := 2*p;
+N := 3*p;
 S:=CuspForms(N);
 R<q>:=PowerSeriesRing(Integers());
 J:=JZero(N);
@@ -180,12 +180,15 @@ end for;
 
 for i in [2,3,4] do
     Cusp2 := i; // i <--> ALs[i](infinity) for i = 2,3,4.
+    Col1 := [Integers() ! Coefficient(f,1) : f in CuspExps[1]];
     Col2 := [Integers() ! Coefficient(f,1) : f in CuspExps[Cusp2]]; // Second column of matrix
-    Col1 := [1 : i in [1..#Col2]];
     M := Transpose(Matrix(Integers(), [Col1,Col2]));
-    //M;
-    assert IsSubsequence(PrimeFactors(GCD(Minors(M,2))),[2]);
-    print("++++++");
+    // M;
+    if IsSubsequence(PrimeFactors(GCD(Minors(M,2))),[2]) eq false then
+        print("-------------------------------------------ALERT");
+        M;
+    end if;
+    //print("+++");
 end for;
 print("+++++++++++++++++++++");
 end for;
