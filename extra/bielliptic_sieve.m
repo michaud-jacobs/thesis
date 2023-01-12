@@ -67,15 +67,20 @@ sieve := function(N: VerboseLevel := 0 );
             print "Sieving for the second case";
             print "++++++++++++++++++++++++";
         end if;
-
-        for m in [-10..10]  do
-            dec := Decomposition(Pullback(psi,Place(m*R+n*Q)));
+        if VerboseLevel ge 3 then
+            print "Known d computed are:";
+        end if;
+        for t in [-10..10]  do
+            dec := Decomposition(Pullback(psi,Place(t*R+n*Q)));
             d := Discriminant(Integers(ResidueClassField(dec[1][1])));
             if IsZero(d mod 4) then
                 d := Integers() ! (d/4);
             end if;
             if d ne 1 and AbsoluteValue(d) lt 100 then
                 KnownBad := KnownBad join {d};
+            end if;
+            if VerboseLevel ge 3 then
+                print "When t = ", t, "d = ", d;
             end if;
         end for;
         if VerboseLevel ge 1 then
@@ -215,7 +220,7 @@ end function;
 // The output is both at the end of this file
 // and in the output file
 
-time for N in [53,61,79,83,89,101,131,65] do
+for N in [53,61,79,83,89,101,131,65] do
     time failed_d, KnownBad := sieve(N);
     assert failed_d eq {};
     print "Bad d for N =", N, "are:", KnownBad;
@@ -223,7 +228,7 @@ time for N in [53,61,79,83,89,101,131,65] do
 end for;
 
 // We now run the sieve with VerboseLevel 2
-// The output is in the output file
+// The output is in the bielliptic_sieve_output.txt file
 
 for N in [53,61,79,83,89,101,131,65] do
     sieve(N : VerboseLevel := 2);
@@ -232,6 +237,37 @@ for N in [53,61,79,83,89,101,131,65] do
 end for;
 
 
-/* Output for VerboseLevel 0:
-
+/* Output for VerboseLevel 0 loop:
+N = 53
+Time: 860.410
+Bad d for N = 53 are: { -43, -11, -7, -1 }
+>>>>>>>>>>>>>>>>>>>>>>>>
+N = 61
+Time: 989.410
+Bad d for N = 61 are: { -19, -3, -1, 61 }
+>>>>>>>>>>>>>>>>>>>>>>>>
+N = 79
+Time: 941.520
+Bad d for N = 79 are: { -43, -7, -3 }
+>>>>>>>>>>>>>>>>>>>>>>>>
+N = 83
+Time: 803.400
+Bad d for N = 83 are: { -67, -43, -19, -2 }
+>>>>>>>>>>>>>>>>>>>>>>>>
+N = 89
+Time: 609.800
+Bad d for N = 89 are: { -67, -11, -2, -1, 89 }
+>>>>>>>>>>>>>>>>>>>>>>>>
+N = 101
+Time: 1177.780
+Bad d for N = 101 are: { -43, -19, -1 }
+>>>>>>>>>>>>>>>>>>>>>>>>
+N = 131
+Time: 1761.650
+Bad d for N = 131 are: { -67, -19, -2 }
+>>>>>>>>>>>>>>>>>>>>>>>>
+N = 65
+Time: 516.920
+Bad d for N = 65 are: { -79, -1 }
+>>>>>>>>>>>>>>>>>>>>>>>>
 */

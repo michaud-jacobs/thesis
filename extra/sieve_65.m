@@ -1,25 +1,29 @@
 N := 65;
-X, ws, pair := eqs_quos(p,[[p]]);
+X, ws, pair := eqs_quos(N,[[N]]);
 E := pair[1][1];
 psi := pair[1][2];
 M, mu, muinv := MordellWeilGroup(E);
-R := mu(M.1);
+Q := mu(M.1);
+R := mu(M.2);
 Rseq := Eltseq(R);
+Qseq := Eltseq(Q);
 
 KnownBad := {};
 for m in [-10..10]  do
-    dec := Decomposition(Pullback(psi,Place(m*R)));
-    d := Discriminant(Integers(ResidueClassField(dec[1][1])));
-    if IsZero(d mod 4) then
-        d := Integers() ! (d/4);
-    end if;
-    if d ne 1and AbsoluteValue(d) lt 100 then
-        KnownBad := KnownBad join {d};
-    end if;
+    for n in [0..1] do
+        dec := Decomposition(Pullback(psi,Place(m*R+n*Q)));
+        d := Discriminant(Integers(ResidueClassField(dec[1][1])));
+        if IsZero(d mod 4) then
+            d := Integers() ! (d/4);
+        end if;
+        if d ne 1and AbsoluteValue(d) lt 100 then
+            KnownBad := KnownBad join {d};
+        end if;
+    end for;
 end for;
 
 
-test_ls := [l : l in PrimesInInterval(3,1000) | l ne p];
+test_ls := [l : l in PrimesInInterval(3,1000) | IsZero(N mod l) eq false];
 ls := [];
 for l in test_ls do
     Fl := GF(l);
@@ -46,20 +50,24 @@ for l in ls do
     Xl:=ChangeRing(X,Fl);
     El:=ChangeRing(E,Fl);
     psil:=map<Xl->El | DefiningEquations(psi) >;
-    Rl:=El ! Rseq;  // [1,0,1] Generates E(Q)
+    Rl:= El ! Rseq;
+    Ql := El ! Qseq;
     Nl:=Order(Rl);     // Order modulo l
     Nls:=Nls cat [Nl];
     ms:=[];
     for m in [0..Nl-1] do
         D:=Decomposition(Pullback(psil,Place(m*Rl)));
-        if (D[1][2] eq 1) and (#D eq 1) then // point defined over extension of Fl
+        W := Decomposition(Pullback(psil,Place(m*Rl+Ql)));
+        if (D[1][2] eq 1) and (#D eq 1) and (W[1][2] eq 1) and (#W eq 1)then // point defined over extension of Fl
             if IsInert(l,OK) eq false then
                 continue;
             end if;
         end if;
-        if ((D[1][2] eq 1) and (#D eq 2)) or (D[1][2] eq 2)  then // pair of distinct points over Fl or a double point over Fl
+        // Could this not just be an ELSE?
+        if (((D[1][2] eq 1) and (#D eq 2)) or (D[1][2] eq 2)) and (((W[1][2] eq 1) and (#W eq 2)) or (W[1][2] eq 2))  then // pair of distinct points over Fl or a double point over Fl
             P :=Eltseq(RepresentativePoint(D[1][1]));
-            if IsInert(l,OK) and P[1] ne 0 then
+            P2 := Eltseq(RepresentativePoint(W[1][1]));
+            if IsInert(l,OK) and P[1] ne 0 and P2[1] ne 0 then
                 continue;
             end if;
         end if;
