@@ -27,7 +27,7 @@ for l in test_ls do
     end if;
 end for;
 
-for d in [d : d in [-200..200] | d ne 0 and d ne 1 and IsSquarefree(d)] do
+for d in [d : d in [-100..100] | d ne 0 and d ne 1 and IsSquarefree(d)] do
 
 
 //F:= -4*y^2 - 4*x*z + z^2;
@@ -112,7 +112,7 @@ end for;
 
 /*
 R := E ! [1,0,1];
-for m in [-10..10]  do
+for m in [-10..10]  do 
     dec := Decomposition(Pullback(psi,Place(m*R)));
     <m,Discriminant(Integers(ResidueClassField(dec[1][1])))>;
 end for;
