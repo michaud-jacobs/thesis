@@ -112,7 +112,7 @@ end for;
 
 /*
 R := E ! [1,0,1];
-for m in [-10..10]  do 
+for m in [-10..10]  do
     dec := Decomposition(Pullback(psi,Place(m*R)));
     <m,Discriminant(Integers(ResidueClassField(dec[1][1])))>;
 end for;
@@ -191,6 +191,7 @@ twist_check_new := function(d,p);
     for l in ls do
         fac := Factorisation(l*OB);
         norms_l := [Norm(ll[1]) : ll in fac ];
+        // print <l, norms_l>;
         if l notin norms_l then
             pass := 2;
             return pass;

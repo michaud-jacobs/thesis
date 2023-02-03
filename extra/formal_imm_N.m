@@ -25,8 +25,12 @@ for p in PrimesInInterval(17,100) do
         fexp := qExpansion(f,prec); // Increase precision to uniquely determine form
         fK:= SK ! (RK ! fexp);
         OK := Integers(K);
-        bOK := Basis(OK);
-        for b in bOK do
+        if Degree(K) eq 1 then
+            int_bas := Basis(OK);
+        else
+            int_bas := Basis(Codifferent(1*OK));
+        end if;
+        for b in int_bas do
             bfK := b*fK;
             tr_bfK := S ! (R ! (&+[Trace(Coefficient(bfK,i))*q^i : i in [1..prec-1]] + O(q^(prec-1))));
             basis := basis cat [tr_bfK];

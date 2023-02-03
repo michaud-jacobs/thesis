@@ -1,36 +1,49 @@
+Magma code output of bielliptic_sieve.m to support the computations in the paper
+Computing points on bielliptic modular curves over fixed quadratic fields by Philippe Michaud-Jacobs.
+See https://github.com/michaud-jacobs/bielliptic for all the code files and links to the paper
+
+We have included the following outputs:
+1. Output for VerboseLevel 0 loop
+2. Output for VerboseLevel 2 loop
+3. Output for example computations in Section 3
+
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+
 Output for VerboseLevel 0 loop:
 (also included in bielliptic_sieve.m file)
 
 N = 53
-Time: 860.410
+Time: 205.850
 Bad d for N = 53 are: { -43, -11, -7, -1 }
 >>>>>>>>>>>>>>>>>>>>>>>>
 N = 61
-Time: 989.410
+Time: 131.990
 Bad d for N = 61 are: { -19, -3, -1, 61 }
 >>>>>>>>>>>>>>>>>>>>>>>>
 N = 79
-Time: 941.520
+Time: 393.710
 Bad d for N = 79 are: { -43, -7, -3 }
 >>>>>>>>>>>>>>>>>>>>>>>>
 N = 83
-Time: 803.400
+Time: 316.200
 Bad d for N = 83 are: { -67, -43, -19, -2 }
 >>>>>>>>>>>>>>>>>>>>>>>>
 N = 89
-Time: 609.800
+Time: 153.100
 Bad d for N = 89 are: { -67, -11, -2, -1, 89 }
 >>>>>>>>>>>>>>>>>>>>>>>>
 N = 101
-Time: 1177.780
+Time: 405.750
 Bad d for N = 101 are: { -43, -19, -1 }
 >>>>>>>>>>>>>>>>>>>>>>>>
 N = 131
-Time: 1761.650
+Time: 749.500
 Bad d for N = 131 are: { -67, -19, -2 }
 >>>>>>>>>>>>>>>>>>>>>>>>
 N = 65
-Time: 516.920
+Time: 143.290
 Bad d for N = 65 are: { -79, -1 }
 >>>>>>>>>>>>>>>>>>>>>>>>
 
@@ -103,368 +116,373 @@ Values of d that must fail sieve are:
  { -43, -11, -7, -1 }
 ++++++++++++++++++++++++
 Considering d = -97
--97 eliminated after reaching l = 11
+-97 eliminated after reaching l = 97
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -95
--95 eliminated after reaching l = 31
+-95 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -94
 -94 eliminated after reaching l = 137
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -93
--93 eliminated after reaching l = 67
+-93 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -91
--91 eliminated after reaching l = 31
+-91 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -89
 -89 eliminated after reaching l = 67
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -87
--87 eliminated after reaching l = 31
+-87 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -86
 -86 eliminated after reaching l = 103
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -85
--85 eliminated after reaching l = 137
+-85 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -83
--83 eliminated after reaching l = 61
+-83 eliminated after reaching l = 83
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -82
--82 eliminated after reaching l = 11
+-82 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -79
--79 eliminated after reaching l = 61
+-79 eliminated after reaching l = 79
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -78
--78 eliminated after reaching l = 31
+-78 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -77
--77 eliminated after reaching l = 239
+-77 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -74
--74 eliminated after reaching l = 103
+-74 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -73
--73 eliminated after reaching l = 239
+-73 eliminated after reaching l = 73
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -71
--71 eliminated after reaching l = 31
+-71 eliminated after reaching l = 71
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -70
--70 eliminated after reaching l = 67
+-70 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -69
--69 eliminated after reaching l = 31
+-69 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -67
--67 eliminated after reaching l = 137
+-67 eliminated after reaching l = 67
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -66
--66 eliminated after reaching l = 31
+-66 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -65
--65 eliminated after reaching l = 197
+-65 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -62
--62 eliminated after reaching l = 137
+-62 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -61
--61 eliminated after reaching l = 137
+-61 eliminated after reaching l = 61
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -59
 -59 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -58
--58 eliminated after reaching l = 67
+-58 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -57
--57 eliminated after reaching l = 67
+-57 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -55
--55 eliminated after reaching l = 103
+-55 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -53
 -53 eliminated after reaching l = 103
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -51
--51 eliminated after reaching l = 31
+-51 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -47
 -47 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -46
--46 eliminated after reaching l = 137
+-46 eliminated after reaching l = 23
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -43
--43 is known to fail
+-43 has not been eliminated
+Expected, since it should fail
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -42
--42 eliminated after reaching l = 11
+-42 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -41
--41 eliminated after reaching l = 31
+-41 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -39
--39 eliminated after reaching l = 31
+-39 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -38
--38 eliminated after reaching l = 11
+-38 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -37
--37 eliminated after reaching l = 67
+-37 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -35
--35 eliminated after reaching l = 31
+-35 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -34
--34 eliminated after reaching l = 67
+-34 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -33
--33 eliminated after reaching l = 31
+-33 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -31
 -31 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -30
--30 eliminated after reaching l = 137
+-30 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -29
--29 eliminated after reaching l = 197
+-29 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -26
--26 eliminated after reaching l = 197
+-26 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -23
--23 eliminated after reaching l = 67
+-23 eliminated after reaching l = 23
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -22
--22 eliminated after reaching l = 307
+-22 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -21
--21 eliminated after reaching l = 67
+-21 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -19
--19 eliminated after reaching l = 193
+-19 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -17
--17 eliminated after reaching l = 197
+-17 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -15
--15 eliminated after reaching l = 193
+-15 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -14
--14 eliminated after reaching l = 31
+-14 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -13
--13 eliminated after reaching l = 67
+-13 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -11
--11 is known to fail
+-11 has not been eliminated
+Expected, since it should fail
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -10
--10 eliminated after reaching l = 103
+-10 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -7
--7 is known to fail
+-7 has not been eliminated
+Expected, since it should fail
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -6
--6 eliminated after reaching l = 137
+-6 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -5
--5 eliminated after reaching l = 31
+-5 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -3
--3 eliminated after reaching l = 11
+-3 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -2
 -2 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -1
--1 is known to fail
+-1 has not been eliminated
+Expected, since it should fail
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 2
 2 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 3
-3 eliminated after reaching l = 31
+3 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 5
-5 eliminated after reaching l = 197
+5 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 6
-6 eliminated after reaching l = 31
+6 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 7
 7 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 10
-10 eliminated after reaching l = 137
+10 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 11
 11 eliminated after reaching l = 67
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 13
-13 eliminated after reaching l = 31
+13 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 14
-14 eliminated after reaching l = 103
+14 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 15
-15 eliminated after reaching l = 31
+15 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 17
-17 eliminated after reaching l = 193
+17 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 19
-19 eliminated after reaching l = 193
+19 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 21
-21 eliminated after reaching l = 31
+21 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 22
-22 eliminated after reaching l = 31
+22 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 23
-23 eliminated after reaching l = 197
+23 eliminated after reaching l = 23
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 26
-26 eliminated after reaching l = 137
+26 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 29
-29 eliminated after reaching l = 139
+29 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 30
-30 eliminated after reaching l = 31
+30 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 31
-31 eliminated after reaching l = 67
+31 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 33
-33 eliminated after reaching l = 307
+33 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 34
-34 eliminated after reaching l = 31
+34 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 35
-35 eliminated after reaching l = 103
+35 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 37
-37 eliminated after reaching l = 31
+37 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 38
-38 eliminated after reaching l = 67
+38 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 39
-39 eliminated after reaching l = 67
+39 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 41
-41 eliminated after reaching l = 199
+41 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 42
-42 eliminated after reaching l = 31
+42 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 43
 43 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 46
-46 eliminated after reaching l = 31
+46 eliminated after reaching l = 23
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 47
-47 eliminated after reaching l = 67
+47 eliminated after reaching l = 61
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 51
-51 eliminated after reaching l = 239
+51 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 53
 53 eliminated after reaching l = 139
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 55
-55 eliminated after reaching l = 31
+55 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 57
-57 eliminated after reaching l = 11
+57 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 58
-58 eliminated after reaching l = 31
+58 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 59
 59 eliminated after reaching l = 317
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 61
-61 eliminated after reaching l = 31
+61 eliminated after reaching l = 61
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 62
-62 eliminated after reaching l = 67
+62 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 65
-65 eliminated after reaching l = 67
+65 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 66
-66 eliminated after reaching l = 137
+66 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 67
-67 eliminated after reaching l = 193
+67 eliminated after reaching l = 67
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 69
-69 eliminated after reaching l = 67
+69 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 70
-70 eliminated after reaching l = 193
+70 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 71
-71 eliminated after reaching l = 67
+71 eliminated after reaching l = 71
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 73
-73 eliminated after reaching l = 31
+73 eliminated after reaching l = 73
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 74
-74 eliminated after reaching l = 137
+74 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 77
-77 eliminated after reaching l = 67
+77 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 78
-78 eliminated after reaching l = 317
+78 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 79
-79 eliminated after reaching l = 31
+79 eliminated after reaching l = 79
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 82
-82 eliminated after reaching l = 137
+82 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 83
-83 eliminated after reaching l = 67
+83 eliminated after reaching l = 83
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 85
-85 eliminated after reaching l = 31
+85 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 86
 86 eliminated after reaching l = 239
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 87
-87 eliminated after reaching l = 67
+87 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 89
 89 eliminated after reaching l = 137
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 91
-91 eliminated after reaching l = 31
+91 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 93
-93 eliminated after reaching l = 193
+93 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 94
-94 eliminated after reaching l = 239
+94 eliminated after reaching l = 67
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 95
-95 eliminated after reaching l = 31
+95 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 97
-97 eliminated after reaching l = 137
+97 eliminated after reaching l = 97
 ++++++++++++++++++++++++++++++++++++++++++++++++
+Maximum l used in sieve was l = 317
 {}
 { -43, -11, -7, -1 }
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -522,7 +540,7 @@ Elliptic curve isomorphism from: Elliptic Curve defined by y^2 = x^3 + x^2 -
 32*x + 64 over Rational Field to CrvEll: E
 Taking (x : y : 1) to (1/4*x : 1/8*y - 1/8*x : 1)
 ++++++++++++++++++++++++++++++++++++++++++++++++
-The point R = (1 : 0 : 1) generates E(Q)
+The point R = (1 : -1 : 1) generates E(Q)
 ++++++++++++++++++++++++
 Primes l to use in sieve are:
  [ 3, 5, 7, 17, 19, 29, 31, 37, 53, 67, 71, 83, 97, 103, 157, 167, 191, 241,
@@ -532,187 +550,190 @@ Values of d that must fail sieve are:
  { -19, -3, -1, 61 }
 ++++++++++++++++++++++++
 Considering d = -97
--97 eliminated after reaching l = 53
+-97 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -95
--95 eliminated after reaching l = 53
+-95 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -94
--94 eliminated after reaching l = 83
+-94 eliminated after reaching l = 47
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -93
--93 eliminated after reaching l = 29
+-93 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -91
--91 eliminated after reaching l = 71
+-91 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -89
--89 eliminated after reaching l = 53
+-89 eliminated after reaching l = 89
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -87
--87 eliminated after reaching l = 83
+-87 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -86
--86 eliminated after reaching l = 257
+-86 eliminated after reaching l = 43
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -85
--85 eliminated after reaching l = 53
+-85 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -83
--83 eliminated after reaching l = 263
+-83 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -82
--82 eliminated after reaching l = 97
+-82 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -79
--79 eliminated after reaching l = 269
+-79 eliminated after reaching l = 79
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -78
--78 eliminated after reaching l = 53
+-78 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -77
--77 eliminated after reaching l = 103
+-77 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -74
--74 eliminated after reaching l = 167
+-74 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -73
--73 eliminated after reaching l = 269
+-73 eliminated after reaching l = 73
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -71
--71 eliminated after reaching l = 97
+-71 eliminated after reaching l = 71
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -70
--70 eliminated after reaching l = 53
+-70 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -69
--69 eliminated after reaching l = 53
+-69 eliminated after reaching l = 23
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -67
--67 eliminated after reaching l = 29
+-67 eliminated after reaching l = 67
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -66
--66 eliminated after reaching l = 53
+-66 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -65
--65 eliminated after reaching l = 313
+-65 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -62
--62 eliminated after reaching l = 53
+-62 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -61
 -61 eliminated after reaching l = 167
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -59
--59 eliminated after reaching l = 53
+-59 eliminated after reaching l = 59
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -58
--58 eliminated after reaching l = 97
+-58 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -57
--57 eliminated after reaching l = 53
+-57 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -55
--55 eliminated after reaching l = 269
+-55 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -53
 -53 eliminated after reaching l = 53
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -51
--51 eliminated after reaching l = 97
+-51 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -47
--47 eliminated after reaching l = 83
+-47 eliminated after reaching l = 47
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -46
--46 eliminated after reaching l = 53
+-46 eliminated after reaching l = 23
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -43
--43 eliminated after reaching l = 103
+-43 eliminated after reaching l = 43
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -42
--42 eliminated after reaching l = 53
+-42 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -41
--41 eliminated after reaching l = 97
+-41 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -39
--39 eliminated after reaching l = 257
+-39 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -38
--38 eliminated after reaching l = 53
+-38 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -37
--37 eliminated after reaching l = 167
+-37 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -35
--35 eliminated after reaching l = 257
+-35 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -34
--34 eliminated after reaching l = 257
+-34 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -33
--33 eliminated after reaching l = 83
+-33 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -31
--31 eliminated after reaching l = 257
+-31 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -30
--30 eliminated after reaching l = 53
+-30 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -29
--29 eliminated after reaching l = 53
+-29 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -26
--26 eliminated after reaching l = 167
+-26 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -23
--23 eliminated after reaching l = 83
+-23 eliminated after reaching l = 23
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -22
--22 eliminated after reaching l = 191
+-22 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -21
--21 eliminated after reaching l = 191
+-21 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -19
--19 is known to fail
+-19 has not been eliminated
+Expected, since it should fail
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -17
--17 eliminated after reaching l = 191
+-17 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -15
--15 eliminated after reaching l = 29
+-15 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -14
--14 eliminated after reaching l = 97
+-14 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -13
--13 eliminated after reaching l = 53
+-13 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -11
--11 eliminated after reaching l = 53
+-11 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -10
--10 eliminated after reaching l = 53
+-10 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -7
--7 eliminated after reaching l = 83
+-7 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -6
--6 eliminated after reaching l = 83
+-6 eliminated after reaching l = 53
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -5
--5 eliminated after reaching l = 71
+-5 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -3
--3 is known to fail
+-3 has not been eliminated
+Expected, since it should fail
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -2
 -2 eliminated after reaching l = 71
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -1
--1 is known to fail
+-1 has not been eliminated
+Expected, since it should fail
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 2
 2 eliminated after reaching l = 103
@@ -721,179 +742,181 @@ Considering d = 3
 3 eliminated after reaching l = 83
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 5
-5 eliminated after reaching l = 167
+5 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 6
 6 eliminated after reaching l = 53
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 7
-7 eliminated after reaching l = 53
+7 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 10
-10 eliminated after reaching l = 53
+10 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 11
-11 eliminated after reaching l = 53
+11 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 13
-13 eliminated after reaching l = 29
+13 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 14
-14 eliminated after reaching l = 83
+14 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 15
-15 eliminated after reaching l = 53
+15 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 17
-17 eliminated after reaching l = 31
+17 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 19
-19 eliminated after reaching l = 29
+19 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 21
-21 eliminated after reaching l = 263
+21 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 22
-22 eliminated after reaching l = 83
+22 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 23
-23 eliminated after reaching l = 191
+23 eliminated after reaching l = 23
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 26
-26 eliminated after reaching l = 31
+26 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 29
-29 eliminated after reaching l = 97
+29 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 30
-30 eliminated after reaching l = 257
+30 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 31
-31 eliminated after reaching l = 103
+31 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 33
-33 eliminated after reaching l = 29
+33 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 34
-34 eliminated after reaching l = 53
+34 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 35
-35 eliminated after reaching l = 83
+35 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 37
-37 eliminated after reaching l = 83
+37 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 38
-38 eliminated after reaching l = 29
+38 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 39
-39 eliminated after reaching l = 83
+39 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 41
-41 eliminated after reaching l = 103
+41 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 42
-42 eliminated after reaching l = 53
+42 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 43
-43 eliminated after reaching l = 53
+43 eliminated after reaching l = 43
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 46
-46 eliminated after reaching l = 53
+46 eliminated after reaching l = 23
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 47
-47 eliminated after reaching l = 83
+47 eliminated after reaching l = 47
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 51
-51 eliminated after reaching l = 71
+51 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 53
-53 eliminated after reaching l = 191
+53 eliminated after reaching l = 53
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 55
-55 eliminated after reaching l = 29
+55 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 57
-57 eliminated after reaching l = 53
+57 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 58
-58 eliminated after reaching l = 83
+58 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 59
-59 eliminated after reaching l = 103
+59 eliminated after reaching l = 59
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 61
-61 is known to fail
+61 has not been eliminated
+Expected, since it should fail
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 62
-62 eliminated after reaching l = 53
+62 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 65
-65 eliminated after reaching l = 257
+65 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 66
-66 eliminated after reaching l = 29
+66 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 67
-67 eliminated after reaching l = 83
+67 eliminated after reaching l = 67
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 69
-69 eliminated after reaching l = 29
+69 eliminated after reaching l = 23
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 70
-70 eliminated after reaching l = 53
+70 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 71
-71 eliminated after reaching l = 97
+71 eliminated after reaching l = 71
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 73
-73 eliminated after reaching l = 103
+73 eliminated after reaching l = 73
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 74
-74 eliminated after reaching l = 83
+74 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 77
-77 eliminated after reaching l = 53
+77 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 78
-78 eliminated after reaching l = 53
+78 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 79
-79 eliminated after reaching l = 103
+79 eliminated after reaching l = 79
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 82
-82 eliminated after reaching l = 53
+82 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 83
-83 eliminated after reaching l = 29
+83 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 85
-85 eliminated after reaching l = 269
+85 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 86
-86 eliminated after reaching l = 167
+86 eliminated after reaching l = 43
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 87
-87 eliminated after reaching l = 97
+87 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 89
-89 eliminated after reaching l = 167
+89 eliminated after reaching l = 89
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 91
-91 eliminated after reaching l = 97
+91 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 93
-93 eliminated after reaching l = 53
+93 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 94
-94 eliminated after reaching l = 53
+94 eliminated after reaching l = 47
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 95
-95 eliminated after reaching l = 97
+95 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 97
-97 eliminated after reaching l = 53
+97 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
+Maximum l used in sieve was l = 167
 {}
 { -19, -3, -1, 61 }
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -977,31 +1000,31 @@ Values of d that must fail sieve are:
  { -43, -7, -3 }
 ++++++++++++++++++++++++
 Considering d = -97
--97 eliminated after reaching l = 223
+-97 eliminated after reaching l = 97
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -95
--95 eliminated after reaching l = 7
+-95 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -94
 -94 eliminated after reaching l = 59
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -93
--93 eliminated after reaching l = 67
+-93 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -91
--91 eliminated after reaching l = 67
+-91 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -89
--89 eliminated after reaching l = 29
+-89 eliminated after reaching l = 89
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -87
--87 eliminated after reaching l = 131
+-87 eliminated after reaching l = 67
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -86
--86 eliminated after reaching l = 7
+-86 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -85
--85 eliminated after reaching l = 7
+-85 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -83
 -83 eliminated after reaching l = 43
@@ -1013,37 +1036,37 @@ Considering d = -79
 -79 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -78
--78 eliminated after reaching l = 83
+-78 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -77
--77 eliminated after reaching l = 83
+-77 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -74
 -74 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -73
--73 eliminated after reaching l = 163
+-73 eliminated after reaching l = 73
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -71
--71 eliminated after reaching l = 7
+-71 eliminated after reaching l = 71
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -70
--70 eliminated after reaching l = 29
+-70 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -69
--69 eliminated after reaching l = 29
+-69 eliminated after reaching l = 23
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -67
--67 eliminated after reaching l = 59
+-67 eliminated after reaching l = 67
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -66
--66 eliminated after reaching l = 29
+-66 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -65
--65 eliminated after reaching l = 7
+-65 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -62
--62 eliminated after reaching l = 131
+-62 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -61
 -61 eliminated after reaching l = 67
@@ -1052,106 +1075,109 @@ Considering d = -59
 -59 eliminated after reaching l = 67
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -58
--58 eliminated after reaching l = 73
+-58 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -57
--57 eliminated after reaching l = 137
+-57 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -55
--55 eliminated after reaching l = 29
+-55 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -53
 -53 eliminated after reaching l = 43
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -51
--51 eliminated after reaching l = 7
+-51 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -47
 -47 eliminated after reaching l = 43
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -46
--46 eliminated after reaching l = 7
+-46 eliminated after reaching l = 23
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -43
--43 is known to fail
+-43 has not been eliminated
+Expected, since it should fail
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -42
--42 eliminated after reaching l = 67
+-42 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -41
 -41 eliminated after reaching l = 131
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -39
--39 eliminated after reaching l = 7
+-39 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -38
--38 eliminated after reaching l = 59
+-38 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -37
--37 eliminated after reaching l = 193
+-37 eliminated after reaching l = 43
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -35
--35 eliminated after reaching l = 59
+-35 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -34
--34 eliminated after reaching l = 59
+-34 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -33
--33 eliminated after reaching l = 83
+-33 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -31
--31 eliminated after reaching l = 59
+-31 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -30
--30 eliminated after reaching l = 7
+-30 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -29
--29 eliminated after reaching l = 7
+-29 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -26
--26 eliminated after reaching l = 29
+-26 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -23
--23 eliminated after reaching l = 73
+-23 eliminated after reaching l = 23
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -22
--22 eliminated after reaching l = 193
+-22 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -21
--21 eliminated after reaching l = 29
+-21 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -19
--19 eliminated after reaching l = 29
+-19 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -17
--17 eliminated after reaching l = 83
+-17 eliminated after reaching l = 73
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -15
--15 eliminated after reaching l = 7
+-15 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -14
--14 eliminated after reaching l = 67
+-14 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -13
--13 eliminated after reaching l = 73
+-13 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -11
--11 eliminated after reaching l = 7
+-11 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -10
--10 eliminated after reaching l = 67
+-10 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -7
--7 is known to fail
+-7 has not been eliminated
+Expected, since it should fail
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -6
 -6 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -5
--5 eliminated after reaching l = 73
+-5 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -3
--3 is known to fail
+-3 has not been eliminated
+Expected, since it should fail
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -2
 -2 eliminated after reaching l = 73
@@ -1166,7 +1192,7 @@ Considering d = 3
 3 eliminated after reaching l = 67
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 5
-5 eliminated after reaching l = 7
+5 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 6
 6 eliminated after reaching l = 7
@@ -1175,94 +1201,94 @@ Considering d = 7
 7 eliminated after reaching l = 137
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 10
-10 eliminated after reaching l = 7
+10 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 11
-11 eliminated after reaching l = 73
+11 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 13
-13 eliminated after reaching l = 67
+13 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 14
-14 eliminated after reaching l = 67
+14 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 15
-15 eliminated after reaching l = 29
+15 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 17
-17 eliminated after reaching l = 83
+17 eliminated after reaching l = 59
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 19
-19 eliminated after reaching l = 7
+19 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 21
-21 eliminated after reaching l = 29
+21 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 22
-22 eliminated after reaching l = 83
+22 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 23
-23 eliminated after reaching l = 163
+23 eliminated after reaching l = 23
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 26
-26 eliminated after reaching l = 7
+26 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 29
-29 eliminated after reaching l = 43
+29 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 30
-30 eliminated after reaching l = 43
+30 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 31
-31 eliminated after reaching l = 7
+31 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 33
-33 eliminated after reaching l = 43
+33 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 34
-34 eliminated after reaching l = 7
+34 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 35
-35 eliminated after reaching l = 59
+35 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 37
 37 eliminated after reaching l = 181
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 38
-38 eliminated after reaching l = 137
+38 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 39
-39 eliminated after reaching l = 73
+39 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 41
 41 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 42
-42 eliminated after reaching l = 73
+42 eliminated after reaching l = 67
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 43
-43 eliminated after reaching l = 83
+43 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 46
-46 eliminated after reaching l = 67
+46 eliminated after reaching l = 23
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 47
 47 eliminated after reaching l = 131
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 51
-51 eliminated after reaching l = 59
+51 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 53
 53 eliminated after reaching l = 73
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 55
-55 eliminated after reaching l = 7
+55 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 57
-57 eliminated after reaching l = 83
+57 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 58
-58 eliminated after reaching l = 181
+58 eliminated after reaching l = 73
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 59
 59 eliminated after reaching l = 7
@@ -1271,37 +1297,37 @@ Considering d = 61
 61 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 62
-62 eliminated after reaching l = 73
+62 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 65
-65 eliminated after reaching l = 43
+65 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 66
-66 eliminated after reaching l = 7
+66 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 67
-67 eliminated after reaching l = 137
+67 eliminated after reaching l = 67
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 69
-69 eliminated after reaching l = 7
+69 eliminated after reaching l = 23
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 70
-70 eliminated after reaching l = 29
+70 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 71
-71 eliminated after reaching l = 31
+71 eliminated after reaching l = 71
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 73
-73 eliminated after reaching l = 167
+73 eliminated after reaching l = 73
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 74
-74 eliminated after reaching l = 131
+74 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 77
-77 eliminated after reaching l = 67
+77 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 78
-78 eliminated after reaching l = 73
+78 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 79
 79 eliminated after reaching l = 163
@@ -1313,32 +1339,33 @@ Considering d = 83
 83 eliminated after reaching l = 73
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 85
-85 eliminated after reaching l = 29
+85 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 86
-86 eliminated after reaching l = 73
+86 eliminated after reaching l = 67
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 87
-87 eliminated after reaching l = 67
+87 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 89
-89 eliminated after reaching l = 7
+89 eliminated after reaching l = 89
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 91
-91 eliminated after reaching l = 67
+91 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 93
-93 eliminated after reaching l = 73
+93 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 94
 94 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 95
-95 eliminated after reaching l = 73
+95 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 97
-97 eliminated after reaching l = 73
+97 eliminated after reaching l = 97
 ++++++++++++++++++++++++++++++++++++++++++++++++
+Maximum l used in sieve was l = 181
 {}
 { -43, -7, -3 }
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -1451,28 +1478,28 @@ Considering d = -97
 -97 eliminated after reaching l = 89
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -95
--95 eliminated after reaching l = 71
+-95 eliminated after reaching l = 53
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -94
--94 eliminated after reaching l = 113
+-94 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -93
--93 eliminated after reaching l = 53
+-93 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -91
--91 eliminated after reaching l = 53
+-91 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -89
--89 eliminated after reaching l = 53
+-89 eliminated after reaching l = 89
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -87
--87 eliminated after reaching l = 107
+-87 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -86
 -86 eliminated after reaching l = 89
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -85
--85 eliminated after reaching l = 107
+-85 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -83
 -83 eliminated after reaching l = 107
@@ -1484,100 +1511,102 @@ Considering d = -79
 -79 eliminated after reaching l = 71
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -78
--78 eliminated after reaching l = 113
+-78 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -77
--77 eliminated after reaching l = 71
+-77 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -74
--74 eliminated after reaching l = 47
+-74 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -73
 -73 eliminated after reaching l = 71
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -71
--71 eliminated after reaching l = 103
+-71 eliminated after reaching l = 67
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -70
--70 eliminated after reaching l = 113
+-70 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -69
--69 eliminated after reaching l = 101
+-69 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -67
--67 is known to fail
+-67 has not been eliminated
+Expected, since it should fail
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -66
--66 eliminated after reaching l = 89
+-66 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -65
 -65 eliminated after reaching l = 103
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -62
--62 eliminated after reaching l = 89
+-62 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -61
--61 eliminated after reaching l = 47
+-61 eliminated after reaching l = 61
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -59
--59 eliminated after reaching l = 71
+-59 eliminated after reaching l = 59
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -58
--58 eliminated after reaching l = 229
+-58 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -57
--57 eliminated after reaching l = 223
+-57 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -55
--55 eliminated after reaching l = 47
+-55 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -53
--53 eliminated after reaching l = 53
+-53 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -51
--51 eliminated after reaching l = 229
+-51 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -47
--47 eliminated after reaching l = 101
+-47 eliminated after reaching l = 53
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -46
 -46 eliminated after reaching l = 193
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -43
--43 is known to fail
+-43 has not been eliminated
+Expected, since it should fail
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -42
--42 eliminated after reaching l = 53
+-42 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -41
 -41 eliminated after reaching l = 233
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -39
--39 eliminated after reaching l = 107
+-39 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -38
--38 eliminated after reaching l = 71
+-38 eliminated after reaching l = 53
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -37
--37 eliminated after reaching l = 53
+-37 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -35
--35 eliminated after reaching l = 107
+-35 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -34
--34 eliminated after reaching l = 107
+-34 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -33
--33 eliminated after reaching l = 107
+-33 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -31
--31 eliminated after reaching l = 103
+-31 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -30
--30 eliminated after reaching l = 71
+-30 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -29
--29 eliminated after reaching l = 71
+-29 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -26
 -26 eliminated after reaching l = 89
@@ -1586,46 +1615,48 @@ Considering d = -23
 -23 eliminated after reaching l = 89
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -22
--22 eliminated after reaching l = 103
+-22 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -21
--21 eliminated after reaching l = 89
+-21 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -19
--19 is known to fail
+-19 has not been eliminated
+Expected, since it should fail
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -17
--17 eliminated after reaching l = 167
+-17 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -15
--15 eliminated after reaching l = 53
+-15 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -14
--14 eliminated after reaching l = 89
+-14 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -13
 -13 eliminated after reaching l = 53
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -11
--11 eliminated after reaching l = 103
+-11 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -10
 -10 eliminated after reaching l = 53
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -7
--7 eliminated after reaching l = 103
+-7 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -6
--6 eliminated after reaching l = 47
+-6 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -5
 -5 eliminated after reaching l = 103
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -3
--3 eliminated after reaching l = 71
+-3 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -2
--2 is known to fail
+-2 has not been eliminated
+Expected, since it should fail
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -1
 -1 eliminated after reaching l = 53
@@ -1634,82 +1665,82 @@ Considering d = 2
 2 eliminated after reaching l = 107
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 3
-3 eliminated after reaching l = 103
+3 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 5
 5 eliminated after reaching l = 107
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 6
-6 eliminated after reaching l = 113
+6 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 7
-7 eliminated after reaching l = 53
+7 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 10
 10 eliminated after reaching l = 53
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 11
-11 eliminated after reaching l = 71
+11 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 13
 13 eliminated after reaching l = 89
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 14
-14 eliminated after reaching l = 113
+14 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 15
-15 eliminated after reaching l = 53
+15 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 17
-17 eliminated after reaching l = 53
+17 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 19
 19 eliminated after reaching l = 89
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 21
-21 eliminated after reaching l = 233
+21 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 22
-22 eliminated after reaching l = 107
+22 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 23
-23 eliminated after reaching l = 107
+23 eliminated after reaching l = 71
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 26
 26 eliminated after reaching l = 71
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 29
-29 eliminated after reaching l = 53
+29 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 30
-30 eliminated after reaching l = 89
+30 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 31
-31 eliminated after reaching l = 47
+31 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 33
-33 eliminated after reaching l = 193
+33 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 34
-34 eliminated after reaching l = 101
+34 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 35
-35 eliminated after reaching l = 71
+35 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 37
-37 eliminated after reaching l = 263
+37 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 38
-38 eliminated after reaching l = 53
+38 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 39
-39 eliminated after reaching l = 71
+39 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 41
 41 eliminated after reaching l = 71
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 42
-42 eliminated after reaching l = 71
+42 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 43
 43 eliminated after reaching l = 89
@@ -1718,61 +1749,61 @@ Considering d = 46
 46 eliminated after reaching l = 53
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 47
-47 eliminated after reaching l = 89
+47 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 51
-51 eliminated after reaching l = 71
+51 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 53
 53 eliminated after reaching l = 71
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 55
-55 eliminated after reaching l = 71
+55 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 57
-57 eliminated after reaching l = 71
+57 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 58
-58 eliminated after reaching l = 103
+58 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 59
-59 eliminated after reaching l = 103
+59 eliminated after reaching l = 59
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 61
-61 eliminated after reaching l = 71
+61 eliminated after reaching l = 61
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 62
-62 eliminated after reaching l = 53
+62 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 65
 65 eliminated after reaching l = 71
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 66
-66 eliminated after reaching l = 71
+66 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 67
 67 eliminated after reaching l = 89
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 69
-69 eliminated after reaching l = 47
+69 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 70
-70 eliminated after reaching l = 47
+70 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 71
-71 eliminated after reaching l = 113
+71 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 73
 73 eliminated after reaching l = 193
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 74
-74 eliminated after reaching l = 89
+74 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 77
-77 eliminated after reaching l = 53
+77 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 78
-78 eliminated after reaching l = 71
+78 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 79
 79 eliminated after reaching l = 103
@@ -1784,25 +1815,25 @@ Considering d = 83
 83 eliminated after reaching l = 113
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 85
-85 eliminated after reaching l = 107
+85 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 86
 86 eliminated after reaching l = 101
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 87
-87 eliminated after reaching l = 107
+87 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 89
 89 eliminated after reaching l = 89
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 91
-91 eliminated after reaching l = 53
+91 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 93
-93 eliminated after reaching l = 113
+93 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 94
-94 eliminated after reaching l = 103
+94 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 95
 95 eliminated after reaching l = 53
@@ -1810,6 +1841,7 @@ Considering d = 95
 Considering d = 97
 97 eliminated after reaching l = 107
 ++++++++++++++++++++++++++++++++++++++++++++++++
+Maximum l used in sieve was l = 233
 {}
 { -67, -43, -19, -2 }
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -1903,7 +1935,7 @@ Elliptic curve isomorphism from: Elliptic Curve defined by y^2 - x*y + y = x^3 -
 5*x^2 + 7*x - 2 over Rational Field to CrvEll: E
 Taking (x : y : 1) to (x - 2 : y - x + 1 : 1)
 ++++++++++++++++++++++++++++++++++++++++++++++++
-The point R = (0 : -1 : 1) generates E(Q)
+The point R = (0 : 0 : 1) generates E(Q)
 ++++++++++++++++++++++++
 Primes l to use in sieve are:
  [ 3, 5, 7, 11, 13, 17, 19, 29, 37, 41, 47, 59, 61, 67, 83, 113, 127, 137, 151,
@@ -1914,368 +1946,374 @@ Values of d that must fail sieve are:
  { -67, -11, -2, -1, 89 }
 ++++++++++++++++++++++++
 Considering d = -97
--97 eliminated after reaching l = 17
+-97 eliminated after reaching l = 97
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -95
--95 eliminated after reaching l = 47
+-95 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -94
--94 eliminated after reaching l = 41
+-94 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -93
--93 eliminated after reaching l = 151
+-93 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -91
--91 eliminated after reaching l = 17
+-91 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -89
 -89 eliminated after reaching l = 47
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -87
--87 eliminated after reaching l = 37
+-87 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -86
--86 eliminated after reaching l = 47
+-86 eliminated after reaching l = 43
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -85
--85 eliminated after reaching l = 61
+-85 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -83
--83 eliminated after reaching l = 151
+-83 eliminated after reaching l = 83
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -82
--82 eliminated after reaching l = 17
+-82 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -79
 -79 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -78
--78 eliminated after reaching l = 59
+-78 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -77
--77 eliminated after reaching l = 47
+-77 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -74
--74 eliminated after reaching l = 59
+-74 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -73
--73 eliminated after reaching l = 17
+-73 eliminated after reaching l = 73
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -71
 -71 eliminated after reaching l = 47
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -70
--70 eliminated after reaching l = 29
+-70 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -69
--69 eliminated after reaching l = 37
+-69 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -67
--67 is known to fail
+-67 has not been eliminated
+Expected, since it should fail
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -66
--66 eliminated after reaching l = 37
+-66 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -65
--65 eliminated after reaching l = 41
+-65 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -62
--62 eliminated after reaching l = 17
+-62 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -61
--61 eliminated after reaching l = 17
+-61 eliminated after reaching l = 61
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -59
--59 eliminated after reaching l = 37
+-59 eliminated after reaching l = 59
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -58
 -58 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -57
--57 eliminated after reaching l = 47
+-57 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -55
--55 eliminated after reaching l = 29
+-55 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -53
--53 eliminated after reaching l = 41
+-53 eliminated after reaching l = 53
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -51
--51 eliminated after reaching l = 37
+-51 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -47
--47 eliminated after reaching l = 37
+-47 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -46
--46 eliminated after reaching l = 19
+-46 eliminated after reaching l = 23
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -43
--43 eliminated after reaching l = 29
+-43 eliminated after reaching l = 43
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -42
--42 eliminated after reaching l = 37
+-42 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -41
--41 eliminated after reaching l = 17
+-41 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -39
--39 eliminated after reaching l = 37
+-39 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -38
--38 eliminated after reaching l = 41
+-38 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -37
--37 eliminated after reaching l = 19
+-37 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -35
--35 eliminated after reaching l = 37
+-35 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -34
--34 eliminated after reaching l = 67
+-34 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -33
--33 eliminated after reaching l = 61
+-33 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -31
--31 eliminated after reaching l = 17
+-31 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -30
--30 eliminated after reaching l = 41
+-30 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -29
--29 eliminated after reaching l = 137
+-29 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -26
--26 eliminated after reaching l = 47
+-26 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -23
--23 eliminated after reaching l = 137
+-23 eliminated after reaching l = 23
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -22
--22 eliminated after reaching l = 19
+-22 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -21
--21 eliminated after reaching l = 37
+-21 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -19
--19 eliminated after reaching l = 29
+-19 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -17
--17 eliminated after reaching l = 37
+-17 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -15
--15 eliminated after reaching l = 137
+-15 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -14
--14 eliminated after reaching l = 17
+-14 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -13
--13 eliminated after reaching l = 41
+-13 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -11
--11 is known to fail
+-11 has not been eliminated
+Expected, since it should fail
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -10
--10 eliminated after reaching l = 17
+-10 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -7
--7 eliminated after reaching l = 17
+-7 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -6
--6 eliminated after reaching l = 17
+-6 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -5
--5 eliminated after reaching l = 17
+-5 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -3
--3 eliminated after reaching l = 17
+-3 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -2
--2 is known to fail
+-2 has not been eliminated
+Expected, since it should fail
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -1
--1 is known to fail
+-1 has not been eliminated
+Expected, since it should fail
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 2
 2 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 3
-3 eliminated after reaching l = 41
+3 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 5
-5 eliminated after reaching l = 19
+5 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 6
-6 eliminated after reaching l = 47
+6 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 7
-7 eliminated after reaching l = 17
+7 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 10
-10 eliminated after reaching l = 47
+10 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 11
-11 eliminated after reaching l = 17
+11 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 13
-13 eliminated after reaching l = 37
+13 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 14
-14 eliminated after reaching l = 17
+14 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 15
-15 eliminated after reaching l = 41
+15 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 17
-17 eliminated after reaching l = 29
+17 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 19
-19 eliminated after reaching l = 151
+19 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 21
-21 eliminated after reaching l = 37
+21 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 22
-22 eliminated after reaching l = 17
+22 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 23
-23 eliminated after reaching l = 17
+23 eliminated after reaching l = 23
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 26
-26 eliminated after reaching l = 29
+26 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 29
-29 eliminated after reaching l = 17
+29 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 30
-30 eliminated after reaching l = 47
+30 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 31
-31 eliminated after reaching l = 83
+31 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 33
-33 eliminated after reaching l = 41
+33 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 34
-34 eliminated after reaching l = 41
+34 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 35
-35 eliminated after reaching l = 47
+35 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 37
-37 eliminated after reaching l = 17
+37 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 38
-38 eliminated after reaching l = 47
+38 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 39
-39 eliminated after reaching l = 17
+39 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 41
-41 eliminated after reaching l = 37
+41 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 42
-42 eliminated after reaching l = 37
+42 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 43
-43 eliminated after reaching l = 37
+43 eliminated after reaching l = 43
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 46
-46 eliminated after reaching l = 17
+46 eliminated after reaching l = 23
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 47
-47 eliminated after reaching l = 29
+47 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 51
-51 eliminated after reaching l = 37
+51 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 53
-53 eliminated after reaching l = 37
+53 eliminated after reaching l = 53
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 55
-55 eliminated after reaching l = 113
+55 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 57
-57 eliminated after reaching l = 17
+57 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 58
-58 eliminated after reaching l = 17
+58 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 59
-59 eliminated after reaching l = 61
+59 eliminated after reaching l = 59
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 61
-61 eliminated after reaching l = 37
+61 eliminated after reaching l = 61
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 62
-62 eliminated after reaching l = 19
+62 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 65
-65 eliminated after reaching l = 17
+65 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 66
-66 eliminated after reaching l = 137
+66 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 67
-67 eliminated after reaching l = 41
+67 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 69
-69 eliminated after reaching l = 113
+69 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 70
-70 eliminated after reaching l = 37
+70 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 71
 71 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 73
-73 eliminated after reaching l = 47
+73 eliminated after reaching l = 73
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 74
-74 eliminated after reaching l = 17
+74 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 77
-77 eliminated after reaching l = 29
+77 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 78
-78 eliminated after reaching l = 17
+78 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 79
 79 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 82
-82 eliminated after reaching l = 47
+82 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 83
-83 eliminated after reaching l = 47
+83 eliminated after reaching l = 83
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 85
-85 eliminated after reaching l = 37
+85 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 86
-86 eliminated after reaching l = 113
+86 eliminated after reaching l = 43
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 87
-87 eliminated after reaching l = 37
+87 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 89
-89 is known to fail
+89 has not been eliminated
+Expected, since it should fail
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 91
-91 eliminated after reaching l = 17
+91 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 93
-93 eliminated after reaching l = 37
+93 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 94
-94 eliminated after reaching l = 37
+94 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 95
-95 eliminated after reaching l = 17
+95 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 97
-97 eliminated after reaching l = 41
+97 eliminated after reaching l = 97
 ++++++++++++++++++++++++++++++++++++++++++++++++
+Maximum l used in sieve was l = 47
 {}
 { -67, -11, -2, -1, 89 }
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -2411,7 +2449,7 @@ Elliptic curve isomorphism from: Elliptic Curve defined by y^2 + 4*x*y + 7*y =
 x^3 - 10*x - 12 over Rational Field to CrvEll: E
 Taking (x : y : 1) to (x + 1 : y + 2*x + 3 : 1)
 ++++++++++++++++++++++++++++++++++++++++++++++++
-The point R = (-1 : 0 : 1) generates E(Q)
+The point R = (-1 : -1 : 1) generates E(Q)
 ++++++++++++++++++++++++
 Primes l to use in sieve are:
  [ 3, 5, 7, 11, 17, 19, 37, 53, 97, 113, 127, 163, 179, 191, 223, 233, 239, 251,
@@ -2422,94 +2460,94 @@ Values of d that must fail sieve are:
  { -43, -19, -1 }
 ++++++++++++++++++++++++
 Considering d = -97
--97 eliminated after reaching l = 17
+-97 eliminated after reaching l = 97
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -95
--95 eliminated after reaching l = 179
+-95 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -94
 -94 eliminated after reaching l = 233
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -93
--93 eliminated after reaching l = 37
+-93 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -91
--91 eliminated after reaching l = 17
+-91 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -89
--89 eliminated after reaching l = 179
+-89 eliminated after reaching l = 89
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -87
--87 eliminated after reaching l = 97
+-87 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -86
 -86 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -85
--85 eliminated after reaching l = 263
+-85 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -83
--83 eliminated after reaching l = 97
+-83 eliminated after reaching l = 83
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -82
--82 eliminated after reaching l = 17
+-82 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -79
 -79 eliminated after reaching l = 127
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -78
--78 eliminated after reaching l = 97
+-78 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -77
--77 eliminated after reaching l = 97
+-77 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -74
--74 eliminated after reaching l = 97
+-74 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -73
--73 eliminated after reaching l = 17
+-73 eliminated after reaching l = 73
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -71
 -71 eliminated after reaching l = 97
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -70
--70 eliminated after reaching l = 233
+-70 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -69
--69 eliminated after reaching l = 97
+-69 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -67
--67 eliminated after reaching l = 97
+-67 eliminated after reaching l = 67
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -66
--66 eliminated after reaching l = 263
+-66 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -65
--65 eliminated after reaching l = 331
+-65 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -62
 -62 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -61
--61 eliminated after reaching l = 17
+-61 eliminated after reaching l = 61
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -59
--59 eliminated after reaching l = 97
+-59 eliminated after reaching l = 59
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -58
--58 eliminated after reaching l = 97
+-58 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -57
--57 eliminated after reaching l = 97
+-57 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -55
--55 eliminated after reaching l = 331
+-55 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -53
--53 eliminated after reaching l = 19
+-53 eliminated after reaching l = 53
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -51
--51 eliminated after reaching l = 19
+-51 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -47
 -47 eliminated after reaching l = 113
@@ -2518,172 +2556,175 @@ Considering d = -46
 -46 eliminated after reaching l = 97
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -43
--43 is known to fail
+-43 has not been eliminated
+Expected, since it should fail
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -42
--42 eliminated after reaching l = 97
+-42 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -41
--41 eliminated after reaching l = 17
+-41 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -39
--39 eliminated after reaching l = 97
+-39 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -38
--38 eliminated after reaching l = 97
+-38 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -37
--37 eliminated after reaching l = 97
+-37 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -35
--35 eliminated after reaching l = 179
+-35 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -34
--34 eliminated after reaching l = 97
+-34 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -33
--33 eliminated after reaching l = 331
+-33 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -31
 -31 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -30
--30 eliminated after reaching l = 97
+-30 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -29
--29 eliminated after reaching l = 97
+-29 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -26
--26 eliminated after reaching l = 97
+-26 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -23
 -23 eliminated after reaching l = 97
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -22
--22 eliminated after reaching l = 97
+-22 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -21
--21 eliminated after reaching l = 97
+-21 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -19
--19 is known to fail
+-19 has not been eliminated
+Expected, since it should fail
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -17
--17 eliminated after reaching l = 97
+-17 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -15
--15 eliminated after reaching l = 19
+-15 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -14
--14 eliminated after reaching l = 17
+-14 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -13
--13 eliminated after reaching l = 263
+-13 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -11
--11 eliminated after reaching l = 487
+-11 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -10
--10 eliminated after reaching l = 17
+-10 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -7
--7 eliminated after reaching l = 17
+-7 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -6
--6 eliminated after reaching l = 17
+-6 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -5
--5 eliminated after reaching l = 17
+-5 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -3
--3 eliminated after reaching l = 17
+-3 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -2
 -2 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -1
--1 is known to fail
+-1 has not been eliminated
+Expected, since it should fail
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 2
 2 eliminated after reaching l = 349
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 3
-3 eliminated after reaching l = 263
+3 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 5
-5 eliminated after reaching l = 179
+5 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 6
-6 eliminated after reaching l = 179
+6 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 7
-7 eliminated after reaching l = 17
+7 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 10
-10 eliminated after reaching l = 97
+10 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 11
-11 eliminated after reaching l = 17
+11 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 13
-13 eliminated after reaching l = 37
+13 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 14
-14 eliminated after reaching l = 17
+14 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 15
-15 eliminated after reaching l = 97
+15 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 17
-17 eliminated after reaching l = 113
+17 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 19
-19 eliminated after reaching l = 19
+19 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 21
-21 eliminated after reaching l = 97
+21 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 22
-22 eliminated after reaching l = 17
+22 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 23
 23 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 26
-26 eliminated after reaching l = 97
+26 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 29
-29 eliminated after reaching l = 17
+29 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 30
-30 eliminated after reaching l = 97
+30 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 31
 31 eliminated after reaching l = 593
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 33
-33 eliminated after reaching l = 179
+33 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 34
-34 eliminated after reaching l = 97
+34 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 35
-35 eliminated after reaching l = 163
+35 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 37
-37 eliminated after reaching l = 17
+37 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 38
 38 eliminated after reaching l = 97
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 39
-39 eliminated after reaching l = 17
+39 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 41
-41 eliminated after reaching l = 97
+41 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 42
-42 eliminated after reaching l = 97
+42 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 43
 43 eliminated after reaching l = 113
@@ -2695,95 +2736,96 @@ Considering d = 47
 47 eliminated after reaching l = 179
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 51
-51 eliminated after reaching l = 97
+51 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 53
-53 eliminated after reaching l = 233
+53 eliminated after reaching l = 53
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 55
-55 eliminated after reaching l = 19
+55 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 57
-57 eliminated after reaching l = 17
+57 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 58
-58 eliminated after reaching l = 17
+58 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 59
-59 eliminated after reaching l = 179
+59 eliminated after reaching l = 59
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 61
-61 eliminated after reaching l = 263
+61 eliminated after reaching l = 61
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 62
 62 eliminated after reaching l = 233
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 65
-65 eliminated after reaching l = 17
+65 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 66
-66 eliminated after reaching l = 19
+66 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 67
-67 eliminated after reaching l = 97
+67 eliminated after reaching l = 67
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 69
-69 eliminated after reaching l = 37
+69 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 70
-70 eliminated after reaching l = 179
+70 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 71
 71 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 73
-73 eliminated after reaching l = 113
+73 eliminated after reaching l = 73
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 74
-74 eliminated after reaching l = 17
+74 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 77
-77 eliminated after reaching l = 97
+77 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 78
-78 eliminated after reaching l = 17
+78 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 79
 79 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 82
-82 eliminated after reaching l = 97
+82 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 83
-83 eliminated after reaching l = 97
+83 eliminated after reaching l = 83
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 85
-85 eliminated after reaching l = 331
+85 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 86
 86 eliminated after reaching l = 233
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 87
-87 eliminated after reaching l = 19
+87 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 89
-89 eliminated after reaching l = 179
+89 eliminated after reaching l = 89
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 91
-91 eliminated after reaching l = 17
+91 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 93
-93 eliminated after reaching l = 233
+93 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 94
 94 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 95
-95 eliminated after reaching l = 17
+95 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 97
-97 eliminated after reaching l = 113
+97 eliminated after reaching l = 97
 ++++++++++++++++++++++++++++++++++++++++++++++++
+Maximum l used in sieve was l = 593
 {}
 { -43, -19, -1 }
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -3099,91 +3141,92 @@ Considering d = -97
 -97 eliminated after reaching l = 167
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -95
--95 eliminated after reaching l = 53
+-95 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -94
 -94 eliminated after reaching l = 83
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -93
--93 eliminated after reaching l = 41
+-93 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -91
--91 eliminated after reaching l = 103
+-91 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -89
 -89 eliminated after reaching l = 163
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -87
--87 eliminated after reaching l = 83
+-87 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -86
--86 eliminated after reaching l = 167
+-86 eliminated after reaching l = 43
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -85
--85 eliminated after reaching l = 211
+-85 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -83
--83 eliminated after reaching l = 103
+-83 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -82
--82 eliminated after reaching l = 167
+-82 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -79
 -79 eliminated after reaching l = 167
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -78
--78 eliminated after reaching l = 73
+-78 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -77
--77 eliminated after reaching l = 73
+-77 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -74
 -74 eliminated after reaching l = 101
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -73
--73 eliminated after reaching l = 193
+-73 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -71
 -71 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -70
--70 eliminated after reaching l = 193
+-70 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -69
--69 eliminated after reaching l = 83
+-69 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -67
--67 is known to fail
+-67 has not been eliminated
+Expected, since it should fail
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -66
--66 eliminated after reaching l = 83
+-66 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -65
--65 eliminated after reaching l = 41
+-65 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -62
 -62 eliminated after reaching l = 101
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -61
--61 eliminated after reaching l = 167
+-61 eliminated after reaching l = 61
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -59
--59 eliminated after reaching l = 101
+-59 eliminated after reaching l = 59
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -58
--58 eliminated after reaching l = 167
+-58 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -57
--57 eliminated after reaching l = 73
+-57 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -55
--55 eliminated after reaching l = 167
+-55 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -53
--53 eliminated after reaching l = 41
+-53 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -51
--51 eliminated after reaching l = 83
+-51 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -47
 -47 eliminated after reaching l = 163
@@ -3192,16 +3235,16 @@ Considering d = -46
 -46 eliminated after reaching l = 251
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -43
--43 eliminated after reaching l = 227
+-43 eliminated after reaching l = 43
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -42
--42 eliminated after reaching l = 101
+-42 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -41
--41 eliminated after reaching l = 211
+-41 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -39
--39 eliminated after reaching l = 101
+-39 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -38
 -38 eliminated after reaching l = 41
@@ -3210,70 +3253,72 @@ Considering d = -37
 -37 eliminated after reaching l = 167
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -35
--35 eliminated after reaching l = 41
+-35 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -34
--34 eliminated after reaching l = 167
+-34 eliminated after reaching l = 73
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -33
--33 eliminated after reaching l = 83
+-33 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -31
 -31 eliminated after reaching l = 101
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -30
--30 eliminated after reaching l = 41
+-30 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -29
--29 eliminated after reaching l = 41
+-29 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -26
--26 eliminated after reaching l = 211
+-26 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -23
 -23 eliminated after reaching l = 83
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -22
--22 eliminated after reaching l = 193
+-22 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -21
--21 eliminated after reaching l = 167
+-21 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -19
--19 is known to fail
+-19 has not been eliminated
+Expected, since it should fail
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -17
 -17 eliminated after reaching l = 83
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -15
--15 eliminated after reaching l = 223
+-15 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -14
--14 eliminated after reaching l = 167
+-14 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -13
--13 eliminated after reaching l = 163
+-13 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -11
--11 eliminated after reaching l = 53
+-11 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -10
--10 eliminated after reaching l = 83
+-10 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -7
--7 eliminated after reaching l = 101
+-7 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -6
--6 eliminated after reaching l = 41
+-6 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -5
--5 eliminated after reaching l = 163
+-5 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -3
--3 eliminated after reaching l = 83
+-3 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -2
--2 is known to fail
+-2 has not been eliminated
+Expected, since it should fail
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -1
 -1 eliminated after reaching l = 101
@@ -3282,67 +3327,67 @@ Considering d = 2
 2 eliminated after reaching l = 167
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 3
-3 eliminated after reaching l = 167
+3 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 5
-5 eliminated after reaching l = 83
+5 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 6
-6 eliminated after reaching l = 41
+6 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 7
-7 eliminated after reaching l = 41
+7 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 10
-10 eliminated after reaching l = 167
+10 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 11
-11 eliminated after reaching l = 73
+11 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 13
-13 eliminated after reaching l = 41
+13 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 14
-14 eliminated after reaching l = 73
+14 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 15
-15 eliminated after reaching l = 241
+15 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 17
-17 eliminated after reaching l = 73
+17 eliminated after reaching l = 53
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 19
 19 eliminated after reaching l = 83
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 21
-21 eliminated after reaching l = 83
+21 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 22
-22 eliminated after reaching l = 41
+22 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 23
 23 eliminated after reaching l = 211
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 26
-26 eliminated after reaching l = 223
+26 eliminated after reaching l = 13
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 29
-29 eliminated after reaching l = 101
+29 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 30
-30 eliminated after reaching l = 41
+30 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 31
 31 eliminated after reaching l = 163
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 33
-33 eliminated after reaching l = 227
+33 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 34
 34 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 35
-35 eliminated after reaching l = 167
+35 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 37
 37 eliminated after reaching l = 167
@@ -3351,16 +3396,16 @@ Considering d = 38
 38 eliminated after reaching l = 211
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 39
-39 eliminated after reaching l = 193
+39 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 41
-41 eliminated after reaching l = 193
+41 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 42
-42 eliminated after reaching l = 83
+42 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 43
-43 eliminated after reaching l = 83
+43 eliminated after reaching l = 43
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 46
 46 eliminated after reaching l = 101
@@ -3369,43 +3414,43 @@ Considering d = 47
 47 eliminated after reaching l = 101
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 51
-51 eliminated after reaching l = 167
+51 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 53
-53 eliminated after reaching l = 101
+53 eliminated after reaching l = 73
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 55
-55 eliminated after reaching l = 223
+55 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 57
-57 eliminated after reaching l = 83
+57 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 58
-58 eliminated after reaching l = 41
+58 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 59
-59 eliminated after reaching l = 73
+59 eliminated after reaching l = 59
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 61
-61 eliminated after reaching l = 101
+61 eliminated after reaching l = 61
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 62
 62 eliminated after reaching l = 73
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 65
-65 eliminated after reaching l = 193
+65 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 66
-66 eliminated after reaching l = 211
+66 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 67
 67 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 69
-69 eliminated after reaching l = 73
+69 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 70
-70 eliminated after reaching l = 167
+70 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 71
 71 eliminated after reaching l = 167
@@ -3417,47 +3462,48 @@ Considering d = 74
 74 eliminated after reaching l = 167
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 77
-77 eliminated after reaching l = 227
+77 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 78
-78 eliminated after reaching l = 103
+78 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 79
 79 eliminated after reaching l = 167
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 82
-82 eliminated after reaching l = 73
+82 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 83
 83 eliminated after reaching l = 193
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 85
-85 eliminated after reaching l = 83
+85 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 86
-86 eliminated after reaching l = 193
+86 eliminated after reaching l = 43
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 87
-87 eliminated after reaching l = 167
+87 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 89
 89 eliminated after reaching l = 211
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 91
-91 eliminated after reaching l = 83
+91 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 93
-93 eliminated after reaching l = 41
+93 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 94
 94 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 95
-95 eliminated after reaching l = 73
+95 eliminated after reaching l = 5
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 97
 97 eliminated after reaching l = 53
 ++++++++++++++++++++++++++++++++++++++++++++++++
+Maximum l used in sieve was l = 251
 {}
 { -67, -19, -2 }
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -3532,166 +3578,167 @@ Values of d that must fail sieve are:
  { -79, -1 }
 ++++++++++++++++++++++++
 Considering d = -97
--97 eliminated after reaching l = 7
+-97 eliminated after reaching l = 97
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -95
--95 eliminated after reaching l = 17
+-95 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -94
--94 eliminated after reaching l = 7
+-94 eliminated after reaching l = 47
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -93
--93 eliminated after reaching l = 37
+-93 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -91
 -91 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -89
--89 eliminated after reaching l = 31
+-89 eliminated after reaching l = 89
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -87
--87 eliminated after reaching l = 61
+-87 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -86
--86 eliminated after reaching l = 67
+-86 eliminated after reaching l = 43
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -85
--85 eliminated after reaching l = 41
+-85 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -83
--83 eliminated after reaching l = 67
+-83 eliminated after reaching l = 83
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -82
--82 eliminated after reaching l = 7
+-82 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -79
--79 is known to fail
+-79 has not been eliminated
+Expected, since it should fail
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -78
--78 eliminated after reaching l = 17
+-78 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -77
--77 eliminated after reaching l = 31
+-77 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -74
--74 eliminated after reaching l = 17
+-74 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -73
--73 eliminated after reaching l = 7
+-73 eliminated after reaching l = 73
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -71
--71 eliminated after reaching l = 17
+-71 eliminated after reaching l = 71
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -70
 -70 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -69
--69 eliminated after reaching l = 41
+-69 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -67
--67 eliminated after reaching l = 41
+-67 eliminated after reaching l = 67
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -66
--66 eliminated after reaching l = 73
+-66 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -65
 -65 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -62
--62 eliminated after reaching l = 37
+-62 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -61
--61 eliminated after reaching l = 7
+-61 eliminated after reaching l = 61
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -59
--59 eliminated after reaching l = 37
+-59 eliminated after reaching l = 59
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -58
--58 eliminated after reaching l = 97
+-58 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -57
--57 eliminated after reaching l = 17
+-57 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -55
--55 eliminated after reaching l = 7
+-55 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -53
--53 eliminated after reaching l = 41
+-53 eliminated after reaching l = 53
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -51
--51 eliminated after reaching l = 61
+-51 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -47
--47 eliminated after reaching l = 41
+-47 eliminated after reaching l = 47
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -46
--46 eliminated after reaching l = 37
+-46 eliminated after reaching l = 23
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -43
--43 eliminated after reaching l = 73
+-43 eliminated after reaching l = 43
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -42
--42 eliminated after reaching l = 109
+-42 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -41
--41 eliminated after reaching l = 37
+-41 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -39
--39 eliminated after reaching l = 17
+-39 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -38
--38 eliminated after reaching l = 37
+-38 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -37
--37 eliminated after reaching l = 41
+-37 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -35
--35 eliminated after reaching l = 41
+-35 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -34
--34 eliminated after reaching l = 7
+-34 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -33
--33 eliminated after reaching l = 61
+-33 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -31
--31 eliminated after reaching l = 7
+-31 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -30
--30 eliminated after reaching l = 41
+-30 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -29
--29 eliminated after reaching l = 17
+-29 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -26
 -26 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -23
--23 eliminated after reaching l = 17
+-23 eliminated after reaching l = 23
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -22
--22 eliminated after reaching l = 61
+-22 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -21
--21 eliminated after reaching l = 31
+-21 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -19
--19 eliminated after reaching l = 7
+-19 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -17
--17 eliminated after reaching l = 31
+-17 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -15
--15 eliminated after reaching l = 31
+-15 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -14
--14 eliminated after reaching l = 67
+-14 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -13
 -13 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -11
--11 eliminated after reaching l = 17
+-11 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -10
 -10 eliminated after reaching l = 7
@@ -3700,40 +3747,41 @@ Considering d = -7
 -7 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -6
--6 eliminated after reaching l = 61
+-6 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -5
 -5 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -3
--3 eliminated after reaching l = 31
+-3 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -2
 -2 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -1
--1 is known to fail
+-1 has not been eliminated
+Expected, since it should fail
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 2
 2 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 3
-3 eliminated after reaching l = 17
+3 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 5
 5 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 6
-6 eliminated after reaching l = 17
+6 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 7
-7 eliminated after reaching l = 67
+7 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 10
 10 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 11
-11 eliminated after reaching l = 7
+11 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 13
 13 eliminated after reaching l = 37
@@ -3742,40 +3790,40 @@ Considering d = 14
 14 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 15
-15 eliminated after reaching l = 41
+15 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 17
-17 eliminated after reaching l = 41
+17 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 19
-19 eliminated after reaching l = 31
+19 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 21
-21 eliminated after reaching l = 97
+21 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 22
-22 eliminated after reaching l = 73
+22 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 23
-23 eliminated after reaching l = 7
+23 eliminated after reaching l = 23
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 26
 26 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 29
-29 eliminated after reaching l = 7
+29 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 30
-30 eliminated after reaching l = 41
+30 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 31
-31 eliminated after reaching l = 17
+31 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 33
-33 eliminated after reaching l = 61
+33 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 34
-34 eliminated after reaching l = 41
+34 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 35
 35 eliminated after reaching l = 7
@@ -3784,46 +3832,46 @@ Considering d = 37
 37 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 38
-38 eliminated after reaching l = 41
+38 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 39
-39 eliminated after reaching l = 31
+39 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 41
 41 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 42
-42 eliminated after reaching l = 67
+42 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 43
-43 eliminated after reaching l = 37
+43 eliminated after reaching l = 43
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 46
-46 eliminated after reaching l = 37
+46 eliminated after reaching l = 23
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 47
-47 eliminated after reaching l = 41
+47 eliminated after reaching l = 47
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 51
-51 eliminated after reaching l = 37
+51 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 53
-53 eliminated after reaching l = 7
+53 eliminated after reaching l = 53
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 55
-55 eliminated after reaching l = 41
+55 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 57
-57 eliminated after reaching l = 37
+57 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 58
-58 eliminated after reaching l = 67
+58 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 59
-59 eliminated after reaching l = 73
+59 eliminated after reaching l = 59
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 61
-61 eliminated after reaching l = 17
+61 eliminated after reaching l = 61
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 62
 62 eliminated after reaching l = 31
@@ -3832,67 +3880,67 @@ Considering d = 65
 65 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 66
-66 eliminated after reaching l = 31
+66 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 67
-67 eliminated after reaching l = 37
+67 eliminated after reaching l = 67
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 69
-69 eliminated after reaching l = 31
+69 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 70
-70 eliminated after reaching l = 31
+70 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 71
-71 eliminated after reaching l = 7
+71 eliminated after reaching l = 71
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 73
-73 eliminated after reaching l = 17
+73 eliminated after reaching l = 73
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 74
-74 eliminated after reaching l = 7
+74 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 77
 77 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 78
-78 eliminated after reaching l = 41
+78 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 79
 79 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 82
-82 eliminated after reaching l = 17
+82 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 83
-83 eliminated after reaching l = 97
+83 eliminated after reaching l = 83
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 85
-85 eliminated after reaching l = 37
+85 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 86
-86 eliminated after reaching l = 7
+86 eliminated after reaching l = 43
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 87
-87 eliminated after reaching l = 37
+87 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 89
-89 eliminated after reaching l = 41
+89 eliminated after reaching l = 89
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 91
-91 eliminated after reaching l = 41
+91 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 93
-93 eliminated after reaching l = 41
+93 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 94
-94 eliminated after reaching l = 37
+94 eliminated after reaching l = 47
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 95
-95 eliminated after reaching l = 7
+95 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 97
-97 eliminated after reaching l = 17
+97 eliminated after reaching l = 97
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Sieving for the second case
 ++++++++++++++++++++++++
@@ -3900,166 +3948,167 @@ Values of d that must fail sieve are:
  { -79, -1 }
 ++++++++++++++++++++++++
 Considering d = -97
--97 eliminated after reaching l = 7
+-97 eliminated after reaching l = 97
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -95
--95 eliminated after reaching l = 17
+-95 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -94
--94 eliminated after reaching l = 7
+-94 eliminated after reaching l = 47
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -93
--93 eliminated after reaching l = 37
+-93 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -91
 -91 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -89
--89 eliminated after reaching l = 31
+-89 eliminated after reaching l = 89
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -87
--87 eliminated after reaching l = 61
+-87 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -86
--86 eliminated after reaching l = 67
+-86 eliminated after reaching l = 43
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -85
--85 eliminated after reaching l = 41
+-85 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -83
--83 eliminated after reaching l = 67
+-83 eliminated after reaching l = 83
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -82
--82 eliminated after reaching l = 7
+-82 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -79
--79 is known to fail
+-79 has not been eliminated
+Expected, since it should fail
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -78
--78 eliminated after reaching l = 17
+-78 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -77
--77 eliminated after reaching l = 31
+-77 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -74
--74 eliminated after reaching l = 17
+-74 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -73
--73 eliminated after reaching l = 7
+-73 eliminated after reaching l = 73
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -71
--71 eliminated after reaching l = 17
+-71 eliminated after reaching l = 71
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -70
 -70 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -69
--69 eliminated after reaching l = 41
+-69 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -67
--67 eliminated after reaching l = 41
+-67 eliminated after reaching l = 67
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -66
--66 eliminated after reaching l = 73
+-66 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -65
 -65 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -62
--62 eliminated after reaching l = 37
+-62 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -61
--61 eliminated after reaching l = 7
+-61 eliminated after reaching l = 61
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -59
--59 eliminated after reaching l = 37
+-59 eliminated after reaching l = 59
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -58
--58 eliminated after reaching l = 97
+-58 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -57
--57 eliminated after reaching l = 17
+-57 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -55
--55 eliminated after reaching l = 7
+-55 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -53
--53 eliminated after reaching l = 41
+-53 eliminated after reaching l = 53
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -51
--51 eliminated after reaching l = 61
+-51 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -47
--47 eliminated after reaching l = 41
+-47 eliminated after reaching l = 47
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -46
--46 eliminated after reaching l = 37
+-46 eliminated after reaching l = 23
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -43
--43 eliminated after reaching l = 73
+-43 eliminated after reaching l = 43
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -42
--42 eliminated after reaching l = 109
+-42 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -41
--41 eliminated after reaching l = 37
+-41 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -39
--39 eliminated after reaching l = 17
+-39 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -38
--38 eliminated after reaching l = 37
+-38 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -37
--37 eliminated after reaching l = 41
+-37 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -35
--35 eliminated after reaching l = 41
+-35 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -34
--34 eliminated after reaching l = 7
+-34 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -33
--33 eliminated after reaching l = 61
+-33 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -31
--31 eliminated after reaching l = 7
+-31 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -30
--30 eliminated after reaching l = 41
+-30 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -29
--29 eliminated after reaching l = 17
+-29 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -26
 -26 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -23
--23 eliminated after reaching l = 17
+-23 eliminated after reaching l = 23
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -22
--22 eliminated after reaching l = 61
+-22 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -21
--21 eliminated after reaching l = 31
+-21 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -19
--19 eliminated after reaching l = 7
+-19 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -17
--17 eliminated after reaching l = 31
+-17 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -15
--15 eliminated after reaching l = 31
+-15 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -14
--14 eliminated after reaching l = 67
+-14 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -13
 -13 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -11
--11 eliminated after reaching l = 17
+-11 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -10
 -10 eliminated after reaching l = 7
@@ -4068,40 +4117,41 @@ Considering d = -7
 -7 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -6
--6 eliminated after reaching l = 61
+-6 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -5
 -5 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -3
--3 eliminated after reaching l = 31
+-3 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -2
 -2 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = -1
--1 is known to fail
+-1 has not been eliminated
+Expected, since it should fail
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 2
 2 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 3
-3 eliminated after reaching l = 17
+3 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 5
 5 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 6
-6 eliminated after reaching l = 17
+6 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 7
-7 eliminated after reaching l = 67
+7 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 10
 10 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 11
-11 eliminated after reaching l = 7
+11 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 13
 13 eliminated after reaching l = 37
@@ -4110,40 +4160,40 @@ Considering d = 14
 14 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 15
-15 eliminated after reaching l = 41
+15 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 17
-17 eliminated after reaching l = 41
+17 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 19
-19 eliminated after reaching l = 31
+19 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 21
-21 eliminated after reaching l = 97
+21 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 22
-22 eliminated after reaching l = 73
+22 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 23
-23 eliminated after reaching l = 7
+23 eliminated after reaching l = 23
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 26
 26 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 29
-29 eliminated after reaching l = 7
+29 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 30
-30 eliminated after reaching l = 41
+30 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 31
-31 eliminated after reaching l = 17
+31 eliminated after reaching l = 31
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 33
-33 eliminated after reaching l = 61
+33 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 34
-34 eliminated after reaching l = 41
+34 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 35
 35 eliminated after reaching l = 7
@@ -4152,46 +4202,46 @@ Considering d = 37
 37 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 38
-38 eliminated after reaching l = 41
+38 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 39
-39 eliminated after reaching l = 31
+39 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 41
 41 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 42
-42 eliminated after reaching l = 67
+42 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 43
-43 eliminated after reaching l = 37
+43 eliminated after reaching l = 43
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 46
-46 eliminated after reaching l = 37
+46 eliminated after reaching l = 23
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 47
-47 eliminated after reaching l = 41
+47 eliminated after reaching l = 47
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 51
-51 eliminated after reaching l = 37
+51 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 53
-53 eliminated after reaching l = 7
+53 eliminated after reaching l = 53
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 55
-55 eliminated after reaching l = 41
+55 eliminated after reaching l = 11
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 57
-57 eliminated after reaching l = 37
+57 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 58
-58 eliminated after reaching l = 67
+58 eliminated after reaching l = 29
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 59
-59 eliminated after reaching l = 73
+59 eliminated after reaching l = 59
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 61
-61 eliminated after reaching l = 17
+61 eliminated after reaching l = 61
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 62
 62 eliminated after reaching l = 31
@@ -4200,69 +4250,954 @@ Considering d = 65
 65 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 66
-66 eliminated after reaching l = 31
+66 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 67
-67 eliminated after reaching l = 37
+67 eliminated after reaching l = 67
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 69
-69 eliminated after reaching l = 31
+69 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 70
-70 eliminated after reaching l = 31
+70 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 71
-71 eliminated after reaching l = 7
+71 eliminated after reaching l = 71
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 73
-73 eliminated after reaching l = 17
+73 eliminated after reaching l = 73
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 74
-74 eliminated after reaching l = 7
+74 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 77
 77 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 78
-78 eliminated after reaching l = 41
+78 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 79
 79 eliminated after reaching l = 37
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 82
-82 eliminated after reaching l = 17
+82 eliminated after reaching l = 41
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 83
-83 eliminated after reaching l = 97
+83 eliminated after reaching l = 83
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 85
-85 eliminated after reaching l = 37
+85 eliminated after reaching l = 17
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 86
-86 eliminated after reaching l = 7
+86 eliminated after reaching l = 43
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 87
-87 eliminated after reaching l = 37
+87 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 89
-89 eliminated after reaching l = 41
+89 eliminated after reaching l = 89
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 91
-91 eliminated after reaching l = 41
+91 eliminated after reaching l = 7
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 93
-93 eliminated after reaching l = 41
+93 eliminated after reaching l = 3
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 94
-94 eliminated after reaching l = 37
+94 eliminated after reaching l = 47
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 95
-95 eliminated after reaching l = 7
+95 eliminated after reaching l = 19
 ++++++++++++++++++++++++++++++++++++++++++++++++
 Considering d = 97
-97 eliminated after reaching l = 17
+97 eliminated after reaching l = 97
 ++++++++++++++++++++++++++++++++++++++++++++++++
+Maximum l used in sieve was l = 41
 {}
 { -79, -1 }
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////
+
+Output for example computations in Section 3:
+
+N = 53
+++++++++++++++++++++++++
+Basis of cusp forms used is:
+ [
+    q - q^2 - 3*q^3 - q^4 + 3*q^6 - 4*q^7 + 3*q^8 + 6*q^9 + O(q^12),
+    q + q^4 - q^6 + 2*q^7 - 2*q^8 - 2*q^9 - 2*q^10 + O(q^12),
+    q^2 - q^4 - q^5 - q^7 + q^9 + q^10 + q^11 + O(q^12),
+    q^3 - q^4 - q^5 - q^7 + q^8 + 3*q^9 + q^10 - q^11 + O(q^12)
+]
+++++++++++++++++++++++++
+The Atkin-Lehner involution w_N is:
+
+[ 1  0  0  0]
+[ 0 -1  0  0]
+[ 0  0 -1  0]
+[ 0  0  0 -1]
+++++++++++++++++++++++++
+X is:
+ Curve over Rational Field defined by
+x[1]^2 - x[2]^2 + 2*x[2]*x[3] - 6*x[2]*x[4] + 11*x[3]^2 - 6*x[3]*x[4] - x[4]^2,
+x[1]^3 - x[1]*x[2]^2 + 2*x[1]*x[2]*x[3] - 6*x[1]*x[2]*x[4] + 11*x[1]*x[3]^2 -
+    6*x[1]*x[3]*x[4] - x[1]*x[4]^2,
+x[1]^2*x[2] - x[2]^3 + 2*x[2]^2*x[3] + 5*x[2]*x[3]^2 + 5*x[2]*x[4]^2 -
+    6*x[3]^2*x[4] + 6*x[4]^3,
+x[1]^2*x[3] - x[2]^2*x[3] + 2*x[2]*x[3]^2 - 6*x[2]*x[3]*x[4] + 11*x[3]^3 -
+    6*x[3]^2*x[4] - x[3]*x[4]^2,
+x[1]^2*x[4] - x[2]*x[3]^2 + 3*x[2]*x[3]*x[4] - 5*x[2]*x[4]^2 + 10*x[3]^2*x[4] -
+    6*x[3]*x[4]^2,
+x[2]^2*x[4] - x[2]*x[3]^2 + x[2]*x[3]*x[4] + x[2]*x[4]^2 - x[3]^2*x[4] + x[4]^3
+++++++++++++++++++++++++
+E is:
+ Elliptic Curve defined by y^2 + x*y + y = x^3 - x^2 over Rational Field
+++++++++++++++++++++++++
+The map psi is:
+ Mapping from: Crv: X to CrvEll: E
+Composition of Mapping from: Crv: X to Curve over Rational Field defined by
+y[1]*y[2]^2 - y[1]^2*y[3] - y[1]*y[2]*y[3] + y[2]^2*y[3] - y[1]*y[3]^2 - y[3]^3
+with equations :
+x[2]
+x[3]
+x[4] and
+Mapping from: Curve over Rational Field defined by
+y[1]*y[2]^2 - y[1]^2*y[3] - y[1]*y[2]*y[3] + y[2]^2*y[3] - y[1]*y[3]^2 - y[3]^3
+to Elliptic Curve defined by y^2 = x^3 + 9*x^2 + 32*x + 64 over Rational Field
+with equations :
+4*y[1]*y[2]
+8*y[1]^2 + 4*y[1]*y[2] + 8*y[1]*y[3] + 8*y[3]^2
+y[2]*y[3] and
+Elliptic curve isomorphism from: Elliptic Curve defined by y^2 = x^3 + 9*x^2 +
+32*x + 64 over Rational Field to CrvEll: E
+Taking (x : y : 1) to (1/4*x + 1 : 1/8*y - 1/8*x - 1 : 1)
+++++++++++++++++++++++++++++++++++++++++++++++++
+The point R = (0 : -1 : 1) generates E(Q)
+++++++++++++++++++++++++
+Primes l to use in sieve are:
+ [ 3, 5, 7, 11, 17, 19, 31, 41, 47, 61, 67, 79, 103, 137, 139, 157, 167, 193,
+197, 199, 239, 307, 313, 317, 347, 373, 389, 419, 433, 457, 521, 571, 587, 599,
+607, 613, 631, 659, 733, 947 ]
+++++++++++++++++++++++++
+Known d computed are:
+When t =  -5 d =  2321
+When t =  -4 d =  -1759
+When t =  -3 d =  -43
+When t =  -2 d =  -1
+When t =  -1 d =  -7
+When t =  0 d =  1
+When t =  1 d =  -11
+When t =  2 d =  -1
+When t =  3 d =  -7
+When t =  4 d =  -271
+When t =  5 d =  -163
+Values of d that must fail sieve are:
+ { -43, -11, -7, -1 }
+++++++++++++++++++++++++
+Considering d = -47
+Including l in []
+Starting sieve
+Using l = 47
+Ramified
+Order Gl = 25
+Surviving ms mod Gl are:
+ [ 13, 17 ]
+Carrying out CRT step
+Completed CRT, 2 possible sequences remaining
+++++++++++++++++++++++++
+Using l = 3
+Splits
+Order Gl = 7
+Surviving ms mod Gl are:
+ [ 0, 1 ]
+Carrying out CRT step
+Completed CRT, 4 possible sequences remaining
+Possible values of m mod 175 are:
+ [ 42, 63, 92, 113 ]
+++++++++++++++++++++++++
+Using l = 5
+Inert
+Order Gl = 6
+Surviving ms mod Gl are:
+ [ 3, 5 ]
+Carrying out CRT step
+Completed CRT, 8 possible sequences remaining
+Possible values of m mod 1050 are:
+ [ 63, 113, 267, 413, 567, 617, 813, 917 ]
+++++++++++++++++++++++++
+Using l = 7
+Splits
+Order Gl = 12
+Surviving ms mod Gl are:
+ [ 0, 3, 4, 7, 11 ]
+Carrying out CRT step
+Completed CRT, 8 possible sequences remaining
+Possible values of m mod 2100 are:
+ [ 63, 267, 567, 1163, 1463, 1667, 1863, 1967 ]
+++++++++++++++++++++++++
+Using l = 11
+Inert
+Order Gl = 12
+Surviving ms mod Gl are:
+ [ 1, 2, 5, 7, 10 ]
+Carrying out CRT step
+Completed CRT, 0 possible sequences remaining
+-47 eliminated after reaching l = 11
+++++++++++++++++++++++++++++++++++++++++++++++++
+Considering d = 3
+Including l in []
+Starting sieve
+Using l = 3
+Ramified
+Order Gl = 7
+Surviving ms mod Gl are:
+ []
+Carrying out CRT step
+Completed CRT, 0 possible sequences remaining
+++++++++++++++++++++++++
+3 eliminated after reaching l = 3
+++++++++++++++++++++++++++++++++++++++++++++++++
+Considering d = -11
+Including l in []
+Starting sieve
+Using l = 11
+Ramified
+Order Gl = 12
+Surviving ms mod Gl are:
+ [ 1, 7 ]
+Carrying out CRT step
+Completed CRT, 2 possible sequences remaining
+++++++++++++++++++++++++
+Using l = 3
+Splits
+Order Gl = 7
+Surviving ms mod Gl are:
+ [ 0, 1 ]
+Carrying out CRT step
+Completed CRT, 4 possible sequences remaining
+Possible values of m mod 84 are:
+ [ 1, 7, 43, 49 ]
+++++++++++++++++++++++++
+Using l = 5
+Splits
+Order Gl = 6
+Surviving ms mod Gl are:
+ [ 0, 1, 2, 4 ]
+Carrying out CRT step
+Completed CRT, 4 possible sequences remaining
+Possible values of m mod 84 are:
+ [ 1, 7, 43, 49 ]
+++++++++++++++++++++++++
+Using l = 7
+Inert
+Order Gl = 12
+Surviving ms mod Gl are:
+ [ 1, 2, 3, 5, 6, 8, 9, 10, 11 ]
+Carrying out CRT step
+Completed CRT, 2 possible sequences remaining
+Possible values of m mod 84 are:
+ [ 1, 49 ]
+++++++++++++++++++++++++
+Using l = 17
+Inert
+Order Gl = 21
+Surviving ms mod Gl are:
+ [ 1, 3, 5, 10, 11, 13, 14, 20 ]
+Carrying out CRT step
+Completed CRT, 1 possible sequences remaining
+Possible values of m mod 84 are:
+ [ 1 ]
+++++++++++++++++++++++++
+Using l = 19
+Inert
+Order Gl = 25
+Surviving ms mod Gl are:
+ [ 1, 2, 3, 4, 5, 7, 9, 11, 12, 14, 15, 17, 19, 20, 21, 22, 23, 24 ]
+Carrying out CRT step
+Completed CRT, 18 possible sequences remaining
+Possible values of m mod 2100 are:
+ [ 1, 169, 253, 337, 421, 505, 589, 673, 757, 1009, 1177, 1261, 1345, 1429,
+1597, 1765, 1849, 2017 ]
+++++++++++++++++++++++++
+Using l = 31
+Splits
+Order Gl = 14
+Surviving ms mod Gl are:
+ [ 0, 1, 4, 7, 8, 10, 11 ]
+Carrying out CRT step
+Completed CRT, 18 possible sequences remaining
+Possible values of m mod 2100 are:
+ [ 1, 169, 253, 337, 421, 505, 589, 673, 757, 1009, 1177, 1261, 1345, 1429,
+1597, 1765, 1849, 2017 ]
+++++++++++++++++++++++++
+Using l = 41
+Inert
+Order Gl = 9
+Surviving ms mod Gl are:
+ [ 1, 3, 8 ]
+Carrying out CRT step
+Completed CRT, 18 possible sequences remaining
+Possible values of m mod 6300 are:
+ [ 1, 253, 505, 757, 1009, 1261, 1765, 2017, 2269, 2521, 2773, 3277, 3529, 4537,
+4789, 5545, 5797, 6049 ]
+++++++++++++++++++++++++
+Using l = 47
+Splits
+Order Gl = 25
+Surviving ms mod Gl are:
+ [ 0, 1, 5, 6, 7, 8, 11, 13, 15, 16, 17, 20, 21, 22 ]
+Carrying out CRT step
+Completed CRT, 9 possible sequences remaining
+Possible values of m mod 6300 are:
+ [ 1, 505, 757, 1261, 1765, 2017, 2521, 5545, 5797 ]
+++++++++++++++++++++++++
+Using l = 61
+Inert
+Order Gl = 10
+Surviving ms mod Gl are:
+ [ 1, 3, 6, 7, 9 ]
+Carrying out CRT step
+Completed CRT, 6 possible sequences remaining
+Possible values of m mod 6300 are:
+ [ 1, 757, 1261, 2017, 2521, 5797 ]
+++++++++++++++++++++++++
+Using l = 67
+Splits
+Order Gl = 20
+Surviving ms mod Gl are:
+ [ 0, 1, 3, 4, 9, 10, 13, 17, 19 ]
+Carrying out CRT step
+Completed CRT, 6 possible sequences remaining
+Possible values of m mod 6300 are:
+ [ 1, 757, 1261, 2017, 2521, 5797 ]
+++++++++++++++++++++++++
+Using l = 79
+Inert
+Order Gl = 81
+Surviving ms mod Gl are:
+ [ 1, 2, 5, 6, 7, 8, 9, 10, 11, 15, 19, 20, 23, 26, 30, 34, 36, 39, 43, 44, 45,
+50, 54, 55, 56, 57, 58, 59, 61, 64, 66, 67, 73, 75, 76, 77, 79 ]
+Carrying out CRT step
+Completed CRT, 36 possible sequences remaining
+Possible values of m mod 56700 are:
+ [ 1, 2017, 2521, 6301, 7057, 8317, 8821, 13357, 13861, 15121, 18397, 19657,
+20161, 20917, 24697, 25201, 26461, 27217, 27721, 30997, 31501, 32257, 33517,
+34021, 37801, 38557, 39061, 40321, 43597, 44857, 45361, 49897, 50401, 51661,
+52417, 56197 ]
+++++++++++++++++++++++++
+Using l = 103
+Splits
+Order Gl = 105
+Surviving ms mod Gl are:
+ [ 0, 1, 4, 6, 7, 9, 18, 19, 22, 24, 29, 32, 33, 35, 38, 40, 46, 49, 50, 51, 52,
+54, 55, 57, 58, 59, 62, 63, 64, 65, 66, 67, 68, 71, 72, 73, 74, 84, 85, 88, 89,
+92, 93, 95, 98, 100, 102 ]
+Carrying out CRT step
+Completed CRT, 36 possible sequences remaining
+Possible values of m mod 56700 are:
+ [ 1, 2017, 2521, 6301, 7057, 8317, 8821, 13357, 13861, 15121, 18397, 19657,
+20161, 20917, 24697, 25201, 26461, 27217, 27721, 30997, 31501, 32257, 33517,
+34021, 37801, 38557, 39061, 40321, 43597, 44857, 45361, 49897, 50401, 51661,
+52417, 56197 ]
+++++++++++++++++++++++++
+Using l = 137
+Splits
+Order Gl = 42
+Surviving ms mod Gl are:
+ [ 0, 1, 2, 3, 8, 9, 11, 12, 16, 17, 19, 21, 24, 25, 29, 34, 35, 37, 38, 40, 41
+]
+Carrying out CRT step
+Completed CRT, 36 possible sequences remaining
+Possible values of m mod 56700 are:
+ [ 1, 2017, 2521, 6301, 7057, 8317, 8821, 13357, 13861, 15121, 18397, 19657,
+20161, 20917, 24697, 25201, 26461, 27217, 27721, 30997, 31501, 32257, 33517,
+34021, 37801, 38557, 39061, 40321, 43597, 44857, 45361, 49897, 50401, 51661,
+52417, 56197 ]
+++++++++++++++++++++++++
+Using l = 139
+Inert
+Order Gl = 40
+Surviving ms mod Gl are:
+ [ 1, 2, 3, 5, 6, 8, 9, 10, 12, 13, 16, 17, 21, 23, 24, 25, 26, 32, 34, 35, 36,
+38, 39 ]
+Carrying out CRT step
+Completed CRT, 54 possible sequences remaining
+Possible values of m mod 113400 are:
+ [ 1, 2017, 2521, 6301, 7057, 8821, 13861, 15121, 19657, 20161, 24697, 25201,
+26461, 27217, 27721, 31501, 32257, 34021, 37801, 39061, 40321, 44857, 45361,
+49897, 50401, 51661, 52417, 56701, 59221, 63001, 65017, 65521, 70057, 70561,
+71821, 75097, 76861, 77617, 81901, 83161, 84421, 87697, 88201, 90217, 90721,
+94501, 95257, 95761, 97021, 100297, 102061, 107101, 108361, 112897 ]
+++++++++++++++++++++++++
+Using l = 157
+Splits
+Order Gl = 162
+Surviving ms mod Gl are:
+ [ 0, 1, 2, 7, 9, 10, 13, 20, 22, 23, 24, 25, 27, 30, 38, 42, 45, 50, 52, 54,
+55, 56, 57, 61, 62, 63, 65, 66, 69, 73, 74, 75, 77, 78, 80, 84, 88, 92, 94, 100,
+101, 102, 103, 105, 106, 107, 112, 113, 116, 117, 119, 121, 122, 126, 128, 129,
+131, 135, 137, 138, 139, 141, 144, 146, 147, 152, 153, 160 ]
+Carrying out CRT step
+Completed CRT, 27 possible sequences remaining
+Possible values of m mod 113400 are:
+ [ 1, 2017, 8821, 15121, 19657, 20161, 24697, 26461, 27217, 31501, 34021, 37801,
+45361, 49897, 56701, 65017, 65521, 70057, 71821, 76861, 83161, 87697, 88201,
+90721, 94501, 95257, 102061 ]
+++++++++++++++++++++++++
+Using l = 167
+Inert
+Order Gl = 49
+Surviving ms mod Gl are:
+ [ 1, 2, 3, 6, 7, 8, 9, 10, 11, 15, 21, 22, 23, 25, 27, 28, 29, 31, 32, 33, 35,
+37, 38, 45, 47, 48 ]
+Carrying out CRT step
+Completed CRT, 135 possible sequences remaining
+Possible values of m mod 793800 are:
+ [ 1, 2017, 8821, 15121, 19657, 20161, 24697, 26461, 27217, 34021, 37801, 49897,
+56701, 65521, 76861, 83161, 88201, 90721, 94501, 95257, 113401, 115417, 122221,
+133057, 138097, 139861, 144901, 147421, 158761, 163297, 170101, 178417, 178921,
+183457, 185221, 196561, 201097, 201601, 208657, 215461, 226801, 235621, 241921,
+246961, 251497, 253261, 254017, 258301, 264601, 272161, 291817, 296857, 298621,
+303661, 314497, 315001, 317521, 321301, 322057, 328861, 342217, 355321, 359857,
+360361, 367417, 374221, 378001, 385561, 390097, 396901, 405721, 410257, 412021,
+417061, 423361, 427897, 430921, 434701, 453601, 455617, 462421, 473257, 473761,
+478297, 480061, 480817, 485101, 487621, 491401, 503497, 510301, 518617, 519121,
+536761, 541801, 544321, 548857, 555661, 567001, 569017, 575821, 582121, 586657,
+591697, 593461, 598501, 612361, 623701, 632017, 632521, 637057, 638821, 643861,
+650161, 654697, 655201, 661501, 662257, 669061, 695521, 700561, 707617, 711901,
+714421, 718201, 725761, 730297, 745417, 750457, 752221, 757261, 768097, 771121,
+774901, 782461 ]
+++++++++++++++++++++++++
+Using l = 193
+Inert
+Order Gl = 210
+Surviving ms mod Gl are:
+ [ 1, 4, 5, 7, 10, 11, 12, 14, 16, 17, 19, 22, 23, 26, 27, 29, 32, 33, 34, 35,
+36, 38, 39, 40, 41, 42, 44, 45, 46, 49, 52, 54, 56, 57, 58, 60, 61, 63, 65, 69,
+70, 72, 73, 74, 75, 77, 79, 81, 82, 83, 87, 88, 90, 91, 92, 94, 95, 97, 99, 100,
+101, 102, 105, 106, 108, 109, 110, 112, 119, 120, 122, 127, 128, 131, 132, 134,
+137, 138, 140, 146, 147, 148, 149, 150, 152, 157, 158, 159, 161, 162, 163, 165,
+166, 167, 168, 169, 170, 172, 175, 178, 179, 181, 183, 184, 186, 190, 192, 196,
+197, 200, 203, 204, 205, 206 ]
+Carrying out CRT step
+Completed CRT, 135 possible sequences remaining
+Possible values of m mod 793800 are:
+ [ 1, 2017, 8821, 15121, 19657, 20161, 24697, 26461, 27217, 34021, 37801, 49897,
+56701, 65521, 76861, 83161, 88201, 90721, 94501, 95257, 113401, 115417, 122221,
+133057, 138097, 139861, 144901, 147421, 158761, 163297, 170101, 178417, 178921,
+183457, 185221, 196561, 201097, 201601, 208657, 215461, 226801, 235621, 241921,
+246961, 251497, 253261, 254017, 258301, 264601, 272161, 291817, 296857, 298621,
+303661, 314497, 315001, 317521, 321301, 322057, 328861, 342217, 355321, 359857,
+360361, 367417, 374221, 378001, 385561, 390097, 396901, 405721, 410257, 412021,
+417061, 423361, 427897, 430921, 434701, 453601, 455617, 462421, 473257, 473761,
+478297, 480061, 480817, 485101, 487621, 491401, 503497, 510301, 518617, 519121,
+536761, 541801, 544321, 548857, 555661, 567001, 569017, 575821, 582121, 586657,
+591697, 593461, 598501, 612361, 623701, 632017, 632521, 637057, 638821, 643861,
+650161, 654697, 655201, 661501, 662257, 669061, 695521, 700561, 707617, 711901,
+714421, 718201, 725761, 730297, 745417, 750457, 752221, 757261, 768097, 771121,
+774901, 782461 ]
+++++++++++++++++++++++++
+Using l = 197
+Inert
+Order Gl = 54
+Surviving ms mod Gl are:
+ [ 1, 4, 9, 10, 11, 12, 15, 17, 18, 19, 20, 22, 26, 27, 28, 29, 30, 31, 33, 37,
+40, 41, 44, 46, 47, 48, 50 ]
+Carrying out CRT step
+Completed CRT, 135 possible sequences remaining
+Possible values of m mod 793800 are:
+ [ 1, 2017, 8821, 15121, 19657, 20161, 24697, 26461, 27217, 34021, 37801, 49897,
+56701, 65521, 76861, 83161, 88201, 90721, 94501, 95257, 113401, 115417, 122221,
+133057, 138097, 139861, 144901, 147421, 158761, 163297, 170101, 178417, 178921,
+183457, 185221, 196561, 201097, 201601, 208657, 215461, 226801, 235621, 241921,
+246961, 251497, 253261, 254017, 258301, 264601, 272161, 291817, 296857, 298621,
+303661, 314497, 315001, 317521, 321301, 322057, 328861, 342217, 355321, 359857,
+360361, 367417, 374221, 378001, 385561, 390097, 396901, 405721, 410257, 412021,
+417061, 423361, 427897, 430921, 434701, 453601, 455617, 462421, 473257, 473761,
+478297, 480061, 480817, 485101, 487621, 491401, 503497, 510301, 518617, 519121,
+536761, 541801, 544321, 548857, 555661, 567001, 569017, 575821, 582121, 586657,
+591697, 593461, 598501, 612361, 623701, 632017, 632521, 637057, 638821, 643861,
+650161, 654697, 655201, 661501, 662257, 669061, 695521, 700561, 707617, 711901,
+714421, 718201, 725761, 730297, 745417, 750457, 752221, 757261, 768097, 771121,
+774901, 782461 ]
+++++++++++++++++++++++++
+Using l = 199
+Splits
+Order Gl = 196
+Surviving ms mod Gl are:
+ [ 0, 1, 5, 9, 10, 12, 13, 14, 16, 17, 20, 21, 22, 23, 24, 26, 28, 30, 31, 32,
+35, 37, 38, 39, 41, 43, 44, 46, 47, 48, 49, 51, 55, 56, 57, 58, 59, 61, 62, 63,
+64, 66, 67, 69, 70, 71, 72, 73, 74, 75, 76, 77, 80, 84, 85, 86, 87, 88, 90, 91,
+93, 94, 96, 99, 100, 101, 102, 103, 104, 105, 108, 109, 111, 115, 116, 117, 119,
+120, 121, 122, 123, 124, 127, 130, 131, 132, 133, 135, 137, 139, 140, 141, 144,
+146, 148, 150, 151, 156, 158, 159, 161, 162, 163, 164, 168, 169, 174, 176, 177,
+178, 179, 181, 183, 184, 185, 187, 188, 189, 190, 191, 192 ]
+Carrying out CRT step
+Completed CRT, 81 possible sequences remaining
+Possible values of m mod 793800 are:
+ [ 1, 2017, 8821, 19657, 20161, 24697, 26461, 27217, 37801, 56701, 65521, 83161,
+88201, 90721, 95257, 115417, 133057, 144901, 158761, 170101, 178417, 178921,
+183457, 185221, 196561, 201097, 215461, 241921, 246961, 254017, 258301, 264601,
+291817, 303661, 317521, 321301, 328861, 342217, 355321, 359857, 374221, 390097,
+396901, 405721, 417061, 423361, 434701, 453601, 462421, 478297, 480061, 485101,
+487621, 503497, 518617, 541801, 548857, 555661, 567001, 575821, 582121, 591697,
+593461, 612361, 637057, 638821, 643861, 654697, 655201, 661501, 662257, 700561,
+707617, 714421, 718201, 725761, 730297, 750457, 752221, 768097, 771121 ]
+++++++++++++++++++++++++
+Using l = 239
+Inert
+Order Gl = 30
+Surviving ms mod Gl are:
+ [ 1, 2, 4, 5, 9, 10, 13, 15, 17, 18, 19, 20, 28 ]
+Carrying out CRT step
+Completed CRT, 54 possible sequences remaining
+Possible values of m mod 793800 are:
+ [ 1, 8821, 20161, 26461, 37801, 56701, 65521, 83161, 88201, 90721, 144901,
+158761, 170101, 178921, 185221, 196561, 215461, 241921, 246961, 258301, 264601,
+303661, 317521, 321301, 328861, 355321, 374221, 396901, 405721, 417061, 423361,
+434701, 453601, 462421, 480061, 485101, 487621, 541801, 555661, 567001, 575821,
+582121, 593461, 612361, 638821, 643861, 655201, 661501, 700561, 714421, 718201,
+725761, 752221, 771121 ]
+++++++++++++++++++++++++
+Using l = 307
+Inert
+Order Gl = 162
+Surviving ms mod Gl are:
+ [ 1, 2, 3, 9, 10, 11, 14, 21, 22, 23, 25, 26, 27, 29, 36, 37, 38, 39, 41, 49,
+50, 52, 53, 54, 56, 57, 59, 60, 61, 63, 64, 68, 69, 70, 72, 73, 74, 75, 76, 77,
+78, 81, 83, 84, 85, 88, 89, 90, 92, 93, 97, 99, 100, 101, 102, 105, 106, 107,
+110, 112, 114, 115, 116, 118, 120, 122, 123, 124, 126, 127, 129, 130, 131, 132,
+133, 136, 137, 141, 142, 144, 145, 146, 148, 152, 153, 156, 157, 160, 161 ]
+Carrying out CRT step
+Completed CRT, 36 possible sequences remaining
+Possible values of m mod 793800 are:
+ [ 1, 8821, 20161, 56701, 65521, 88201, 90721, 144901, 158761, 170101, 178921,
+215461, 246961, 258301, 303661, 317521, 328861, 374221, 396901, 405721, 417061,
+453601, 462421, 485101, 487621, 541801, 555661, 567001, 575821, 612361, 643861,
+655201, 700561, 714421, 725761, 771121 ]
+++++++++++++++++++++++++
+Using l = 313
+Splits
+Order Gl = 320
+Surviving ms mod Gl are:
+ [ 0, 1, 2, 5, 7, 9, 10, 11, 12, 14, 15, 17, 18, 20, 22, 25, 27, 28, 30, 31, 34,
+36, 39, 45, 47, 49, 53, 54, 57, 58, 60, 62, 63, 64, 65, 66, 67, 68, 69, 73, 75,
+76, 79, 80, 81, 82, 83, 87, 89, 92, 93, 96, 97, 98, 100, 101, 102, 103, 104,
+106, 108, 109, 110, 111, 113, 114, 115, 120, 121, 122, 123, 125, 129, 130, 131,
+132, 133, 137, 138, 139, 143, 144, 145, 146, 148, 151, 153, 155, 157, 158, 160,
+161, 164, 165, 168, 169, 174, 177, 180, 181, 185, 186, 187, 189, 191, 192, 193,
+194, 196, 197, 198, 199, 203, 204, 205, 206, 208, 210, 212, 213, 214, 217, 218,
+219, 220, 221, 222, 226, 228, 229, 230, 231, 233, 234, 235, 236, 239, 245, 248,
+249, 255, 258, 260, 261, 262, 264, 265, 268, 272, 281, 283, 290, 292, 296, 297,
+299, 301, 303, 307, 308, 309, 311, 316, 318 ]
+Carrying out CRT step
+Completed CRT, 180 possible sequences remaining
+Possible values of m mod 6350400 are:
+ [ 1, 8821, 20161, 90721, 144901, 170101, 215461, 303661, 317521, 328861,
+396901, 405721, 417061, 453601, 485101, 487621, 567001, 655201, 700561, 714421,
+725761, 850501, 859321, 882001, 1009261, 1040761, 1052101, 1097461, 1111321,
+1122661, 1190701, 1199521, 1210861, 1256221, 1278901, 1360801, 1406161, 1437661,
+1494361, 1564921, 1587601, 1596421, 1607761, 1653121, 1675801, 1746361, 1757701,
+1766521, 1803061, 1834561, 1905121, 1916461, 1961821, 1984501, 2004661, 2050021,
+2129401, 2143261, 2163421, 2199961, 2231461, 2288161, 2302021, 2313361, 2358721,
+2381401, 2401561, 2469601, 2472121, 2526301, 2540161, 2560321, 2685061, 2710261,
+2755621, 2835001, 2843821, 2866501, 2869021, 2923201, 2937061, 2957221, 2993761,
+3025261, 3036601, 3107161, 3175201, 3195361, 3231901, 3240721, 3265921, 3320101,
+3390661, 3422161, 3433501, 3549421, 3572101, 3580921, 3592261, 3628801, 3637621,
+3662821, 3730861, 3742201, 3751021, 3819061, 3830401, 3900961, 3946321, 3977821,
+4025701, 4034521, 4113901, 4127761, 4139101, 4147921, 4215961, 4227301, 4286521,
+4297861, 4343221, 4374721, 4456621, 4510801, 4524661, 4536001, 4544821, 4669561,
+4683421, 4740121, 4771621, 4819501, 4828321, 4851001, 4853521, 4907701, 4921561,
+4932901, 4941721, 5009761, 5021101, 5066461, 5080321, 5216401, 5225221, 5247901,
+5250421, 5304601, 5375161, 5406661, 5418001, 5463361, 5477221, 5533921, 5556601,
+5565421, 5576761, 5613301, 5644801, 5647321, 5715361, 5726701, 5735521, 5772061,
+5814901, 5860261, 5930821, 5953501, 5962321, 5973661, 6010201, 6041701, 6098401,
+6112261, 6123601, 6132421, 6168961, 6211801, 6271021, 6282361 ]
+++++++++++++++++++++++++
+Using l = 317
+Splits
+Order Gl = 105
+Surviving ms mod Gl are:
+ [ 0, 1, 2, 3, 6, 13, 14, 15, 16, 17, 19, 21, 27, 29, 32, 34, 35, 37, 38, 39,
+41, 42, 43, 47, 49, 51, 57, 58, 59, 60, 61, 65, 66, 67, 68, 70, 71, 74, 75, 76,
+77, 78, 80, 81, 83, 84, 85, 87, 88, 89, 90, 92, 93, 94, 95, 96, 97, 98, 102,
+103, 104 ]
+Carrying out CRT step
+Completed CRT, 180 possible sequences remaining
+Possible values of m mod 6350400 are:
+ [ 1, 8821, 20161, 90721, 144901, 170101, 215461, 303661, 317521, 328861,
+396901, 405721, 417061, 453601, 485101, 487621, 567001, 655201, 700561, 714421,
+725761, 850501, 859321, 882001, 1009261, 1040761, 1052101, 1097461, 1111321,
+1122661, 1190701, 1199521, 1210861, 1256221, 1278901, 1360801, 1406161, 1437661,
+1494361, 1564921, 1587601, 1596421, 1607761, 1653121, 1675801, 1746361, 1757701,
+1766521, 1803061, 1834561, 1905121, 1916461, 1961821, 1984501, 2004661, 2050021,
+2129401, 2143261, 2163421, 2199961, 2231461, 2288161, 2302021, 2313361, 2358721,
+2381401, 2401561, 2469601, 2472121, 2526301, 2540161, 2560321, 2685061, 2710261,
+2755621, 2835001, 2843821, 2866501, 2869021, 2923201, 2937061, 2957221, 2993761,
+3025261, 3036601, 3107161, 3175201, 3195361, 3231901, 3240721, 3265921, 3320101,
+3390661, 3422161, 3433501, 3549421, 3572101, 3580921, 3592261, 3628801, 3637621,
+3662821, 3730861, 3742201, 3751021, 3819061, 3830401, 3900961, 3946321, 3977821,
+4025701, 4034521, 4113901, 4127761, 4139101, 4147921, 4215961, 4227301, 4286521,
+4297861, 4343221, 4374721, 4456621, 4510801, 4524661, 4536001, 4544821, 4669561,
+4683421, 4740121, 4771621, 4819501, 4828321, 4851001, 4853521, 4907701, 4921561,
+4932901, 4941721, 5009761, 5021101, 5066461, 5080321, 5216401, 5225221, 5247901,
+5250421, 5304601, 5375161, 5406661, 5418001, 5463361, 5477221, 5533921, 5556601,
+5565421, 5576761, 5613301, 5644801, 5647321, 5715361, 5726701, 5735521, 5772061,
+5814901, 5860261, 5930821, 5953501, 5962321, 5973661, 6010201, 6041701, 6098401,
+6112261, 6123601, 6132421, 6168961, 6211801, 6271021, 6282361 ]
+++++++++++++++++++++++++
+Using l = 347
+Inert
+Order Gl = 189
+Surviving ms mod Gl are:
+ [ 1, 2, 4, 6, 7, 8, 9, 11, 15, 16, 18, 21, 23, 25, 29, 30, 31, 34, 35, 37, 40,
+41, 42, 43, 46, 48, 49, 53, 54, 56, 57, 60, 61, 62, 63, 67, 70, 71, 72, 73, 75,
+78, 79, 83, 86, 88, 91, 93, 94, 95, 98, 99, 102, 103, 105, 107, 108, 109, 110,
+111, 113, 114, 116, 117, 119, 120, 126, 127, 128, 129, 133, 134, 136, 137, 139,
+140, 141, 142, 147, 148, 151, 152, 153, 155, 157, 159, 160, 161, 164, 165, 167,
+168, 170, 174, 175, 176, 181, 182, 183, 184, 186, 187 ]
+Carrying out CRT step
+Completed CRT, 180 possible sequences remaining
+Possible values of m mod 6350400 are:
+ [ 1, 8821, 20161, 90721, 144901, 170101, 215461, 303661, 317521, 328861,
+396901, 405721, 417061, 453601, 485101, 487621, 567001, 655201, 700561, 714421,
+725761, 850501, 859321, 882001, 1009261, 1040761, 1052101, 1097461, 1111321,
+1122661, 1190701, 1199521, 1210861, 1256221, 1278901, 1360801, 1406161, 1437661,
+1494361, 1564921, 1587601, 1596421, 1607761, 1653121, 1675801, 1746361, 1757701,
+1766521, 1803061, 1834561, 1905121, 1916461, 1961821, 1984501, 2004661, 2050021,
+2129401, 2143261, 2163421, 2199961, 2231461, 2288161, 2302021, 2313361, 2358721,
+2381401, 2401561, 2469601, 2472121, 2526301, 2540161, 2560321, 2685061, 2710261,
+2755621, 2835001, 2843821, 2866501, 2869021, 2923201, 2937061, 2957221, 2993761,
+3025261, 3036601, 3107161, 3175201, 3195361, 3231901, 3240721, 3265921, 3320101,
+3390661, 3422161, 3433501, 3549421, 3572101, 3580921, 3592261, 3628801, 3637621,
+3662821, 3730861, 3742201, 3751021, 3819061, 3830401, 3900961, 3946321, 3977821,
+4025701, 4034521, 4113901, 4127761, 4139101, 4147921, 4215961, 4227301, 4286521,
+4297861, 4343221, 4374721, 4456621, 4510801, 4524661, 4536001, 4544821, 4669561,
+4683421, 4740121, 4771621, 4819501, 4828321, 4851001, 4853521, 4907701, 4921561,
+4932901, 4941721, 5009761, 5021101, 5066461, 5080321, 5216401, 5225221, 5247901,
+5250421, 5304601, 5375161, 5406661, 5418001, 5463361, 5477221, 5533921, 5556601,
+5565421, 5576761, 5613301, 5644801, 5647321, 5715361, 5726701, 5735521, 5772061,
+5814901, 5860261, 5930821, 5953501, 5962321, 5973661, 6010201, 6041701, 6098401,
+6112261, 6123601, 6132421, 6168961, 6211801, 6271021, 6282361 ]
+++++++++++++++++++++++++
+Using l = 373
+Inert
+Order Gl = 384
+Surviving ms mod Gl are:
+ [ 1, 4, 10, 11, 12, 13, 15, 18, 19, 21, 22, 23, 25, 26, 27, 29, 30, 31, 34, 35,
+38, 40, 41, 44, 46, 47, 48, 49, 50, 51, 52, 53, 55, 56, 59, 60, 61, 64, 66, 67,
+68, 73, 74, 76, 78, 81, 83, 84, 89, 90, 92, 96, 97, 98, 100, 101, 102, 106, 107,
+111, 114, 116, 117, 119, 121, 123, 125, 126, 133, 139, 142, 145, 146, 147, 148,
+149, 150, 151, 153, 156, 158, 161, 162, 165, 166, 168, 173, 175, 176, 177, 179,
+182, 185, 186, 188, 190, 194, 195, 199, 205, 206, 208, 212, 213, 218, 220, 222,
+226, 227, 229, 231, 232, 233, 234, 237, 241, 242, 243, 244, 245, 252, 253, 255,
+258, 259, 264, 265, 267, 270, 271, 272, 273, 276, 277, 278, 279, 281, 282, 283,
+284, 285, 288, 289, 291, 292, 293, 294, 297, 298, 299, 305, 307, 309, 310, 314,
+317, 320, 322, 324, 325, 326, 330, 332, 335, 336, 338, 339, 340, 341, 344, 346,
+348, 349, 351, 352, 356, 359, 360, 364, 365, 369, 370, 371, 372, 374, 376, 377,
+381 ]
+Carrying out CRT step
+Completed CRT, 180 possible sequences remaining
+Possible values of m mod 12700800 are:
+ [ 1, 90721, 144901, 396901, 453601, 487621, 655201, 700561, 725761, 850501,
+1040761, 1052101, 1111321, 1122661, 1199521, 1360801, 1437661, 1564921, 1587601,
+1596421, 1653121, 1675801, 1757701, 1766521, 1905121, 1961821, 2050021, 2129401,
+2163421, 2199961, 2288161, 2302021, 2313361, 2401561, 2469601, 2526301, 2540161,
+2685061, 2866501, 2937061, 2993761, 3175201, 3195361, 3240721, 3265921, 3390661,
+3572101, 3580921, 3592261, 3628801, 3662821, 3742201, 3830401, 3900961, 3977821,
+4025701, 4127761, 4139101, 4215961, 4227301, 4297861, 4669561, 4740121, 4828321,
+4853521, 4941721, 5009761, 5066461, 5080321, 5216401, 5225221, 5304601, 5406661,
+5418001, 5477221, 5533921, 5556601, 5644801, 5715361, 5735521, 5930821, 5953501,
+6041701, 6098401, 6112261, 6132421, 6168961, 6282361, 6370561, 6441121, 6495301,
+6565861, 6667921, 6679261, 6756121, 6767461, 6804001, 6838021, 6917401, 7005601,
+7200901, 7209721, 7232401, 7402501, 7549921, 7606621, 7711201, 7756561, 7844761,
+7946821, 7958161, 8096761, 8108101, 8184961, 8255521, 8493661, 8581861, 8638561,
+8652421, 8709121, 8731801, 8820001, 8822521, 8910721, 9035461, 9106021, 9185401,
+9216901, 9219421, 9273601, 9307621, 9344161, 9387001, 9457561, 9525601, 9545761,
+9582301, 9670501, 9741061, 9772561, 9783901, 9922501, 9942661, 10251361,
+10296721, 10384921, 10498321, 10636921, 10648261, 10725121, 10861201, 10886401,
+11033821, 11122021, 11178721, 11201401, 11271961, 11283301, 11360161, 11575621,
+11598301, 11725561, 11757061, 11813761, 11884321, 11927161, 11997721, 12065761,
+12085921, 12122461, 12210661, 12281221, 12312721, 12324061, 12360601, 12448801,
+12462661, 12474001, 12482821, 12562201 ]
+++++++++++++++++++++++++
+Using l = 389
+Splits
+Order Gl = 189
+Surviving ms mod Gl are:
+ [ 0, 1, 2, 3, 7, 9, 11, 14, 15, 17, 21, 23, 26, 28, 29, 32, 35, 36, 37, 38, 39,
+40, 42, 43, 44, 46, 49, 50, 52, 55, 56, 57, 59, 60, 63, 64, 65, 67, 69, 72, 75,
+77, 78, 79, 80, 81, 83, 85, 87, 88, 89, 90, 92, 93, 94, 96, 97, 99, 100, 105,
+106, 107, 108, 109, 115, 117, 119, 120, 121, 122, 123, 126, 128, 130, 131, 134,
+135, 137, 141, 143, 144, 147, 148, 152, 153, 154, 155, 156, 157, 158, 162, 164,
+165, 167, 169, 172, 176, 179, 180, 182, 184, 187, 188 ]
+Carrying out CRT step
+Completed CRT, 90 possible sequences remaining
+Possible values of m mod 12700800 are:
+ [ 1, 90721, 396901, 453601, 487621, 725761, 850501, 1111321, 1122661, 1360801,
+1564921, 1587601, 1757701, 1905121, 1961821, 2199961, 2302021, 2313361, 2540161,
+2937061, 2993761, 3175201, 3265921, 3390661, 3572101, 3628801, 3662821, 3742201,
+3900961, 4025701, 4127761, 4139101, 4297861, 4740121, 4853521, 5080321, 5216401,
+5477221, 5533921, 5556601, 5715361, 5930821, 5953501, 6112261, 6168961, 6282361,
+6441121, 6565861, 6667921, 6679261, 6804001, 6838021, 6917401, 7200901, 7711201,
+7756561, 8096761, 8108101, 8255521, 8493661, 8652421, 8709121, 8731801, 8822521,
+9106021, 9185401, 9219421, 9344161, 9457561, 9525601, 9582301, 9741061, 9922501,
+10251361, 10296721, 10636921, 10648261, 10886401, 11033821, 11271961, 11283301,
+11725561, 11884321, 11997721, 12065761, 12122461, 12281221, 12360601, 12462661,
+12474001 ]
+++++++++++++++++++++++++
+Using l = 419
+Splits
+Order Gl = 108
+Surviving ms mod Gl are:
+ [ 0, 1, 4, 5, 7, 8, 19, 21, 23, 24, 28, 29, 31, 32, 34, 35, 37, 38, 39, 40, 41,
+43, 49, 51, 53, 55, 56, 57, 58, 59, 62, 65, 68, 69, 70, 71, 72, 78, 79, 83, 86,
+89, 91, 93, 94, 95, 96, 100, 101, 102, 103, 104 ]
+Carrying out CRT step
+Completed CRT, 90 possible sequences remaining
+Possible values of m mod 12700800 are:
+ [ 1, 90721, 396901, 453601, 487621, 725761, 850501, 1111321, 1122661, 1360801,
+1564921, 1587601, 1757701, 1905121, 1961821, 2199961, 2302021, 2313361, 2540161,
+2937061, 2993761, 3175201, 3265921, 3390661, 3572101, 3628801, 3662821, 3742201,
+3900961, 4025701, 4127761, 4139101, 4297861, 4740121, 4853521, 5080321, 5216401,
+5477221, 5533921, 5556601, 5715361, 5930821, 5953501, 6112261, 6168961, 6282361,
+6441121, 6565861, 6667921, 6679261, 6804001, 6838021, 6917401, 7200901, 7711201,
+7756561, 8096761, 8108101, 8255521, 8493661, 8652421, 8709121, 8731801, 8822521,
+9106021, 9185401, 9219421, 9344161, 9457561, 9525601, 9582301, 9741061, 9922501,
+10251361, 10296721, 10636921, 10648261, 10886401, 11033821, 11271961, 11283301,
+11725561, 11884321, 11997721, 12065761, 12122461, 12281221, 12360601, 12462661,
+12474001 ]
+++++++++++++++++++++++++
+Using l = 433
+Splits
+Order Gl = 49
+Surviving ms mod Gl are:
+ [ 0, 1, 2, 4, 6, 8, 12, 15, 17, 18, 19, 25, 26, 27, 28, 34, 41, 43, 44, 45, 47
+]
+Carrying out CRT step
+Completed CRT, 60 possible sequences remaining
+Possible values of m mod 12700800 are:
+ [ 1, 396901, 453601, 850501, 1111321, 1564921, 1587601, 1905121, 1961821,
+2199961, 2302021, 2540161, 2937061, 2993761, 3175201, 3390661, 3572101, 3628801,
+4025701, 4127761, 4740121, 5080321, 5216401, 5477221, 5533921, 5556601, 5715361,
+5930821, 5953501, 6112261, 6168961, 6565861, 6667921, 6804001, 7200901, 7756561,
+8096761, 8255521, 8493661, 8652421, 8709121, 8731801, 9106021, 9185401, 9344161,
+9525601, 9582301, 9741061, 9922501, 10296721, 10636921, 11033821, 11271961,
+11725561, 11884321, 12065761, 12122461, 12281221, 12360601, 12462661 ]
+++++++++++++++++++++++++
+Using l = 457
+Inert
+Order Gl = 210
+Surviving ms mod Gl are:
+ [ 1, 4, 6, 8, 10, 13, 15, 19, 21, 26, 27, 28, 29, 30, 31, 33, 35, 36, 37, 38,
+40, 42, 43, 46, 49, 51, 52, 53, 54, 55, 57, 59, 61, 63, 64, 65, 66, 67, 69, 70,
+71, 72, 77, 78, 80, 81, 83, 84, 85, 87, 90, 91, 92, 93, 96, 98, 99, 102, 103,
+104, 107, 108, 112, 113, 116, 118, 120, 121, 122, 126, 127, 128, 129, 131, 132,
+133, 138, 139, 141, 143, 144, 146, 147, 151, 152, 154, 156, 157, 158, 159, 163,
+164, 167, 168, 169, 176, 178, 179, 180, 184, 185, 186, 189, 190, 191, 193, 195,
+196, 198, 200, 201, 203, 204, 206, 207 ]
+Carrying out CRT step
+Completed CRT, 60 possible sequences remaining
+Possible values of m mod 12700800 are:
+ [ 1, 396901, 453601, 850501, 1111321, 1564921, 1587601, 1905121, 1961821,
+2199961, 2302021, 2540161, 2937061, 2993761, 3175201, 3390661, 3572101, 3628801,
+4025701, 4127761, 4740121, 5080321, 5216401, 5477221, 5533921, 5556601, 5715361,
+5930821, 5953501, 6112261, 6168961, 6565861, 6667921, 6804001, 7200901, 7756561,
+8096761, 8255521, 8493661, 8652421, 8709121, 8731801, 9106021, 9185401, 9344161,
+9525601, 9582301, 9741061, 9922501, 10296721, 10636921, 11033821, 11271961,
+11725561, 11884321, 12065761, 12122461, 12281221, 12360601, 12462661 ]
+++++++++++++++++++++++++
+Using l = 521
+Splits
+Order Gl = 21
+Surviving ms mod Gl are:
+ [ 0, 1, 2, 4, 7, 8, 11, 12, 14, 16, 17, 19 ]
+Carrying out CRT step
+Completed CRT, 60 possible sequences remaining
+Possible values of m mod 12700800 are:
+ [ 1, 396901, 453601, 850501, 1111321, 1564921, 1587601, 1905121, 1961821,
+2199961, 2302021, 2540161, 2937061, 2993761, 3175201, 3390661, 3572101, 3628801,
+4025701, 4127761, 4740121, 5080321, 5216401, 5477221, 5533921, 5556601, 5715361,
+5930821, 5953501, 6112261, 6168961, 6565861, 6667921, 6804001, 7200901, 7756561,
+8096761, 8255521, 8493661, 8652421, 8709121, 8731801, 9106021, 9185401, 9344161,
+9525601, 9582301, 9741061, 9922501, 10296721, 10636921, 11033821, 11271961,
+11725561, 11884321, 12065761, 12122461, 12281221, 12360601, 12462661 ]
+++++++++++++++++++++++++
+Using l = 571
+Inert
+Order Gl = 96
+Surviving ms mod Gl are:
+ [ 1, 2, 4, 5, 8, 9, 13, 15, 16, 17, 18, 19, 25, 26, 27, 28, 29, 30, 33, 35, 36,
+37, 39, 42, 43, 45, 50, 51, 53, 55, 59, 60, 61, 64, 65, 67, 71, 73, 75, 78, 80,
+81, 85, 86, 87, 93, 94 ]
+Carrying out CRT step
+Completed CRT, 54 possible sequences remaining
+Possible values of m mod 12700800 are:
+ [ 1, 396901, 453601, 850501, 1111321, 1564921, 1905121, 1961821, 2199961,
+2302021, 2540161, 2937061, 2993761, 3175201, 3390661, 3572101, 3628801, 4025701,
+4740121, 5080321, 5477221, 5533921, 5556601, 5715361, 5930821, 5953501, 6112261,
+6168961, 6565861, 6804001, 7200901, 8096761, 8255521, 8493661, 8652421, 8709121,
+8731801, 9106021, 9185401, 9344161, 9525601, 9582301, 9741061, 9922501,
+10636921, 11033821, 11271961, 11725561, 11884321, 12065761, 12122461, 12281221,
+12360601, 12462661 ]
+++++++++++++++++++++++++
+Using l = 587
+Splits
+Order Gl = 80
+Surviving ms mod Gl are:
+ [ 0, 1, 4, 7, 10, 11, 15, 17, 20, 23, 25, 27, 29, 35, 36, 38, 39, 45, 47, 48,
+51, 55, 59, 60, 61, 63, 64, 65, 66, 68, 69, 71, 72, 73 ]
+Carrying out CRT step
+Completed CRT, 24 possible sequences remaining
+Possible values of m mod 12700800 are:
+ [ 1, 453601, 1905121, 1961821, 2540161, 2993761, 3175201, 3628801, 5080321,
+5533921, 5715361, 5953501, 6168961, 6804001, 8255521, 8493661, 8709121, 9344161,
+9525601, 9582301, 11033821, 11884321, 12065761, 12122461 ]
+++++++++++++++++++++++++
+Using l = 599
+Splits
+Order Gl = 315
+Surviving ms mod Gl are:
+ [ 0, 1, 3, 4, 6, 9, 10, 15, 16, 18, 22, 24, 27, 29, 30, 34, 38, 39, 43, 44, 46,
+48, 49, 54, 55, 57, 64, 66, 71, 75, 77, 78, 80, 82, 84, 87, 91, 92, 96, 99, 100,
+101, 102, 103, 104, 108, 109, 117, 120, 121, 123, 125, 130, 132, 135, 139, 146,
+147, 148, 152, 155, 156, 158, 161, 163, 165, 170, 172, 173, 175, 177, 179, 182,
+186, 195, 198, 200, 203, 204, 205, 206, 207, 208, 209, 210, 212, 216, 217, 220,
+221, 222, 226, 227, 228, 232, 233, 235, 236, 237, 238, 239, 243, 244, 246, 248,
+250, 252, 253, 257, 263, 279, 281, 285, 292, 295, 297, 299, 300, 302, 303, 304,
+306, 307, 311, 312, 314 ]
+Carrying out CRT step
+Completed CRT, 24 possible sequences remaining
+Possible values of m mod 12700800 are:
+ [ 1, 453601, 1905121, 1961821, 2540161, 2993761, 3175201, 3628801, 5080321,
+5533921, 5715361, 5953501, 6168961, 6804001, 8255521, 8493661, 8709121, 9344161,
+9525601, 9582301, 11033821, 11884321, 12065761, 12122461 ]
+++++++++++++++++++++++++
+Using l = 607
+Inert
+Order Gl = 28
+Surviving ms mod Gl are:
+ [ 1, 2, 3, 4, 6, 9, 13, 14, 15, 16, 17, 18, 22, 23, 24, 25, 26, 27 ]
+Carrying out CRT step
+Completed CRT, 24 possible sequences remaining
+Possible values of m mod 12700800 are:
+ [ 1, 453601, 1905121, 1961821, 2540161, 2993761, 3175201, 3628801, 5080321,
+5533921, 5715361, 5953501, 6168961, 6804001, 8255521, 8493661, 8709121, 9344161,
+9525601, 9582301, 11033821, 11884321, 12065761, 12122461 ]
+++++++++++++++++++++++++
+Using l = 613
+Inert
+Order Gl = 45
+Surviving ms mod Gl are:
+ [ 1, 4, 5, 9, 11, 12, 15, 22, 23, 25, 26, 27, 29, 30, 33, 34, 37, 41 ]
+Carrying out CRT step
+Completed CRT, 24 possible sequences remaining
+Possible values of m mod 12700800 are:
+ [ 1, 453601, 1905121, 1961821, 2540161, 2993761, 3175201, 3628801, 5080321,
+5533921, 5715361, 5953501, 6168961, 6804001, 8255521, 8493661, 8709121, 9344161,
+9525601, 9582301, 11033821, 11884321, 12065761, 12122461 ]
+++++++++++++++++++++++++
+Using l = 631
+Splits
+Order Gl = 125
+Surviving ms mod Gl are:
+ [ 0, 1, 3, 4, 6, 7, 8, 11, 12, 15, 18, 21, 25, 26, 27, 28, 33, 35, 37, 40, 43,
+45, 46, 47, 48, 49, 50, 52, 53, 54, 56, 57, 59, 60, 61, 62, 63, 65, 66, 67, 69,
+72, 73, 74, 75, 76, 78, 79, 80, 82, 83, 96, 97, 98, 99, 102, 103, 105, 106, 108,
+109, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 124 ]
+Carrying out CRT step
+Completed CRT, 80 possible sequences remaining
+Possible values of m mod 63504000 are:
+ [ 1, 1905121, 2993761, 3175201, 5533921, 5715361, 5953501, 6804001, 8255521,
+8709121, 12065761, 13154401, 14605921, 14662621, 15694561, 15876001, 17781121,
+18234721, 18869761, 21409921, 22226401, 23734621, 24585121, 24766561, 24823261,
+25855201, 27306721, 27363421, 27941761, 28395361, 29030401, 30481921, 30935521,
+31570561, 33657121, 33895261, 34110721, 34745761, 34927201, 34983901, 36435421,
+37285921, 37467361, 37524061, 38102401, 38556001, 40007521, 40064221, 40642561,
+41731201, 43182721, 43817761, 44055901, 44271361, 44906401, 46357921, 46596061,
+46811521, 47446561, 47628001, 47684701, 49136221, 49986721, 50224861, 50803201,
+52765021, 53343361, 53978401, 54432001, 55883521, 56337121, 56518561, 56756701,
+57607201, 59058721, 59296861, 60147361, 60385501, 61837021, 62687521 ]
+++++++++++++++++++++++++
+Using l = 659
+Inert
+Order Gl = 108
+Surviving ms mod Gl are:
+ [ 1, 2, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15, 21, 23, 27, 29, 30, 32, 36, 37,
+42, 50, 53, 55, 56, 57, 58, 59, 60, 61, 66, 69, 72, 73, 74, 75, 76, 77, 80, 81,
+82, 84, 87, 88, 89, 97, 98, 101, 104, 106 ]
+Carrying out CRT step
+Completed CRT, 80 possible sequences remaining
+Possible values of m mod 63504000 are:
+ [ 1, 1905121, 2993761, 3175201, 5533921, 5715361, 5953501, 6804001, 8255521,
+8709121, 12065761, 13154401, 14605921, 14662621, 15694561, 15876001, 17781121,
+18234721, 18869761, 21409921, 22226401, 23734621, 24585121, 24766561, 24823261,
+25855201, 27306721, 27363421, 27941761, 28395361, 29030401, 30481921, 30935521,
+31570561, 33657121, 33895261, 34110721, 34745761, 34927201, 34983901, 36435421,
+37285921, 37467361, 37524061, 38102401, 38556001, 40007521, 40064221, 40642561,
+41731201, 43182721, 43817761, 44055901, 44271361, 44906401, 46357921, 46596061,
+46811521, 47446561, 47628001, 47684701, 49136221, 49986721, 50224861, 50803201,
+52765021, 53343361, 53978401, 54432001, 55883521, 56337121, 56518561, 56756701,
+57607201, 59058721, 59296861, 60147361, 60385501, 61837021, 62687521 ]
+++++++++++++++++++++++++
+Using l = 733
+Inert
+Order Gl = 180
+Surviving ms mod Gl are:
+ [ 1, 3, 4, 6, 7, 8, 10, 12, 13, 14, 17, 21, 22, 26, 27, 28, 31, 33, 38, 44, 45,
+47, 50, 51, 57, 64, 66, 67, 69, 70, 71, 72, 73, 79, 81, 84, 85, 87, 88, 89, 90,
+91, 95, 97, 100, 102, 103, 105, 109, 111, 113, 115, 117, 118, 119, 120, 121,
+123, 126, 127, 128, 135, 138, 140, 141, 143, 150, 153, 155, 157, 158, 159, 161,
+163, 164, 165, 166, 169, 172, 173, 175, 176, 177, 179 ]
+Carrying out CRT step
+Completed CRT, 80 possible sequences remaining
+Possible values of m mod 63504000 are:
+ [ 1, 1905121, 2993761, 3175201, 5533921, 5715361, 5953501, 6804001, 8255521,
+8709121, 12065761, 13154401, 14605921, 14662621, 15694561, 15876001, 17781121,
+18234721, 18869761, 21409921, 22226401, 23734621, 24585121, 24766561, 24823261,
+25855201, 27306721, 27363421, 27941761, 28395361, 29030401, 30481921, 30935521,
+31570561, 33657121, 33895261, 34110721, 34745761, 34927201, 34983901, 36435421,
+37285921, 37467361, 37524061, 38102401, 38556001, 40007521, 40064221, 40642561,
+41731201, 43182721, 43817761, 44055901, 44271361, 44906401, 46357921, 46596061,
+46811521, 47446561, 47628001, 47684701, 49136221, 49986721, 50224861, 50803201,
+52765021, 53343361, 53978401, 54432001, 55883521, 56337121, 56518561, 56756701,
+57607201, 59058721, 59296861, 60147361, 60385501, 61837021, 62687521 ]
+++++++++++++++++++++++++
+Using l = 947
+Splits
+Order Gl = 320
+Surviving ms mod Gl are:
+ [ 0, 1, 3, 4, 5, 6, 7, 9, 11, 13, 14, 15, 16, 18, 19, 20, 23, 24, 26, 27, 28,
+36, 38, 39, 42, 45, 46, 47, 49, 51, 52, 53, 55, 58, 60, 61, 62, 63, 67, 70, 71,
+72, 75, 76, 77, 79, 81, 82, 85, 86, 88, 91, 94, 95, 96, 99, 105, 107, 108, 109,
+110, 112, 113, 115, 116, 117, 119, 121, 132, 133, 136, 137, 138, 140, 143, 144,
+145, 146, 147, 149, 150, 151, 152, 155, 156, 157, 161, 162, 170, 175, 177, 178,
+180, 181, 182, 184, 185, 187, 188, 189, 194, 195, 196, 198, 199, 201, 202, 204,
+205, 207, 217, 218, 219, 225, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236,
+237, 239, 242, 243, 244, 246, 248, 249, 250, 251, 252, 255, 259, 260, 263, 265,
+266, 267, 269, 270, 271, 272, 274, 275, 279, 280, 281, 283, 286, 287, 289, 291,
+292, 293, 297, 298, 299, 302, 303, 307, 308, 309, 310, 313, 314, 315, 317, 319 ]
+Carrying out CRT step
+Completed CRT, 60 possible sequences remaining
+Possible values of m mod 63504000 are:
+ [ 1, 1905121, 2993761, 3175201, 5533921, 5715361, 6804001, 8255521, 8709121,
+12065761, 13154401, 14605921, 15694561, 15876001, 17781121, 18234721, 18869761,
+21409921, 22226401, 24585121, 24766561, 25855201, 27306721, 27941761, 28395361,
+29030401, 30481921, 30935521, 31570561, 33657121, 34110721, 34745761, 34927201,
+37285921, 37467361, 38102401, 38556001, 40007521, 40642561, 41731201, 43182721,
+43817761, 44271361, 44906401, 46357921, 46811521, 47446561, 47628001, 49986721,
+50803201, 53343361, 53978401, 54432001, 55883521, 56337121, 56518561, 57607201,
+59058721, 60147361, 62687521 ]
+++++++++++++++++++++++++
+-11 has not been eliminated
+Expected, since it should fail
+++++++++++++++++++++++++++++++++++++++++++++++++
+Maximum l used in sieve was l = 11
+We verify nonsingularity for l in:
+ [ 11, 3, 5, 7 ]
+{}
+{ -43, -11, -7, -1 }
