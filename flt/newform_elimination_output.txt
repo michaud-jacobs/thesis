@@ -1,0 +1,2052 @@
+*** Magma code to support the computations in the paper
+*** Fermat's Last Theorem and modular curves over real quadratic fields by Philippe Michaud-Jacobs.
+*** See https://github.com/michaud-jacobs/flt-quad for all the code files and links to the paper
+
+*** This file contains the output of the newform_elimination.m file
+
+
+Considering d =  2
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 1>
+]
+Using 18 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  3
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 1>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 4>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+Spaces remaining, unable to eliminate the following primes: [* 0 *]
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  5
+Considering level Np with factorisation: [
+    <Principal Prime Ideal
+    Generator:
+        [2, 0], 1>
+]
+Using 18 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Principal Prime Ideal
+    Generator:
+        [2, 0], 4>
+]
+Using 18 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+Spaces remaining, unable to eliminate the following primes: [* 0, 0, 0 *]
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  6
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 1>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 8>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  7
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 1>
+]
+Using 19 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 4>
+]
+Using 19 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  10
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 1>
+]
+Using 16 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 1>,
+    <Prime Ideal
+    Two element generators:
+        [3, 0]
+        [2, 1], 2>
+]
+Using 16 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  11
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 1>
+]
+Using 18 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 4>
+]
+Using 18 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  13
+Considering level Np with factorisation: [
+    <Principal Prime Ideal
+    Generator:
+        [2, 0], 1>
+]
+Using 19 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Principal Prime Ideal
+    Generator:
+        [2, 0], 4>
+]
+Using 19 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  14
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 1>
+]
+Using 15 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 8>
+]
+Using 15 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  15
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 1>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 4>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 1>,
+    <Prime Ideal
+    Two element generators:
+        [3, 0]
+        [0, 1], 2>
+]
+Using 16 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 4>,
+    <Prime Ideal
+    Two element generators:
+        [3, 0]
+        [0, 1], 2>
+]
+Using 16 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  17
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [2, 1], 1>,
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 1>
+]
+Using 19 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+Spaces remaining, unable to eliminate the following primes: [* 0 *]
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  19
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 1>
+]
+Using 19 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 4>
+]
+Using 19 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  21
+Considering level Np with factorisation: [
+    <Principal Prime Ideal
+    Generator:
+        [2, 0], 1>
+]
+Using 18 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Principal Prime Ideal
+    Generator:
+        [2, 0], 4>
+]
+Using 18 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  22
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 1>
+]
+Using 18 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 8>
+]
+Using 18 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  23
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 1>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 4>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  26
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 1>
+]
+Using 18 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 1>,
+    <Prime Ideal
+    Two element generators:
+        [5, 0]
+        [6, 1], 2>
+]
+Using 18 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  29
+Considering level Np with factorisation: [
+    <Principal Prime Ideal
+    Generator:
+        [2, 0], 1>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Principal Prime Ideal
+    Generator:
+        [2, 0], 4>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  30
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 1>
+]
+Using 19 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 1>,
+    <Prime Ideal
+    Two element generators:
+        [3, 0]
+        [0, 1], 2>
+]
+Using 18 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 8>
+]
+Using 19 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 8>,
+    <Prime Ideal
+    Two element generators:
+        [3, 0]
+        [0, 1], 2>
+]
+Using 18 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  31
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 1>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 4>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  33
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [2, 1], 1>,
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 1>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Principal Prime Ideal
+    Generator:
+        [-2, -1], 1>,
+    <Principal Prime Ideal
+    Generator:
+        [3, -1], 4>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+Spaces remaining, unable to eliminate the following primes: [* 0, 0 *]
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  34
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 1>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 8>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+Spaces remaining, unable to eliminate the following primes: [* 0, 0, 753664,
+753664 *]
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Principal Prime Ideal
+    Generator:
+        [-6, -1], 1>,
+    <Prime Ideal
+    Two element generators:
+        [3, 0]
+        [1, 1], 2>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Principal Prime Ideal
+    Generator:
+        [-6, -1], 8>,
+    <Prime Ideal
+    Two element generators:
+        [3, 0]
+        [1, 1], 2>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  35
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 1>
+]
+Using 21 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 4>
+]
+Using 21 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 1>,
+    <Prime Ideal
+    Two element generators:
+        [5, 0]
+        [0, 1], 2>
+]
+Using 20 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 4>,
+    <Prime Ideal
+    Two element generators:
+        [5, 0]
+        [0, 1], 2>
+]
+Using 20 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated1
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  37
+Considering level Np with factorisation: [
+    <Principal Prime Ideal
+    Generator:
+        [2, 0], 1>
+]
+Using 18 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Principal Prime Ideal
+    Generator:
+        [2, 0], 4>
+]
+Using 18 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  38
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 1>
+]
+Using 22 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 8>
+]
+Using 22 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  41
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 1>,
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [3, 1], 1>
+]
+Using 19 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+Spaces remaining, unable to eliminate the following primes: [* 0 *]
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  42
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 1>
+]
+Using 18 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 1>,
+    <Prime Ideal
+    Two element generators:
+        [3, 0]
+        [0, 1], 2>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 8>
+]
+Using 18 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 8>,
+    <Prime Ideal
+    Two element generators:
+        [3, 0]
+        [0, 1], 2>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated0
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  43
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 1>
+]
+Using 15 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 4>
+]
+Using 15 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  46
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 1>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 8>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  47
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 1>
+]
+Using 21 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 4>
+]
+Using 21 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  51
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 1>
+]
+Using 15 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 4>
+]
+Using 15 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Principal Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 1>,
+    <Prime Ideal
+    Two element generators:
+        [3, 0]
+        [0, 1], 2>
+]
+Using 14 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Principal Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 4>,
+    <Prime Ideal
+    Two element generators:
+        [3, 0]
+        [0, 1], 2>
+]
+Using 14 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  53
+Considering level Np with factorisation: [
+    <Principal Prime Ideal
+    Generator:
+        [2, 0], 1>
+]
+Using 18 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Principal Prime Ideal
+    Generator:
+        [2, 0], 4>
+]
+Using 18 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  55
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 1>
+]
+Using 16 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 4>
+]
+Using 16 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 8>
+]
+Using 16 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+Spaces remaining, unable to eliminate the following primes: [* 0, 0, 184 *]
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 1>,
+    <Prime Ideal
+    Two element generators:
+        [3, 0]
+        [4, 1], 2>
+]
+Using 16 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+Spaces remaining, unable to eliminate the following primes: [* 17, 17 *]
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 4>,
+    <Prime Ideal
+    Two element generators:
+        [3, 0]
+        [4, 1], 2>
+]
+Using 16 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 8>,
+    <Prime Ideal
+    Two element generators:
+        [3, 0]
+        [4, 1], 2>
+]
+Using 16 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  57
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 1>,
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [3, 1], 1>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Principal Prime Ideal
+    Generator:
+        [4, -1], 1>,
+    <Principal Prime Ideal
+    Generator:
+        [-3, -1], 4>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+Spaces remaining, unable to eliminate the following primes: [* 0, 0 *]
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  58
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 1>
+]
+Using 14 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 1>,
+    <Prime Ideal
+    Two element generators:
+        [3, 0]
+        [1, 1], 2>
+]
+Using 14 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  59
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 1>
+]
+Using 18 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 4>
+]
+Using 18 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  61
+Considering level Np with factorisation: [
+    <Principal Prime Ideal
+    Generator:
+        [2, 0], 1>
+]
+Using 20 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Principal Prime Ideal
+    Generator:
+        [2, 0], 4>
+]
+Using 20 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  62
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 1>
+]
+Using 21 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 8>
+]
+Using 21 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated3
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  65
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [2, 1], 1>,
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 1>
+]
+Using 18 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [2, 1], 1>,
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 1>,
+    <Prime Ideal
+    Two element generators:
+        [7, 0]
+        [2, 2], 2>
+]
+Using 18 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  66
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 1>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 1>,
+    <Prime Ideal
+    Two element generators:
+        [3, 0]
+        [0, 1], 2>
+]
+Using 16 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Principal Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 8>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Principal Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 8>,
+    <Prime Ideal
+    Two element generators:
+        [3, 0]
+        [0, 1], 2>
+]
+Using 16 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  67
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 1>
+]
+Using 15 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 4>
+]
+Using 15 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+Spaces remaining, unable to eliminate the following primes: [* 19 *]
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  69
+Considering level Np with factorisation: [
+    <Principal Prime Ideal
+    Generator:
+        [2, 0], 1>
+]
+Using 18 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Principal Prime Ideal
+    Generator:
+        [2, 0], 4>
+]
+Using 18 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  71
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 1>
+]
+Using 18 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 4>
+]
+Using 18 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  73
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 1>,
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [3, 1], 1>
+]
+Using 19 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  74
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 1>
+]
+Using 19 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 1>,
+    <Prime Ideal
+    Two element generators:
+        [5, 0]
+        [3, 1], 2>
+]
+Using 19 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated1
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  77
+Considering level Np with factorisation: [
+    <Principal Prime Ideal
+    Generator:
+        [2, 0], 1>
+]
+Using 21 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Principal Prime Ideal
+    Generator:
+        [2, 0], 4>
+]
+Using 21 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  79
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 1>
+]
+Using 18 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 4>
+]
+Using 18 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  82
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 1>
+]
+Using 19 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 1>,
+    <Prime Ideal
+    Two element generators:
+        [3, 0]
+        [4, 1], 2>
+]
+Using 19 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  83
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 1>
+]
+Using 21 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 4>
+]
+Using 21 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  85
+Considering level Np with factorisation: [
+    <Principal Prime Ideal
+    Generator:
+        [2, 0], 1>
+]
+Using 16 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Principal Prime Ideal
+    Generator:
+        [2, 0], 4>
+]
+Using 16 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [3, 0]
+        [4, 2], 2>,
+    <Principal Prime Ideal
+    Generator:
+        [2, 0], 1>
+]
+Using 16 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [3, 0]
+        [4, 2], 2>,
+    <Principal Prime Ideal
+    Generator:
+        [2, 0], 4>
+]
+Using 16 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  86
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 1>
+]
+Using 18 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+Spaces remaining, unable to eliminate the following primes: [* 31, 31 *]
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 8>
+]
+Using 18 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  87
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 1>
+]
+Using 23 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 4>
+]
+Using 23 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 1>,
+    <Prime Ideal
+    Two element generators:
+        [3, 0]
+        [0, 1], 2>
+]
+Using 22 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 4>,
+    <Prime Ideal
+    Two element generators:
+        [3, 0]
+        [0, 1], 2>
+]
+Using 22 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  89
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 1>,
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [3, 1], 1>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+Spaces remaining, unable to eliminate the following primes: [* 0 *]
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  91
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 1>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 4>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 1>,
+    <Prime Ideal
+    Two element generators:
+        [5, 0]
+        [1, 1], 2>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 4>,
+    <Prime Ideal
+    Two element generators:
+        [5, 0]
+        [1, 1], 2>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  93
+Considering level Np with factorisation: [
+    <Principal Prime Ideal
+    Generator:
+        [2, 0], 1>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Principal Prime Ideal
+    Generator:
+        [2, 0], 4>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  94
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 1>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [0, 1], 8>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+All spaces eliminated
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
+Considering d =  97
+Considering level Np with factorisation: [
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [2, 1], 1>,
+    <Prime Ideal
+    Two element generators:
+        [2, 0]
+        [1, 1], 1>
+]
+Using 17 primes
+Computing first Hecke operator
+Factorising its characteristic polynomial
+Computing first Hecke decomposition
+Computing further Hecke decompositions
+Spaces remaining, unable to eliminate the following primes: [* 459 *]
++++++++++++++++++++++++++++++++++++++++++++++++++
+====================================================================
+====================================================================
+====================================================================
