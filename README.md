@@ -1,1 +1,1 @@
-# phd-thesis-code
+# thesis
