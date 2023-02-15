@@ -7,7 +7,7 @@
 
 D := [d : d in [26..97] | IsSquarefree(d)];
 for d in D do
-    bad_p := non_const(d: t := 4);
+    bad_p := non_const(d: t := 4, aux_upper_bd := 50);
     assert bad_p eq {2,3,5,7,11,13,17,19,37};
 end for;
 
