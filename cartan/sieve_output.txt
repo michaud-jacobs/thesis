@@ -1,0 +1,86 @@
+Magma code to support the computations in the paper Quadratic points on non-split Cartan modular curves by Philippe Michaud-Jacobs.
+See https://github.com/michaud-jacobs/quad-cartan for all the code files and links to the paper
+
+This is the output of the sieve.m file
+
+Starting calculations for p = 3
+Computing the Jacobian mod 3
+Time: 3.300
+The Jacobian mod 3 is isomorphic to [ 182, 182 ]
+The Jacobian mod M is isomorphic to  [ 13, 13 ]
+Index of B_3 in Z^3 is 13
+W_3 has 3 elements
+Index of B_int in Z^3 is 13
+W_int has 3 elements
+Calculations completed for p = 3
++++++++++++++++++++++++++++++++++++++++++
+Starting calculations for p = 5
+Computing the Jacobian mod 5
+Time: 2.640
+The Jacobian mod 5 is isomorphic to [ 87087, 13 ]
+The Jacobian mod M is isomorphic to  [ 1131, 13 ]
+Index of B_5 in Z^3 is 377
+W_5 has 3 elements
+Index of B_int in Z^3 is 4901
+W_int has 9 elements
+Calculations completed for p = 5
++++++++++++++++++++++++++++++++++++++++++
+Starting calculations for p = 31
+Computing the Jacobian mod 31
+Time: 249.340
+The Jacobian mod 31 is isomorphic to [ 37951527614, 26 ]
+The Jacobian mod M is isomorphic to  [ 377, 13 ]
+Index of B_31 in Z^3 is 377
+W_31 has 62 elements
+Index of B_int in Z^3 is 142129
+W_int has 27 elements
+Calculations completed for p = 31
++++++++++++++++++++++++++++++++++++++++++
+Starting calculations for p = 43
+Computing the Jacobian mod 43
+Time: 643.910
+The Jacobian mod 43 is isomorphic to [ 459004, 7, 35308, 91 ]
+The Jacobian mod M is isomorphic to  [ 169, 13, 13 ]
+Index of B_43 in Z^3 is 13
+W_43 has 13 elements
+Index of B_int in Z^3 is 1847677
+W_int has 351 elements
+Calculations completed for p = 43
++++++++++++++++++++++++++++++++++++++++++
+Starting calculations for p = 53
+Computing the Jacobian mod 53
+Time: 1041.420
+The Jacobian mod 53 is isomorphic to [ 658749, 13, 658749, 13 ]
+The Jacobian mod M is isomorphic to  [ 39, 13, 39, 13 ]
+Index of B_53 in Z^3 is 169
+W_53 has 39 elements
+Index of B_int in Z^3 is 1847677
+W_int has 247 elements
+Calculations completed for p = 53
++++++++++++++++++++++++++++++++++++++++++
+Starting calculations for p = 61
+Computing the Jacobian mod 61
+Time: 1624.350
+The Jacobian mod 61 is isomorphic to [ 13361257, 13361257 ]
+The Jacobian mod M is isomorphic to  [ 377, 377 ]
+Index of B_61 in Z^3 is 377
+W_61 has 49 elements
+Index of B_int in Z^3 is 1847677
+W_int has 65 elements
+Calculations completed for p = 61
++++++++++++++++++++++++++++++++++++++++++
+Starting calculations for p = 73
+Computing the Jacobian mod 73
+Time: 6106.850
+The Jacobian mod 73 is isomorphic to [ 42833115507, 13, 39, 39 ]
+The Jacobian mod M is isomorphic to  [ 1131, 13, 39, 39 ]
+Index of B_73 in Z^3 is 4901
+W_73 has 60 elements
+Index of B_int in Z^3 is 1847677
+W_int has 0 elements
+Calculations completed for p = 73
++++++++++++++++++++++++++++++++++++++++++
+Sieving complete, success
+Indices of B_int: [ 13, 4901, 142129, 1847677, 1847677, 1847677, 1847677 ]
+Coset sizes of W_int: [ 3, 9, 27, 351, 247, 65, 0 ]
+
