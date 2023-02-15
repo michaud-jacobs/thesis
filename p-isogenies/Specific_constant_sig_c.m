@@ -12,7 +12,6 @@
 // The primes 2 and 3 are inert in Q(sqrt(5)) and this will therefore replicate the set-up exactly
 
 const := function(d: aux_upper_bd := 20, t := 1); // to work over the field K = Q(sqrt(d))
-    print("Considering d = "),d;
     T<x>:=PolynomialRing(Rationals());
     K<a>:=NumberField(x^2-d);
     OK:=RingOfIntegers(K);

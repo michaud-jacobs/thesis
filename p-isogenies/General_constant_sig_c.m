@@ -8,7 +8,6 @@
 // This code verifies the computations in the proof of Theorem 1
 
 gen_const := function(n: aux_upper_bd := 20, t := 1);  // n is the class group exponent.
-    print("Considering n = "),n;
 
     T<x> := PolynomialRing(Rationals());
     vbadp := [2,3,5,7,11,13,17,19,37];
