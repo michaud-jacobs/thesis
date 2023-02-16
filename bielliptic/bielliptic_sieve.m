@@ -14,6 +14,9 @@
 
 // The code to reproduce the example computations is included at the end of this file
 
+// The code uses functions from the file "bielliptic_models.m" available at:
+// https://github.com/michaud-jacobs/thesis/blob/main/bielliptic/bielliptic_models.m
+
 ////////////////////////////////////////////
 
 // This function carries out the Mordell--Weil sieve
