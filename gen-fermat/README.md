@@ -3,7 +3,7 @@ This folder contains Magma code to support the computations in Chapter 8 of my t
 
 This folder contains the following files (more description is contained within each file):
 
-- Lemmas_7.2_7.3.m.
-- Proposition_5.2.m.
-- Theroem_1.m.
-- Theorem_3.m.
+- asymptotic_constants.m computes explicit constants for irreducibility and dimensions of Hilbert cusp forms for signature (2, 2n, 3p).
+- cuspforms_7.m verifies the Hilbert cusp form computation for signature (2, 2n, 21).
+- cuspforms_17.m verifies the Hilbert cusp form computations for signature (2m, 2l, 17).
+- irreducibility_17.m carries out the irreducibility computations for signature (2m, 2l, 17).
