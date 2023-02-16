@@ -1,8 +1,12 @@
-// Magma code to support the computations in the paper Quadratic points on non-split Cartan modular curves by Philippe Michaud-Jacobs.
-// See https://github.com/michaud-jacobs/quad-cartan for all the code files and links to the paper
+// Magma code to support the computations in my PhD thesis.
 
 // The code in this file obtains a new model for the curve X_ns(13)
 // The code works on Magma V2.26-10
+
+// The code uses data from the file "eqn_data.m" file available at:
+// https://github.com/michaud-jacobs/thesis/blob/main/cartan/eqn_data.m
+
+// The new model for X_ns(13) obtained using this code is also available in the "eqn_data.m" file.
 
 load "eqn_data.m";
 
@@ -15,7 +19,6 @@ old_rho :=map < old_X -> X_plus | old_rho_eqns >;
 SvnPts := [X_plus ! [0,1,0], X_plus ! [0,0,1], X_plus ! [-1,0,1], X_plus ! [1,0,0], X_plus ! [1,1,0], X_plus ! [0,3,2], X_plus ! [1,0,1]];  
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 // We compute the pullbacks of the seven rational points on XNSplus13
 
@@ -63,7 +66,7 @@ Mw:=Transpose((Matrix(w_old)));        // Matrix of the modular involution
 // We now diagonalise the matrix. 
 // The following matrix was obtained from PrimaryRationalForm
 // We enter the matrix directly here since each call of PrimaryRationalForm can pick a different diagonalising matrix
-// The following ensures the equations we end up with match those of the paper.
+// The following ensures the equations we end up with are always the same.
 
 TZ := Matrix( [
 [ 0, 0, 0, 1,-1, 0, 0, 0],
@@ -90,27 +93,23 @@ g:=hom<R->R | Eqg>;                   // Change of coordinate map
 // Multiply by 4 to clear denominators
 
 Neqns := [4*g(ee) : ee in old_eqns];
-assert Neqns eq new_eqns; // Matches data file
+assert Neqns eq new_eqns; // Matches data file.
 
 // Apply change of coordinates to obtain new equations for map (to same bottom curve)
 
 Nrhos := [g(ee) : ee in old_rho_eqns];
-assert Nrhos eq new_rho_eqns; // Matches data file, does not match paper, as version in paper is incorrect.
+assert Nrhos eq new_rho_eqns; // Matches data file.
 
 // We now have the following new data:
+
 X:= Curve(ProjectiveSpace(R),new_eqns);                         // New model of our curve
 w:= map<X -> X | [Diag[i][i]*R.i : i in [1..8]]>;  // New modular involution
 rho := map< X -> X_plus | new_rho_eqns >;                        // New equations for map
  
-
-
-// Check that this new model is nonsingular at the primes used in the sieve (rather long, hours for p = 73).
+// Check that this new model is nonsingular at the primes used in the sieve (rather long for the larger primes).
 
 for p in [3,5,31,43,53,61,73] do 
     print "Starting p =", p;
     NXp:=ChangeRing(NX,GF(p));
     assert IsNonsingular(NXp);
 end for;
-
-
-
