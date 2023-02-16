@@ -1,15 +1,18 @@
-// Magma code to support the computations in the paper
-// Computing points on bielliptic modular curves over fixed quadratic fields by Philippe Michaud-Jacobs.
-// See https://github.com/michaud-jacobs/bielliptic for all the code files and links to the paper
+// Magma code to support the computations in my PhD thesis.
+// The code works on Magma V2.26-10
+
+// This file contains the sieving computations
 
 ////////////////////////////////////////////
 
-// The code works on Magma V2.27-5
 // The output for VerboseLevel 0 is included at the end of this file AND in bielliptic_sieve_output.txt
 // The output for VerboseLevel 2 is in bielliptic_sieve_output.txt
-// The output for the example computations in Section 3 is in bielliptic_sieve_output.txt
+// The output for the example computations is in bielliptic_sieve_output.txt
 
-// The code to reproduce the example computations in Section 3 are included at the end of this file
+// The file bielliptic_sieve_output.txt is available at
+// https://github.com/michaud-jacobs/thesis/blob/main/bielliptic/bielliptic_sieve_output.txt
+
+// The code to reproduce the example computations is included at the end of this file
 
 ////////////////////////////////////////////
 
@@ -336,7 +339,7 @@ end for;
 
 ////////////////////////////////////////////////////////////////////////////
 
-// Code to reproduce the example computations in section 3
+// Code to reproduce the example computations
 // The output is in the bielliptic_sieve_output.txt file
 
 sieve(53: VerboseLevel := 3, check_bad_d := true, range_d := [-47, 3, -11]);
