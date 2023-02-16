@@ -3,7 +3,7 @@
 
 // The code in this file obtains a new model for the curve X_ns(13)
 
-// The code uses data from the file "eqn_data.m" file available at:
+// The code uses data from the file "eqn_data.m" available at:
 // https://github.com/michaud-jacobs/thesis/blob/main/cartan/eqn_data.m
 
 // The new model for X_ns(13) obtained using this code is also available in the "eqn_data.m" file.
