@@ -4,6 +4,8 @@
 // The code in this file includes equations for curves and maps.
 // The data in this file is used in the other files associated to this chapter
 
+////////////////////////////////////////////
+
 R<x_1,x_2,x_3,x_4,x_5,x_6,x_7,x_8>:=PolynomialRing(Rationals(),8); 
 S<X,Y,Z>:=PolynomialRing(Rationals(),3);   
 
