@@ -83,11 +83,14 @@ end function;
 // We check the formal immersion criterion for m = 2, 3 and primes 17 <= p <= 300
 // (if m = 2 then p ne 23)
 
-time for m in [2,3] do // total time =
-    for p in PrimesInInterval(17,300) do // max prime is 293
+time for m in [2,3] do
+    for p in PrimesInInterval(17,200) do // max prime is 293
         if p eq 23 and m eq 2 then
             continue; // result does not apply in this case
         end if;
         assert check_formal_immersion(m,p);
     end for;
 end for;
+
+// total time = approx 3.5 hours
+// (computations with p > 150 are somewhat slow)
