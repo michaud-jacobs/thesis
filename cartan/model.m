@@ -8,6 +8,8 @@
 
 // The new model for X_ns(13) obtained using this code is also available in the "eqn_data.m" file.
 
+////////////////////////////////////////////
+
 load "eqn_data.m";
 
 old_X := Curve(ProjectiveSpace(R), old_eqns);  // The curve X_ns(13)
