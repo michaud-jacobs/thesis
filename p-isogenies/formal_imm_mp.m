@@ -84,7 +84,7 @@ end function;
 // (if m = 2 then p ne 23)
 
 time for m in [2,3] do
-    for p in PrimesInInterval(17,200) do // max prime is 293
+    for p in PrimesInInterval(17,300) do // max prime is 293
         if p eq 23 and m eq 2 then
             continue; // result does not apply in this case
         end if;
