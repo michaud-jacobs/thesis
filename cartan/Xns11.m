@@ -1,12 +1,17 @@
-// We verify some basic computations for the curve X_{ns}(11)
-// We check that the points at infinity on our affine model consist of a pair of quadratic points which arise as the pullback of the identity point on X_{ns}+(11)
+// Magma code to support the computations in my PhD thesis.
+// The code works on Magma V2.27-7
+
+// We verify some basic computations for the curve X_ns(11)
+// We check that the points at infinity on our affine model consist of a pair of quadratic points 
+// which arise as the pullback of the identity point on X_ns+(11)
 
 A<x,y,t> := AffineSpace(Rationals(),3);
 eqns := [y^2+y-(x^3-x^2-7*x+10), t^2 +4*x^3+7*x^2-6*x+19];
-X := Curve(A,eqns); // The affine model used for X_{ns}(11)
+X := Curve(A,eqns); // The affine model used for X_ns(11)
 
-E := EllipticCurve([0,-1,+1,-7,10]); // The curve X_{ns}+(11)
+E := EllipticCurve([0,-1,+1,-7,10]); // The curve X_ns+(11)
 // Elliptic Curve defined by y^2 + y = x^3 - x^2 - 7*x + 10 over Rational Field
+
 assert Conductor(E) eq 121;
 MW,_,tf1,tf2 := MordellWeilGroup(E);
 assert tf1 and tf2;  // MordellWeil group has been provably computed
@@ -24,6 +29,7 @@ H := HyperplaneAtInfinity(A);
 
 inf_scheme := H meet PX;   // Scheme defining points at infinity on X
 PointsOverSplittingField(infinity_scheme);
+
 /*
 {@ (0 : r1 : 1 : 0), (0 : r2 : 1 : 0) @}
 Algebraically closed field with 2 variables over Rational Field
@@ -40,6 +46,7 @@ K<a>:= QuadraticField(-1);
 inf_scheme_K := BaseChange(inf_scheme,K);
 Points(inf_scheme_K);
 // {@ (0 : -1/2*a : 1 : 0), (0 : 1/2*a : 1 : 0) @}
+
 assert HasPointsOverExtension(inf_scheme_K) eq false; // There are no further points
 
 rhoP := map<PX -> E | [xx,yy,tt]>; // degenracy map from projective closure to E
