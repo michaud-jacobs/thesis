@@ -9,6 +9,8 @@
 // The code uses data from the file "eqn_data.m" file available at:
 // https://github.com/michaud-jacobs/thesis/blob/main/cartan/eqn_data.m
 
+////////////////////////////////////////////
+
 load "eqn_data.m";
 
 X:= Curve(ProjectiveSpace(R),new_eqns);                 // New model of our curve
