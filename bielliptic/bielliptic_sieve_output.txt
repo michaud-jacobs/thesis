@@ -1,6 +1,7 @@
-Magma code output of bielliptic_sieve.m to support the computations in the paper
-Computing points on bielliptic modular curves over fixed quadratic fields by Philippe Michaud-Jacobs.
-See https://github.com/michaud-jacobs/bielliptic for all the code files and links to the paper
+Magma code output to support the computations in my PhD thesis.
+
+This is the output of the bielliptic_sieve.m file available at:
+https://github.com/michaud-jacobs/thesis/blob/main/bielliptic/bielliptic_sieve.m
 
 We have included the following outputs:
 1. Output for VerboseLevel 0 loop
