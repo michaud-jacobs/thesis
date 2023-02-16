@@ -1,9 +1,11 @@
-// Magma code to support the computations in the paper Quadratic points on non-split Cartan modular curves by Philippe Michaud-Jacobs.
-// See https://github.com/michaud-jacobs/quad-cartan for all the code files and links to the paper
+// Magma code to support the computations in my PhD thesis.
+// The code works on Magma V2.26-10
 
 // The code in this file concerns the saturation step
 // See saturation_output.txt for the output
-// The code works on Magma V2.26-10
+
+// The code uses data from the file "eqn_data.m" file available at:
+// https://github.com/michaud-jacobs/thesis/blob/main/cartan/eqn_data.m
 
 load "eqn_data.m";
 
@@ -107,7 +109,3 @@ for l in ls_to_test do
     _ := saturation_test(l, aux_p);
     print "===========================================";
 end for;
-
-
-
-
