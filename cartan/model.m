@@ -1,7 +1,7 @@
 // Magma code to support the computations in my PhD thesis.
+// The code works on Magma V2.26-10
 
 // The code in this file obtains a new model for the curve X_ns(13)
-// The code works on Magma V2.26-10
 
 // The code uses data from the file "eqn_data.m" file available at:
 // https://github.com/michaud-jacobs/thesis/blob/main/cartan/eqn_data.m
