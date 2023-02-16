@@ -1,8 +1,13 @@
-/// Magma code to support the computations in the paper Quadratic points on non-split Cartan modular curves by Philippe Michaud-Jacobs.
-// See https://github.com/michaud-jacobs/quad-cartan for all the code files and links to the paper
+// Magma code to support the computations in my PhD thesis.
+// The code works on Magma V2.26-10
 
 // The code in this file carries out the sieving (and Chabauty) steps.
-// The code works on Magma V2.26-10
+
+// The output is in the file sieve_output.txt, available at
+// https://github.com/michaud-jacobs/thesis/blob/main/cartan/sieve_output.txt
+
+// The code uses data from the file "eqn_data.m" file available at:
+// https://github.com/michaud-jacobs/thesis/blob/main/cartan/eqn_data.m
 
 load "eqn_data.m";
 
