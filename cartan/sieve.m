@@ -6,7 +6,7 @@
 // The output is in the file sieve_output.txt, available at
 // https://github.com/michaud-jacobs/thesis/blob/main/cartan/sieve_output.txt
 
-// The code uses data from the file "eqn_data.m" file available at:
+// The code uses data from the file "eqn_data.m" available at:
 // https://github.com/michaud-jacobs/thesis/blob/main/cartan/eqn_data.m
 
 ////////////////////////////////////////////
