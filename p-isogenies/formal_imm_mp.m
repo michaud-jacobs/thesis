@@ -1,9 +1,19 @@
-// We compute formal immersion matrices
-// Tests formal immersion criterion for N = mp for a prime m.
+// Magma code to support the computations in my PhD thesis.
+// The code works on Magma V2.27-7
 
-m := 2;
-for p in PrimesInInterval(17,100) do
-    // print "p = ", p;
+// This code verifies certain formal immersion criteria
+
+////////////////////////////////////////////
+
+// Input m = 2 or 3 and a prime p >= 17
+// if m = 2 then p should not be 23
+
+// Output true or false
+// true if formal immersion check true for N = mp for each q > 2 with q ne m and q ne p
+// false if formal immersion check fails for N = mp for some q and some cusp
+// (if false then function prints a statement too)
+
+check_formal_immersion := function(m,p);
     N := m*p;
     S:=CuspForms(N);
     R<q>:=PowerSeriesRing(Integers());
@@ -11,18 +21,18 @@ for p in PrimesInInterval(17,100) do
     dec := Decomposition(J);
     Nfs := [* *];
     for d in dec do
-        if IsZeroAt(LSeries(d),1) eq false then
+        if IsZeroAt(LSeries(d),1) eq false then  // We pick out newform orbits with rank 0
             Nfs := Nfs cat [*Newform(d)*];
         end if;
     end for;
 
-    basis := [ ];
+    basis := [ ];  // We seek a basis with integer Fourier coefficients
     for f in Nfs do
         K:= CoefficientField(f);
         RK:= ChangeRing(R,K);
         SK:= BaseChange(S,K);
         prec := Max(100,Ceiling(N /3));
-        fexp := qExpansion(f,prec); // Increase precision to uniquely determine form
+        fexp := qExpansion(f,prec); // can increase precision to uniquely determine form if necessary
         fK:= SK ! (RK ! fexp);
         OK := Integers(K);
         if Degree(K) eq 1 then
@@ -37,8 +47,8 @@ for p in PrimesInInterval(17,100) do
         end for;
     end for;
 
-    CuspExps:=[*basis*]; // Initial list
-    ALs:=[ m : m in Divisors(N) | GCD(m,N div m) eq 1 and m gt 1];
+    CuspExps:=[*basis*]; // Initial list, we now compute expansions at other cusps
+    ALs:=[ m : m in Divisors(N) | GCD(m,N div m) eq 1 and m gt 1]; // Atkin-Lehner indices
     for m in ALs do
         CE:=[* *];
         for f in basis do
@@ -48,7 +58,7 @@ for p in PrimesInInterval(17,100) do
         CuspExps:=CuspExps cat [*CE*];
     end for;
 
-    for i in [1,2,3,4] do
+    for i in [1,2,3,4] do  // We now form the formal immersion matrices
         Cusp2 := i; // i <--> ALs[i](infinity) for i = 2,3,4.
         Col1 := [Integers() ! Coefficient(f,1) : f in CuspExps[1]];
         if i eq 1 then
@@ -56,12 +66,28 @@ for p in PrimesInInterval(17,100) do
         else
             Col2 := [Integers() ! Coefficient(f,1) : f in CuspExps[Cusp2]];
         end if;
-        M := Transpose(Matrix(Integers(), [Col1,Col2]));
-        gcdMinors := GCD(Minors(M,2));
+        M := Transpose(Matrix(Integers(), [Col1,Col2])); // Formal immersion matrix
+        gcdMinors := GCD(Minors(M,2)); // use this to check rank mod q for many q > 2
         if IsZero(gcdMinors) or IsSubsequence(PrimeFactors(gcdMinors),[2]) eq false then
             print "Criterion failed for N =", N, "and cusp =", i;
-            // M;
+            print "Not testing further cusps";
+            return false;
         end if;
     end for;
-    // print("+++++++++++++++++++++");
+    return true; // No cusps failed, so formal immersion criterion passed
+end function;
+
+////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////
+
+// We check the formal immersion criterion for m = 2, 3 and primes 17 <= p <= 300
+// (if m = 2 then p ne 23)
+
+time for m in [2,3] do // total time =
+    for p in PrimesInInterval(17,300) do // max prime is 293
+        if p eq 23 and m eq 2 then
+            continue; // result does not apply in this case
+        end if;
+        assert check_formal_immersion(m,p);
+    end for;
 end for;

@@ -1,15 +1,19 @@
-// Magma code to support the computations in the paper On elliptic curves with p-isogenies over quadratic fields by Philippe Michaud-Jacobs.
-// See https://github.com/michaud-jacobs/p-isog-quadratic for all the code files and links to the paper
-
+// Magma code to support the computations in my PhD thesis.
 // The code works on Magma V2.26-10
-// The output is at the end of the file
 
+// The code computes bad primes in the case of a constant isogeny signature
+// works over a specific quadratic field K = Q(sqrt(d))
 
-// This code verifies the computations parts of the proofs of Theorem 5.3 and Proposition 5.5
-// We compute a set of bad primes in the case of constant isogeny signature
+////////////////////////////////////////////
 
-// To verify the computations in Theorem 5.3, simply run the code for d := 5 and set aux := [3,2].
-// The primes 2 and 3 are inert in Q(sqrt(5)) and this will therefore replicate the set-up exactly
+// Input: d
+// We work over the quadratic field K = Q(sqrt(d))
+// Optional input: aux_upper_bd and t
+// aux_upper_bd is an upper bound for the primes q to be used (default = 20)
+// t is a positive integer that divides the size of E(K)_tors (default = 1)
+
+// Output: list of bad primes for constant isogeny signature
+// list will automatically include [2,3,5,7,11,13,17,19,37]
 
 const := function(d: aux_upper_bd := 20, t := 1); // to work over the field K = Q(sqrt(d))
     T<x>:=PolynomialRing(Rationals());
@@ -53,16 +57,16 @@ const := function(d: aux_upper_bd := 20, t := 1); // to work over the field K = 
     return Set(Sort(badp cat vbadp));
 end function;
 
-for d in [5,47*67*101] do // Output at end of file.
-    specif_sig(d);
-end for;
+////////////////////////////////////////////////////////////////////////////////
 
-/* Output for d in [5, 47*67*101]
+// To verify the computations in Theorem 5.3, simply run the code for d := 5 and set aux := [3,2].
+// The primes 2 and 3 are inert in Q(sqrt(5)) and this will therefore replicate the set-up exactly
 
-Considering d =  5
-{ 2, 3, 5, 7, 11, 13, 17, 19, 37 }
+// We check what happens if 2 and 3 are inert by running the following code
+// (we set d = 5 since 2 and 3 are inert in Q(sqrt(5)))
 
-Considering d =  318049
-{ 2, 3, 5, 7, 11, 13, 17, 19, 37 }
+assert const(5: aux_upper_bd := 3) eq {2,3,5,7,11,13,17,19,37};
 
-*/
+// We now run the computation for d = 47*67*101
+
+assert const(47*67*101) eq {2,3,5,7,11,13,17,19,37};

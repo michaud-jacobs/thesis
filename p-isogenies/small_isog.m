@@ -1,15 +1,15 @@
-// Magma code to support the computations in the paper On elliptic curves with p-isogenies over quadratic fields by Philippe Michaud-Jacobs.
-// See https://github.com/michaud-jacobs/p-isog-quadratic for all the code files and links to the paper
-
+// Magma code to support the computations in my PhD thesis.
 // The code works on Magma V2.26-10
-// The output is at the end of the file
 
+// This code carries out certain computations for p-isogenies with p small
 
-// This code verifies the computations in part of the proof of Theorem 2, part of the proof of Proposition 5.5, and Remark 5.2
+// The output is displayed at the end of the file
+
+////////////////////////////////////////////
 
 // We start by considering the primes p = 11, 17, and 19 in each case
-// The code verifies whether X_0(p)(K) has rank 0 or not
-// In the case of positive rank, the code tries to construct an elliptic curve with a p-isogeny which is semistable at the primes of K above p
+// This function verifies whether X_0(p)(K) has rank 0 or not
+// In the case of positive rank, the function tries to construct an elliptic curve with a p-isogeny which is semistable at the primes of K above p
 
 small_isog := function(d);
     print("Considering d = "),d;
@@ -29,7 +29,7 @@ small_isog := function(d);
         _,phi := IsIsomorphic(XdK,XK);
 
         Md,pid,tf1,tf2 := MordellWeilGroup(Xd: Effort := 3); // can change effort.
-        assert tf1 and tf2; 
+        assert tf1 and tf2;
         k := #Generators(Md);
         gen := Md.k;
 
@@ -38,15 +38,15 @@ small_isog := function(d);
             ranks := ranks cat <0>;
         end if;
 
-        if IsFinite(Md) eq false then 
+        if IsFinite(Md) eq false then
             print("Positive rank over K");
             ranks := ranks cat <"pos">;
-            if d lt 11 then 
+            if d lt 11 then
                i_range := [1,2];
-            
-            else i_range := [1]; 
+
+            else i_range := [1];
             end if;
-            for i in i_range do  
+            for i in i_range do
                 print("Doing i = "),i;
                 ptK := phi(XdK ! (pid(i*gen)));
                 E := Domain(Isogeny(ptK,p));
@@ -54,7 +54,7 @@ small_isog := function(d);
                     LocalInformation(E,pp)[5]; // the Kodaira symbol, I0 means good reduction
                 end for;
             end for;
-        end if; 
+        end if;
     end for;
     return ranks, ClassNumber(K);
 end function;
@@ -76,7 +76,7 @@ OK := Integers(K);
 
 X := SmallModularCurve(43);
 XK := ChangeRing(X,K);
-w := AtkinLehnerInvolution(X,43,43); 
+w := AtkinLehnerInvolution(X,43,43);
 Xpl, phi := CurveQuotient(AutomorphismGroup(X, [w]));
 Pts:=Points(Xpl: Bound := 100);
 for Q in Pts do
@@ -99,9 +99,10 @@ assert(Valuation(Conductor(E1),p2)) eq 0;
 
 g := Generators(p1)[2];
 E2 := QuadraticTwist(E1,g);
-Factorisation(Integers() ! Norm(Conductor(E2))); // this is [ <2, 10>, <3, 4>, <11, 4> ], so good reduction at p1 and p2.
+Factorisation(Integers() ! Norm(Conductor(E2)));
+// this is [ <2, 10>, <3, 4>, <11, 4> ], so good reduction at p1 and p2.
 
-/* Output for d in [-5] cat [2,3,5,6,7] cat [47*67*101] cat [29,10,79] 
+/* Output for d in [-5] cat [2,3,5,6,7] cat [47*67*101] cat [29,10,79]
 
 Considering d =  -5
 Doing p =  11
@@ -256,8 +257,4 @@ Positive rank over K
 Doing i =  1
 I0
 <"pos", "pos", "pos"> 3
-
 */
-
- 
-     

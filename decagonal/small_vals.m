@@ -1,4 +1,9 @@
+// Magma code to support the computations in my PhD thesis.
+// The code works on Magma V2.27-7
+
 // We solve certain Thue equations arising in the cases p = 3, 5, and 7.
+
+////////////////////////////////////////////
 
 T<X> := PolynomialRing(Integers());
 

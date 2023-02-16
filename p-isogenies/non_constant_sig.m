@@ -1,12 +1,18 @@
-// Magma code to support the computations in the paper On elliptic curves with p-isogenies over quadratic fields by Philippe Michaud-Jacobs.
-// See https://github.com/michaud-jacobs/p-isog-quadratic for all the code files and links to the paper
-
+// Magma code to support the computations in my PhD thesis.
 // The code works on Magma V2.26-10
-// The output is at the end of the file
 
+// The code computes bad primes in the case of a non-constant isogeny signature
 
-// This code verifies the computations in part of the proof of Theorem 2  (for d = 6 and d = -5)
-// We compute a set of bad primes in the case of non-constant isogeny signature
+////////////////////////////////////////////
+
+// Input: d
+// We work over the quadratic field K = Q(sqrt(d))
+// Optional input: aux_upper_bd and t
+// aux_upper_bd is an upper bound for the primes q to be used (default = 10)
+// t is a positive integer that divides the size of E(K)_tors (default = 1)
+
+// Output: list of bad primes for non-constant isogeny signature
+// list will automatically include [2,3,5,7,11,13,17,19,37]
 
 non_const := function(d: aux_upper_bd := 10, t := 1);
     T<x>:=PolynomialRing(Rationals());
@@ -52,16 +58,8 @@ non_const := function(d: aux_upper_bd := 10, t := 1);
     return Set(Sort(badp cat vbadp));
 end function;
 
-for d in [-5,6] do // Output at end of file.
-    non_const(d);
-end for;
+////////////////////////////////////////////////////////////////////////////////
 
+// We verify the computation for d = -5
 
-/* Output for d in [-5,6]
-
-Considering d =  -5
-{ 2, 3, 5, 7, 11, 13, 17, 19, 37, 43 }
-
-Considering d =  6
-{ 2, 3, 5, 7, 11, 13, 17, 19, 37 }
-*/
+assert non_const(-5) eq {2,3,5,7,11,13,17,19,37,43};

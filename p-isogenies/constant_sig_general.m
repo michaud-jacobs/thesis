@@ -1,11 +1,21 @@
-// Magma code to support the computations in the paper On elliptic curves with p-isogenies over quadratic fields by Philippe Michaud-Jacobs.
-// See https://github.com/michaud-jacobs/p-isog-quadratic for all the code files and links to the paper
-
+// Magma code to support the computations in my PhD thesis.
 // The code works on Magma V2.26-10
+
+// The code computes bad primes in the case of a constant isogeny signature
+// It works with families of quadratic fields with class group exponent n
+
 // The output is at the end of the file
 
+////////////////////////////////////////////
 
-// This code verifies the computations in the proof of Theorem 1
+// Input: n
+// We work over the quadratic fields with class group exponent n
+// Optional input: aux_upper_bd and t
+// aux_upper_bd is an upper bound for the primes q to be used (default = 20)
+// t is a positive integer that divides the size of E(K)_tors (default = 1)
+
+// Output: list of bad primes for non-constant isogeny signature
+// list will automatically include [2,3,5,7,11,13,17,19,37]
 
 gen_const := function(n: aux_upper_bd := 20, t := 1);  // n is the class group exponent.
 
@@ -47,22 +57,19 @@ gen_const := function(n: aux_upper_bd := 20, t := 1);  // n is the class group e
     return Set(Sort(badp cat vbadp));
 end function;
 
-for n in [1,2,3] cat [100] do   // Output at end of file.
-    gen_sig(n);
+for n in [1,2,3] cat [100] do   // Output follows
+    print "Considering n =", n;
+    gen_const(n);
 end for;
 
-/* Output for n in [1,2,3] cat [100]:
+/* Output:
 
-Considering n =  1
+Considering n = 1
 { 2, 3, 5, 7, 11, 13, 17, 19, 37 }
-
-Considering n =  2
+Considering n = 2
 { 2, 3, 5, 7, 11, 13, 17, 19, 37 }
-
-Considering n =  3
+Considering n = 3
 { 2, 3, 5, 7, 11, 13, 17, 19, 37, 73 }
-
-Considering n =  100
+Considering n = 100
 { 2, 3, 5, 7, 11, 13, 17, 19, 31, 37, 41, 61, 97, 101, 151, 241, 401, 601, 1201, 1801 }
-
 */
