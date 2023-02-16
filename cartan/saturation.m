@@ -2,7 +2,8 @@
 // The code works on Magma V2.26-10
 
 // The code in this file concerns the saturation step
-// See saturation_output.txt for the output
+// The output is in the file saturation_output.txt, available at
+// https://github.com/michaud-jacobs/thesis/blob/main/cartan/saturation_output.txt
 
 // The code uses data from the file "eqn_data.m" file available at:
 // https://github.com/michaud-jacobs/thesis/blob/main/cartan/eqn_data.m
