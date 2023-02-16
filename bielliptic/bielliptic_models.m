@@ -1,10 +1,7 @@
-// Magma code to support the computations in the paper
-// Computing points on bielliptic modular curves over fixed quadratic fields by Philippe Michaud-Jacobs.
-// See https://github.com/michaud-jacobs/bielliptic for all the code files and links to the paper
+// Magma code to support the computations in my PhD thesis.
+// The code works on Magma V2.26-10
 
-////////////////////////////////////////////
-
-// The code works on Magma V2.27-5
+// The code in this file contains code for computing models of certain curves
 
 ////////////////////////////////////////////
 
