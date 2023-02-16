@@ -5,6 +5,8 @@
 // We check that the points at infinity on our affine model consist of a pair of quadratic points 
 // which arise as the pullback of the identity point on X_ns+(11)
 
+////////////////////////////////////////////
+
 A<x,y,t> := AffineSpace(Rationals(),3);
 eqns := [y^2+y-(x^3-x^2-7*x+10), t^2 +4*x^3+7*x^2-6*x+19];
 X := Curve(A,eqns); // The affine model used for X_ns(11)
