@@ -1,9 +1,15 @@
-// Magma code to support the computations in the paper
-// Fermat's Last Theorem and modular curves over real quadratic fields by Philippe Michaud-Jacobs.
-// See https://github.com/michaud-jacobs/flt-quad for all the code files and links to the paper
-
+// Magma code to support the computations in my PhD thesis.
 // The code works on Magma V2.26-10
-// The output is in the newform_elimination_output.txt file
+
+// The code in this file carries out the main elimination of newform step.
+
+// The output is in the file elimination_output.txt, available at
+// https://github.com/michaud-jacobs/thesis/blob/main/flt/elimination_output.txt
+
+// The code uses the function "Np_possibilities" from the file "levels.m" available at:
+// https://github.com/michaud-jacobs/thesis/blob/main/flt/levels.m
+
+////////////////////////////////////////////
 
 // This code attemptes to eliminate all newforms at all possible levels
 // There are two functions for this, hecke_elim and decomp_elim
@@ -16,13 +22,11 @@
 // it should only be used on spaces of smaller dimensions
 // it has a greater chance of eliminating primes than hecke_elim
 
-// the functions in this file rely on the Np_possibilities functions in the levels.m file
-
 //////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////
 
 // auxiliary function to compute c-values
-// q a prime ideal, e a polynomial. Outputs corresponding c-value. See Remark 5.3 of the paper.
+// q a prime ideal, e a polynomial. Outputs corresponding c-value.
 
 Cf:=function(q,e);
     nq:=Norm(q);
