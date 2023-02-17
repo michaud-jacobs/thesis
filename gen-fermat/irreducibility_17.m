@@ -1,14 +1,13 @@
-// Magma code to support the computations in the paper On some generalized Fermat equations of the form x^2 + y^2n = z^p by Philippe Michaud-Jacobs.
-// See https://github.com/michaud-jacobs/gen-fermat for all the code files and links to the paper
-
+// Magma code to support the computations in my PhD thesis.
 // The code works on Magma V2.26-10
-// The output is contained withing the file
 
-// This code verifies the computations of Lemma 7.2 and Lemma 7.3.
+// The code carries out the irreducibility checks for signature (2m, 2l, 17)
 
-/////////////////////////////////////////////////////////////////////////////////
+// The output is contained within the file
 
-// We start with the verifications for Lemma 7.3
+////////////////////////////////////////////
+
+// We start with the modular curve verifications
 
 p:=17;
 L<a>:=CyclotomicField(p);
@@ -115,7 +114,7 @@ assert ModularDegree(C) eq 3;
 /////////////////////////////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////
 
-// We now carry out the verifications for Lemma 7.2
+// We now carry out the remaining irreducibility checks.
 // We first check the j-invariant cannot be in Q(sqrt(17)) 
 // by considering its reduction mod a prime of K above 2
 
@@ -142,8 +141,10 @@ assert Degree(MinimalPolynomial(red)) eq 2;  // so not defined over F2.
 
 /////////////////////////////////////////////////////////////////////////////////
 
-// We now verify the first paragraph of the proof of Lemma 7.2 following [1, p. 1165]
-// This is the code of Anni and Siksek [1] (very slightly adapted).
+// We now verify there exists a curve with a 2l torsion point. We follow 
+// S. Anni and S. Siksek. Modular elliptic curves over real abelian fields and the generalized Fermat equation x^2l+y^2m=z^p. 
+// Algebra Number Theory 10(6):1147--1172, 2016.
+// This is the code of Anni and Siksek (very slightly adapted).
 
 i := 1; // Choose case
 
@@ -234,4 +235,3 @@ The set of B_{T^prime,D}(u_1,...,u_d) is  { 1, 4096 }
 The set of surviving primes ell is []
  
 */
-
