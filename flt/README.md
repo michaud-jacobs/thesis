@@ -3,6 +3,7 @@ This folder contains Magma code to support the computations in Chapter 7 of my t
 
 This folder contains the following files (more description is contained within each file):
 
+- irreducibility.m carries out the irreducibility checks.
 - levels.m computes the possible levels N_p for Hilbert newforms.
 - levels_output.txt contains the output of the levels.m file.
 - newform_elimination.m carries out the newform elimination checks.
