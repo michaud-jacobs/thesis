@@ -1,8 +1,19 @@
+// Magma code to support the computations in my PhD thesis.
+// The code works on Magma V2.27-7.
+// The code in this folder ("Q-curves") is based on joint work with Michael A Bennett and Samir Siksek.
+
+// The code in this file carries out the elimination steps using Frey Q curves (and multi-Frey techniques).
+
+// The output is in the file Qcurve_elimination_output.txt, available at:
+// https://github.com/michaud-jacobs/thesis/edit/main/Q-curves/Qcurve_elimination_output.txt
+
+////////////////////////////////////////////
+
 q := 41; // Choose q = 17, 41, 89, or 97.
 M<rootq> := QuadraticField(q);
 OM :=Integers(M);
 
-// start by defining gamma and gammab appropriately and check they satisfy requirements.
+// start by defining gamma and gammab appropriately.
 
 if q eq 17 then                    
    gamma := (-3+rootq)/2;
@@ -121,7 +132,7 @@ Bg := function(g);
    return GCD([Bgp(g,p) : p in PrimesInInterval(3,30) | p ne q ]);
 end function;
 
-// see output file for the output of the following loop.
+// see output file (Qcurve_elimination_output.txt) for the output of the following loop.
 
 for i in [1..#Nfreps] do   // Do not use for q = 97 and the last two newforms as too slow.
     print "Doing i = ", i;
