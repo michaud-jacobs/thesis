@@ -1,8 +1,7 @@
-*** Magma code to support the computations in the paper
-*** Fermat's Last Theorem and modular curves over real quadratic fields by Philippe Michaud-Jacobs.
-*** See https://github.com/michaud-jacobs/flt-quad for all the code files and links to the paper
+Magma code output to support the computations in my PhD thesis.
 
-*** This file contains the output of the remaining_cases.m file
+This is the output of the remaining_cases.m file available at:
+https://github.com/michaud-jacobs/thesis/blob/main/flt/remaining_cases.m
 
 
 Considering d =  17
