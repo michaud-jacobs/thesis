@@ -1,6 +1,16 @@
-// We now use the code from the paper 
-// [4] M. Bennett and S. Siksek, Differences between perfect powers: prime power gaps, arXiv:2110.05553v1
-// to verify there are no unkown solutions for q = 17 and n > 7
+// Magma code to support the computations in my PhD thesis.
+// The code works on Magma V2.27-7.
+// The code in this folder ("Q-curves") is based on joint work with Michael A Bennett and Samir Siksek.
+
+// The code in this file carries out the elimination steps for q = 17 and n < 1000 using the rational Frey curve
+
+// The code is taken from the paper
+// M. Bennett and S. Siksek, Differences between perfect powers: prime power gaps, arXiv:2110.05553v1
+
+// In the case n = 7, we use the main function from the file ThueMahlerSolver.m, available at:
+// https://github.com/michaud-jacobs/thesis/blob/main/Q-curves/ThueMahlerSolver.m
+
+////////////////////////////////////////////
 
 kraus:=function(v,q,del,kap,f,nn);
 	// This computes the intersection \cap \mathcal{Z}_{\ell_i}
@@ -106,7 +116,7 @@ end for;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// We use the refined sieve from [4] to get more information in the case n = 7.
+// We now use the refined sieve from to get more information in the case n = 7.
 
 fineKraus:=function(mlist,q,del,kap,f,nn);
 	if Type(nn) eq RngIntElt then
