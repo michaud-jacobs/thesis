@@ -1,23 +1,27 @@
-// Magma code to support the computations in the paper
-// Fermat's Last Theorem and modular curves over real quadratic fields by Philippe Michaud-Jacobs.
-// See https://github.com/michaud-jacobs/flt-quad for all the code files and links to the paper
-
+// Magma code to support the computations in my PhD thesis.
 // The code works on Magma V2.26-10
-// The output is in the remaining_cases_output.txt file
-// Some output is included within this file
 
-// This code carries out the remaining elimination steps in Section 5 of the paper
+// The code in this file carries out the computations to deal with any remaining cases for the elimination steps.
+
+// The output is in the file remaining_cases_output.txt, available at
+// https://github.com/michaud-jacobs/thesis/blob/main/flt/remaining_cases_output.txt
+// Some output is included withing this file
+
+// The code uses the function "Np_possibilities" from the file "levels.m" available at:
+// https://github.com/michaud-jacobs/thesis/blob/main/flt/levels.m
+
+// The code also uses the functions "decomp_elim" and "hecke_elim" from the file "newform_elimination.m" available at:
+// https://github.com/michaud-jacobs/thesis/blob/main/flt/newform_elimination.m
+
+////////////////////////////////////////////
+
 // The code carries out the following checks:
 
 // Image of inertia argument for d = 34 and d = 55
 // Symplectic argument for d = 89
 // Sieving steps for eliminating individual primes p
 
-// the functions in this file rely on the Np_possibilities functions in the levels.m file
-// and all functions in the newform_elimination.m file.
-
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////
 
 // We carry out the computations for the image of inertia argument
 // in the cases d = 34 and d = 55
@@ -142,7 +146,7 @@ Valuation(Discriminant(E),p1)*Valuation(Discriminant(E),p2) eq 20;
 ///////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////
 
-// This code carries out the computations of Lemma 5.5 in the paper.
+// This code carries out the steps for eliminating p in the range 17 <= p < 10^7.
 
 // Input: d
 // Output: primes in the range 17 to 10^7 that cannot be eliminated
