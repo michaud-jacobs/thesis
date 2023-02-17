@@ -1,7 +1,12 @@
-// We verify the irreducibility computations
+// Magma code to support the computations in my PhD thesis.
+// The code works on Magma V2.27-7
 
-// The code uses the function "non_const" in the file "xxxxxxxxxxxxxxxx" available in the p-isogenies folder of this thesis' repository at:
-// https://github.com/michaud-jacobs/thesis/blob/main/p-isogenies/Specific_constant_sig_c.m
+// The code in this file carries out the irreducibility.
+
+// The code uses the function "non_const" from the file "non_constant_sig.m" available in the "p-isogenies" folder of this thesis' repository at:
+// https://github.com/michaud-jacobs/thesis/blob/main/p-isogenies/non_constant_sig.m
+
+////////////////////////////////////////////
 
 // We first consider the case of a non-constant isogeny signature:
 
