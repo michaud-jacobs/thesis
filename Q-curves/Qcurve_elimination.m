@@ -5,7 +5,7 @@
 // The code in this file carries out the elimination steps using Frey Q curves (and multi-Frey techniques).
 
 // The output is in the file Qcurve_elimination_output.txt, available at:
-// https://github.com/michaud-jacobs/thesis/edit/main/Q-curves/Qcurve_elimination_output.txt
+// https://github.com/michaud-jacobs/thesis/blob/main/Q-curves/Qcurve_elimination_output.txt
 
 ////////////////////////////////////////////
 
