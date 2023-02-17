@@ -1,8 +1,11 @@
-// Magma code to support the computations in the paper On some generalized Fermat equations of the form x^2 + y^2n = z^p by Philippe Michaud-Jacobs.
-// See https://github.com/michaud-jacobs/gen-fermat for all the code files and links to the paper
-
+// Magma code to support the computations in my PhD thesis.
 // The code works on Magma V2.26-10
-// The output is contained withing the file
+
+// The code in this computes constants for p = 11, 13, 17 for the asymptotic version for signature (2, 2n, 3p)
+
+// The output is contained within the file
+
+////////////////////////////////////////////
 
 // Computing B_p
 // The code works for any prime p.
