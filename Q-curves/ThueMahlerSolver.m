@@ -1,5 +1,18 @@
-// The latest version of this solver can be found at 
-// https://github.com/adelagherga/ThueMahler/tree/master/Code/TMSolver
+// Magma code to support the computations in my PhD thesis.
+// The code works on Magma V2.27-7.
+// The code in this folder ("Q-curves") is based on joint work with Michael A Bennett and Samir Siksek.
+
+// The code in this file contains functions to solve Thue-Mahler equations.
+
+// The code is written by A. Gherga and S. Siksek and taken from the paper
+// A. Gherga and S. Siksek. Efficient resolution of Thue-Mahler equations, arXiv:2207.14492v1, 2022.
+
+// The code was taken from the GitHub repository:
+// https://github.com/adelagherga/ThueMahler
+
+// An updated version of the solver we use below may be found there
+
+////////////////////////////////////////////
 
 /*
 ThueMahlerSolver.m
