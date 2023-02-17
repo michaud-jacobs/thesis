@@ -1,7 +1,10 @@
-// This Magma code carries out the checks and computations for the paper 
-// Q-curves and the Lebesgue-Nagell equation by Michael A. Bennett, Philippe Michaud-Jacobs, and Samir Siksek
+// Magma code to support the computations in my PhD thesis.
+// The code works on Magma V2.27-7.
+// The code in this folder ("Q-curves") is based on joint work with Michael A Bennett and Samir Siksek.
 
-// The code runs on Magma V2.26-10
+// The code in this file carries out basic checks on the Frey Q-curves.
+
+////////////////////////////////////////////
 
 q := 41; // Choose q = 17, 41, 89, or 97.
 M<rootq> := QuadraticField(q);
