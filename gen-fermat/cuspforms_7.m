@@ -1,9 +1,10 @@
-// Magma code to support the computations in the paper On some generalized Fermat equations of the form x^2 + y^2n = z^p by Philippe Michaud-Jacobs.
-// See https://github.com/michaud-jacobs/gen-fermat for all the code files and links to the paper
-
+// Magma code to support the computations in my PhD thesis.
 // The code works on Magma V2.26-10
 
-// This code carries out the computations needed for the proof of Theorem 1.
+// The code in this computes the Hilbert cusp form decomposition for signature (2, 2n, 21)
+// The output is contained within the file
+
+////////////////////////////////////////////
 
 p:=7;
 L<zet>:=CyclotomicField(p);
