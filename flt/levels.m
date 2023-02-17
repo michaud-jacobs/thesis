@@ -1,12 +1,12 @@
-// Magma code to support the computations in the paper
-// Fermat's Last Theorem and modular curves over real quadratic fields by Philippe Michaud-Jacobs.
-// See https://github.com/michaud-jacobs/flt-quad for all the code files and links to the paper
-
+// Magma code to support the computations in my PhD thesis.
 // The code works on Magma V2.26-10
-// The output is in the levels_output.txt file
 
-//////////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////////
+// The code in this file computes the possible levels after level-lowering
+
+// The output is in the file levels_output.txt, available at
+// https://github.com/michaud-jacobs/thesis/blob/main/flt/levels_output.txt
+
+////////////////////////////////////////////
 
 // Input: Squarefree d > 0
 // Output:
