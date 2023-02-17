@@ -1,10 +1,16 @@
-// Magma code to support the computations in the paper On some generalized Fermat equations of the form x^2 + y^2n = z^p by Philippe Michaud-Jacobs.
-// See https://github.com/michaud-jacobs/gen-fermat for all the code files and links to the paper
-
+// Magma code to support the computations in my PhD thesis.
 // The code works on Magma V2.26-10
-// The output is at the end of the file
 
-// We start by using the code of Anni and Siksek [1] (very slightly adapted) to eliminate all newforms other than g_1, g_2, g_3, and g_4.
+// The code carries out the Hilbert newform elimination steps for signature (2m, 2l, 17)
+
+// The output is contained within the file
+
+////////////////////////////////////////////
+
+// We start by using the code of Anni and Siksek (very slightly adapted) to eliminate all newforms other than g_1, g_2, g_3, and g_4.
+// This is from the paper: 
+// S. Anni and S. Siksek. Modular elliptic curves over real abelian fields and the generalized Fermat equation x^2l+y^2m=z^p. 
+// Algebra Number Theory 10(6):1147--1172, 2016.
 
 cs:=1; // cs = 1 is i = 1 and cs = 2 is i = 2
 
@@ -548,9 +554,6 @@ Factoristion of B_S(ff) [ <2, 40> ]
 surviving primes ell= []
 
 */
-
-
-
 
 
 
