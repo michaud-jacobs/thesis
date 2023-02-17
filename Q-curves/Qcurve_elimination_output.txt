@@ -1,3 +1,10 @@
+Magma code output to support the computations in my PhD thesis.
+The code in this folder ("Q-curves") is based on joint work with Michael A Bennett and Samir Siksek.
+
+This is the output of the Qcurve_elimination.m file available at:
+https://github.com/michaud-jacobs/thesis/blob/main/Q-curves/Qcurve_elimination.m
+
+
 17
 
 Doing i =  1
