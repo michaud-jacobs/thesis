@@ -77,8 +77,6 @@ sieve := function(   :primes_for_sieve := [3,5,31,43,53,61,73], VerboseLevel := 
             K := quad_pts_list[i][2];
             Qa := Eltseq(quad_pt[1]);
             Qb := Eltseq(quad_pt[2]);
-            // Code now continues in same way as Sieve_OldMagma.m
-
             OK:=RingOfIntegers(K);
             dec:=Factorization(p*OK);
             pp:=dec[1][1];                   // A prime above the rational prime p
@@ -269,4 +267,4 @@ end function;
 // See output file
 
 sieve();
-sieve(   :primes_for_sieve := [3,5], VerboseLevel := 1);
+sieve(   :primes_for_sieve := [3,5], VerboseLevel := 1); // For presented computations
