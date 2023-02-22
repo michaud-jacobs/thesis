@@ -66,7 +66,6 @@ for d in [-5] cat [2,3,5,6,7] cat [47*67*101] cat [29,10,79] do
 end for;
 // Output displayed at the end of this file.
 
-
 //////////////////////////////////////////////////////////////////
 
 // Next, we consider the case d = -5 and p = 43
@@ -102,7 +101,7 @@ E2 := QuadraticTwist(E1,g);
 Factorisation(Integers() ! Norm(Conductor(E2)));
 // this is [ <2, 10>, <3, 4>, <11, 4> ], so good reduction at p1 and p2.
 
-/* Output for d in [-5] cat [2,3,5,6,7] cat [47*67*101] cat [29,10,79]
+/* Output for d in [-5] cat [2,3,5,6,7] cat [47*67*101] cat [29,10,79] loop
 
 Considering d =  -5
 Doing p =  11
