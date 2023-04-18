@@ -6,5 +6,5 @@ This folder contains the following files (more description is contained within e
 - [asymptotic_constants.m](asymptotic_constants.m) computes explicit constants for irreducibility and dimensions of Hilbert cusp forms for signature (2, 2n, 3p).
 - [cuspforms_7.m](cuspforms_7.m) verifies the Hilbert cusp form computation for signature (2, 2n, 21).
 - [cuspforms_17.m](cuspforms_17.m) verifies the Hilbert cusp form computations for signature (2m, 2l, 17).
-- [cuspforms_17_output.txt](cuspforms_17_output.txt) contains the output of the cuspforms_17.m file.
+- [cuspforms_17_output.txt](cuspforms_17_output.txt) contains the output of the `cuspforms_17.m` file.
 - [irreducibility_17.m](irreducibility_17.m) carries out the irreducibility computations for signature (2m, 2l, 17).
