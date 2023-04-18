@@ -4,6 +4,8 @@ This folder contains Magma code to support the computations in Chapter 9 of my t
 
 This folder contains the following files (more description is contained within each file):
 
-- MainCode.m.
-- Elimination_outputs.txt.
-- ThueMahlerSolver.m.
+- [Qcurve_checks.m](Qcurve_checks.m)
+- [Qcurve_elimination.m](Qcurve_elimination.m)
+- [Qcurve_elimination_output.txt](Qcurve_elimination_output.txt)
+- [ThueMahlerSolver.m](ThueMahlerSolver.m)
+- [rational_elimination_17.m](rational_elimination_17.m)
