@@ -2,7 +2,7 @@
 // The code works on Magma V2.27-7.
 // The code in this folder ("Q-curves") is based on joint work with Michael A Bennett and Samir Siksek.
 
-// The code in this file carries out the elimination steps using Frey Q curves (and multi-Frey techniques).
+// The code in this file carries out the elimination steps using Frey Q-curves (and multi-Frey techniques).
 
 // The output is in the file Qcurve_elimination_output.txt, available at:
 // https://github.com/michaud-jacobs/thesis/blob/main/Q-curves/Qcurve_elimination_output.txt
