@@ -4,8 +4,8 @@ This folder contains Magma code to support the computations in Chapter 5 of my t
 
 This folder contains the following files (more description is contained within each file):
 
-- constant_sig_general.m computes bad constant isogeny signature primes for a given class group exponent.
-- constant_sig_specific.m computes bad constant isogeny signature primes for a given quadratic field.
-- non_constant_sig.m computes bad non-constant isogeny signature primes for a given quadratic field.
-- small_isog.m uses modular curves to check for small degree isogenies.
-- formal_imm_mp.m verifies the ranks of certain formal immersion matrices.
+- [constant_sig_general.m](constant_sig_general.m) computes bad constant isogeny signature primes for a given class group exponent.
+- [constant_sig_specific.m](constant_sig_specific.m) computes bad constant isogeny signature primes for a given quadratic field.
+- [non_constant_sig.m](non_constant_sig.m) computes bad non-constant isogeny signature primes for a given quadratic field.
+- [small_isog.m](small_isog.m) uses modular curves to check for small degree isogenies.
+- [formal_imm_mp.m](formal_imm_mp.m) verifies the ranks of certain formal immersion matrices.
