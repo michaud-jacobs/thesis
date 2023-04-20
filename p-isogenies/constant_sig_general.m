@@ -57,19 +57,26 @@ gen_const := function(n: aux_upper_bd := 20, t := 1);  // n is the class group e
     return Set(Sort(badp cat vbadp));
 end function;
 
-for n in [1,2,3] cat [100] do   // Output follows
+for n in [1..7] cat [100] do   // Output follows
     print "Considering n =", n;
     gen_const(n);
 end for;
 
 /* Output:
-
 Considering n = 1
 { 2, 3, 5, 7, 11, 13, 17, 19, 37 }
 Considering n = 2
 { 2, 3, 5, 7, 11, 13, 17, 19, 37 }
 Considering n = 3
 { 2, 3, 5, 7, 11, 13, 17, 19, 37, 73 }
+Considering n = 4
+{ 2, 3, 5, 7, 11, 13, 17, 19, 37, 97 }
+Considering n = 5
+{ 2, 3, 5, 7, 11, 13, 17, 19, 31, 37, 61 }
+Considering n = 6
+{ 2, 3, 5, 7, 11, 13, 17, 19, 37, 73 }
+Considering n = 7
+{ 2, 3, 5, 7, 11, 13, 17, 19, 37, 43 }
 Considering n = 100
 { 2, 3, 5, 7, 11, 13, 17, 19, 31, 37, 41, 61, 97, 101, 151, 241, 401, 601, 1201, 1801 }
 */
