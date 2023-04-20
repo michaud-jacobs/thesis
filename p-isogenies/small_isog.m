@@ -14,13 +14,13 @@
 // In the case of positive rank, the function tries to construct an elliptic curve with a p-isogeny and good reduction (and therefore semistable reduction) at the primes of K above p
 
 small_isog := function(d);
-    print("Considering d = "),d;
+    print "Considering d =", d;
     K<a> := QuadraticField(d);
     OK := Integers(K);
-    print "Class group exponent is:", Exponent(ClassGroup(K));
+    print "Class group exponent is", Exponent(ClassGroup(K));
     ranks := <>;
     for p in [11,17,19] do
-        print("Doing p = "),p;
+        print "Doing p =", p;
 
         pfac := [Factorisation(p*OK)[i][1] : i in [1..#Factorisation(p*OK)]];
 
@@ -37,14 +37,14 @@ small_isog := function(d);
         gen := Md.k;
 
         if IsFinite(Md) then
-            print("Rank is 0 over K");
+            print "Rank is 0 over K";
             ranks := ranks cat <0>;
         else
-            print("Positive rank over K");
+            print "Positive rank over K";
             ranks := ranks cat <"pos">;
             i_range := [1,2,3,4,5,-1,-2,-3,-4,-5];
             for i in i_range do
-                print("Doing i = "),i;
+                print "Doing i =", i;
                 ptK := phi(XdK ! (pid(i*gen)));
                 E := Domain(Isogeny(ptK,p));
                 if #pfac eq 1 then
@@ -74,7 +74,7 @@ end function;
 
 for d in [-5] cat [2,3,5,6,7] cat [29,10,79,145,1756,697,1009] cat [47*67*101] do
     small_isog(d);
-    print("+++++++++++++++++++++++++++++++");
+    print "+++++++++++++++++++++++++++++++";
 end for;
 
 // The output is displayed in the small_isog_output.txt file

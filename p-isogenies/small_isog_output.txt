@@ -6,299 +6,293 @@ https://github.com/michaud-jacobs/thesis/blob/main/p-isogenies/small_isog.m
 This is the output for the small_isog function loop where we consider
 d in [-5] cat [2,3,5,6,7] cat [29,10,79,145,1756,697,1009] cat [47*67*101]
 
-Considering d =  -5
-Class group exponent is: 2
-Doing p =  11
+Considering d = -5
+Class group exponent is 2
+Doing p = 11
 Rank is 0 over K
 +++++++
-Doing p =  17
+Doing p = 17
 Rank is 0 over K
 +++++++
-Doing p =  19
+Doing p = 19
 Rank is 0 over K
 +++++++
 <0, 0, 0>
 +++++++++++++++++++++++++++++++
-Considering d =  2
-Class group exponent is: 1
-Doing p =  11
+Considering d = 2
+Class group exponent is 1
+Doing p = 11
 Positive rank over K
-Doing i =  1
+Doing i = 1
 I0
 Found a curve with good reduction at all primes above p
 +++++++
-Doing p =  17
+Doing p = 17
 Rank is 0 over K
 +++++++
-Doing p =  19
+Doing p = 19
 Positive rank over K
-Doing i =  1
+Doing i = 1
 I0
 Found a curve with good reduction at all primes above p
 +++++++
 <"pos", 0, "pos">
 +++++++++++++++++++++++++++++++
-Considering d =  3
-Class group exponent is: 1
-Doing p =  11
+Considering d = 3
+Class group exponent is 1
+Doing p = 11
 Rank is 0 over K
 +++++++
-Doing p =  17
+Doing p = 17
 Positive rank over K
-Doing i =  1
+Doing i = 1
 I0
 Found a curve with good reduction at all primes above p
 +++++++
-Doing p =  19
+Doing p = 19
 Positive rank over K
-Doing i =  1
+Doing i = 1
 I0
 Found a curve with good reduction at all primes above p
 +++++++
 <0, "pos", "pos">
 +++++++++++++++++++++++++++++++
-Considering d =  5
-Class group exponent is: 1
-Doing p =  11
+Considering d = 5
+Class group exponent is 1
+Doing p = 11
 Rank is 0 over K
 +++++++
-Doing p =  17
+Doing p = 17
 Positive rank over K
-Doing i =  1
+Doing i = 1
 IV
-Doing i =  2
+Doing i = 2
 I0
 Found a curve with good reduction at all primes above p
 +++++++
-Doing p =  19
+Doing p = 19
 Rank is 0 over K
 +++++++
 <0, "pos", 0>
 +++++++++++++++++++++++++++++++
-Considering d =  6
-Class group exponent is: 1
-Doing p =  11
+Considering d = 6
+Class group exponent is 1
+Doing p = 11
 Positive rank over K
-Doing i =  1
+Doing i = 1
 I0
 Found a curve with good reduction at all primes above p
 +++++++
-Doing p =  17
+Doing p = 17
 Positive rank over K
-Doing i =  1
+Doing i = 1
 IV
-Doing i =  2
+Doing i = 2
 I0
 Found a curve with good reduction at all primes above p
 +++++++
-Doing p =  19
+Doing p = 19
 Rank is 0 over K
 +++++++
 <"pos", "pos", 0>
 +++++++++++++++++++++++++++++++
-Considering d =  7
-Class group exponent is: 1
-Doing p =  11
+Considering d = 7
+Class group exponent is 1
+Doing p = 11
 Positive rank over K
-Doing i =  1
+Doing i = 1
 I0
 Found a curve with good reduction at all primes above p
 +++++++
-Doing p =  17
+Doing p = 17
 Positive rank over K
-Doing i =  1
-IV
-Doing i =  2
+Doing i = 1
 I0
 Found a curve with good reduction at all primes above p
 +++++++
-Doing p =  19
+Doing p = 19
 Rank is 0 over K
 +++++++
 <"pos", "pos", 0>
 +++++++++++++++++++++++++++++++
-Considering d =  29
-Class group exponent is: 1
-Doing p =  11
+Considering d = 29
+Class group exponent is 1
+Doing p = 11
 Positive rank over K
-Doing i =  1
+Doing i = 1
 I0
 Found a curve with good reduction at all primes above p
 +++++++
-Doing p =  17
+Doing p = 17
 Positive rank over K
-Doing i =  1
+Doing i = 1
 I0
 Found a curve with good reduction at all primes above p
 +++++++
-Doing p =  19
+Doing p = 19
 Positive rank over K
-Doing i =  1
-I0
-Found a curve with good reduction at all primes above p
-+++++++
-<"pos", "pos", "pos">
-+++++++++++++++++++++++++++++++
-Considering d =  10
-Class group exponent is: 2
-Doing p =  11
-Positive rank over K
-Doing i =  1
-I0
-Found a curve with good reduction at all primes above p
-+++++++
-Doing p =  17
-Positive rank over K
-Doing i =  1
-IV
-Doing i =  2
-I0
-Found a curve with good reduction at all primes above p
-+++++++
-Doing p =  19
-Positive rank over K
-Doing i =  1
+Doing i = 1
 I0
 Found a curve with good reduction at all primes above p
 +++++++
 <"pos", "pos", "pos">
 +++++++++++++++++++++++++++++++
-Considering d =  79
-Class group exponent is: 3
-Doing p =  11
+Considering d = 10
+Class group exponent is 2
+Doing p = 11
 Positive rank over K
-Doing i =  1
+Doing i = 1
 I0
 Found a curve with good reduction at all primes above p
 +++++++
-Doing p =  17
+Doing p = 17
 Positive rank over K
-Doing i =  1
+Doing i = 1
 I0
 Found a curve with good reduction at all primes above p
 +++++++
-Doing p =  19
+Doing p = 19
 Positive rank over K
-Doing i =  1
+Doing i = 1
 I0
 Found a curve with good reduction at all primes above p
 +++++++
 <"pos", "pos", "pos">
 +++++++++++++++++++++++++++++++
-Considering d =  145
-Class group exponent is: 4
-Doing p =  11
+Considering d = 79
+Class group exponent is 3
+Doing p = 11
 Positive rank over K
-Doing i =  1
+Doing i = 1
 I0
 Found a curve with good reduction at all primes above p
 +++++++
-Doing p =  17
+Doing p = 17
 Positive rank over K
-Doing i =  1
-<IV, IV>
-Doing i =  2
+Doing i = 1
+I0
+Found a curve with good reduction at all primes above p
++++++++
+Doing p = 19
+Positive rank over K
+Doing i = 1
+I0
+Found a curve with good reduction at all primes above p
++++++++
+<"pos", "pos", "pos">
++++++++++++++++++++++++++++++++
+Considering d = 145
+Class group exponent is 4
+Doing p = 11
+Positive rank over K
+Doing i = 1
+I0
+Found a curve with good reduction at all primes above p
++++++++
+Doing p = 17
+Positive rank over K
+Doing i = 1
 <I0, I0>
 Found a curve with good reduction at all primes above p
 +++++++
-Doing p =  19
+Doing p = 19
 Positive rank over K
-Doing i =  1
+Doing i = 1
 I0
 Found a curve with good reduction at all primes above p
 +++++++
 <"pos", "pos", "pos">
 +++++++++++++++++++++++++++++++
-Considering d =  1756
-Class group exponent is: 5
-Doing p =  11
+Considering d = 1756
+Class group exponent is 5
+Doing p = 11
 Positive rank over K
-Doing i =  1
+Doing i = 1
 I0
 Found a curve with good reduction at all primes above p
 +++++++
-Doing p =  17
+Doing p = 17
 Positive rank over K
-Doing i =  1
+Doing i = 1
 I0
 Found a curve with good reduction at all primes above p
 +++++++
-Doing p =  19
+Doing p = 19
 Positive rank over K
-Doing i =  1
+Doing i = 1
 I0
 Found a curve with good reduction at all primes above p
 +++++++
 <"pos", "pos", "pos">
 +++++++++++++++++++++++++++++++
-Considering d =  697
-Class group exponent is: 6
-Doing p =  11
+Considering d = 697
+Class group exponent is 6
+Doing p = 11
 Positive rank over K
-Doing i =  1
+Doing i = 1
 <I0*, IV>
-Doing i =  2
+Doing i = 2
 <II, III>
-Doing i =  3
+Doing i = 3
 <III, II>
-Doing i =  4
+Doing i = 4
 <IV, I0*>
-Doing i =  5
+Doing i = 5
 <I0, I0>
 Found a curve with good reduction at all primes above p
 +++++++
-Doing p =  17
+Doing p = 17
 Positive rank over K
-Doing i =  1
+Doing i = 1
 I0
 Found a curve with good reduction at all primes above p
 +++++++
-Doing p =  19
+Doing p = 19
 Positive rank over K
-Doing i =  1
+Doing i = 1
 I0
 Found a curve with good reduction at all primes above p
 +++++++
 <"pos", "pos", "pos">
 +++++++++++++++++++++++++++++++
-Considering d =  1009
-Class group exponent is: 7
-Doing p =  11
+Considering d = 1009
+Class group exponent is 7
+Doing p = 11
 Positive rank over K
-Doing i =  1
+Doing i = 1
 I0
 Found a curve with good reduction at all primes above p
 +++++++
-Doing p =  17
+Doing p = 17
 Positive rank over K
-Doing i =  1
+Doing i = 1
 IV
-Doing i =  2
+Doing i = 2
 I0
 Found a curve with good reduction at all primes above p
 +++++++
-Doing p =  19
+Doing p = 19
 Positive rank over K
-Doing i =  1
+Doing i = 1
 I0
 Found a curve with good reduction at all primes above p
 +++++++
 <"pos", "pos", "pos">
 +++++++++++++++++++++++++++++++
-Considering d =  318049
-Class group exponent is: 122
-Doing p =  11
+Considering d = 318049
+Class group exponent is 122
+Doing p = 11
 Positive rank over K
-Doing i =  1
+Doing i = 1
 I0
 Found a curve with good reduction at all primes above p
 +++++++
-Doing p =  17
+Doing p = 17
 Rank is 0 over K
 +++++++
-Doing p =  19
+Doing p = 19
 Positive rank over K
-Doing i =  1
+Doing i = 1
 I0
 Found a curve with good reduction at all primes above p
 +++++++
