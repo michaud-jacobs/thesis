@@ -2,8 +2,10 @@
 // The code works on Magma V2.27-7
 
 // We verify some basic computations for the curve X_ns(11)
-// We check that the points at infinity on our affine model consist of a pair of quadratic points 
+// We check that the points at infinity on our affine model consist of a pair of quadratic points
 // which arise as the pullback of the identity point on X_ns+(11)
+
+// We also check that H(Q) is empty.
 
 ////////////////////////////////////////////
 
@@ -56,3 +58,11 @@ assert Degree(rhoP) eq 2; // This is indeed the correct map
 pullback_scheme := Pullback(rhoP,Identity(E));
 Points(pullback_scheme,K); // We see that we have the same points:
 // {@ (0 : -1/2*a : 1 : 0), (0 : 1/2*a : 1 : 0) @}
+
+////////////////////////////////////////////
+
+// We check that H(Q) is empty using the TwoCoverDescent function
+
+QQ<s> := PolynomialRing(Rationals());
+H := HyperellipticCurve(-(2*s^3-4*s^2-28*s+41)*(4*s^3+7*s^2-6*s+19));
+assert TwoCoverDescent(H) eq {}; // takes about 5 minutes
