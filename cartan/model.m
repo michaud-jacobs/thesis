@@ -15,10 +15,10 @@ load "eqn_data.m";
 old_X := Curve(ProjectiveSpace(R), old_eqns);  // The curve X_ns(13)
 
 X_plus := Curve(ProjectiveSpace(S), eqn_X_plus); // The curve X_ns^+(13),
- 
-old_rho :=map < old_X -> X_plus | old_rho_eqns >; 
- 
-SvnPts := [X_plus ! [0,1,0], X_plus ! [0,0,1], X_plus ! [-1,0,1], X_plus ! [1,0,0], X_plus ! [1,1,0], X_plus ! [0,3,2], X_plus ! [1,0,1]];  
+
+old_rho :=map < old_X -> X_plus | old_rho_eqns >;
+
+SvnPts := [X_plus ! [0,1,0], X_plus ! [0,0,1], X_plus ! [-1,0,1], X_plus ! [1,0,0], X_plus ! [1,1,0], X_plus ! [0,3,2], X_plus ! [1,0,1]];
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -37,7 +37,7 @@ for pt in SvnPts do
     K2 := NumberField(AbsolutePolynomial(K1));
     d := Squarefree(Discriminant(Integers(K2)));
     K := QuadraticField(d);
-    ds := ds join {d};  
+    ds := ds join {d};
 end for;
 
 T<x> := PolynomialRing(Rationals());   // Setting up a more general field that contains all the square roots we need
@@ -58,14 +58,14 @@ end for;
 T1 := TranslationOfSimplex(PQQ,quad_pts1 cat [quad_pts2[1],quad_pts2[2]]);
 T2 := TranslationOfSimplex(PQQ,quad_pts2 cat [quad_pts1[1],quad_pts1[2]]);
 TofS := T2^(-1)*T1;
-EqTS:=DefiningEquations(TofS); 
+EqTS:=DefiningEquations(TofS);
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
 
 w_old := map< old_X -> old_X | EqTS>;          // The modular involution on the curve
-Mw:=Transpose((Matrix(w_old)));        // Matrix of the modular involution 
+Mw:=Transpose((Matrix(w_old)));        // Matrix of the modular involution
 
-// We now diagonalise the matrix. 
+// We now diagonalise the matrix.
 // The following matrix was obtained from PrimaryRationalForm
 // We enter the matrix directly here since each call of PrimaryRationalForm can pick a different diagonalising matrix
 // The following ensures the equations we end up with are always the same.
@@ -85,7 +85,7 @@ T := ChangeRing(TZ,Rationals());
 
 Diag := DiagonalMatrix([1,1,1,-1,-1,-1,-1,-1]);
 assert T*Mw*(T^-1) eq Diag;
-                              
+
 Eqg := [&+[(T^-1)[i][j]*R.j : j in [1..8]] : i in [1..8]]; // We use T^-1 to find our change of coordinate map
 g:=hom<R->R | Eqg>;                   // Change of coordinate map
 
@@ -107,11 +107,24 @@ assert Nrhos eq new_rho_eqns; // Matches data file.
 X:= Curve(ProjectiveSpace(R),new_eqns);                         // New model of our curve
 w:= map<X -> X | [Diag[i][i]*R.i : i in [1..8]]>;  // New modular involution
 rho := map< X -> X_plus | new_rho_eqns >;                        // New equations for map
- 
+
 // Check that this new model is nonsingular at the primes used in the sieve (rather long for the larger primes).
 
-for p in [3,5,31,43,53,61,73] do 
+for p in [3,5,31,43,53,61,73] do
     print "Starting p =", p;
     NXp:=ChangeRing(NX,GF(p));
     assert IsNonsingular(NXp);
 end for;
+
+////////////////////////////////////////////////////////////////////////////////
+
+// We verify that J_(ns)(13)(Q) has rank 3
+// We must verify that J_0^-(169)(Q) has rank 0
+
+J := JZero(169);
+Jmin := Image(1-AtkinLehnerOperator(J,169));
+dec := Decomposition(Jmin);
+assert #dec eq 2; // 2 abelian varieties in the decomposition
+assert IsZeroAt(LSeries(dec[1]),1) eq false; // implies rank 0
+assert IsZeroAt(LSeries(dec[2]),1) eq false; // implies rank 0
+// So J_0^-(169)(Q) has rank 0
