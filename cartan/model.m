@@ -112,8 +112,8 @@ rho := map< X -> X_plus | new_rho_eqns >;          // New equations for map
 
 for p in [3,5,31,43,53,61,73] do
     print "Starting p =", p;
-    NXp:=ChangeRing(NX,GF(p));
-    assert IsNonsingular(NXp);
+    Xp:=ChangeRing(X,GF(p));
+    assert IsNonsingular(Xp);
 end for;
 
 ////////////////////////////////////////////////////////////////////////////////
