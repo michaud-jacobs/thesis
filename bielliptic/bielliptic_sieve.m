@@ -33,6 +33,8 @@
 
 // The function uses the 'model_and_map' and 'is_nonsing_mod_l' functions available in bielliptic_models.m
 
+load "bielliptic_models.m";
+
 sieve := function(N: check_bad_d := false, VerboseLevel := 0, range_d := [-100..100], maxi_l := 1000 );
     print "N =", N;
     X, E, psi, B, w, cusp := model_and_map(N);
