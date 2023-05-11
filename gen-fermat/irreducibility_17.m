@@ -12,7 +12,7 @@
 
 p:=17;
 L<a>:=CyclotomicField(p);
-K<w>:=sub< L | a+a^-1 >;
+K<w>:=sub< L | a+a^-1 >; // maximal totally real subfield
 assert Degree(K) eq (p-1)/2;
 OK:=Integers(K);
 
@@ -36,10 +36,10 @@ assert IsIsomorphic(K, ext<K4 | Z^2-d>);  // verification that K = K4(\sqrt(d))
 for n in [14,11] do
     XX := SmallModularCurve(n);  // the curve X_0(N)
     rank_XX, tf := Rank(XX);
-    assert rank_XX eq 0 and tf;
+    assert rank_XX eq 0 and tf; // rank is 0, provably correct
     XXK4 := ChangeRing(XX,K4);
-    M,pi,tf1,tf2 := MordellWeilGroup(XXK4); // (true true)
-    assert tf1 and tf2;
+    M,pi,tf1,tf2 := MordellWeilGroup(XXK4);
+    assert tf1 and tf2; // provably correct
     assert IsIsomorphic(TorsionSubgroup(XXK4),TorsionSubgroup(XX));
     gen:= pi(M.2);  // generator for free part
     for i in [1,2,3] do
@@ -60,9 +60,9 @@ XF:=ChangeRing(X,F);
 
 MordellWeilGroup(X);  // Z/6Z (true true)
 MF,piF,tf1,tf2:=MordellWeilGroup(XF);  // Z/6Z + Z (true true)
-assert tf1 and tf2;
+assert tf1 and tf2; // provably correct
 MW,pi,tf1,tf2:=MordellWeilGroup(XK4);  // Z/6Z + Z  (true true), about 1 minute
-assert tf1 and tf2;
+assert tf1 and tf2; // provably correct
 R:= XK ! pi(MW.2);
 Q:= XK ! pi(MW.1);
 
@@ -74,7 +74,7 @@ XdK4:=QuadraticTwist(XK4,d);
 XdK:=ChangeRing(XdK4,K);
 
 time Md,pid,tf1,tf2:=MordellWeilGroup(XdK4); // Z/2Z (true true), about 90 seconds
-assert tf1 and tf2;
+assert tf1 and tf2; // provably correct
 
 // We now verify 2-divisibility
 
@@ -88,7 +88,7 @@ Ab:=AbelianGroup(Xq);         // this is Z/2Z + Z/60Z
 
 for b in [0,1] do
     Pt:=R+b*Q;
-    m:=Minimum([Valuation(a,q) : a in Eltseq(Pt) | not a eq 0]);
+    m:=Minimum([Valuation(a,q) : a in Eltseq(Pt) | not a eq 0]); // we reduce the point 
     Red1:=[unif^(-m)*a : a in Eltseq(Pt)];
     Red:=Xq![Evaluate(a,Place(q)) : a in Red1];   // reduction of Pt
     Order(Red);              // orders are 60, 60
@@ -137,7 +137,7 @@ qq := Factorisation(2*OK)[1][1]; // one of the two primes of K above 2
 Fqq<t>, pi := ResidueClassField(qq);  // finite field of size 2^4
 
 expr := ((thj^2)*(thk)^2) / (thj-thk)^2;
-red := pi(expr);
+red := pi(expr); // reduction of expr
 assert Degree(MinimalPolynomial(red)) eq 2;  // so not defined over F2.
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -158,7 +158,7 @@ for i in [1,2] do // i = 1 is case 1, i = 2 is case 2.
     end if;
 
     OK:=MaximalOrder(K);
-    assert NarrowClassNumber(K) eq 1;
+    assert NarrowClassNumber(K) eq 1; // required condition to apply the method
     U,phi:=UnitGroup(K);
     // We will determine a system of totally positive units.
     V:=U;
