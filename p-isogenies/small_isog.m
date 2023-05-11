@@ -13,7 +13,7 @@
 // This function verifies whether X_0(p)(K) has rank 0 or not
 // In the case of positive rank, the function tries to construct an elliptic curve with a p-isogeny and good reduction (and therefore semistable reduction) at the primes of K above p
 
-small_isog := function(d);
+small_isog := function(d); // d is for the quadratic field K = Q(sqrt(d))
     print "Considering d =", d;
     K<a> := QuadraticField(d);
     OK := Integers(K);
@@ -26,15 +26,15 @@ small_isog := function(d);
 
         X := SmallModularCurve(p);
         XK := SmallModularCurve(p,K);
-
+        // We check the rank using the quadratic twist of the curve by d
         Xd := QuadraticTwist(X,d);
         XdK := ChangeRing(Xd,K);
         _,phi := IsIsomorphic(XdK,XK);
 
         Md,pid,tf1,tf2 := MordellWeilGroup(Xd: Effort := 3); // can change effort.
-        assert tf1 and tf2;
+        assert tf1 and tf2; // provably correct
         k := #Generators(Md);
-        gen := Md.k;
+        gen := Md.k; // will be an element of infinite order if the rank is positive
 
         if IsFinite(Md) then
             print "Rank is 0 over K";
@@ -42,15 +42,15 @@ small_isog := function(d);
         else
             print "Positive rank over K";
             ranks := ranks cat <"pos">;
-            i_range := [1,2,3,4,5,-1,-2,-3,-4,-5];
+            i_range := [1,2,3,4,5,-1,-2,-3,-4,-5]; // we will test i*gen for i in this range
             for i in i_range do
                 print "Doing i =", i;
-                ptK := phi(XdK ! (pid(i*gen)));
-                E := Domain(Isogeny(ptK,p));
-                if #pfac eq 1 then
-                    kod := LocalInformation(E,pfac[1])[5];
+                ptK := phi(XdK ! (pid(i*gen))); // point on X
+                E := Domain(Isogeny(ptK,p)); // the corresponding elliptic curve
+                if #pfac eq 1 then // unique prime above p
+                    kod := LocalInformation(E,pfac[1])[5]; // reduction type
                     kod;
-                else
+                else // there are two primes above p
                     kod1 := LocalInformation(E,pfac[1])[5];
                     kod2 := LocalInformation(E,pfac[2])[5];
                     <kod1, kod2>;
@@ -89,7 +89,7 @@ OK := Integers(K);
 X := SmallModularCurve(43);
 XK := ChangeRing(X,K);
 w := AtkinLehnerInvolution(X,43,43);
-Xpl, phi := CurveQuotient(AutomorphismGroup(X, [w]));
+Xpl, phi := CurveQuotient(AutomorphismGroup(X, [w])); // This is X_0^+(43)
 Pts:=Points(Xpl: Bound := 100);
 for Q in Pts do
     pbK := Points(ChangeRing(Pullback(phi,Q),K));
@@ -98,13 +98,13 @@ end for;
 // we see that we obtain a non-Q-rational point over K in one case
 // we define
 
-R := XK ! [1/3*(-2*d-2),4/3,1];
-E1 := Domain(Isogeny(R,43));
+R := XK ! [1/3*(-2*d-2),4/3,1]; // the quadratic point we found
+E1 := Domain(Isogeny(R,43)); // the corresponding elliptic curve
 
 p1 := Factorisation(43*OK)[1][1];
 p2 := Factorisation(43*OK)[2][1];
 
-assert(Valuation(Conductor(E1),p1)) eq 2;
+assert(Valuation(Conductor(E1),p1)) eq 2; // reduction is NOT semistable here for this curve
 assert(Valuation(Conductor(E1),p2)) eq 0;
 
 // We now twist:
