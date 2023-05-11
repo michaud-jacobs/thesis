@@ -2,7 +2,10 @@
 // The code works on Magma V2.27-7.
 // The code in this folder ("Q-curves") is based on joint work with Michael A Bennett and Samir Siksek.
 
-// The code in this file carries out basic checks on the Frey Q-curves.
+// The code in this file carries out basic checks on the Frey Q-curves. 
+// We verify that gamma is defined appropriately for each value of q
+// We verify that c(sigma, sigma) = -2
+// We verify the irreducilibity checks
 
 ////////////////////////////////////////////
 
@@ -96,7 +99,7 @@ _<x,y>:=FunctionField(E);
 sigphi := map<  E -> Econj | [ 	(x^2 + 2*A*gam*x + gam^2*w)/(gam^2*x), (x^2 -gam^2*w)*y/(gam^3*x^2), 1] >;
 
 // Want to evaluate phi circ sigma(phi).
-// This is sigma(phi) * phi in Magma notation!
+// This is sigma(phi) * phi in Magma notation
 
 Phi:=sigphi*phi;
 assert Domain(Phi) eq E and Codomain(Phi) eq E;
@@ -109,7 +112,7 @@ assert Phi eq Theta; // Therefore phi circ sigma(phi) = -2.
 ///////////////////////////////////////////////////////////////////////////////
 
 // We complete the proof that the mod n representation of E is irreducible
-// by computing the integral points on certain elliptic curves
+// by computing the integral points on certain elliptic curves.
 // It is enough to check that the x-coordinate of each point is not of the form 2^n or -2^n with n >= 6
 // since 6 + 4 = 10 < 11, and 11 is the smallest value of n,and 4 is the largest exponent of 2
 
@@ -118,7 +121,7 @@ T<X> := PolynomialRing(Rationals());
 for q in [17, 41, 89, 97] do
     for c in [1, 2^2, 2^4] do
         E := EllipticCurve(X^3 + c*q);
-        int_points := IntegralPoints(E: SafetyFactor := 10);
+        int_points := IntegralPoints(E: SafetyFactor := 10); // the SafetyFactor is just an additional sanity check that Magma performs
         abs_xcoords := [AbsoluteValue(Eltseq(pt)[1]) : pt in int_points];
         for x in abs_xcoords do
             assert x lt 2^6 or PrimeFactors(Integers() ! x) ne [2]; // all cases pass check
