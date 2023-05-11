@@ -72,7 +72,7 @@ end function;
 JFp_data_copy := [];
 for n in [1..500] do
     if IsPrime(n) eq false or n eq 13 then 
-        JFp_data := JFp_data cat [<n,1>];  // 1 in data if not applicable
+        JFp_data_copy := JFp_data_copy cat [<n,1>];  // 1 in data if not applicable
         continue;
     end if;
     p := n;
