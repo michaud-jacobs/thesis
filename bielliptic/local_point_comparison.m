@@ -15,7 +15,7 @@
 // E. Ozman. Points on quadratic twists of X_0(N). Acta Arith., 152(4):323-348, 2012.
 
 local_point_check := function(p,d);
-    loc := 0;
+    loc := 0; // a flag
     K := QuadraticField(d);
     OK := Integers(K);
     DOK := Discriminant(OK);
@@ -33,11 +33,11 @@ local_point_check := function(p,d);
         end if;
     end for;
     D := Discriminant(EquationOrder(M));
-    B := NumberField(HilbertClassPolynomial(D));
+    B := NumberField(HilbertClassPolynomial(D)); // This is the ring class field of the order O. It is also Q(j(O)). 
     OB := Integers(B);
     for l in ls do
         fac := Factorisation(l*OB);
-        norms_l := [Norm(ll[1]) : ll in fac ];
+        norms_l := [Norm(ll[1]) : ll in fac ]; // We check the inertia degrees
         if l notin norms_l then
             loc := 1;
             return loc;
