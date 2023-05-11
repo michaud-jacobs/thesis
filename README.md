@@ -1,6 +1,6 @@
 # thesis
 
-This repository contains Magma code and output files to support the computations in my PhD thesis.
+This repository contains Magma code and output files to support the computations in my PhD thesis. The thesis is not yet publicly available, but will be in the near future.
 
 The files are organised into seven folders, each of which corresponds to a chapter in my thesis. The code for each chapter is based on the code accompanying the article to which each chapter corresponds. Each folder contains its own README.md file with a more detailed description of its contents. The folders are as follows:
 
