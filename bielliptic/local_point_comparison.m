@@ -58,4 +58,4 @@ for d in D do
     success_ct := success_ct + local_point_check(53,d);
 end for;
 
-assert success_ct := 94; // succeeded for 94 values.
+assert success_ct eq 94; // succeeded for 94 values.
