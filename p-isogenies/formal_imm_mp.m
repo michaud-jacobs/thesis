@@ -15,6 +15,7 @@
 
 check_formal_immersion := function(m,p);
     N := m*p;
+    // We first choose the newforms which correspond to abelian varieties with rank 0 over Q
     S:=CuspForms(N);
     R<q>:=PowerSeriesRing(Integers());
     J:=JZero(N);
@@ -31,11 +32,11 @@ check_formal_immersion := function(m,p);
         K:= CoefficientField(f);
         RK:= ChangeRing(R,K);
         SK:= BaseChange(S,K);
-        prec := Max(100,Ceiling(N /3));
+        prec := Max(100,Ceiling(N /3)); // found this precision bound to be sufficient in cases tested
         fexp := qExpansion(f,prec); // can increase precision to uniquely determine form if necessary
         fK:= SK ! (RK ! fexp);
         OK := Integers(K);
-        if Degree(K) eq 1 then
+        if Degree(K) eq 1 then // Rational field
             int_bas := Basis(OK);
         else
             int_bas := Basis(Codifferent(1*OK));
@@ -52,7 +53,7 @@ check_formal_immersion := function(m,p);
     for m in ALs do
         CE:=[* *];
         for f in basis do
-            fm:=AtkinLehnerOperator(m,f);
+            fm:=AtkinLehnerOperator(m,f); // expansion at the cusp w_m(infty)
             CE:= CE cat [*fm*];
         end for;
         CuspExps:=CuspExps cat [*CE*];
@@ -60,7 +61,8 @@ check_formal_immersion := function(m,p);
 
     for i in [1,2,3,4] do  // We now form the formal immersion matrices
         Cusp2 := i; // i <--> ALs[i](infinity) for i = 2,3,4.
-        Col1 := [Integers() ! Coefficient(f,1) : f in CuspExps[1]];
+        Col1 := [Integers() ! Coefficient(f,1) : f in CuspExps[1]]; // first column of matrix
+        // second column is defined according to whether we have a double cusp or not
         if i eq 1 then
             Col2 := [Integers() ! Coefficient(f,2) : f in CuspExps[1]];
         else
