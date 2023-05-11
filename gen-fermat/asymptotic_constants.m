@@ -8,6 +8,8 @@
 ////////////////////////////////////////////
 
 // Computing B_p
+// The integer B_p is defined in the paper:
+// F. Freitas and S. Siksek. Criteria for irreducibility of mod p representations of Frey curves. J. Théor. Nombres Bordeaux, 27(1):67–76, 2015
 // The code works for any prime p.
 
 for p in [11,13,17] do
