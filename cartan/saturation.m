@@ -21,9 +21,9 @@ C := Curve(ProjectiveSpace(S), eqn_X_plus); //  The curve X_ns^+(13)
 
 saturation_test := function(l,aux_p);    
     Zl3:=AbelianGroup([l,l,l]); 
-    Int_Kp := Zl3;  
-    Kps:=[];  
-    Int_Kp_sizes := [];        
+    Int_Kp := Zl3;   // Initial intersection is the whole of (Z/lZ)^3
+    Kps:=[];  // sequence of kernels of the maps pi_p
+    Int_Kp_sizes := [];  // sequence of sizes of intersections of kernels     
     for p in aux_p do   
         print "Using auxiliary prime p =", p;                                               
         Cp:=ChangeRing(C,GF(p)); 
@@ -61,6 +61,7 @@ saturation_test := function(l,aux_p);
     return #Int_Kp;    
 end function;
 
+//////////////////////////////////////////////////////////////////////////////////////////
 
 // Given l, we choose primes p such that l divides #J(F_p)
 // We first compute the exponent of J(F_p) for all primes p < 500 with p not 13.
@@ -72,7 +73,7 @@ end function;
 JFp_data := [];
 for n in [1..20] do
     if IsPrime(n) eq false or n eq 13 then 
-        JFp_data := JFp_data cat [<n,1>];
+        JFp_data := JFp_data cat [<n,1>];  // 1 in data if not applicable
         continue;
     end if;
     p := n;
@@ -81,25 +82,29 @@ for n in [1..20] do
     ClGrp,phi,psi:=ClassGroup(Cp);
     Z:=FreeAbelianGroup(1);
     degr:=hom<ClGrp->Z | [ Degree(phi(a))*Z.1 : a in OrderedGenerators(ClGrp)]>;  
-    JFp:=Kernel(degr); 
+    JFp:=Kernel(degr); // Jacobian mod p
     JFp_data := JFp_data cat [<p,LCM([Order(ee) : ee in Generators(JFp)])>];
 end for;
 
 print "JFp_data :=", JFp_data, ";"; // see output file
+
+//////////////////////////////////
 
 // The following function chooses auxiliary primes for a given l, using the data computed above
 
 aux_prime_chooser := function(l,JFp_data);
     aux := [];
     for p in PrimesInInterval(2,#JFp_data) do
-        if (JFp_data[p][2] mod l) eq 0 then 
-            aux := aux cat [p];
+        if (JFp_data[p][2] mod l) eq 0 then // We check if p is a suitable prime
+            aux := aux cat [p];   // if it is, then we include it
         end if;
     end for;
     return aux;
 end function;
 
-// We now prove that the index is not divisible by the following primes l
+//////////////////////////////////////////////////////////////////////////////////////////
+
+// We now prove that the index is not divisible by the primes l in ls_to_test defined below
 // The output is available in saturation_output.txt 
 
 ls_to_test := [3,5,13,29];
