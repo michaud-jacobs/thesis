@@ -293,7 +293,7 @@ for pF in partialFails do
 end for;
 
 
-load "ThueMahlerSolver.m" // see the file ThueMahlerSolver.m included with this code
+load "ThueMahlerSolver.m"; // see the file ThueMahlerSolver.m included with this code
 // The latest version of this solver can be found at https://github.com/adelagherga/ThueMahler/tree/master/Code/TMSolver
 
 // We obtain the following equations from the 3 partial fails listed above:
