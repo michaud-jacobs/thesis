@@ -111,7 +111,7 @@ rho := map< X -> X_plus | new_rho_eqns >;          // New equations for map
 // Check that this new model is nonsingular at the primes used in the sieve (rather long for the larger primes).
 
 for p in [3,5,31,43,53,61,73] do
-    print "Starting p =", p;
+    print "Starting nonsingularity check for p =", p;
     Xp:=ChangeRing(X,GF(p));
     assert IsNonsingular(Xp);
 end for;
