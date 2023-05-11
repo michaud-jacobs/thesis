@@ -27,7 +27,7 @@ gen_const := function(n: aux_upper_bd := 20, t := 1);  // n is the class group e
     Resus:=[];
     for q in aux do
           if q eq 2 then
-             largep := [p : p in PrimeFactors(GCD(Resus)) | p gt 2357] ;
+             largep := [p : p in PrimeFactors(GCD(Resus)) | p gt 2357] ; // bound coming from formal immersion criterion
              if largep ne [] then  // (q,p) may not be an admissible pair
                 print("large p after initial sieve are "),largep;
                 break;
@@ -48,7 +48,7 @@ gen_const := function(n: aux_upper_bd := 20, t := 1);  // n is the class group e
               Rqs := Rqs cat [Rq];
           end for;
           if q eq 2 then
-             Rqs := Rqs cat [41];
+             Rqs := Rqs cat [41]; //(2,41) is not admissible
           end if;
           Resus := Resus cat [LCM(Rqs)];
 
