@@ -32,7 +32,7 @@ assert AffinePatch(PX,1) eq X;
 H := HyperplaneAtInfinity(A);
 
 inf_scheme := H meet PX;   // Scheme defining points at infinity on X
-PointsOverSplittingField(infinity_scheme);
+PointsOverSplittingField(inf_scheme);
 
 /*
 {@ (0 : r1 : 1 : 0), (0 : r2 : 1 : 0) @}
