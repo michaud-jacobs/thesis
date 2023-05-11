@@ -23,7 +23,7 @@
 // The functions takes as input a value N and some optional parameters:
 
 // if check_bad_d = true then the sieve tests values of d that are expected to fail (default = false)
-// The VerboseLevel can be set at 0, 1, 2, or 3 (default = 0), which will print varying level of output
+// The VerboseLevel can be set at 0, 1, 2, or 3 (default = 0), which will print varying levels of output
 // The sieve tests all d in range_d (default = [-100..100])
 // The maximum value of a prime l to be used is maxi_l (default = 1000)
 
@@ -50,10 +50,11 @@ sieve := function(N: check_bad_d := false, VerboseLevel := 0, range_d := [-100..
         print "++++++++++++++++++++++++++++++++++++++++++++++++";
     end if;
     M, mu, tf1, tf2 := MordellWeilGroup(E);
-    assert tf1 and tf2;
+    assert tf1 and tf2; // provably conputed
     rankE, tf3 := Rank(E);
-    assert rankE eq 1 and tf3;
+    assert rankE eq 1 and tf3; // provably computed
     T := TorsionSubgroup(E);
+    // We choose generators for the group E(Q)
     if N ne 65 then
         assert #TorsionSubgroup(E) eq 1;
         R := mu(M.1);
@@ -95,8 +96,8 @@ sieve := function(N: check_bad_d := false, VerboseLevel := 0, range_d := [-100..
 
     max_l := ls[1]; // We will record the maximum value of l used in sieve
 
-    failed_d := {};
-    KnownBad := {};
+    failed_d := {}; // values d which we unexpectedly failed to eliminate
+    KnownBad := {}; // values d for which we find a quadratic point in X_0(N)(Q(sqrt(d)))
 
     for n in n_range do
         if N eq 65 and n eq 0 and VerboseLevel ge 1 then
@@ -136,9 +137,8 @@ sieve := function(N: check_bad_d := false, VerboseLevel := 0, range_d := [-100..
                 print "Considering d =", d;
             end if;
 
-
             // if check_bad_d eq false we skip d in KnownBad as they should fail
-            // if check_bad_d eq true we check them and ensure they fail
+            // if check_bad_d eq true we check them and ensure they fail to check sieve is working as expected (takes longer)
             if check_bad_d eq false and d in KnownBad then
                 if VerboseLevel ge 1 then
                     print d, "is known to fail";
@@ -157,12 +157,11 @@ sieve := function(N: check_bad_d := false, VerboseLevel := 0, range_d := [-100..
             ls := SetToSequence({@ l : l in ramif cat ls @});
             // These primes will be removed before proceeding to the next value of d
 
-
             K := QuadraticField(d);
             OK := Integers(K);
 
-            mls:=[* *];
-            Gls:=[];
+            mls:=[* *]; // possibilities for m in range [0..Gl-1]
+            Gls:=[]; // Orders mod l of generator
             if VerboseLevel ge 3 then
                 print "Starting sieve";
             end if;
@@ -266,7 +265,7 @@ sieve := function(N: check_bad_d := false, VerboseLevel := 0, range_d := [-100..
                             print "++++++++++++++++++++++++";
                         end if;
                     end if;
-                    if #Newms eq 0 then // If Newms is empty, no sols, so contradiction.
+                    if #Newms eq 0 then // If Newms is empty, no solutions, so contradiction.
                         if l gt max_l then
                             max_l := l;
                         end if;
