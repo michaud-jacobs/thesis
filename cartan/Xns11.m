@@ -23,7 +23,7 @@ assert MW eq AbelianGroup([0]); // E(Q) is isomorphic to Z
 
 rho := map<X -> E | [x,y,1]>; // degeneracy map
 
-// We with to verify that there is a pair of quadratic poitns at infinity
+// We wish to verify that there is a pair of quadratic points at infinity
 // and that these arise as the pullback of the identity on E
 
 PX := ProjectiveClosure(X);
@@ -55,7 +55,7 @@ assert HasPointsOverExtension(inf_scheme_K) eq false; // There are no further po
 
 rhoP := map<PX -> E | [xx,yy,tt]>; // degenracy map from projective closure to E
 assert Degree(rhoP) eq 2; // This is indeed the correct map
-pullback_scheme := Pullback(rhoP,Identity(E));
+pullback_scheme := Pullback(rhoP,Identity(E)); 
 Points(pullback_scheme,K); // We see that we have the same points:
 // {@ (0 : -1/2*a : 1 : 0), (0 : 1/2*a : 1 : 0) @}
 
