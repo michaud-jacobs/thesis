@@ -11,7 +11,7 @@
 
 ////////////////////////////////////////////
 
-// load "eqn_data.m";
+load "eqn_data.m";
 
 // The sieve function takes as optional input a different list of primes
 // and an option to set the VerboseLevel to 1
