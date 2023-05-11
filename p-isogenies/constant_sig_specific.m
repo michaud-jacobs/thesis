@@ -26,9 +26,8 @@ const := function(d: aux_upper_bd := 20, t := 1); // to work over the field K = 
 
     Resus:=[];
     for q in aux do
-
         if q eq 2 then
-            largep := [p : p in PrimeFactors(GCD(Resus)) | p gt 2357] ;
+            largep := [p : p in PrimeFactors(GCD(Resus)) | p gt 2357] ; // bound coming from formal immersion criterion
             if largep ne []  then  // (q,p) may not be an admissible pair
                 print("large p after initial sieve are "),largep;
                 break;
@@ -39,16 +38,14 @@ const := function(d: aux_upper_bd := 20, t := 1); // to work over the field K = 
         r := Order(phi(qq)); // will be 1 for all inert primes.
         nq:=Norm(qq);
 
-
         Aqt :=[a : a in [Ceiling(-2*Sqrt(nq))..Floor(2*Sqrt(nq))] | IsZero((nq+1-a) mod t)];
-
         Rq := q*LCM([Integers() ! (Resultant(x^2-a*x+nq,x^(12*r)-1)) : a in Aqt]);
         if q eq 2 and nq eq q then // need to consider reduction to (\infty, 0)
            m2 := 2^(12*r)-1;
            Rq := LCM([Rq,m2]);
         end if;
         if q eq 2 then
-             Rq := LCM([Rq,41]);
+             Rq := LCM([Rq,41]); // (2,41) is not admissible
         end if;
         Resus:=Resus cat [Rq];
     end for;
