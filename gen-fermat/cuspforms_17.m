@@ -122,16 +122,16 @@ end function;
 
 // --------------------------------------------------------------------------------------
 
-S:=[3,67,101];  // prime to be used in the sieve
+S:=[3,67,101];  // primes to be used in the sieve
 
 H:=HilbertCuspForms(M,level);
 Hnew:=NewSubspace(H);
-time decomp:=NewformDecomposition(Hnew);
+time decomp:=NewformDecomposition(Hnew); // full newform decomposition
 decomp;
 
 if cs eq 1 then
-     interval:=[1..#decomp-4];  // computations cannot be carried out for the last 4 forms (in a reasonable time)
-else interval:=[1..#decomp];    // We deal with the other four forms separately afterwards
+     interval:=[1..#decomp-4];  // computations cannot be carried out for the last 4 forms of case 1 (in a reasonable time)
+else interval:=[1..#decomp];    // so we deal with the other four forms separately afterwards
 end if;
 
 for i in interval do
@@ -157,6 +157,7 @@ end for;
 // We now eliminate the newforms g1,g2,g3, and g4 for all primes l > 5.
 // These are the four remaining forms for case 1
 // We work directly with the Hecke operators and their characteristic polynomials.
+// We use the same basic code as in Chapter 7
 
 p:=17;
 L<zet>:=CyclotomicField(p);
