@@ -5,7 +5,7 @@
 // The code in this file carries out the elimination steps for q = 17 and n < 1000 using the rational Frey curve
 
 // The code is taken from the paper
-// M. Bennett and S. Siksek, Differences between perfect powers: prime power gaps, arXiv:2110.05553v1
+// M. Bennett and S. Siksek, Differences between perfect powers: prime power gaps, arXiv:2110.05553v1 (to appear in Algbera Number Theory)
 
 // In the case n = 7, we use the main function from the file ThueMahlerSolver.m, available at:
 // https://github.com/michaud-jacobs/thesis/blob/main/Q-curves/ThueMahlerSolver.m
@@ -235,7 +235,7 @@ partialFails := [ [17, 1, 1, 0, 7, 2, -573, 139],
                   [17, 1, 1, 1, 7, 1,  71,  -17],
                   [17, 1, 1, 1, 7, 9, -573, 139] ];
 
-// We use the code of [4] to obtain the Thue--Mahler equations:
+// We continue using the code Bennett and Siksek to obtain the Thue--Mahler equations:
 
 for pF in partialFails do
     print "Partial Fail is ",pF;
