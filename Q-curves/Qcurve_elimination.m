@@ -14,6 +14,7 @@ M<rootq> := QuadraticField(q);
 OM :=Integers(M);
 
 // start by defining gamma and gammab appropriately.
+// (the checks for this were carried out in the Qcurves_checks.m file)
 
 if q eq 17 then                    
    gamma := (-3+rootq)/2;
@@ -42,6 +43,7 @@ end if;
 
 // Input: x between 0 and p-1, m between 0 and p-2, a prime p, a case number cs.
 // Output: Trace of Frobenius at a prime of M above p for the given values of x and m.
+// This is the trace of Frobenius for the Q-curve, E.
 
 QTracexmp := function(x,m,p,cs);
          pp := Factorisation(p*OM)[1][1]; // A prime of M above p
@@ -58,7 +60,7 @@ QTracexmp := function(x,m,p,cs);
             w_pp := ((x + q^(2*m+1)*rootq_pp)*(rootq_pp))/2;
             wb_pp := ((x - q^(2*m+1)*rootq_pp)*(-rootq_pp))/2;
          end if;
-         // assert w_pp + wb_pp eq redpp(q^(2*m+2)); // sanity check
+         assert w_pp + wb_pp eq redpp(q^(2*m+2)); // sanity check
          Disc_pp := (gamma_pp^12)*(gammab_pp^6)*(w_pp)^2*(wb_pp);
          if IsZero(Disc_pp) eq false then 
             E_pp := EllipticCurve([0,2*gamma_pp*(redpp(q)^(m+1)),0,(gamma_pp^2)*w_pp,0]);
@@ -78,6 +80,7 @@ QTracexmp := function(x,m,p,cs);
 end function;
 
 // We compute a set of all possible traces at a prime above p (both cases at once).
+// These are traces of Frobenius for the Q-curve, E.
 
 Traces_atp := function(p);
     Traces:= {};
@@ -97,9 +100,9 @@ assert Conductor(eps) eq q;
 assert Order(eps) eq 2;
 MM := ModularForms(eps,2);   // Space of modular forms of weight 2, level 2*q^2, and character eps
 S :=CuspidalSubspace(MM);
-N := NewSubspace(S);
+N := NewSubspace(S); 
 dim := Dimension(N);
-time Nfs := Newforms(S);
+time Nfs := Newforms(S); // Newforms in this space
 class_sizes := [#cl : cl in Nfs];  
 Nfreps:= [*Nfs[i][1] : i in [1..#Nfs]*];  // Choose a newform representative for each Galois conjugacy class.
 
@@ -108,11 +111,11 @@ Nfreps:= [*Nfs[i][1] : i in [1..#Nfs]*];  // Choose a newform representative for
 
 // We now try and eliminate newforms
 
-// function to compute the trace of Frob at a newform
+// function to compute the trace of Frobenius at a newform
 
-TrFrobpd:=function(g,p);  // Use g for newforms here (but f is used in the paper).
+TrFrobpd:=function(g,p);  // Use g for newforms here (but f is used in the thesis).
           if IsInert(p,OM) then 
-             Tr := Coefficient(g,p)^2- 2*eps(p)*p;  // could just say +2p as eps(p) = -1 when p is inert.
+             Tr := Coefficient(g,p)^2- 2*eps(p)*p;  // could also just say +2p as eps(p) = -1 when p is inert.
           else Tr := Coefficient(g,p);
           end if;
           return Tr;
@@ -193,6 +196,7 @@ assert Coefficient(g,p) eq -4;
 
 // The following function computes the trace at a prime p of G_{x,m} for a given x and m
 // (This is more detailed than necessary for the case q = 41).
+// This is the trace of Frobenius for the rational Frey curve, G
 
 // cs 1 is k = 2m is even
 // cs 2 is k = 2m+1 is odd 
@@ -222,7 +226,6 @@ RatTracexmp := function(x, m, p, cs);
         end if;
 end function;
 
-
 for x,m in [0..p-1] do
    <RatTracexmp(x,m,p,1),x,m>;   // only x = 6 mod 7 gives a trace of -4.
    <RatTracexmp(x,m,p,2),x,m>;   // Independent of cs
@@ -242,6 +245,7 @@ assert TrFrobpd(Nfreps[4],p) eq 14;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////     
 
+// Sanity check:
 // We check for q = 17 or q = 89 that when we enter the true solution (-23)^2 - 17 = 2^9 or (-91)^2 - 89 = 2^13
 // that the traces of the Frey Q-curve match those of the obstructing form
 
@@ -259,7 +263,7 @@ EE:=EllipticCurve([0,2*gamma*q,0,(gamma^2)*w,0]);
 assert Conductor(EE) eq gamma*gammab*rootq^2*OM;  // right conductor
 LocalInformation(EE,rootq*OM); 
 j := jInvariant(EE);
-assert Valuation(j, rootq*OM) gt -1; // it is = 0.
+assert Valuation(j, rootq*OM) gt -1; // the valuation is = 0.
 
 for p in [p : p in PrimesInInterval(3,1000) | p ne q] do
     pp := Factorisation(p*OM)[1][1];
