@@ -2,6 +2,8 @@
 // The code works on Magma V2.26-10
 
 // The code in this file computes the possible levels after level-lowering
+// We follow the method of Freitas and Siksek presented in their paper:
+// N. Freitas and S. Siksek. Fermat's last theorem over some small real quadratic fields. Algebra Number Theory, 9(4):875–895, 2015.
 
 // The output is in the file levels_output.txt, available at
 // https://github.com/michaud-jacobs/thesis/blob/main/flt/levels_output.txt
@@ -26,12 +28,13 @@ Np_possibilities := function(d);
     QuoClK,nu:=quo<ClK | 2*ClK>;
     elts:=[q : q in QuoClK];
     H:=[1*OK];
+    // We choose a representative for Cl(K) / 2*Cl(K) when this group is non-trivial
     for i in [2..#QuoClK] do
         primes := [P : P in PrimesUpTo(40,K) | IsOdd(Norm(P)) and nu(muinv(P)) eq elts[i]];
         _,n:=Minimum([Norm(P) : P in primes]);
         H_i:=primes[n];
         if d eq 65 then
-            H_i := primes[n+1]; // We choose a different prime in the case d = 65
+            H_i := primes[n+1]; // We choose a different prime in the case d = 65 (better for the elimination step)
         end if;
         H:=H cat [H_i];
     end for;              // H forms a set of representatives for Cl(K)/Cl(K)^2, with #H=r.
@@ -133,9 +136,11 @@ Np_possibilities := function(d);
     return N_ps, K, S, H;
 end function;
 
+////////////////////////////////////////////////////////////////////////////////////////////
+
 // We now list the possible levels N_p for each d
 // We also list the dimensions of the spaces of modular forms and newforms
-// See the output file levels_output.txt as well as the table in the appendix of the paper.
+// See the output file levels_output.txt.
 // We include data for 1 < d < 25 to check against Freitas and Siksek's paper.
 
 for d in [d : d in [2..100] | IsSquarefree(d)] do
