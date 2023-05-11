@@ -66,11 +66,10 @@ end function;
 // Given l, we choose primes p such that l divides #J(F_p)
 // We first compute the exponent of J(F_p) for all primes p < 500 with p not 13.
 
-// The following takes quite a long time.
-// The (formatted) output is available in the saturation_output.txt file
-// and can be copied directly from there.
-
-JFp_data := [];
+// The code below produces the Jacobian data (JFp_data) present in the eqn_data.m file
+// It takes some time, so it is commented out
+/*
+JFp_data_copy := [];
 for n in [1..500] do
     if IsPrime(n) eq false or n eq 13 then 
         JFp_data := JFp_data cat [<n,1>];  // 1 in data if not applicable
@@ -83,10 +82,10 @@ for n in [1..500] do
     Z:=FreeAbelianGroup(1);
     degr:=hom<ClGrp->Z | [ Degree(phi(a))*Z.1 : a in OrderedGenerators(ClGrp)]>;  
     JFp:=Kernel(degr); // Jacobian mod p
-    JFp_data := JFp_data cat [<p,LCM([Order(ee) : ee in Generators(JFp)])>];
+    JFp_data_copy := JFp_data_copy cat [<p,LCM([Order(ee) : ee in Generators(JFp)])>];
 end for;
-
-print "JFp_data :=", JFp_data, ";"; // see output file
+assert JFp_data_copy eq JFp_data;
+*/
 
 //////////////////////////////////
 
