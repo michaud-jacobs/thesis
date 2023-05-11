@@ -14,7 +14,7 @@
 // This code attemptes to eliminate all newforms at all possible levels
 // There are two functions for this, hecke_elim and decomp_elim
 
-// hecke_elim works directly with Hecke operators to compute partial newform fundamental
+// hecke_elim works directly with Hecke operators to compute partial newform data
 // as the levels get larger (say > 200) it is much faster
 // as the levels get even larger (say >1000), it is the only option.
 
@@ -49,8 +49,8 @@ hecke_elim := function(Np,K);
     NewM:=NewSubspace(M);
     normbd:=150;   // Increase this bound to enlarge T
     pbd:=13;       // If all prime divisors of a c-value are <= pbd, then the subspace is eliminated.
-
-    T1 := [q : q in PrimesUpTo(normbd,K) | (Valuation(Np,q) eq 0) and IsSplit(q) ];
+    // we first choose the auxiliary primes q to use
+    T1 := [q : q in PrimesUpTo(normbd,K) | (Valuation(Np,q) eq 0) and IsSplit(q) ]; 
     T1 := [T1[i] : i in [1..#T1] | IsOdd(i)];
     T2 := [q : q in PrimesUpTo(normbd,K) | (Valuation(Np,q) eq 0) and (IsSplit(q) eq false ) ];
     T:=Sort(T1 cat T2);
@@ -61,11 +61,12 @@ hecke_elim := function(Np,K);
     print "Factorising its characteristic polynomial";
     Chpoly1:=Factorisation(CharacteristicPolynomial(H1));
 
-    Cs:=[*Cf(T[1],e[1]) : e in Chpoly1*];
+    Cs:=[*Cf(T[1],e[1]) : e in Chpoly1*]; // The c-values of the subspaces
+    // We eliminate subspaces if all prime factors of the c-value are <= pbd
     Newind:=[i : i in [1..#Cs] | (Cs[i] eq 0) or ((Cs[i] ne 1) and (Maximum(PrimeFactors(Cs[i])) gt pbd))];
-    Cs:=[*Cs[i] : i in Newind*];
+    Cs:=[*Cs[i] : i in Newind*]; 
     Es:=[* [Chpoly1[i][1]] : i in Newind*];
-    Vs:=[* *];
+    Vs:=[* *]; // list of supbspaces
     print "Computing first Hecke decomposition";
     for j in Newind do   // Start by computing the list of irreducible subspaces corresponding to the first Hecke operator
         V := NullSpace(Evaluate(Chpoly1[j][1],M1));
@@ -75,14 +76,16 @@ hecke_elim := function(Np,K);
     for i in [2..#T] do
         H:=HeckeOperator(NewM,T[i]);
         M:=Matrix(H);
+        // prepare new lists
         NVs:=[* *];
         NCs:=[* *];
         NEs:=[* *];
         for j in [1..#Vs] do
             B:=Basis(Vs[j]);
             Coords:=[Coordinates(Vs[j],H(B[k])) : k in [1..#B]   ];
-            NM:=Matrix(Coords);
+            NM:=Matrix(Coords); // Hecke operator on the subspace
             Chpoly:=Factorisation(CharacteristicPolynomial(NM));
+            // prepare new lists for this subspace
             NVsj:=[* *];
             NCsj:=[* *];
             NEsj:=[* *];
@@ -99,6 +102,7 @@ hecke_elim := function(Np,K);
             NCs:=NCs cat NCsj;
             NEs:=NEs cat NEsj;
         end for;
+        // We have now formed our subspace decomposition and we attempt to eliminate subspaces
         Vs:=NVs;
         Cs:=NCs;
         Es:=NEs;
@@ -111,30 +115,32 @@ hecke_elim := function(Np,K);
             return Vs, Cs, Es, T;
         end if;
     end for;
-    print "Spaces remaining, unable to eliminate the following primes:", Cs;
+    print "Spaces remaining, unable to eliminate the following primes:", Cs; // (look at the prime factors of the leftover numbers)
     return Vs, Cs, Es, T;
 end function;
+
+////////////////////////////////////////////////////////////////////////////////////////
 
 // decomp_elim computes the full newform decomposition to try and eliminate newforms
 // Input: Level Np, quadratic field K, normbd to control how many primes to use
 // Output:
 // CNpprimes: primes that were not eliminated,
 //            a zero means no primes were eliminated for the corresponding form
-// bad_f: a list of newforms with c_value = 0
+// bad_f: a list of newforms with C_value = 0
 // T: list of primes used
 
 decomp_elim := function(Np,K,normbd);
     M := HilbertCuspForms(K, Np);
     NewM:=NewSubspace(M);
-    decomp := NewformDecomposition(NewM);
+    decomp := NewformDecomposition(NewM); // the full newform decomposition
     CNpfs:=[];
     CNpPrimes:=[];
-    bad_f := [* *];
+    bad_f := [* *]; // newforms which we cannot eliminate
     for i in [1..#decomp] do
         f:=Eigenform(decomp[i]);
         Q_f:=HeckeEigenvalueField(decomp[i]);
         OQ_f:=Integers(Q_f);
-        T := [q : q in PrimesUpTo(normbd,K) |Valuation(Np,q) eq 0 ];
+        T := [q : q in PrimesUpTo(normbd,K) |Valuation(Np,q) eq 0 ]; // auxiliary primes q to use
         Bqfs:={};
         for q in T do
             nq:=Norm(q);
@@ -161,6 +167,7 @@ decomp_elim := function(Np,K,normbd);
     return CNpPrimes, bad_f, T;
 end function;
 
+////////////////////////////////////////////////////////////////////////////////////////
 
 too_big_d := [39, 70, 78, 95]; // Dimensions too large for computations (some dimension > 10000)
 
@@ -172,7 +179,6 @@ too_big_d := [39, 70, 78, 95]; // Dimensions too large for computations (some di
 
 // We include data for 1 < d < 25 to compare with Freitas and Siksek's paper
 // The output is available in the newform_elimination_output.txt file
-
 
 for d in [d : d in [2..100] | IsSquarefree(d) and d notin (too_big_d)] do
     print "Considering d = ", d;
@@ -190,7 +196,7 @@ end for;
 // We now use decomp_elim to eliminate the following triples (d,p,Np):
 // (d,p,Np) = (67,19,N_ps[2]) and (d,p) = (55,17,N_ps[4])
 // We note we could also eliminate these two pairs (d,p)
-// using the methods of Section 6, as they are d-regular.
+// using the method of regular primes (as used at the end of the chapter in the case d = 57 and p = 19) as they are d-regular.
 
 d := 67;
 N_ps, K := Np_possibilities(d);
