@@ -122,21 +122,22 @@ assert Valuation(j2,pp) ge 0;
 d := 89;
 N_ps, K := Np_possibilities(d);
 assert #N_ps eq 1;
-Np := N_ps[1];
+Np := N_ps[1]; // the level we need to work with
 normbd := 100;
 _, bad_f, T := decomp_elim(Np,K,normbd);
-assert #bad_f eq 1;
+assert #bad_f eq 1; // single newform creating the problem
 f := bad_f[1];
 traces_f := [HeckeEigenvalue(f,q) : q in T];
 // [ -2, -2, 6, 0, 0, 2, 2, 8, 8, -6, -6, -6, 8, 8, -8, -8, 14, 14, 16, 16, -6, -2, -2 ]
+// We find a matching elliptic curve (as above)
 Ell_curves := EllipticCurveSearch(Np,400: Primes := T, Traces := traces_f); // 30 seconds
 E := Ell_curves[1];
 // Elliptic Curve defined by y^2 + x*y = x^3 - x^2 + 1/2*(72875*sqrt_d - 687501)*x + 1/2*(-20764677*sqrt_d + 195893571) over K
 assert E eq MinimalModel(E);
-assert [TraceOfFrobenius(E,q) : q in T] eq traces_f;
+assert [TraceOfFrobenius(E,q) : q in T] eq traces_f; // sanity check
 p1 := Factorisation(Np)[1][1];
 p2 := Factorisation(Np)[2][1];
-Valuation(Discriminant(E),p1)*Valuation(Discriminant(E),p2) eq 20;
+Valuation(Discriminant(E),p1)*Valuation(Discriminant(E),p2) eq 20; // used to apply argument
 
 // We then consider when the quantity ((-8+2pt1)*(-8+2pt2) / 20) mod p is a square (for p >5)
 // This is a square if and only if 5 is a square mod p
