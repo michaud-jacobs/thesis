@@ -23,18 +23,18 @@ non_const := function(d: aux_upper_bd := 10, t := 1);
     n := Exponent(ClK);
     phi := pi^(-1);
     Uni,psi:=UnitGroup(OK);
-    if d gt 0 then
+    if d gt 0 then // real quadratic field case
         eps:=psi(Uni.2);  // a fundamental unit of K
         B:=PrimeFactors(Integers() ! (Norm(eps^12-1)));  // The prime factors of the quantity Norm(epsilon^12-1)
-        B2 := [p : p in B | IsSplit(p,OK)];
+        B2 := [p : p in B | IsSplit(p,OK)]; // we can remove any inert primes
     else B := [];
         B2 := [];
     end if;
     vbadp := [2,3,5,7,11,13,17,19,37];
 
-    aux := [q : q in PrimesInInterval(2,aux_upper_bd) | IsSplit(q,OK)]; // a prime that doesn't split will not bound p
+    aux := [q : q in PrimesInInterval(2,aux_upper_bd) | IsSplit(q,OK)]; // a prime q that does not split will not bound p
 
-    Resus:= [];
+    Resus:= []; // build up to sequence of LCM(Mq,Rq), then p will divide the gcd of the sequence
 
     for q in aux do
         qq := Factorisation(q*OK)[1][1];
