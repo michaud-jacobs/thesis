@@ -169,3 +169,5 @@ decomp_elim := function(Np,K,normbd);
     CNpPrimes:=SetToSequence(Set(CNpPrimes));
     return CNpPrimes, bad_f, T;
 end function;
+
+// (We run the functions in the "newform_elimination.m" file)
