@@ -1,5 +1,4 @@
 // Magma code to support the computations in my PhD thesis.
-// The code works on Magma V2.27-7
 
 // The code in this file verifies the example computations with the local points on twist method
 
