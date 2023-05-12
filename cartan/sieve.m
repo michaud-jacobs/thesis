@@ -2,7 +2,7 @@
 
 // The code in this file carries out the sieving (and Chabauty) steps.
 
-// The output is in the file sieve_output.txt, available at
+// The output is in the file "sieve_output.txt", available at
 // https://github.com/michaud-jacobs/thesis/blob/main/cartan/sieve_output.txt
 
 // The code uses data from the file "eqn_data.m" available at:
@@ -268,7 +268,7 @@ sieve := function(   :primes_for_sieve := [3,5,31,43,53,61,73], VerboseLevel := 
     return W;
 end function;
 
-// See output file
+// See output file "sieve_output.txt";
 
 sieve();
 sieve(   :primes_for_sieve := [3,5], VerboseLevel := 1); // For presented computations
