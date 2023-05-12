@@ -155,6 +155,7 @@ for cs in [1,2] do
     //////////////////////////////////////////
     //////////////////////////////////////////
     if cs eq 1 then
+        print "+++++++++++++++++++++++++++++++"
         print "Considering final four newforms";
         // We now eliminate the newforms g1,g2,g3, and g4 for all primes l > 5.
         // These are the four remaining forms for case 1
