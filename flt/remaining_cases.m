@@ -158,7 +158,7 @@ initial_bad_p := function(d);
     U<x>:=PolynomialRing(Rationals());
     K<a>:=NumberField(x^2-d);
     OK:=Integers(K);
-    PP:=PrimesInInterval(17,10^7);  // Primes to test
+    PP:=PrimesInInterval(17,10^7);  // Primes to test, takes a while to go all the way up to 10^7, much faster for 10^6
     ns:=[];    // For each prime we aim to find a value of n that works.
     for p in PP do;
         nsp:=[];
