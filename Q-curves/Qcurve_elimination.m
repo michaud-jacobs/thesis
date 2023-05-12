@@ -133,7 +133,7 @@ for q in [17,41,89,97] do
     // Input a newform g
     // Output Bg value, obtained using primes above the rational primes between 3 and 30, with p ne q.
 
-    Bg := function(g);output
+    Bg := function(g);
        return GCD([Bgp(g,p) : p in PrimesInInterval(3,30) | p ne q ]);
     end function;
 
