@@ -1,5 +1,4 @@
 // Magma code to support the computations in my PhD thesis.
-// The code works on Magma V2.26-10
 
 // The code in this file carries out the sieving (and Chabauty) steps.
 
@@ -9,9 +8,9 @@
 // The code uses data from the file "eqn_data.m" available at:
 // https://github.com/michaud-jacobs/thesis/blob/main/cartan/eqn_data.m
 
-////////////////////////////////////////////
-
 load "eqn_data.m";
+
+////////////////////////////////////////////
 
 // The sieve function takes as optional input a different list of primes
 // and an option to set the VerboseLevel to 1
