@@ -1,5 +1,4 @@
 // Magma code to support the computations in my PhD thesis.
-// The code works on Magma V2.26-10
 
 // The code in this computes constants for p = 11, 13, 17 for the asymptotic version for signature (2, 2n, 3p)
 
