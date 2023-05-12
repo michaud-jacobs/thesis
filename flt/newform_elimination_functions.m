@@ -10,7 +10,7 @@
 // The code uses the function "Np_possibilities" from the file "levels_function.m" available at:
 // https://github.com/michaud-jacobs/thesis/blob/main/flt/levels_function.m
 
-load "levels.m";
+load "levels_function.m";
 
 ////////////////////////////////////////////
 
