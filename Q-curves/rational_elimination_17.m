@@ -1,6 +1,5 @@
 // Magma code to support the computations in my PhD thesis.
-// The code works on Magma V2.27-7.
-// The code in this folder ("Q-curves") is based on joint work with Michael A Bennett and Samir Siksek.
+// The code in this folder ("Q-curves") is based on joint work with Michael A. Bennett and Samir Siksek.
 
 // The code in this file carries out the elimination steps for q = 17 and n < 1000 using the rational Frey curve
 
@@ -9,6 +8,9 @@
 
 // In the case n = 7, we use the main function from the file ThueMahlerSolver.m, available at:
 // https://github.com/michaud-jacobs/thesis/blob/main/Q-curves/ThueMahlerSolver.m
+
+load "ThueMahlerSolver.m"; // see the file ThueMahlerSolver.m included with this code
+// The latest version of this solver can be found at https://github.com/adelagherga/ThueMahler/tree/master/Code/TMSolver
 
 ////////////////////////////////////////////
 
@@ -291,10 +293,6 @@ for pF in partialFails do
         end if;
      end for;
 end for;
-
-
-load "ThueMahlerSolver.m"; // see the file ThueMahlerSolver.m included with this code
-// The latest version of this solver can be found at https://github.com/adelagherga/ThueMahler/tree/master/Code/TMSolver
 
 // We obtain the following equations from the 3 partial fails listed above:
 
