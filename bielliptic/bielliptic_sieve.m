@@ -8,7 +8,7 @@
 // The output for VerboseLevel 2 is in bielliptic_sieve_output.txt
 // The output for the example computations is in bielliptic_sieve_output.txt
 
-// The file bielliptic_sieve_output.txt is available at
+// The file "bielliptic_sieve_output.txt" is available at
 // https://github.com/michaud-jacobs/thesis/blob/main/bielliptic/bielliptic_sieve_output.txt
 
 // The code to reproduce the example computations is included at the end of this file
@@ -320,7 +320,7 @@ end function;
 // We run the sieve for each value of N
 // We first run the sieve with VerboseLevel 0
 // The output is both at the end of this file
-// and in the bielliptic_sieve_output.txt file
+// and in the "bielliptic_sieve_output.txt" file
 
 for N in [53,61,79,83,89,101,131,65] do
     time failed_d, KnownBad := sieve(N);
@@ -332,7 +332,7 @@ end for;
 ////////////////////////////////////////////////////////////////////////////
 
 // We now run the sieve with VerboseLevel 2
-// The output is in the bielliptic_sieve_output.txt file
+// The output is in the "bielliptic_sieve_output.txt" file
 
 for N in [53,61,79,83,89,101,131,65] do
     sieve(N : VerboseLevel := 2, check_bad_d := true);
@@ -343,7 +343,7 @@ end for;
 ////////////////////////////////////////////////////////////////////////////
 
 // Code to reproduce the example computations
-// The output is in the bielliptic_sieve_output.txt file
+// The output is in the "bielliptic_sieve_output.txt" file
 
 sieve(53: VerboseLevel := 3, check_bad_d := true, range_d := [-47, 3, -11]);
 
