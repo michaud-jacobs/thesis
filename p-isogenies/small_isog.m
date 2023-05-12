@@ -1,9 +1,8 @@
 // Magma code to support the computations in my PhD thesis.
-// The code works on Magma V2.26-10
 
 // This code carries out certain computations for p-isogenies with p small
 
-// The output is in the file small_isog_output.txt, available at
+// The output is in the file "small_isog_output.txt", available at
 // https://github.com/michaud-jacobs/thesis/blob/main/p-isogenies/small_isog_output.txt
 // Some output is included within the file
 
@@ -77,7 +76,7 @@ for d in [-5] cat [2,3,5,6,7] cat [29,10,79,145,1756,697,1009] cat [47*67*101] d
     print "+++++++++++++++++++++++++++++++";
 end for;
 
-// The output is displayed in the small_isog_output.txt file
+// The output is displayed in the "small_isog_output.txt" file
 
 //////////////////////////////////////////////////////////////////
 
