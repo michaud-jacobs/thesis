@@ -1,6 +1,5 @@
 // Magma code to support the computations in my PhD thesis.
-// The code works on Magma V2.27-7.
-// The code in this folder ("Q-curves") is based on joint work with Michael A Bennett and Samir Siksek.
+// The code in this folder ("Q-curves") is based on joint work with Michael A. Bennett and Samir Siksek.
 
 // The code in this file contains functions to solve Thue-Mahler equations.
 
