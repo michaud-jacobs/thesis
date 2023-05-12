@@ -258,7 +258,6 @@ for cs in [1,2] do
             Es:=NEs;
         end for;
 
-        // Time: 1257.210
         print "Factorisations of the newform values are:";
         Factorisation(Cs[1]);  // 2^17 x 3^8
         Factorisation(Cs[2]);  // 2^18 x 3^7 x 5^2
