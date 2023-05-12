@@ -34,12 +34,12 @@ for pt in SvnPts do
     D := Difference(S, BS);  // Pullback scheme withoout base scheme
     Ds := Ds cat [D];
     pb, K1 := PointsOverSplittingField(D);
-    K2 := NumberField(AbsolutePolynomial(K1)); 
+    K2 := NumberField(AbsolutePolynomial(K1));
     d := Squarefree(Discriminant(Integers(K2)));
     ds := ds join {d};
 end for;
 
-// We now find the equations of the modular involution 
+// We now find the equations of the modular involution
 // We do this by seeing which maps interchange the pairs of quadratic points obtained above
 
 T<x> := PolynomialRing(Rationals());   // Setting up a more general field that contains all the square roots we need
@@ -108,7 +108,11 @@ X:= Curve(ProjectiveSpace(R),new_eqns);            // New model of our curve
 w:= map<X -> X | [Diag[i][i]*R.i : i in [1..8]]>;  // New modular involution
 rho := map< X -> X_plus | new_rho_eqns >;          // New equations for map
 
-// Check that this new model is nonsingular at the primes used in the sieve (rather long for the larger primes).
+// Check that this new model is nonsingular at the primes used in the sieve
+// This takes a bit under an hour per prime on average
+// An alternative would be to use the method employed in the code of Chapter 4
+// See the "is_nonsing_mod_l" function in the file "bielliptic_models.m", available at:
+// https://github.com/michaud-jacobs/thesis/blob/main/bielliptic/bielliptic_models.m
 
 for p in [3,5,31,43,53,61,73] do
     print "Starting nonsingularity check for p =", p;
