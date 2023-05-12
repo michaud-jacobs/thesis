@@ -1,10 +1,9 @@
 // Magma code to support the computations in my PhD thesis.
-// The code works on Magma V2.26-10
 
 // The code in this file carries out the main elimination of newform step.
 
-// The output is in the file elimination_output.txt, available at
-// https://github.com/michaud-jacobs/thesis/blob/main/flt/elimination_output.txt
+// The output is in the file "newform_elimination_output.txt", available at
+// https://github.com/michaud-jacobs/thesis/blob/main/flt/newform_elimination_output.txt
 
 // The code uses the functions "hecke_elim" and "decomp_elim" from the file "newform_elimination_functions.m" available at:
 // https://github.com/michaud-jacobs/thesis/blob/main/flt/levels_function.m
@@ -24,7 +23,7 @@ too_big_d := [39, 70, 78, 95]; // Dimensions too large for computations (some di
 // We start by only using hecke_elim
 
 // We include data for 1 < d < 25 to compare with Freitas and Siksek's paper
-// The output is available in the newform_elimination_output.txt file
+// The output is available in the "newform_elimination_output.txt" file
 
 for d in [d : d in [2..100] | IsSquarefree(d) and d notin (too_big_d)] do
     print "Considering d = ", d;
