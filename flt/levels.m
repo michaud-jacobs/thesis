@@ -1,7 +1,6 @@
 // Magma code to support the computations in my PhD thesis.
-// The code works on Magma V2.26-10
 
-// The code in this file executes the "Np_possibilities "function
+// The code in this file executes the "Np_possibilities" function
 // to compute the possible levels after level-lowering.
 // This function is in the "levels_function.m" file, available at
 // https://github.com/michaud-jacobs/thesis/blob/main/flt/levels_function.m
