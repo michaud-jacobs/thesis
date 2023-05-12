@@ -1,5 +1,4 @@
 // Magma code to support the computations in my PhD thesis.
-// The code works on Magma V2.26-10
 
 // The code in this file includes equations for curves and maps.
 // It also includes the Jacobian data for use in the saturation test.
