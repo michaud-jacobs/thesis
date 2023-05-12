@@ -1,5 +1,4 @@
 // Magma code to support the computations in my PhD thesis.
-// The code works on Magma V2.26-10
 
 // The code carries out the irreducibility checks for signature (2m, 2l, 17)
 
