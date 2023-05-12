@@ -1,6 +1,6 @@
 Magma code output to support the computations in my PhD thesis.
 
-This is the output of the saturation.m file available at:
+This is the output of the "saturation.m" file available at:
 https://github.com/michaud-jacobs/thesis/blob/main/cartan/saturation.m
 
 Testing saturation for l = 3
