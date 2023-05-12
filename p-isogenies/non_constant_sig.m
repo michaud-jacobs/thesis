@@ -1,5 +1,4 @@
 // Magma code to support the computations in my PhD thesis.
-// The code works on Magma V2.26-10
 
 // The code computes bad primes in the case of a non-constant isogeny signature
 
