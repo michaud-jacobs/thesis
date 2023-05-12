@@ -1,9 +1,8 @@
 // Magma code to support the computations in my PhD thesis.
-// The code works on Magma V2.26-10
 
 // The code in this file carries out the computations to deal with any remaining cases for the elimination steps.
 
-// The output is in the file remaining_cases_output.txt, available at
+// The output is in the file "remaining_cases_output.txt", available at
 // https://github.com/michaud-jacobs/thesis/blob/main/flt/remaining_cases_output.txt
 // Some output is included withing this file
 
@@ -202,7 +201,7 @@ elim_p := function(p,f,K);
 end function;
 
 // We run these elimination steps for those d appearing in Theorem 3
-// The output is in the remaining_cases_output.txt file
+// The output is in the "remaining_cases_output.txt" file
 
 for d in [17,33,41,57,89] do
     print "Considering d = ",d;
