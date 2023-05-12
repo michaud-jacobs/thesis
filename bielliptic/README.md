@@ -1,4 +1,4 @@
-This folder contains Magma code to support the computations in Chapter 4 of my thesis (Copmuting points on bielliptic modular curves over fixed quadratic fields). All code runs on Magma V2.27-7 (and hopefully on later versions too).
+This folder contains Magma code to support the computations in Chapter 4 of my thesis (Copmuting points on bielliptic modular curves over fixed quadratic fields). All code runs on Magma V2.27-7 (and hopefully on later versions too). All timings refer to computations running on a 2200 MHz AMD Opteron.
 
 This folder contains the following files (more description is contained within each file):
 
