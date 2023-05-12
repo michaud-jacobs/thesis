@@ -1,6 +1,6 @@
 Magma code output to support the computations in my PhD thesis.
 
-This is the output of the sieve.m file available at:
+This is the output of the "cuspforms_17.m" file available at:
 https://github.com/michaud-jacobs/thesis/blob/main/gen-fermat/cuspforms_17.m
 
 Output of loop for case 1 (final four forms considered separately):
