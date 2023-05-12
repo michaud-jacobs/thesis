@@ -1,6 +1,6 @@
 Magma code output to support the computations in my PhD thesis.
 
-This is the output of the sieve.m file available at:
+This is the output of the "small_isog.m" file available at:
 https://github.com/michaud-jacobs/thesis/blob/main/p-isogenies/small_isog.m
 
 This is the output for the small_isog function loop where we consider
