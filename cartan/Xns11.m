@@ -1,5 +1,4 @@
 // Magma code to support the computations in my PhD thesis.
-// The code works on Magma V2.27-7
 
 // We verify some basic computations for the curve X_ns(11)
 // We check that the points at infinity on our affine model consist of a pair of quadratic points
