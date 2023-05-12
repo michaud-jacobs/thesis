@@ -1,10 +1,12 @@
 // Magma code to support the computations in my PhD thesis.
 // The code works on Magma V2.27-7
 
-// The code in this file carries out the irreducibility.
+// The code in this file carries out the irreducibility checks.
 
 // The code uses the function "non_const" from the file "non_constant_sig.m" available in the "p-isogenies" folder of this thesis' repository at:
 // https://github.com/michaud-jacobs/thesis/blob/main/p-isogenies/non_constant_sig.m
+
+load "../p-isogenies/non_constant_sig.m";
 
 ////////////////////////////////////////////
 

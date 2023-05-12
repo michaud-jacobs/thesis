@@ -7,11 +7,13 @@
 // https://github.com/michaud-jacobs/thesis/blob/main/flt/remaining_cases_output.txt
 // Some output is included withing this file
 
-// The code uses the function "Np_possibilities" from the file "levels.m" available at:
-// https://github.com/michaud-jacobs/thesis/blob/main/flt/levels.m
+// The code uses the function "Np_possibilities" from the file "levels_function.m" available at:
+// https://github.com/michaud-jacobs/thesis/blob/main/flt/levels_function.m
 
-// The code also uses the functions "decomp_elim" and "hecke_elim" from the file "newform_elimination.m" available at:
-// https://github.com/michaud-jacobs/thesis/blob/main/flt/newform_elimination.m
+// The code also uses the functions "decomp_elim" and "hecke_elim" from the file "newform_elimination_functions.m" available at:
+// https://github.com/michaud-jacobs/thesis/blob/main/flt/newform_elimination_functions.m
+
+load "newform_elimination_functions.m";
 
 ////////////////////////////////////////////
 
