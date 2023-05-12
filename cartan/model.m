@@ -1,5 +1,4 @@
 // Magma code to support the computations in my PhD thesis.
-// The code works on Magma V2.26-10
 
 // The code in this file obtains a new model for the curve X_ns(13)
 
