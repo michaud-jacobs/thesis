@@ -1,5 +1,5 @@
 # flt-quad
-This folder contains Magma code to support the computations in Chapter 7 of my thesis (Fermat's Last Theorem over real quadratic fields).
+This folder contains Magma code to support the computations in Chapter 7 of my thesis (Fermat's Last Theorem over real quadratic fields). All code runs on Magma V2.27-7 (and hopefully on later versions too).
 
 This folder contains the following files (more description is contained within each file):
 
