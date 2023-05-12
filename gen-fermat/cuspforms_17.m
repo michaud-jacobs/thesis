@@ -1,11 +1,9 @@
 // Magma code to support the computations in my PhD thesis.
-// The code works on Magma V2.26-10
 
 // The code carries out the Hilbert newform elimination steps for signature (2m, 2l, 17)
 
-// The output is in the file cuspforms_17_output.txt, available at
+// The output is in the file "cuspforms_17_output.txt", available at
 // https://github.com/michaud-jacobs/thesis/blob/main/gen-fermat/cuspforms_17_output.txt
-// Some output is included within the file
 
 ////////////////////////////////////////////
 
@@ -149,8 +147,6 @@ for cs in [1,2] do
     	survivors:=[l : l in PrimeDivisors(Norm(B)) | l in {2,3,p} eq false];
     	print "surviving primes ell=", survivors;
     end for;
-
-    // See output file
 
     //////////////////////////////////////////
     //////////////////////////////////////////
