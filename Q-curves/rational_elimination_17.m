@@ -6,10 +6,10 @@
 // The code is taken from the paper
 // M. Bennett and S. Siksek, Differences between perfect powers: prime power gaps, arXiv:2110.05553v1 (to appear in Algbera Number Theory)
 
-// In the case n = 7, we use the main function from the file ThueMahlerSolver.m, available at:
+// In the case n = 7, we use the main function from the file "ThueMahlerSolver.m", available at:
 // https://github.com/michaud-jacobs/thesis/blob/main/Q-curves/ThueMahlerSolver.m
 
-load "ThueMahlerSolver.m"; // see the file ThueMahlerSolver.m included with this code
+load "ThueMahlerSolver.m"; // see the file "ThueMahlerSolver.m" included with this code
 // The latest version of this solver can be found at https://github.com/adelagherga/ThueMahler/tree/master/Code/TMSolver
 
 ////////////////////////////////////////////
