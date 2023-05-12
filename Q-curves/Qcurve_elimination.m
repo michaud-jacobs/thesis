@@ -3,7 +3,7 @@
 
 // The code in this file carries out the elimination steps using Frey Q-curves (and multi-Frey techniques).
 
-// The output is in the file Qcurve_elimination_output.txt, available at:
+// The output is in the file "Qcurve_elimination_output.txt", available at:
 // https://github.com/michaud-jacobs/thesis/blob/main/Q-curves/Qcurve_elimination_output.txt
 
 ////////////////////////////////////////////
@@ -133,11 +133,11 @@ for q in [17,41,89,97] do
     // Input a newform g
     // Output Bg value, obtained using primes above the rational primes between 3 and 30, with p ne q.
 
-    Bg := function(g);
+    Bg := function(g);output
        return GCD([Bgp(g,p) : p in PrimesInInterval(3,30) | p ne q ]);
     end function;
 
-    // see output file (Qcurve_elimination_output.txt) for the output of the following loop.
+    // see output file "Qcurve_elimination_output.txt" for the output of the following loop.
     print "Eliminating newforms";
     for i in [1..#Nfreps] do
         if i in [28,29] and q eq 97 then
