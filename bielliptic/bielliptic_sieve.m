@@ -1,5 +1,4 @@
 // Magma code to support the computations in my PhD thesis.
-// The code works on Magma V2.26-10
 
 // This file contains the sieving computations
 
@@ -17,6 +16,8 @@
 // The code uses functions from the file "bielliptic_models.m" available at:
 // https://github.com/michaud-jacobs/thesis/blob/main/bielliptic/bielliptic_models.m
 
+load "bielliptic_models.m";
+
 ////////////////////////////////////////////
 
 // This function carries out the Mordell--Weil sieve
@@ -31,9 +32,7 @@
 // failed_d consists of values d which we unexpectedly failed to eliminate
 // KnownBad consists of values d for which we found a quadratic point in X_0(N)(Q(sqrt(d)))
 
-// The function uses the 'model_and_map' and 'is_nonsing_mod_l' functions available in bielliptic_models.m
-
-load "bielliptic_models.m";
+// The function uses the "model_and_map" and "is_nonsing_mod_l" functions available in "bielliptic_models.m"
 
 sieve := function(N: check_bad_d := false, VerboseLevel := 0, range_d := [-100..100], maxi_l := 1000 );
     print "N =", N;
