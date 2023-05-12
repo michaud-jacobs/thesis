@@ -1,5 +1,4 @@
 // Magma code to support the computations in my PhD thesis.
-// The code works on Magma V2.27-7
 
 // This code verifies certain formal immersion criteria
 
