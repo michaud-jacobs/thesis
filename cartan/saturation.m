@@ -2,7 +2,7 @@
 
 // The code in this file concerns the saturation step
 
-// The output is in the file saturation_output.txt, available at
+// The output is in the file "saturation_output.txt", available at
 // https://github.com/michaud-jacobs/thesis/blob/main/cartan/saturation_output.txt
 
 // The code uses data from the file "eqn_data.m" available at:
@@ -103,7 +103,7 @@ end function;
 //////////////////////////////////////////////////////////////////////////////////////////
 
 // We now prove that the index is not divisible by the primes l in ls_to_test defined below
-// The output is available in saturation_output.txt 
+// The output is available in "saturation_output.txt" 
 
 ls_to_test := [3,5,13,29];
 
