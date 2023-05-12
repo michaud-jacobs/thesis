@@ -1,6 +1,6 @@
 # Q-curves
 
-This folder contains Magma code to support the computations in Chapter 9 of my thesis (Q-Curves and the Lebesgue–Nagell equation), based on joint work with Michael A. Bennett and Samir Siksek. All code runs on Magma V2.27-7 (and hopefully on later versions too).
+This folder contains Magma code to support the computations in Chapter 9 of my thesis (Q-Curves and the Lebesgue–Nagell equation), based on joint work with Michael A. Bennett and Samir Siksek. All code runs on Magma V2.27-7 (and hopefully on later versions too). All timings refer to computations running on a 2200 MHz AMD Opteron.
 
 This folder contains the following files (more description is contained within each file):
 
