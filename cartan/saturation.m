@@ -8,9 +8,9 @@
 // The code uses data from the file "eqn_data.m" available at:
 // https://github.com/michaud-jacobs/thesis/blob/main/cartan/eqn_data.m
 
-////////////////////////////////////////////
-
 load "eqn_data.m";
+
+////////////////////////////////////////////
 
 C := Curve(ProjectiveSpace(S), eqn_X_plus); //  The curve X_ns^+(13)
 
