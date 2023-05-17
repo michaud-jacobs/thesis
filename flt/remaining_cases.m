@@ -158,7 +158,7 @@ initial_bad_p := function(d);
     U<x>:=PolynomialRing(Rationals());
     K<a>:=NumberField(x^2-d);
     OK:=Integers(K);
-    PP:=PrimesInInterval(17,10^7);  // Primes to test, takes a while to go all the way up to 10^7, much faster for 10^6
+    PP:=PrimesInInterval(17,10^7);  // Primes to test, takes about 8 hours per d if going up to 10^7, and about 5 minutes for up to 10^6
     ns:=[];    // For each prime we aim to find a value of n that works.
     for p in PP do;
         nsp:=[];
@@ -205,7 +205,7 @@ end function;
 
 for d in [17,33,41,57,89] do
     print "Considering d = ",d;
-    init_bad_p := initial_bad_p(d); // several hours per d if going up to 10^7, and about 5 minutes for up to 10^6
+    init_bad_p := initial_bad_p(d); // about 8 hours per d if going up to 10^7, and about 5 minutes for up to 10^6
     "Initial bad primes are:", init_bad_p;
     N_ps, K := Np_possibilities(d);
     for Np in N_ps do
