@@ -1,6 +1,6 @@
 // Magma code to support the computations in my PhD thesis.
 
-// The code in this file carries out the sieving (and Chabauty) steps.
+// The code in this file carries out the sieve (incorporating the relative symmetric Chabauty criterion).
 
 // The output is in the file "sieve_output.txt", available at
 // https://github.com/michaud-jacobs/thesis/blob/main/cartan/sieve_output.txt
@@ -12,17 +12,17 @@ load "eqn_data.m";
 
 ////////////////////////////////////////////
 
-// The sieve function takes as optional input a different list of primes
+// The sieve function takes as optional input a different list of auxiliary primes to use
 // and an option to set the VerboseLevel to 1
 // VerboseLevel 1 includes some additional output
 
 sieve := function(   :primes_for_sieve := [3,5,31,43,53,61,73], VerboseLevel := 0);
     // (non_singularity at the default primes used is checked in the "model.m" file)
     X:= Curve(ProjectiveSpace(R),new_eqns);                 // New model of our curve
-    X_plus := Curve(ProjectiveSpace(S), eqn_X_plus);        //  The curve X_ns^+(13)
+    X_plus := Curve(ProjectiveSpace(S), eqn_X_plus);        // The curve X_ns+(13)
     w:= map<X -> X | [Diag[i][i]*R.i : i in [1..8]]>;       // New modular involution
-    rho := map< X -> X_plus | new_rho_eqns >;               // New equations for map
-
+    rho := map< X -> X_plus | new_rho_eqns >;               // New equations for the quotient map
+    // We define the seven rational points on the quotient
     SvnPts := [X_plus ! [0,1,0], X_plus ! [0,0,1], X_plus ! [-1,0,1], X_plus ! [1,0,0], X_plus ! [1,1,0], X_plus ! [0,3,2], X_plus ! [1,0,1]];
 
     ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -67,7 +67,7 @@ sieve := function(   :primes_for_sieve := [3,5,31,43,53,61,73], VerboseLevel := 
         print("Starting calculations for p ="), p;
         H_p:={};    // Build up to list of known points mod p that pass Chabauty test
         Ds_mod_p:=[];    // Build up to list of generators for G reduced mod p
-        Rks:=[];      // Ranks of residue disc matrices
+        Rks:=[];      // Ranks of residue disc matrices (used in Chabauty criterion)
         TQ<x> := PolynomialRing(Integers());
         Fp:=GF(p);
         Xp:=ChangeRing(X,Fp);  // Curve mod p
@@ -75,6 +75,7 @@ sieve := function(   :primes_for_sieve := [3,5,31,43,53,61,73], VerboseLevel := 
     ///////////////////////////////////////////////////////////////////////////////////////////////
 
         for i in [1..7] do
+            // We start by reducing our quadratic points mod p
             quad_pt := quad_pts_list[i][1];
             K := quad_pts_list[i][2];
             Qa := Eltseq(quad_pt[1]);
@@ -101,7 +102,7 @@ sieve := function(   :primes_for_sieve := [3,5,31,43,53,61,73], VerboseLevel := 
             plQtbb:=Place(Qtbb);
             plQtb:=Place(Qtb);
 
-           if Degree(plQta) eq 1 then   // if a point is defined over Fp
+           if Degree(plQta) eq 1 then    // if a point is defined over Fp
                DivQ:=plQta+plQtb;        // then form a divisor from the point and its conjugate
             end if;
             if Degree(plQta) eq 2 then   // if a point is defined over Fp^2
@@ -109,7 +110,7 @@ sieve := function(   :primes_for_sieve := [3,5,31,43,53,61,73], VerboseLevel := 
             end if;
 
             ////////////////////////////////////////////////////////////////////////////////
-            // Checking if there are exceptional points in residue disc of the point by applying the Chabauty criterion
+            // Checking if there are non-pullback points in residue disc of the point by applying the Chabauty criterion
 
             wpp:=map< Xpp->Xpp | [x_1,x_2,x_3,-x_4,-x_5,-x_6,-x_7,-x_8] >; // Modular involution
             V,phiD:=SpaceOfDifferentialsFirstKind(Xpp);  // Holomorphic differentials on Xpp
@@ -118,8 +119,8 @@ sieve := function(   :primes_for_sieve := [3,5,31,43,53,61,73], VerboseLevel := 
             oms:=[phiD(T.i) : i in [1..Dimension(T)]];
             tQta:=UniformizingParameter(Qtaa);
             Ata:=Matrix([[Evaluate(omega/Differential(tQta),plQtaa) : omega in oms]]); // Chabauty criterion matrix
-            ra:=Rank(Ata); // Rank 1 means no exceptional points in residue class, check succeeded
-            if ra eq 0 then  // An alert to say that there could potentially be an exceptional point in the residue class.
+            ra:=Rank(Ata); // Rank 1 means no non-pullback points in residue class, check succeeded
+            if ra eq 0 then  // An alert to say that there could potentially be a non-pullback point in the residue class.
                 print "Point Not Lonely When i =", i; print"and p =", p;
             end if;
 
@@ -142,8 +143,7 @@ sieve := function(   :primes_for_sieve := [3,5,31,43,53,61,73], VerboseLevel := 
             printf "\n";
         end if;
 
-    ///////////////////////////////////////////////////////////////////////////////////////////////
-    ///////////////////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////////////////
 
         pls1p:=Places(Xp,1);   // The degree 1 places on Xp
         pls2p:=Places(Xp,2);   //  The degree 2 places on Xp
@@ -228,7 +228,7 @@ sieve := function(   :primes_for_sieve := [3,5,31,43,53,61,73], VerboseLevel := 
         Ws:=Ws cat [* W_p *];
         Bs:=Bs cat [* B_p *];
 
-        // We now carry out the intersection
+        // We now carry out the intersection 
         Bnew,iB_p:=sub<B_p | B meet B_p>;
         iAnew:=iB_p*iAp;
         A0,pi0:=quo<A | iAnew(Bnew)>;
