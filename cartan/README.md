@@ -1,4 +1,3 @@
-# quad-cartan
 This folder contains Magma code to support the computations in Chapter 3 of my thesis (Quadratic points on non-split Cartan modular curves). All code runs on Magma V2.27-7 (and hopefully on later versions too). All timings refer to computations running on a 2200 MHz AMD Opteron.
 
 This folder contains the following files (more description is contained within each file):
