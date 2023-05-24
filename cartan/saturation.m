@@ -12,9 +12,9 @@ load "eqn_data.m";
 
 ////////////////////////////////////////////
 
-C := Curve(ProjectiveSpace(S), eqn_X_plus); //  The curve X_ns^+(13)
+C := Curve(ProjectiveSpace(S), eqn_X_plus); //  The curve X_ns^+(13) 
 
-// This function takes as input a prime l and a sequence of auxiliary primes [p_1, ... , p_n]
+// This function takes as input a prime l and a sequence of auxiliary primes aux_p = [p_1, ... , p_n]
 // It tries to prove that the index in question is not divisible by l
 // See the functions below for help choosing the primes in aux_p
 
@@ -66,7 +66,7 @@ end function;
 // We first compute the exponent of J(F_p) for all primes p < 500 with p not 13.
 
 // The code below produces the Jacobian data (JFp_data) present in the eqn_data.m file
-// It takes some time, so it is commented out
+// It takes some time to run, so it is commented out
 /*
 JFp_data_copy := [];
 for n in [1..500] do
@@ -103,7 +103,7 @@ end function;
 //////////////////////////////////////////////////////////////////////////////////////////
 
 // We now prove that the index is not divisible by the primes l in ls_to_test defined below
-// The output is available in "saturation_output.txt" 
+// The output is available in the file "saturation_output.txt" 
 
 ls_to_test := [3,5,13,29];
 
