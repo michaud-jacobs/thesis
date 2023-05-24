@@ -1,6 +1,8 @@
 // Magma code to support the computations in my PhD thesis.
 
 // The code in this file obtains a new model for the curve X_ns(13)
+// together with equations for the modular involution and quotient map.
+// We also test nonsingularity at the required primes and verify the rank of J_ns(13)(Q).
 
 // The code uses data from the file "eqn_data.m" available at:
 // https://github.com/michaud-jacobs/thesis/blob/main/cartan/eqn_data.m
@@ -13,15 +15,16 @@ load "eqn_data.m";
 
 old_X := Curve(ProjectiveSpace(R), old_eqns);  // The curve X_ns(13)
 
-X_plus := Curve(ProjectiveSpace(S), eqn_X_plus); // The curve X_ns^+(13),
+X_plus := Curve(ProjectiveSpace(S), eqn_X_plus); // The curve X_ns+(13),
 
-old_rho :=map < old_X -> X_plus | old_rho_eqns >;
+old_rho :=map < old_X -> X_plus | old_rho_eqns >; // Quotient map
 
+// We define the seven known rational points on the quotient curve X_ns+(13)
 SvnPts := [X_plus ! [0,1,0], X_plus ! [0,0,1], X_plus ! [-1,0,1], X_plus ! [1,0,0], X_plus ! [1,1,0], X_plus ! [0,3,2], X_plus ! [1,0,1]];
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////
 
-// We compute the pullbacks of the seven rational points on XNSplus13
+// We compute the pullbacks of the seven rational points on X_ns+(13)
 
 // We first compute the fields of definition and some pullback schemes
 
@@ -88,7 +91,7 @@ assert T*Mw*(T^-1) eq Diag;
 Eqg := [&+[(T^-1)[i][j]*R.j : j in [1..8]] : i in [1..8]]; // We use T^-1 to find our change of coordinate map
 g:=hom<R->R | Eqg>;                   // Change of coordinate map
 
-/////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////
 
 // Apply our change of coordinates to obtain new equations
 // Multiply by 4 to clear denominators
@@ -103,9 +106,12 @@ assert Nrhos eq new_rho_eqns; // Matches data file.
 
 // We now have the following new data:
 
-X:= Curve(ProjectiveSpace(R),new_eqns);            // New model of our curve
-w:= map<X -> X | [Diag[i][i]*R.i : i in [1..8]]>;  // New modular involution
-rho := map< X -> X_plus | new_rho_eqns >;          // New equations for map
+X:= Curve(ProjectiveSpace(R),new_eqns);            // New model of our curve X_ns(13)
+w:= map<X -> X | [Diag[i][i]*R.i : i in [1..8]]>;  // New modular involution on X_ns(13)
+rho := map< X -> X_plus | new_rho_eqns >;          // New equations for the quotient map from X_ns(13) to X_ns+(13)
+
+
+////////////////////////////////////////////////////////////////////////////////
 
 // Check that this new model is nonsingular at the primes used in the sieve
 // This takes a bit under an hour per prime on average
