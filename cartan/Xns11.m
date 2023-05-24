@@ -17,7 +17,7 @@ E := EllipticCurve([0,-1,+1,-7,10]); // The curve X_ns+(11)
 
 assert Conductor(E) eq 121;
 MW,_,tf1,tf2 := MordellWeilGroup(E);
-assert tf1 and tf2;  // MordellWeil group has been provably computed
+assert tf1 and tf2;  // Mordell-Weil group has been provably computed
 assert MW eq AbelianGroup([0]); // E(Q) is isomorphic to Z
 
 rho := map<X -> E | [x,y,1]>; // degeneracy map
@@ -50,9 +50,9 @@ inf_scheme_K := BaseChange(inf_scheme,K);
 Points(inf_scheme_K);
 // {@ (0 : -1/2*a : 1 : 0), (0 : 1/2*a : 1 : 0) @}
 
-assert HasPointsOverExtension(inf_scheme_K) eq false; // There are no further points
+assert HasPointsOverExtension(inf_scheme_K) eq false; // sanity check
 
-rhoP := map<PX -> E | [xx,yy,tt]>; // degenracy map from projective closure to E
+rhoP := map<PX -> E | [xx,yy,tt]>; // degeneracy map from projective closure to E
 assert Degree(rhoP) eq 2; // This is indeed the correct map
 pullback_scheme := Pullback(rhoP,Identity(E)); 
 Points(pullback_scheme,K); // We see that we have the same points:
@@ -63,5 +63,5 @@ Points(pullback_scheme,K); // We see that we have the same points:
 // We check that H(Q) is empty using the TwoCoverDescent function
 
 QQ<s> := PolynomialRing(Rationals());
-H := HyperellipticCurve(-(2*s^3-4*s^2-28*s+41)*(4*s^3+7*s^2-6*s+19));
-assert TwoCoverDescent(H) eq {}; // takes about 5 minutes
+H := HyperellipticCurve(-(4*s^3-4*s^2-28*s+41)*(4*s^3+7*s^2-6*s+19));
+assert TwoCoverDescent(H) eq {}; // takes under a second
