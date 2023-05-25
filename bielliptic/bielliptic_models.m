@@ -4,9 +4,8 @@
 
 ////////////////////////////////////////////
 
-// This function takes as input a basis, B, of cuspforms at level N
-// If X_0(N) can be canonically embedded, it computes a model for X_0(N)
-// The function is based on the code of Ozman and Siksek in their paper 'Quadratic Points on Modular Curves'
+// This function takes as input a basis, B, of cuspforms at level N.
+// If X_0(N) can be canonically embedded, it computes a model for X_0(N).
 
 canonic := function(B);
     N := Level(B[1]);
@@ -15,25 +14,25 @@ canonic := function(B);
     L<q>:=LaurentSeriesRing(Rationals(),prec);
     R<[x]>:=PolynomialRing(Rationals(),dim);
     Bexp:=[L!qExpansion(B[i],prec) : i in [1..dim]]; // q expansions of cusp forms
-    eqns:=[R | ];
+    eqns:=[R | ]; // build up to sequence of equations for curve
     d:=1;
     tf:=false;
     while tf eq false do   // We search for degree d relations
 	d:=d+1;
 	mons:=MonomialsOfDegree(R,d);
-	monsq:=[Evaluate(mon,Bexp) : mon in mons];
+	monsq:=[Evaluate(mon,Bexp) : mon in mons];  // monomials of degree d evaluated at q-expansions of cusp forms
 	V:=VectorSpace(Rationals(),#mons);
 	W:=VectorSpace(Rationals(),prec-10);
 	h:=hom<V->W | [W![Coefficient(monsq[i],j) : j in [1..(prec-10)]] : i in [1..#mons]]>;
 	K:=Kernel(h);
-	eqns:=eqns cat [ &+[Eltseq(V!k)[j]*mons[j] : j in [1..#mons] ] : k in Basis(K)  ];
+	eqns:=eqns cat [ &+[Eltseq(V!k)[j]*mons[j] : j in [1..#mons] ] : k in Basis(K)  ]; // relations between cusp forms
         I:=Radical(ideal<R | eqns>);
 	X:=Scheme(ProjectiveSpace(R),I);
-	if Dimension(X) eq 1 then
-	    if IsIrreducible(X) then
+	if Dimension(X) eq 1 then       // check we have a curve
+	    if IsIrreducible(X) then  
 		X:=Curve(ProjectiveSpace(R),eqns);
 		if Genus(X) eq dim then
-		    tf:=true;
+		    tf:=true;  // all checks passed, so we stop. Otherwise, move on to next d.
 		end if;
 	    end if;
 	end if;
@@ -42,16 +41,16 @@ canonic := function(B);
     eqns := [LCM([Denominator(c) : c in Coefficients(eqn)])*eqn : eqn in eqns]; // scale equations
     X := Curve(ProjectiveSpace(R),eqns); // same curve with scaled equations
 
-    // We now check relations up to the Sturm bound
+    // We now check the cusp form relations up to the Sturm bound
 
-    indexGam:=N*&*[Rationals() | 1+1/p : p in PrimeDivisors(N)];
+    indexGam:=N*&*[Rationals() | 1+1/p : p in PrimeDivisors(N)]; 
     indexGam:=Integers()!indexGam; // Index of Gamma_0(N) in SL_2(Z)
 
     for eqn in eqns do
 	wt:=2*Degree(eqn); // Weight of eqn as a cuspform.
-	hecke:=Ceiling(indexGam*wt/12);  // Sturm bound for Gamma_0(N)
-	Bexp1:=[qExpansion(B[i],hecke+10) : i in [1..dim]]; // q-expansions
-	assert Valuation(Evaluate(eqn,Bexp1)) gt hecke+1;
+	sturm:=Ceiling(indexGam*wt/12);  // Sturm bound for Gamma_0(N)
+	Bexp1:=[qExpansion(B[i],sturm+10) : i in [1..dim]]; // q-expansions up to sturm bound (+10)
+	assert Valuation(Evaluate(eqn,Bexp1)) gt sturm+1;  // relations hold up to the sturm bound
     end for; // We have now checked the correctness of the equations for X.
 
  return(X);
@@ -59,8 +58,8 @@ end function;
 
 ////////////////////////////////////////////
 
-// This function takes as input a level N
-// It returns a basis of cusp forms for S_2(N) and the matrix of the AL involution w_N
+// This function takes as input a level N.
+// It returns a basis of cusp forms for S_2(N) and the matrix of the Atkin-Lehner involution w_N
 // such that w_N acts diagonally on this basis.
 
 diag_basis := function(N);
@@ -80,7 +79,7 @@ diag_basis := function(N);
     T := Matrix(new_basis);
     w := T*w*T^(-1); // diagonalised operator
     B := Basis(C);
-    cleardenom := LCM([Denominator(x) : x in Eltseq(T)]);
+    cleardenom := LCM([Denominator(x) : x in Eltseq(T)]); // used to scale to obtain integer coefficients.
     NB := [&+[cleardenom*T[i,j]*B[j] : j in [1..g]] : i in [1..g]];
     return NB, w;
 end function;
@@ -89,7 +88,7 @@ end function;
 
 // This function takes as input a level N
 // It returns X, E, psi, B, w, cusp. Where:
-// X is a nonsingualr projective model for X_0(N) on which w_N acts diagonally
+// X is a non-singular projective model for X_0(N) on which w_N acts diagonally
 // E is the elliptic curve X_0^+(N) in some Weierstrass form
 // psi is the map X -> E
 // B is the basis of cusp forms used
@@ -99,7 +98,7 @@ end function;
 model_and_map := function(N);
     B, w := diag_basis(N);
     g := #B;
-    X := canonic(B);
+    X := canonic(B); // projective model for X_0(N) in P^(g-1) on which w_N acts diagonally
     A<[x]> := AmbientSpace(X);
     cusp_seq := []; // find the infinity cusp (as a sequence of coordinates)
     for f in B do
@@ -116,22 +115,22 @@ model_and_map := function(N);
     assert Genus(Y) eq 1; // verify that the curve has the correct genus
     rho1 := map<X -> Y | [x[i] : i in [2..g]]>;
     assert Degree(rho1) eq 2; // verify that the map has the right degree, so we have the right map and curve
-    Z, rho2 := EllipticCurve(Y,rho1(cusp)); // convert into an elliptic curve with Magma
+    Z, rho2 := EllipticCurve(Y,rho1(cusp)); // convert into an elliptic curve
     AZ<[z]> := AmbientSpace(Z);
     E, rho3 := SimplifiedModel(Z); // Weierstrass form of the elliptic curve
     psi := rho1*rho2*rho3;
-    assert Conductor(E) eq N;
+    assert Conductor(E) eq N; // sanity check
     return X, E, psi, B, w, cusp;
 end function;
 
 ////////////////////////////////////////////
 
-// This function checks nonsingularity mod l
+// This function checks non-singularity mod l
 // Input: curve X, level N, (infinty) cusp, prime l
 // (The infinity cusp can be computed using model_and_map)
-// Output True if X is nonsingular mod l, false otherwise
+// Output true if X is non-singular mod l, false otherwise
 
-// The function checks X mod l is nonsingular using Lemma 2.3 of the author's paper [1]
+// The function checks X mod l is non-singular using Lemma 2.3 of the author's paper [1]
 // (This is: "Computing quadratic points on modular curves X_0(N)" by Adzaga, Keller, Michaud-Jacobs, Najman, Ozman, and Vukorepa)
 
 is_nonsing_mod_l := function(X, N, cusp, l);
@@ -150,7 +149,7 @@ is_nonsing_mod_l := function(X, N, cusp, l);
     if Genus(Xl) ne Genus(Gamma0(N)) then // Genus(Gamma_0(N)) is the genus of X
         return false;
     end if;
-    // We check the curve has a smooth F_l point
+    // We check the curve has a smooth F_l point (so that it is geometrically integral)
     cusp_seq := [GF(l) ! r : r in Eltseq(cusp)];
     cuspl := Xl ! Eltseq(cusp_seq); // Reduction of the cusp mod l
     if IsNonsingular(Xl,cuspl) then // We check if this is a nonsingular point
