@@ -271,4 +271,4 @@ end function;
 // See output file "sieve_output.txt";
 
 sieve();
-sieve(   :primes_for_sieve := [3,5], VerboseLevel := 1); // For presented computations
+sieve(   :primes_for_sieve := [3,5], VerboseLevel := 1); // For example computations presented in the thesis
