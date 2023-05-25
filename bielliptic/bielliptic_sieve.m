@@ -323,7 +323,7 @@ end function;
 // and in the "bielliptic_sieve_output.txt" file
 
 for N in [53,61,79,83,89,101,131,65] do
-    time failed_d, KnownBad := sieve(N);
+    time failed_d, KnownBad := sieve(N); // record runtime
     assert failed_d eq {};
     print "Bad d for N =", N, "are:", KnownBad;
     print ">>>>>>>>>>>>>>>>>>>>>>>>";
