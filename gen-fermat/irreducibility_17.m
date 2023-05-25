@@ -57,22 +57,22 @@ XK:=ChangeRing(X,K);
 XK4:=ChangeRing(X,K4);
 XF:=ChangeRing(X,F);
 
-MordellWeilGroup(X);  // Z/6Z (true true)
-MF,piF,tf1,tf2:=MordellWeilGroup(XF);  // Z/6Z + Z (true true)
+MordellWeilGroup(X);  // Output: Z/6Z (true true)
+MF,piF,tf1,tf2:=MordellWeilGroup(XF);  // Output: Z/6Z + Z (true true)
 assert tf1 and tf2; // provably correct
-MW,pi,tf1,tf2:=MordellWeilGroup(XK4);  // Z/6Z + Z  (true true), about 1 minute
+MW,pi,tf1,tf2:=MordellWeilGroup(XK4);  // Output: Z/6Z + Z  (true true), Runtime: about 1 minute
 assert tf1 and tf2; // provably correct
 R:= XK ! pi(MW.2);
 Q:= XK ! pi(MW.1);
 
 assert (XK4 ! piF(-MF.2-2*MF.1)) eq pi(MW.2); // generator of free part of XK4 comes from point in X(F), so XK4 = XF.
 
-TorsXK:=TorsionSubgroup(XK); // Z/6Z
+TorsXK:=TorsionSubgroup(XK); // Output: Z/6Z
 
 XdK4:=QuadraticTwist(XK4,d);
 XdK:=ChangeRing(XdK4,K);
 
-time Md,pid,tf1,tf2:=MordellWeilGroup(XdK4); // Z/2Z (true true), about 90 seconds
+time Md,pid,tf1,tf2:=MordellWeilGroup(XdK4); // Output: Z/2Z (true true), Runtime: about 90 seconds
 assert tf1 and tf2; // provably correct
 
 // We now verify 2-divisibility
@@ -83,14 +83,14 @@ q:=Factorisation(qq*OK)[1][1];
 unif:=UniformizingElement(q);
 Fq:=ResidueClassField(q);
 Xq:=ChangeRing(XK,Fq);
-Ab:=AbelianGroup(Xq);         // this is Z/2Z + Z/60Z
+Ab:=AbelianGroup(Xq);   // Output: Z/2Z + Z/60Z
 
 for b in [0,1] do
     Pt:=R+b*Q;
     m:=Minimum([Valuation(a,q) : a in Eltseq(Pt) | not a eq 0]); // we reduce the point 
     Red1:=[unif^(-m)*a : a in Eltseq(Pt)];
     Red:=Xq![Evaluate(a,Place(q)) : a in Red1];   // reduction of Pt
-    Order(Red);              // orders are 60, 60
+    Order(Red);              // Output: orders are 60, 60
 end for;
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -104,9 +104,9 @@ CremonaReference(C); // 52a1
 CK4 := ChangeRing(C,K4);
 CdK4 := QuadraticTwist(CK4,d);
 
-Rank(CK4);  // 0 true
-Rank(CdK4); // 0 true
-TorsionSubgroup(ChangeRing(C,K)); // Z/2Z
+Rank(CK4);  // Output: 0 true
+Rank(CdK4); // Output: 0 true
+TorsionSubgroup(ChangeRing(C,K)); // Output: Z/2Z
 
 assert ModularDegree(C) eq 3;
 
@@ -120,7 +120,7 @@ assert ModularDegree(C) eq 3;
 
 p:=17;
 L<zet>:=CyclotomicField(p);
-K:=sub<L | zet+1/zet>; // Q(zeta_p)^+.
+K:=sub<L | zet+1/zet>; // this is Q(zeta_p)^+.
 OK:=Integers(K);
 
 thj:=OK!(zet+1/zet);      // j = 1
@@ -185,7 +185,7 @@ for i in [1,2] do // i = 1 is case 1, i = 2 is case 2.
     for D in subG do   // D is a subgroup of the Galois group.
     	T,pi:=quo<G|D>; // T is the cosets of G/D.
     	for Tp in Subsets({q : q in T}) do // Tp is T^prime
-    					// in the notation of the paper [1].
+    					// in the notation of the paper by Anni and Siksek.
     		if #Tp ne 0 and #Tp ne #T then
     				// We check that Tp is non-empty and proper.
     		   TpD:=[mu(t@@pi) : t in Tp];
@@ -195,7 +195,7 @@ for i in [1,2] do // i = 1 is case 1, i = 2 is case 2.
     				// tau is in T^prime.
     		   BTpD:=GCD( [ Integers()!Norm(&*[u@t : t in TpD]-1)  : u in posunits  ]  );
     				// This B_{T^prime,D}(u_1,...,u_d) in the
-    				// notation of the paper [1].
+    				// notation of the paper by Anni and Siksek.
     		   BSet:=BSet join {BTpD};
     		end if;
     	end for;
