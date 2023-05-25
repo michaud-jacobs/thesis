@@ -84,7 +84,7 @@ for p in [11,13,17] do
     OK:=Integers(K);
     H:=HilbertCuspForms(K,2^3*OK);
     Hnew:=NewSubspace(H);
-    dim := Dimension(Hnew); // a few minutes for p=13 and p=17.
+    dim := Dimension(Hnew); // Runtime: a few minutes for p=13 and p=17.
     print "Dimension is", dim, "for p =", p;
 end for;
 
