@@ -4,9 +4,9 @@
 
 ////////////////////////////////////////////
 
-// The output for VerboseLevel 0 is included at the end of this file AND in bielliptic_sieve_output.txt
-// The output for VerboseLevel 2 is in bielliptic_sieve_output.txt
-// The output for the example computations is in bielliptic_sieve_output.txt
+// The output for VerboseLevel 0 is included at the end of this file AND in "bielliptic_sieve_output.txt"
+// The output for VerboseLevel 2 is in "bielliptic_sieve_output.txt"
+// The output for the example computations is in "bielliptic_sieve_output.txt"
 
 // The file "bielliptic_sieve_output.txt" is available at
 // https://github.com/michaud-jacobs/thesis/blob/main/bielliptic/bielliptic_sieve_output.txt
@@ -25,14 +25,14 @@ load "bielliptic_models.m";
 
 // if check_bad_d = true then the sieve tests values of d that are expected to fail (default = false)
 // The VerboseLevel can be set at 0, 1, 2, or 3 (default = 0), which will print varying levels of output
-// The sieve tests all d in range_d (default = [-100..100])
+// The sieve tests all (squarefree) d in range_d (default = [-100..100])
 // The maximum value of a prime l to be used is maxi_l (default = 1000)
 
 // The function outputs two sets, failed_d and KnownBad
 // failed_d consists of values d which we unexpectedly failed to eliminate
 // KnownBad consists of values d for which we found a quadratic point in X_0(N)(Q(sqrt(d)))
 
-// The function uses the "model_and_map" and "is_nonsing_mod_l" functions available in "bielliptic_models.m"
+// The function uses the "model_and_map" and "is_nonsing_mod_l" functions available in the file "bielliptic_models.m".
 
 sieve := function(N: check_bad_d := false, VerboseLevel := 0, range_d := [-100..100], maxi_l := 1000 );
     print "N =", N;
@@ -58,9 +58,9 @@ sieve := function(N: check_bad_d := false, VerboseLevel := 0, range_d := [-100..
     // We choose generators for the group E(Q)
     if N ne 65 then
         assert #TorsionSubgroup(E) eq 1;
-        R := mu(M.1);
-        Q := mu(0*M.1); // Identity on E
-        n_range := [0];
+        R := mu(M.1); // generator for Mordell-Weil group
+        Q := mu(0*M.1); // identity on E
+        n_range := [0]; // (we only run the sieve once, for mR)
         if VerboseLevel ge 2 then
             print "The point R =", R, "generates E(Q)";
             print "++++++++++++++++++++++++";
@@ -79,17 +79,17 @@ sieve := function(N: check_bad_d := false, VerboseLevel := 0, range_d := [-100..
     // We search for suitable primes l to use in the sieve
     initial_ls := [l : l in PrimesInInterval(3,maxi_l) | IsZero(N mod l) eq false];
     // The upper bound of 1000 can be increased here
-    ls := [];
+    ls := []; // we refine which ls to use
     for l in initial_ls do
         Fl := GF(l);
         El:=ChangeRing(E,Fl);
         Rl:=El ! Eltseq(R);
-        Gl:=Order(Rl);
+        Gl:=Order(Rl); // Order of R mod l
         if Max(PrimeFactors(Gl)) le 7 then
             ls := ls cat [l];
         end if;
     end for;
-    original_ls := ls;
+    original_ls := ls; // we will include ramified primes later
     if VerboseLevel ge 1 then
        print "Primes l to use in sieve are:\n", ls;
        print "++++++++++++++++++++++++";
@@ -116,7 +116,7 @@ sieve := function(N: check_bad_d := false, VerboseLevel := 0, range_d := [-100..
         // We compute KnownBad values of d by computing psi*(tR) for small t
         for t in [-5..5] do
             dec := Decomposition(Pullback(psi,Place(t*R+n*Q)));
-            d := Discriminant(Integers(ResidueClassField(dec[1][1])));
+            d := Discriminant(Integers(ResidueClassField(dec[1][1]))); // used to extract quadratic field
             if IsZero(d mod 4) then
                 d := Integers() ! (d/4);
             end if;
@@ -181,9 +181,9 @@ sieve := function(N: check_bad_d := false, VerboseLevel := 0, range_d := [-100..
                 end if;
 
                 Fl:=GF(l);
-                Xl:=ChangeRing(X,Fl);
-                El:=ChangeRing(E,Fl);
-                psil:=map<Xl->El | DefiningEquations(psi) >;
+                Xl:=ChangeRing(X,Fl); // X_0(N) mod l
+                El:=ChangeRing(E,Fl); // X_0+(N) mod l
+                psil:=map<Xl->El | DefiningEquations(psi) >; // map psi mod l
                 Rl:=El ! Eltseq(R);
                 Ql := El ! Eltseq(Q);
                 Gl:=Order(Rl);
@@ -227,7 +227,7 @@ sieve := function(N: check_bad_d := false, VerboseLevel := 0, range_d := [-100..
                 if VerboseLevel ge 3 then
                     print "Carrying out CRT step";
                 end if;
-                if Type(Newms) eq MonStgElt then // not yet defined, so we are at first step
+                if Type(Newms) eq MonStgElt then // Newms not yet defined, so we are at first step
                     Newms:=[* [mls[1][j]] : j in [1..#mls[1]]*];
                     if VerboseLevel ge 3 then
                         print "Completed CRT,", #Newms, "possible sequences remaining";
@@ -268,7 +268,7 @@ sieve := function(N: check_bad_d := false, VerboseLevel := 0, range_d := [-100..
                     end if;
                     if #Newms eq 0 then // If Newms is empty, no solutions, so contradiction.
                         if l gt max_l then
-                            max_l := l;
+                            max_l := l; // record max value used
                         end if;
                         if VerboseLevel ge 1 then
                             print d, "eliminated after reaching l =", l;
