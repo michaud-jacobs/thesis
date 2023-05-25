@@ -20,17 +20,15 @@ small_isog := function(d); // d is for the quadratic field K = Q(sqrt(d))
     ranks := <>;
     for p in [11,17,19] do
         print "Doing p =", p;
-
-        pfac := [Factorisation(p*OK)[i][1] : i in [1..#Factorisation(p*OK)]];
-
-        X := SmallModularCurve(p);
-        XK := SmallModularCurve(p,K);
+        pfac := [Factorisation(p*OK)[i][1] : i in [1..#Factorisation(p*OK)]]; // primes above p
+        X := SmallModularCurve(p); // the curve X_0(p) (over Q)
+        XK := SmallModularCurve(p,K); // the curve X_0(p) over K
         // We check the rank using the quadratic twist of the curve by d
         Xd := QuadraticTwist(X,d);
         XdK := ChangeRing(Xd,K);
-        _,phi := IsIsomorphic(XdK,XK);
+        _,phi := IsIsomorphic(XdK,XK); // isomorphism over K between twist and original curve
 
-        Md,pid,tf1,tf2 := MordellWeilGroup(Xd: Effort := 3); // can change effort.
+        Md,pid,tf1,tf2 := MordellWeilGroup(Xd: Effort := 3); // effort set to 3 to ensure a provably correct result.
         assert tf1 and tf2; // provably correct
         k := #Generators(Md);
         gen := Md.k; // will be an element of infinite order if the rank is positive
@@ -54,7 +52,7 @@ small_isog := function(d); // d is for the quadratic field K = Q(sqrt(d))
                     kod2 := LocalInformation(E,pfac[2])[5];
                     <kod1, kod2>;
                 end if;
-                good_kod := KodairaSymbol("I0");
+                good_kod := KodairaSymbol("I0"); // The Kodaira symbol in the case of good reduction
                 if (#pfac eq 1 and kod eq good_kod) or (#pfac eq 2 and kod1 eq good_kod and kod2 eq good_kod) then
                     print "Found a curve with good reduction at all primes above p";
                     break;
@@ -85,26 +83,27 @@ end for;
 K<d> := QuadraticField(-5);
 OK := Integers(K);
 
-X := SmallModularCurve(43);
-XK := ChangeRing(X,K);
+X := SmallModularCurve(43); // The curve X_0(43) (over Q)
+XK := ChangeRing(X,K); // The curve X_0(43) over K
 w := AtkinLehnerInvolution(X,43,43);
-Xpl, phi := CurveQuotient(AutomorphismGroup(X, [w])); // This is X_0^+(43)
+Xpl, phi := CurveQuotient(AutomorphismGroup(X, [w])); // This is X_0+(43)
 Pts:=Points(Xpl: Bound := 100);
 for Q in Pts do
     pbK := Points(ChangeRing(Pullback(phi,Q),K));
 end for;
 
-// we see that we obtain a non-Q-rational point over K in one case
-// we define
+// by checking each pbK, we see that we obtain a non-Q-rational point over K in one case
+// we define this point 'manually':
 
 R := XK ! [1/3*(-2*d-2),4/3,1]; // the quadratic point we found
 E1 := Domain(Isogeny(R,43)); // the corresponding elliptic curve
 
-p1 := Factorisation(43*OK)[1][1];
+// we define the primes of K above 43
+p1 := Factorisation(43*OK)[1][1]; 
 p2 := Factorisation(43*OK)[2][1];
 
 assert(Valuation(Conductor(E1),p1)) eq 2; // reduction is NOT semistable here for this curve
-assert(Valuation(Conductor(E1),p2)) eq 0;
+assert(Valuation(Conductor(E1),p2)) eq 0; 
 
 // We now twist:
 
