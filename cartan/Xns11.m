@@ -13,7 +13,7 @@ eqns := [y^2+y-(x^3-x^2-7*x+10), t^2 +4*x^3+7*x^2-6*x+19];
 X := Curve(A,eqns); // The affine model used for X_ns(11)
 
 E := EllipticCurve([0,-1,+1,-7,10]); // The curve X_ns+(11)
-// Elliptic Curve defined by y^2 + y = x^3 - x^2 - 7*x + 10 over Rational Field
+// Output: Elliptic Curve defined by y^2 + y = x^3 - x^2 - 7*x + 10 over Rational Field
 
 assert Conductor(E) eq 121;
 MW,_,tf1,tf2 := MordellWeilGroup(E);
@@ -33,7 +33,7 @@ H := HyperplaneAtInfinity(A);
 inf_scheme := H meet PX;   // Scheme defining points at infinity on X
 PointsOverSplittingField(inf_scheme);
 
-/*
+/* Output:
 {@ (0 : r1 : 1 : 0), (0 : r2 : 1 : 0) @}
 Algebraically closed field with 2 variables over Rational Field
 Defining relations:
@@ -48,7 +48,7 @@ Defining relations:
 K<a>:= QuadraticField(-1);
 inf_scheme_K := BaseChange(inf_scheme,K);
 Points(inf_scheme_K);
-// {@ (0 : -1/2*a : 1 : 0), (0 : 1/2*a : 1 : 0) @}
+// Output: {@ (0 : -1/2*a : 1 : 0), (0 : 1/2*a : 1 : 0) @}
 
 assert HasPointsOverExtension(inf_scheme_K) eq false; // sanity check
 
@@ -56,7 +56,7 @@ rhoP := map<PX -> E | [xx,yy,tt]>; // degeneracy map from projective closure to 
 assert Degree(rhoP) eq 2; // This is indeed the correct map
 pullback_scheme := Pullback(rhoP,Identity(E)); 
 Points(pullback_scheme,K); // We see that we have the same points:
-// {@ (0 : -1/2*a : 1 : 0), (0 : 1/2*a : 1 : 0) @}
+// Output: {@ (0 : -1/2*a : 1 : 0), (0 : 1/2*a : 1 : 0) @}
 
 ////////////////////////////////////////////
 
@@ -64,4 +64,4 @@ Points(pullback_scheme,K); // We see that we have the same points:
 
 QQ<s> := PolynomialRing(Rationals());
 H := HyperellipticCurve(-(4*s^3-4*s^2-28*s+41)*(4*s^3+7*s^2-6*s+19));
-assert TwoCoverDescent(H) eq {}; // takes under a second
+assert TwoCoverDescent(H) eq {}; // Runtime: under a second
