@@ -29,18 +29,18 @@ non_const := function(d: aux_upper_bd := 10, t := 1);
     else B := [];
         B2 := [];
     end if;
-    vbadp := [2,3,5,7,11,13,17,19,37];
+    vbadp := [2,3,5,7,11,13,17,19,37]; // primes to automatically include
 
     aux := [q : q in PrimesInInterval(2,aux_upper_bd) | IsSplit(q,OK)]; // a prime q that does not split will not bound p
 
-    Resus:= []; // build up to sequence of LCM(Mq,Rq), then p will divide the gcd of the sequence
+    Resus:= []; // build up to sequence of LCM(Mq,Rq), one per prime q, then p will divide the gcd of the sequence
 
     for q in aux do
         qq := Factorisation(q*OK)[1][1];
         nq := q; // since q splits
         r := Order(phi(qq));
-        _,al := IsPrincipal(qq^r);
-        Aqt:=[a : a in [Ceiling(-2*Sqrt(nq))..Floor(2*Sqrt(nq))] | IsZero((nq+1-a) mod t)];
+        _,al := IsPrincipal(qq^r); // al is a generator of the principal ideal qq^r
+        Aqt:=[a : a in [Ceiling(-2*Sqrt(nq))..Floor(2*Sqrt(nq))] | IsZero((nq+1-a) mod t)]; // possible traces of Frobenius
 
         Rq := q*LCM([Integers() ! (Norm (Resultant(y^2-a*y+nq,y^(12*r)-al^(12)))) : a in Aqt]); // pot. good. red.
 
