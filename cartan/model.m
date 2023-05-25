@@ -68,8 +68,8 @@ w_old := map< old_X -> old_X | EqTS>;  // The modular involution on the curve
 Mw:=Transpose((Matrix(w_old)));        // Matrix of the modular involution
 
 // We now diagonalise the matrix.
-// The following matrix was obtained from PrimaryRationalForm
-// We input the matrix directly here since each call of PrimaryRationalForm can pick a different diagonalising matrix
+// The following matrix was obtained from Magma's inbuilt function "PrimaryRationalForm"
+// We input the matrix directly here since each call of "PrimaryRationalForm" can pick a different diagonalising matrix
 // The following ensures the equations we end up with are always the same.
 
 TZ := Matrix( [
@@ -114,7 +114,7 @@ rho := map< X -> X_plus | new_rho_eqns >;          // New equations for the quot
 ////////////////////////////////////////////////////////////////////////////////
 
 // Check that this new model is nonsingular at the primes used in the sieve
-// This takes a bit under an hour per prime on average
+// Runtime: This takes a bit under an hour per prime on average
 // An alternative would be to use the method employed in the code of Chapter 4
 // See the "is_nonsing_mod_l" function in the file "bielliptic_models.m", available at:
 // https://github.com/michaud-jacobs/thesis/blob/main/bielliptic/bielliptic_models.m
