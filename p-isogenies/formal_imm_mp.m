@@ -4,10 +4,10 @@
 
 ////////////////////////////////////////////
 
-// Input m = 2 or 3 and a prime p >= 17
+// Input: m = 2 or 3 and a prime p >= 17
 // if m = 2 then p should not be 23
 
-// Output true or false
+// Output: true or false
 // true if formal immersion check true for N = mp for each q > 2 with q ne m and q ne p
 // false if formal immersion check fails for N = mp for some q and some cusp
 // (if false then function prints a statement too)
@@ -93,5 +93,5 @@ time for m in [2,3] do
     end for;
 end for;
 
-// total time = approx 3.5 hours
+// Runtime: total time = approx 3.5 hours
 // (computations with p > 150 are somewhat slow)
