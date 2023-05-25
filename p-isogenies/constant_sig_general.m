@@ -13,17 +13,17 @@
 // aux_upper_bd is an upper bound for the primes q to be used (default = 20)
 // t is a positive integer that divides the size of E(K)_tors (default = 1)
 
-// Output: list of bad primes for non-constant isogeny signature
+// Output: list of bad primes for constant isogeny signature
 // list will automatically include [2,3,5,7,11,13,17,19,37]
 
 gen_const := function(n: aux_upper_bd := 20, t := 1);  // n is the class group exponent.
 
     T<x> := PolynomialRing(Rationals());
-    vbadp := [2,3,5,7,11,13,17,19,37];
+    vbadp := [2,3,5,7,11,13,17,19,37]; // primes to automatically include
 
     aux := PrimesInInterval(3,aux_upper_bd) cat [2]; // start with primes > 2 and finish with 2 (if(2,p) is admissible).
 
-    Resus:=[];
+    Resus:=[]; // build up to sequence of the LCMs of the Rqs, one per prime q
     for q in aux do
           if q eq 2 then
              largep := [p : p in PrimeFactors(GCD(Resus)) | p gt 2357] ; // bound coming from formal immersion criterion
@@ -34,11 +34,11 @@ gen_const := function(n: aux_upper_bd := 20, t := 1);  // n is the class group e
           end if;
 
           pairs := [ [q^2,1] ] cat [[q,r] : r in [1..n] | IsZero(n mod r) ]; // possibilities for (nq,r)
-          Rqs := [];
+          Rqs := []; // build up to sequence of Rqs, one per pair
           for pair in pairs do
               nq := pair[1];
               r := pair[2];
-              Aqt :=[a : a in [Ceiling(-2*Sqrt(nq))..Floor(2*Sqrt(nq))] | IsZero((nq+1-a) mod t)];
+              Aqt :=[a : a in [Ceiling(-2*Sqrt(nq))..Floor(2*Sqrt(nq))] | IsZero((nq+1-a) mod t)]; // possible traces of Frobenius
               Rq := q*LCM([Integers() ! (Resultant(x^2-a*x+nq,x^(12*r)-1)) : a in Aqt]);
               if q eq 2 and nq eq q then // need to consider reduction to (\infty, 0)
                  m2 := 2^(12*r)-1;
