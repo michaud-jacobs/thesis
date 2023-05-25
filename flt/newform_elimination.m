@@ -46,11 +46,11 @@ end for;
 d := 67;
 N_ps, K := Np_possibilities(d);
 Np := N_ps[2];
-bad_primes := decomp_elim(Np,K,100); // [ 2, 3, 5, 7, 11 ]
+bad_primes := decomp_elim(Np,K,100); // Ouput: [ 2, 3, 5, 7, 11 ]
 assert 19 notin bad_primes;
 
 d := 55;
 N_ps, K := Np_possibilities(d);
 Np := N_ps[4];
-bad_primes := decomp_elim(Np,K,100); // [ 2, 3 ]
+bad_primes := decomp_elim(Np,K,100); // Output: [ 2, 3 ]
 assert 17 notin bad_primes;
