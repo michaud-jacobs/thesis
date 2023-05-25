@@ -20,10 +20,10 @@ const := function(d: aux_upper_bd := 20, t := 1); // to work over the field K = 
     OK:=RingOfIntegers(K);
     ClK, pi := ClassGroup(K);
     phi := pi^(-1);
-    vbadp := [2,3,5,7,11,13,17,19,37];
+    vbadp := [2,3,5,7,11,13,17,19,37]; // primes to automatically include
     aux := PrimesInInterval(3,aux_upper_bd) cat [2];
 
-    Resus:=[];
+    Resus:=[]; // build up to sequence of the Rqs, one per prime q
     for q in aux do
         if q eq 2 then
             largep := [p : p in PrimeFactors(GCD(Resus)) | p gt 2357] ; // bound coming from formal immersion criterion
@@ -37,7 +37,7 @@ const := function(d: aux_upper_bd := 20, t := 1); // to work over the field K = 
         r := Order(phi(qq)); // will be 1 for all inert primes.
         nq:=Norm(qq);
 
-        Aqt :=[a : a in [Ceiling(-2*Sqrt(nq))..Floor(2*Sqrt(nq))] | IsZero((nq+1-a) mod t)];
+        Aqt :=[a : a in [Ceiling(-2*Sqrt(nq))..Floor(2*Sqrt(nq))] | IsZero((nq+1-a) mod t)]; // possible traces of Frobenius
         Rq := q*LCM([Integers() ! (Resultant(x^2-a*x+nq,x^(12*r)-1)) : a in Aqt]);
         if q eq 2 and nq eq q then // need to consider reduction to (\infty, 0)
            m2 := 2^(12*r)-1;
@@ -55,10 +55,7 @@ end function;
 
 ////////////////////////////////////////////////////////////////////////////////
 
-// To verify the computations in Theorem 5.3, simply run the code for d := 5 and set aux := [3,2].
-// The primes 2 and 3 are inert in Q(sqrt(5)) and this will therefore replicate the set-up exactly
-
-// We check what happens if 2 and 3 are inert by running the following code
+// We first check what happens if 2 and 3 are inert in K by running the following code
 // (we set d = 5 since 2 and 3 are inert in Q(sqrt(5)))
 
 assert const(5: aux_upper_bd := 3) eq {2,3,5,7,11,13,17,19,37};
