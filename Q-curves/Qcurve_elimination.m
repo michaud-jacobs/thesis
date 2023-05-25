@@ -84,7 +84,7 @@ for q in [17,41,89,97] do
 
     Traces_atp := function(p);
         Traces:= {};
-        for x,m in [0..p-1] do  // here we take m = p-1 too, this isn't necessary, can just go up to m-2
+        for x,m in [0..p-1] do  // here we take m = p-1 too, this isn't necessary, could just go up to m-2
             Traces := Traces join {QTracexmp(x,m,p,1),QTracexmp(x,m,p,2)};  // we do both cases here
         end for;
         return Traces;
@@ -123,15 +123,15 @@ for q in [17,41,89,97] do
               return Tr;
     end function;
 
-    // Input a newform g and a prime p
-    // Output Bgp value
+    // Input: a newform g and a prime p
+    // Output: Bgp value
     Bgp := function(g,p);
         Trgp := TrFrobpd(g,p);
         return Integers() ! (p*(Norm(&*[TrEp - Trgp : TrEp in Traces_atp(p)])));
     end function;
 
-    // Input a newform g
-    // Output Bg value, obtained using primes above the rational primes between 3 and 30, with p ne q.
+    // Input: a newform g
+    // Output: Bg value, obtained using primes above the rational primes between 3 and 30, with p ne q.
 
     Bg := function(g);
        return GCD([Bgp(g,p) : p in PrimesInInterval(3,30) | p ne q ]);
@@ -140,7 +140,7 @@ for q in [17,41,89,97] do
     // see output file "Qcurve_elimination_output.txt" for the output of the following loop.
     print "Eliminating newforms";
     for i in [1..#Nfreps] do
-        if i in [28,29] and q eq 97 then
+        if i in [28,29] and q eq 97 then // we use a seperate method, see below
             continue;
         end if;
         print "Doing i = ", i;
@@ -165,32 +165,32 @@ for q in [17,41,89,97] do
             g := Nfreps[i];
             p := 3; // p = 3 splits in M = Q(root(97)), so simplifies calculations
             c3 := Coefficient(g,p);
-            time m3 := MinimalPolynomial(c3); // just under 10 minutes
+            time m3 := MinimalPolynomial(c3); // Runtime: just under 10 minutes
 
             Pfacs3 := {};
             for TrEp in Traces_atp(p) do
                 Pfacs3 := Pfacs3 join Set(PrimeFactors(Integers() ! (Evaluate(m3,TrEp))));
             end for;
 
-            // for 28 this is { 97, 197, 19699, 221213147, 103253033370303849827500533626642567989 }
-            // for 29 this is { 7, 97, 293, 26459, 29009, 21800662421, 1646462350472829319981822308933239 }
+            // Output: for 28 this is { 97, 197, 19699, 221213147, 103253033370303849827500533626642567989 }
+            // Output: for 29 this is { 7, 97, 293, 26459, 29009, 21800662421, 1646462350472829319981822308933239 }
 
             p := 11; // splits in M
             c11 := Coefficient(g,p);
-            time m11 := MinimalPolynomial(c11); // just under 10 minutes
+            time m11 := MinimalPolynomial(c11); // Runtime: just under 10 minutes
 
             Pfacs11 := {};
             for TrEp in Traces_atp(p) do
                 Pfacs11 := Pfacs11 join Set(PrimeFactors(Integers() ! (Evaluate(m11,TrEp))));
             end for;
 
-            // for 28 this is { 97, 197, 883, 51178639, 61636609, 228584903, 260653637, 424065307, 2917870913, 338663262251, 1018649743327, 1240078052149, 35721870807713, 182813673735166315687, 26463327294255127678711, 1078920696877023743158459, 6128931136469659192656731, 1267552850875731186890958647077, 619359364442343315454986086059486285753242163 }
-            // for 29 this is { 7, 97, 197, 293, 881, 2549, 21757, 160033, 203878319, 4102431803, 23093935003, 145485956351, 55026131560360852193, 513177834834375493931, 3273015333063381240971, 6909497652223021076438783, 447830839329396958965849731, 986120937021833473419484284121336988471, 18057580031646431274412356196478878566887588673345137195371 }
+            // Output: for 28 this is { 97, 197, 883, 51178639, 61636609, 228584903, 260653637, 424065307, 2917870913, 338663262251, 1018649743327, 1240078052149, 35721870807713, 182813673735166315687, 26463327294255127678711, 1078920696877023743158459, 6128931136469659192656731, 1267552850875731186890958647077, 619359364442343315454986086059486285753242163 }
+            // Output: for 29 this is { 7, 97, 197, 293, 881, 2549, 21757, 160033, 203878319, 4102431803, 23093935003, 145485956351, 55026131560360852193, 513177834834375493931, 3273015333063381240971, 6909497652223021076438783, 447830839329396958965849731, 986120937021833473419484284121336988471, 18057580031646431274412356196478878566887588673345137195371 }
 
             Pfacs3 meet Pfacs11;
 
-            // for 28 this is { 97, 197 }
-            // for 29 this is { 7, 97, 293 }
+            // Output: for 28 this is { 97, 197 }
+            // Output: for 29 this is { 7, 97, 293 }
         end for;
     end if;
 
