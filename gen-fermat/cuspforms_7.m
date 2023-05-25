@@ -15,6 +15,6 @@ nq:=Norm(q);
 
 H:=HilbertCuspForms(K,2^3*OK); 
 Hnew:=NewSubspace(H);
-Dimension(Hnew);   // 5
-NewformDecomposition(Hnew); // 5 forms
+Dimension(Hnew);   // Output: 5
+NewformDecomposition(Hnew); // Output: 5 forms
 
