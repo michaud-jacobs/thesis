@@ -83,7 +83,7 @@ for cs in [1,2] do
 
     // Given: an eigenform ff; the maximal order Off of the field of Hecke eigenvalues Off;
     // a rational prime q; integers eta, mu;
-    // returns B_q(ff,\eta,\mu) in the notation of Section 11 of [1].
+    // returns B_q(ff,\eta,\mu) in the notation of Section 11 of Anni and Siksek's paper.
 
     Bqetamu:=function(ff,Off,q,eta,mu);
     		 Qlist:=[fact[1] : fact in Factorisation(q*OO)];
@@ -111,7 +111,7 @@ for cs in [1,2] do
 
     // Given: an eigenform ff; the maximal order Off of the field of Hecke eigenvalues Off;
     // a set S of rational primes q different from 2, p
-    // returns B_S(ff) in the notation of Section 11 of [1].
+    // returns B_S(ff) in the notation of Section 11 of Anni and Siksek's paper.
 
     BS:=function(ff,Off,S);
     	B:=&+[Bq(ff,Off,q) : q in S];
@@ -259,10 +259,10 @@ for cs in [1,2] do
         end for;
 
         print "Factorisations of the newform values are:";
-        Factorisation(Cs[1]);  // 2^17 x 3^8
-        Factorisation(Cs[2]);  // 2^18 x 3^7 x 5^2
-        Factorisation(Cs[3]);  // 2^18 x 3^8 x 5^1
-        Factorisation(Cs[4]);  // 2^20 x 3^2 x 5^2
+        Factorisation(Cs[1]);  // Output: 2^17 x 3^8
+        Factorisation(Cs[2]);  // Output: 2^18 x 3^7 x 5^2
+        Factorisation(Cs[3]);  // Output: 2^18 x 3^8 x 5^1
+        Factorisation(Cs[4]);  // Output: 2^20 x 3^2 x 5^2
     end if;
     print "+++++++++++++++++++++++++++++++++++++";
 end for;
