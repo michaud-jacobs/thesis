@@ -226,8 +226,8 @@ end function;
 // We apply the refined sieve
 f := Newforms(CuspForms(34))[1][1];
 
-fineKraus([2],17,1,1,f,7); // output [ [ 2, -573, 139 ] ]
-fineKraus([1,5,9],17,1,1,f,7); // output [ [ 1, 71, -17 ], [ 9, 573, -139 ]]
+fineKraus([2],17,1,1,f,7); // Output: [ [ 2, -573, 139 ] ]
+fineKraus([1,5,9],17,1,1,f,7); // Output: [ [ 1, 71, -17 ], [ 9, 573, -139 ]]
 
 // we have the following partialFails
 
@@ -237,7 +237,7 @@ partialFails := [ [17, 1, 1, 0, 7, 2, -573, 139],
                   [17, 1, 1, 1, 7, 1,  71,  -17],
                   [17, 1, 1, 1, 7, 9, -573, 139] ];
 
-// We continue using the code Bennett and Siksek to obtain the Thue--Mahler equations:
+// We continue using the code Bennett and Siksek to obtain the Thue-Mahler equations:
 
 for pF in partialFails do
     print "Partial Fail is ",pF;
@@ -298,8 +298,8 @@ end for;
 
 // pF 1
 
-// 139*X^7 - 1519*X^6*Y + 7119*X^5*Y^2 - 18515*X^4*Y^3 + 28945*X^3*Y^4 - 27069*X^2*Y^5 + 14133*X*Y^6 - 3137*Y^7
-cfs_1 := [ 139, -1519, 7119, -18515, 28945, -27069, 14133, -3137 ];  
+// equation: 139*X^7 - 1519*X^6*Y + 7119*X^5*Y^2 - 18515*X^4*Y^3 + 28945*X^3*Y^4 - 27069*X^2*Y^5 + 14133*X*Y^6 - 3137*Y^7
+cfs_1 := [ 139, -1519, 7119, -18515, 28945, -27069, 14133, -3137 ]; // coefficients
 sols:=solveThueMahler(cfs_1,[17],1); 
 assert sols eq {}; // no solutions
 
@@ -307,8 +307,8 @@ assert sols eq {}; // no solutions
 
 // first equation for pF 2
 
-// -17*X^7 + 189*X^6*Y - 861*X^5*Y^2 + 2345*X^4*Y^3 - 3395*X^3*Y^4 + 3591*X^2*Y^5 -1519*X*Y^6 + 467*Y^7
-cfs_21 := [ -17, 189, -861, 2345, -3395, 3591, -1519, 467 ];  
+// equation: -17*X^7 + 189*X^6*Y - 861*X^5*Y^2 + 2345*X^4*Y^3 - 3395*X^3*Y^4 + 3591*X^2*Y^5 -1519*X*Y^6 + 467*Y^7
+cfs_21 := [ -17, 189, -861, 2345, -3395, 3591, -1519, 467 ]; // coefficients
 sols:=solveThueMahler(cfs_21,[17],1); 
 assert sols eq {}; // no solutions
 
@@ -316,7 +316,8 @@ assert sols eq {}; // no solutions
 
 // other equation for pF2
 
-cfs_22 := [ -1, 189, -14637, 677705, -16679635, 299923911, -2156762783, 11272244723 ]; 
+// equation: -*X^7 + 189*X^6*Y - 14637*X^5*Y^2 + 677705*X^4*Y^3 - 16679635*X^3*Y^4 + 299923911*X^2*Y^5 -2156762783*X*Y^6 + 11272244723*Y^7
+cfs_22 := [ -1, 189, -14637, 677705, -16679635, 299923911, -2156762783, 11272244723 ]; // coefficients
 sols:=solveThueMahler(cfs_22,[17],1); 
 assert sols eq { [-1, 0, 0] };  // this leads to the solution (-71)^2 - 17 = 2^7
 
