@@ -111,4 +111,4 @@ assert(Valuation(Conductor(E1),p2)) eq 0;
 g := Generators(p1)[2];
 E2 := QuadraticTwist(E1,g);
 Factorisation(Integers() ! Norm(Conductor(E2)));
-// this is [ <2, 10>, <3, 4>, <11, 4> ], so good reduction at p1 and p2.
+// Output: [ <2, 10>, <3, 4>, <11, 4> ], so good reduction at p1 and p2.
