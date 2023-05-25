@@ -1,6 +1,6 @@
 # thesis
 
-This repository contains Magma code and output files to support the computations in my PhD thesis (Diophantine Equations and Modular Curves). All code runs on Magma V2.27-7 (and hopefully on later versions too). All timings refer to computations running on a 2200 MHz AMD Opteron. 
+This repository contains Magma code and output files to support the computations in my PhD thesis (Diophantine Equations and Modular Curves by Philippe Alain Michaud-Jacobs). All code runs on Magma V2.27-7 (and hopefully on later versions too). All timings refer to computations running on a 2200 MHz AMD Opteron. 
 
 The thesis is not yet publicly available, but will be in the near future.
 
