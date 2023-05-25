@@ -66,7 +66,7 @@ end function;
 // We first compute the exponent of J(F_p) for all primes p < 500 with p not 13.
 
 // The code below produces the Jacobian data (JFp_data) present in the eqn_data.m file
-// It takes some time to run, so it is commented out
+// Runtime: it takes some time to run, so it is commented out
 /*
 JFp_data_copy := [];
 for n in [1..500] do
