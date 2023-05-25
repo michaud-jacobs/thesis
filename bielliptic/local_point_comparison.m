@@ -23,7 +23,7 @@ local_point_check := function(p,d);
     OM := Integers(M);
     DOM := Discriminant(OM);
 
-    ls := [l : l in PrimeFactors(DOK) | IsZero(DOM mod l) eq false];
+    ls := [l : l in PrimeFactors(DOK) | IsZero(DOM mod l) eq false]; // auxiliary primes to use
     for l in ls do
         ll := Factorisation(l*OM)[1][1];
         if IsPrincipal(ll) eq false then // ideal is principal if and only if totally split in Hilbert class field
@@ -45,6 +45,7 @@ local_point_check := function(p,d);
     return loc;
 end function;
 
+////////////////////////////////////////////
 
 // We test for which values of d the function succeeds when p = 53
 
