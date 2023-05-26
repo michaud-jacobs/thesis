@@ -34,7 +34,7 @@ for d in D do
     DK := Discriminant(OK);
     rams := PrimeFactors(DK);
     for p in rams do 
-        if p eq 2 and 41 notin rams then 
+        if p eq 2 and 37 notin rams and 41 notin rams then 
             continue d; // use argument provided in thesis for this value of d
         elif p ge 17 and p notin [17,19,23,31,73,97] then  
             ram_pairs := ram_pairs cat [<d,p>]; 
@@ -42,7 +42,7 @@ for d in D do
     end for;
 end for;
 
-assert ram_pairs eq [ <29, 29>, <37, 37>, <41, 41>, <53, 53>, <61, 61>, <82, 41>, <89, 89> ]; 
+assert ram_pairs eq [ <29, 29>, <37, 37>, <41, 41>, <53, 53>, <61, 61>, <74,37>, <82, 41>, <89, 89> ]; 
 
 // For each of these pairs (d,p), it is enough to contruct primes of multiplicative reduction.
 // We use the following function:
@@ -73,6 +73,7 @@ end for;
 <41, 41> [ 83, 821, 1559 ]
 <53, 53> [ 107, 743, 1061, 1697 ]
 <61, 61> [ 977, 1709, 2441 ]
+<74, 37> [ 593, 1481 ]
 <82, 41> [ 1559 ]
 <89, 89> [ 179, 3917, 4451 ]
 */
