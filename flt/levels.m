@@ -17,12 +17,9 @@ load "levels_function.m";
 // See the output file "levels_output.txt".
 // We include data for 1 < d < 25 to check against Freitas and Siksek's paper.
 
-// The following loop is commented out so that it does not run when the file is loaded
-
-
 for d in [d : d in [2..100] | IsSquarefree(d)] do
     print "Computing the possible levels N_p for d =", d;
-    N_ps, K, S, H := Np_possibilities(d);
+    N_ps, K, S, H := Np_possibilities(d); // S is the set of primes above 2 and H are the representatives for Cl(K)/2*Cl(K)
     if #S eq 2 then
         print "2 splits in K and S = {p_1, p_2}";
     else if Norm(S[1]) eq 2 then
