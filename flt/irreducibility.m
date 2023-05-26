@@ -24,7 +24,8 @@ end for;
 // All quadratic points on the following curves are defined over imaginary quadratic fields:
 // X_0(34), X_0(38), X_0(92), X_0(62), X_0(73), X_0(97)
 // So we immediately remove the primes 17, 19, 23, 31, 73, 97
-// We isolate the remaining pairs (d,p):
+
+// We now isolate the remaining pairs (d,p):
 
 ram_pairs := []; // build up to list of pairs (d,p) to consider
 for d in D do
@@ -33,29 +34,21 @@ for d in D do
     DK := Discriminant(OK);
     rams := PrimeFactors(DK);
     for p in rams do 
-        if p eq 2 then 
-            continue; // use argument provided in thesis to rule out all p
+        if p eq 2 and 41 notin rams then 
+            continue d; // use argument provided in thesis for this value of d
         elif p ge 17 and p notin [17,19,23,31,73,97] then  
-            ram_pairs := ram_pairs cat [<d,p>];
+            ram_pairs := ram_pairs cat [<d,p>]; 
         end if;
     end for;
 end for;
 
-ram_pairs; 
-/* Output:
-[ 
-<29, 29>, <37, 37>, <41, 41>, <43, 43>, <47, 47>, <53, 53>, <58, 29>, <59, 59>, <61, 61>, <67, 67>, 
-<71, 71>, <74, 37>, <79, 79>, <82, 41>, <83, 83>, <86, 43>, <87, 29>, <89, 89>, <94, 47> 
-]
-*/
+assert ram_pairs eq [ <29, 29>, <37, 37>, <41, 41>, <53, 53>, <61, 61>, <82, 41>, <89, 89> ]; 
 
-// For each of these pairs (d,p), it is enough to contruct primes of multiplicative reduction:
-
+// For each of these pairs (d,p), it is enough to contruct primes of multiplicative reduction.
 // We use the following function:
-
 // Input: d, p, bd (a search bound)
-// Output: A list of primes
-// Each prime splits in K = Q(sqrt_d) and the two primes of K above it are of multiplicative reduction for E_{a,b,c,p,d}
+// Output: A list of primes [q_1, q_2, q_3, ...]
+// Each prime q_i splits in K = Q(sqrt_d) and the two primes of K above q_i are of multiplicative reduction for E_{a,b,c,p,d}
 
 mult_primes_q := function(d,p,bd);
     U<x>:=PolynomialRing(Rationals());
@@ -68,30 +61,20 @@ end function;
 for pair in ram_pairs do
     d := pair[1];
     p := pair[2];
-    bd := 50;
-    print pair, mult_primes_q(d,p,bd);
+    bd := 50; // search bound of 50, can be increased
+    mults := mult_primes_q(d,p,bd);
+    assert mults ne []; // check we have found some primes
+    print pair, mults; // print the output (see below)
 end for;
 
 /* Output:
 <29, 29> [ 59, 233, 929, 1103, 1277, 1451 ]
 <37, 37> [ 149, 593, 1259, 1481 ]
 <41, 41> [ 83, 821, 1559 ]
-<43, 43> [ 173, 1721 ]
-<47, 47> [ 941, 2069 ]
 <53, 53> [ 107, 743, 1061, 1697 ]
-<58, 29> [ 233, 929, 1103 ]
-<59, 59> [ 1181, 1889 ]
 <61, 61> [ 977, 1709, 2441 ]
-<67, 67> [ 269, 1877 ]
-<71, 71> [ 569, 2273 ]
-<74, 37> [ 593, 1481 ]
-<79, 79> [ 317, 2213 ]
 <82, 41> [ 1559 ]
-<83, 83> [ 2657 ]
-<86, 43> [ 947, 1721, 1979 ]
-<87, 29> [ 59, 1103, 1451 ]
 <89, 89> [ 179, 3917, 4451 ]
-<94, 47> [ 659, 1787 ]
 */
 
 // We see that we were successful in finding primes of multiplicative reduction in each case
