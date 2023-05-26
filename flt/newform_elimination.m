@@ -27,7 +27,7 @@ too_big_d := [39, 70, 78, 95]; // Dimensions too large for computations (some di
 
 for d in [d : d in [2..100] | IsSquarefree(d) and d notin (too_big_d)] do
     print "Considering d = ", d;
-    N_ps, K := Np_possibilities(d);
+    N_ps, K := Np_possibilities(d); // possible level-lowered levels
     for Np in N_ps do
         print "Considering level Np with factorisation:", Factorisation(Np);
         elim := hecke_elim(Np,K);
