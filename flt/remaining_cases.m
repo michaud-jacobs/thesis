@@ -29,7 +29,7 @@ load "newform_elimination_functions.m";
 // The code is very similar for each case
 
 d := 34;
-N_ps,K := Np_possibilities(d);
+N_ps,K := Np_possibilities(d); // possible level-lowered levels
 Np := N_ps[2]; // This is p^8, for p the prime above 2.
 Vs, Cs, Es, T := hecke_elim(Np,K); // (using norm bound of 150 in hecke_elim function)
 assert Cs eq [* 0, 0, 753664, 753664 *];
@@ -47,7 +47,9 @@ e_vals_f2 := [-Evaluate(e,0) : e in f2];
 
 // We search for elliptic curves to which these newforms corresponds
 // The elliptic curve function may list isogenous curves
-// and may produce many matching curves
+// and may produce many matching curves.
+// See below (the case d = 89) to see how to directly search for elliptic curves with the right trace
+
 matching_curves_f1 := [];
 matching_curves_f2 := [];
 Ell_curves := EllipticCurveSearch(Np,1);
@@ -81,7 +83,7 @@ assert Valuation(j2,pp) ge 0;
 // We repeat the above calculations for d = 55
 
 d := 55;
-N_ps,K := Np_possibilities(d);
+N_ps,K := Np_possibilities(d); // possible level-lowered levels
 Np := N_ps[3]; // This is p^8, for p the prime above 2.
 Vs, Cs, Es, T := hecke_elim(Np,K); // (using norm bound of 150 in hecke_elim function)
 assert Cs eq [* 0, 0, 184 *];
@@ -130,6 +132,7 @@ f := bad_f[1];
 traces_f := [HeckeEigenvalue(f,q) : q in T];
 // Output: [ -2, -2, 6, 0, 0, 2, 2, 8, 8, -6, -6, -6, 8, 8, -8, -8, 14, 14, 16, 16, -6, -2, -2 ]
 // We find a matching elliptic curve (as above)
+// We search with the traces as a parameter, as otherwise it would be too slow
 Ell_curves := EllipticCurveSearch(Np,400: Primes := T, Traces := traces_f); // Runtime: 30 seconds
 E := Ell_curves[1];
 // Output: Elliptic Curve defined by y^2 + x*y = x^3 - x^2 + 1/2*(72875*sqrt_d - 687501)*x + 1/2*(-20764677*sqrt_d + 195893571) over K
@@ -167,7 +170,7 @@ initial_bad_p := function(d);
                 S<z>:=PolynomialRing(GF(q));
                 if Resultant(z^n-1,   (z+1)^n-1) ne 0 then
                     nsp:= nsp cat [n];
-                    break n;
+                    break n;  // stop if a suitable value of n is found
                 end if;
             end if;
         end for;
@@ -208,7 +211,7 @@ for d in [17,33,41,57,89] do
     "Initial bad primes are:", init_bad_p;
     N_ps, K := Np_possibilities(d);
     for Np in N_ps do
-        C_primes, bad_f := decomp_elim(Np,K,100);
+        C_primes, bad_f := decomp_elim(Np,K,100); // we isolate the newforms f creating issues
         i := 1;
         for f in bad_f do
             print "Considering newform", i;
