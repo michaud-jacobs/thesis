@@ -14,11 +14,10 @@
 for p in [11,13,17] do
     print "Computing B-value for p =", p;
     L<zet>:=CyclotomicField(p);
-    K<t>:=sub<L | zet+1/zet>; 
+    K<t>:=sub<L | zet+1/zet>; // maximal totally real subfield of Q(zeta_p)
     OK:=Integers(K); 
 
     Aut,_,nu:=AutomorphismGroup(K);
-
     Gal:=[nu(Aut.1)^i : i in [0..((p-1)/2)-1]]; // elements of Gal(K/Q)
 
     UK,psi:=UnitGroup(K);
@@ -27,7 +26,7 @@ for p in [11,13,17] do
 
     S:=[];                      // we compute the possible non-constant isogeny characters
     for i in [1..2^r-2] do
-        seq1:=Intseq(i,2);
+        seq1:=Intseq(i,2);    // binary representation
         seq2:=seq1 cat [0*j : j in [1..r-#seq1]];
         seq:=[12*ss : ss in seq2];
         S:=S cat [seq];
