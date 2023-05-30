@@ -12,66 +12,39 @@ for q in [17, 41, 89, 97] do
     M<rootq> := QuadraticField(q);
     OM :=Integers(M);
 
-    // start by defining gamma and gammab appropriately and check they satisfy requirements.
+    // start by defining gamma and gammab 
 
     if q eq 17 then
         gamma := (-3+rootq)/2;
         gammab := (-3-rootq)/2;
-        assert gamma*gammab eq -2;
-        _,red := quo<OM | gamma^2>;
-        assert IsZero(red(rootq+1));
-        assert IsZero(red(gammab+1));
-        fac1 := Factorisation(2*OM)[1][1];
-        fac2 := Factorisation(2*OM)[2][1];
-        assert gamma*OM eq fac1;
-        assert gammab*OM eq fac2;
-    end if;
-
-    if q eq 41 then
+    elif q eq 41 then 
         gamma := (-19 - 3*rootq)/2;
         gammab := (-19 + 3*rootq)/2;
-        assert gamma*gammab eq -2;
-        _,red := quo<OM | gamma^2>;
-        assert IsZero(red(rootq+1));
-        assert IsZero(red(gammab+1));
-        fac1 := Factorisation(2*OM)[1][1];
-        fac2 := Factorisation(2*OM)[2][1];
-        assert gamma*OM eq fac1;
-        assert gammab*OM eq fac2;
-    end if;
-
-    if q eq 89 then
+    elif q eq 89 then 
         gamma := (9+rootq)/2;
-        gammab := (9-rootq)/2;
-        assert gamma*gammab eq -2;
-        _,red := quo<OM | gamma^2>;
-        assert IsZero(red(rootq+1));
-        assert IsZero(red(gammab+1));
-        fac1 := Factorisation(2*OM)[1][1];
-        fac2 := Factorisation(2*OM)[2][1];
-        assert gamma*OM eq fac1;
-        assert gammab*OM eq fac2;
-    end if;
-
-    if q eq 97 then
+        gammab := (9-rootq)/2;    
+    elif q eq 97 then 
         gamma := (325+33*rootq)/2;
         gammab := (325-33*rootq)/2;
-        assert gamma*gammab eq -2;
-        _,red := quo<OM | gamma^2>;
-        assert IsZero(red(rootq+1));
-        assert IsZero(red(gammab+1));
-        fac1 := Factorisation(2*OM)[1][1];
-        fac2 := Factorisation(2*OM)[2][1];
-        assert gamma*OM eq fac1;
-        assert gammab*OM eq fac2;
-   end if;
+    end if;
+
+   // We now check they satisfy the requirements
+
+    assert gamma*gammab eq -2;
+    _,red := quo<OM | gamma^2>; // quotient map to check congruences mod gamma^2
+    assert IsZero(red(rootq+1)); // rootq is congruent to -1 mod gamma^2
+    assert IsZero(red(gammab+1)); // gammab is congruent to -1 mod gamma^2
+    fac1 := Factorisation(2*OM)[1][1]; // a prime above 2
+    fac2 := Factorisation(2*OM)[2][1]; // the other prime above 2
+    assert gamma*OM eq fac1; // gamma generates a prime above 2
+    assert gammab*OM eq fac2; // gammab generates the other prime above 2
 
     ///////////////////////////////////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////////
 
     // We verify the computation that c(sigma, sigma) = -2.
 
-    aff<A,w,wb,gam,gamb>:=AffineSpace(Rationals(),5);  // Here, A is q^{m+1}
+    aff<A,w,wb,gam,gamb>:=AffineSpace(Rationals(),5);  // Here, A matches q^{m+1}
     S:=Scheme(aff,[w+wb-A^2, gam*gamb+2]);
     FF:=FieldOfFractions(CoordinateRing(S));
     A:=FF!A;
@@ -111,7 +84,7 @@ for q in [17, 41, 89, 97] do
     for c in [1, 2^2, 2^4] do
         E := EllipticCurve(X^3 + c*q);
         int_points := IntegralPoints(E: SafetyFactor := 10); // the SafetyFactor is just an additional sanity check that Magma performs
-        abs_xcoords := [AbsoluteValue(Eltseq(pt)[1]) : pt in int_points];
+        abs_xcoords := [AbsoluteValue(Eltseq(pt)[1]) : pt in int_points]; // absolute value of x coordinates of integral points
         for x in abs_xcoords do
             assert x lt 2^6 or PrimeFactors(Integers() ! x) ne [2]; // all cases pass check
         end for;
