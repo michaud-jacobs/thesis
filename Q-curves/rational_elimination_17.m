@@ -101,7 +101,7 @@ kraus:=function(v,q,del,kap,f,nn);
 	return mlist, lset;
 end function;
 
-// We now test all exponenets between 7 and 1000
+// We now test all exponents between 7 and 1000
 
 for n in PrimesInInterval(7,1000) do
     for v in [0,1] do
@@ -118,7 +118,7 @@ end for;
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-// We now use the refined sieve from to get more information in the case n = 7.
+// We now use the refined sieve from Bennett and Siksek's paper to get more information in the case n = 7.
 
 fineKraus:=function(mlist,q,del,kap,f,nn);
 	if Type(nn) eq RngIntElt then
