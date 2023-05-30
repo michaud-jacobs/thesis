@@ -97,7 +97,7 @@ for cs in [1,2] do
     // Given:
     // an eigenform ff; the maximal order Off of the field of Hecke eigenvalues Off;
     // a rational prime q;
-    // returns B_q(ff) in the notation of Section 11 of [1].
+    // returns B_q(ff) in the notation of Section 11 of of Anni and Siksek's paper.
 
     Bq:=function(ff,Off,q);
     	B:=q*Off;
@@ -129,9 +129,9 @@ for cs in [1,2] do
     decomp;
 
     if cs eq 1 then
-        interval:=[1..#decomp-4];  // computations cannot be carried out for the last 4 forms of case 1 (in a reasonable time)
+        interval:=[1..#decomp-4];  // computations cannot be carried out for the last 4 forms of case 1 (in a reasonable time), we consider these afterwards
     else
-        interval:=[1..#decomp];    // so we deal with the other four forms separately afterwards
+        interval:=[1..#decomp];   
     end if;
     print "Starting newform elimination";
     for i in interval do
@@ -156,7 +156,8 @@ for cs in [1,2] do
         // We now eliminate the newforms g1,g2,g3, and g4 for all primes l > 5.
         // These are the four remaining forms for case 1
         // We work directly with the Hecke operators and their characteristic polynomials.
-        // We use the same basic code as in Chapter 7
+        // We use the same basic code as in Chapter 7 
+        // (see the "hecke_elim" function in the "newform_elimination_functions.m" file in the "flt" folder)
 
         p:=17;
         L<zet>:=CyclotomicField(p);
@@ -168,7 +169,8 @@ for cs in [1,2] do
         M:=HilbertCuspForms(K,2*OK);
         NewM:=NewSubspace(M);
 
-        T:=[Factorisation(q*OK)[1][1] : q in [67,3,157]];
+        T:=[Factorisation(q*OK)[1][1] : q in [67,3,157]]; // primes to use in sieve, ordered like this to reduce computation time
+        // We now define the functions we need to obtain the appropriate quanitites by working with the characteristic polynomial factors, rather than the eigenvalues themselves
 
         uv:=function(eta,mu);
             u:=(thj+2)*eta^2+(thj-2)*mu^2;
@@ -209,6 +211,8 @@ for cs in [1,2] do
             B:=LCM(Bs);
         	return B;
         end function;
+        
+        // We now start the subspace decomposition process
 
         time H1:=HeckeOperator(NewM,T[1]);
         M1:=Matrix(H1);
