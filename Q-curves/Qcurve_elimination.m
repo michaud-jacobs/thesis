@@ -14,7 +14,7 @@ for q in [17,41,89,97] do
     OM :=Integers(M);
 
     // start by defining gamma and gammab appropriately.
-    // (the checks for this were carried out in the Qcurves_checks.m file)
+    // (the checks for this were carried out in the "Qcurve_checks.m" file)
 
     if q eq 17 then
        gamma := (-3+rootq)/2;
@@ -61,13 +61,13 @@ for q in [17,41,89,97] do
                 wb_pp := ((x - q^(2*m+1)*rootq_pp)*(-rootq_pp))/2;
              end if;
              assert w_pp + wb_pp eq redpp(q^(2*m+2)); // sanity check
-             Disc_pp := (gamma_pp^12)*(gammab_pp^6)*(w_pp)^2*(wb_pp);
-             if IsZero(Disc_pp) eq false then
+             Disc_pp := (gamma_pp^12)*(gammab_pp^6)*(w_pp)^2*(wb_pp); // discriminant of curve mod pp
+             if IsZero(Disc_pp) eq false then // good reduction case
                 E_pp := EllipticCurve([0,2*gamma_pp*(redpp(q)^(m+1)),0,(gamma_pp^2)*w_pp,0]);
                 app := TraceOfFrobenius(E_pp);
                 return app;
              end if;
-             if IsZero(Disc_pp) eq true then
+             if IsZero(Disc_pp) eq true then // bad reduction case
                 c4_pp := (gamma_pp^6)*(gammab_pp^4)*(w_pp + 4*wb_pp);
                 c6_pp := (gamma_pp^9)*(gammab_pp^6)*(w_pp - 8*wb_pp)*(redpp(q))^(m+1);
                 g := -c6_pp/c4_pp;   // we use this to determine split or non-split multiplicative reduction
@@ -98,6 +98,7 @@ for q in [17,41,89,97] do
     eps:=DirichletGroup(2*q^2).1;  // This is our quadratic Dirichlet character
     assert Conductor(eps) eq q;
     assert Order(eps) eq 2;
+    assert eps eq (DirichletGroup(2*q^2) ! KroneckerCharacter(q)); // make sure we have exactly the right character
     MM := ModularForms(eps,2);   // Space of modular forms of weight 2, level 2*q^2, and character eps
     S :=CuspidalSubspace(MM);
     N := NewSubspace(S);
@@ -113,11 +114,11 @@ for q in [17,41,89,97] do
 
     // We now try and eliminate newforms
 
-    // function to compute the trace of Frobenius at a newform
+    // function to compute the trace of Frobenius at a prime for a newform
 
     TrFrobpd:=function(g,p);  // Use g for newforms here (but f is used in the thesis).
               if IsInert(p,OM) then
-                 Tr := Coefficient(g,p)^2- 2*eps(p)*p;  // could also just say +2p as eps(p) = -1 when p is inert.
+                 Tr := Coefficient(g,p)^2 - 2*eps(p)*p;  // could also just say +2p as eps(p) = -1 when p is inert.
               else Tr := Coefficient(g,p);
               end if;
               return Tr;
@@ -154,7 +155,6 @@ for q in [17,41,89,97] do
 
     print "++++++++++++++++++++++++++++++++";
 
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     // For q = 97 and the last two newforms we can use the following.
@@ -200,8 +200,9 @@ for q in [17,41,89,97] do
     if q eq 41 then
         print "Eliminating two remaining newforms using a multi-Frey approach";
         p := 7;
-        pp := Factorisation(p*OM)[1][1];
-        g := Newforms(CuspForms(2*q))[1][1];
+        pp := Factorisation(p*OM)[1][1]; // prime of M above 7
+        g := Newforms(CuspForms(2*q))[1][1]; // obstructing newform with trivial character at level 2q
+        assert CremonaReference(EllipticCurve(g)) eq "82a1"; // check we have picked out the right form (it is actually the only rational newform) 
         assert Coefficient(g,p) eq -4;
 
         // The following function computes the trace at a prime p of G_{x,m} for a given x and m
@@ -235,6 +236,8 @@ for q in [17,41,89,97] do
                      return ap;
                 end if;
         end function;
+
+        ////////////////////////
 
         for x,m in [0..p-1] do
             t1 := <RatTracexmp(x,m,p,1),x,m>;
@@ -276,9 +279,9 @@ for q in [17,41,89,97] do
         w := ((x+rootq)/2)*(rootq^3);
         EE:=EllipticCurve([0,2*gamma*q,0,(gamma^2)*w,0]);
         assert Conductor(EE) eq gamma*gammab*rootq^2*OM;  // right conductor
-        LocalInformation(EE,rootq*OM);
+        print LocalInformation(EE,rootq*OM);
         j := jInvariant(EE);
-        assert Valuation(j, rootq*OM) gt -1; // the valuation is = 0.
+        assert Valuation(j, rootq*OM) gt -1; // (the valuation is actually = 0)
 
         for p in [p : p in PrimesInInterval(3,1000) | p ne q] do
             pp := Factorisation(p*OM)[1][1];
