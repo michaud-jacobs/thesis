@@ -15,15 +15,15 @@ K<w>:=sub< L | a+a^-1 >; // maximal totally real subfield
 assert Degree(K) eq (p-1)/2;
 OK:=Integers(K);
 
-K4<c>:=sub< L | a+a^(3^4)+a^(3^8)+a^(3^12)>; // the unique subfield of K of degree 4.
+K4<c>:=sub< L | a+a^(3^4)+a^(3^8)+a^(3^12)>; // the unique subfield of K of degree 4, denoted K' in the thesis
 assert Degree(K4) eq (p-1)/4;
 
-F<b>:=QuadraticField(17);
+F<b>:=QuadraticField(17); // Q(sqrt(17))
 assert IsSubfield(F,K4);
 
 d:=Discriminant(MinimalPolynomial(w,K4));
 S<Z>:=PolynomialRing(K4);
-assert IsIsomorphic(K, ext<K4 | Z^2-d>);  // verification that K = K4(\sqrt(d))
+assert IsIsomorphic(K, ext<K4 | Z^2-d>);  // verification that K = K4(sqrt(d))
 
 /////////////////////////////////////////////////////////////////////////////////
 
@@ -33,7 +33,7 @@ assert IsIsomorphic(K, ext<K4 | Z^2-d>);  // verification that K = K4(\sqrt(d))
 // we have XX(K4) = XX(Q(sqrt(17))).
 
 for n in [14,11] do
-    XX := SmallModularCurve(n);  // the curve X_0(N)
+    XX := SmallModularCurve(n);  // the curve X_0(n)
     rank_XX, tf := Rank(XX);
     assert rank_XX eq 0 and tf; // rank is 0, provably correct
     XXK4 := ChangeRing(XX,K4);
@@ -62,8 +62,8 @@ MF,piF,tf1,tf2:=MordellWeilGroup(XF);  // Output: Z/6Z + Z (true true)
 assert tf1 and tf2; // provably correct
 MW,pi,tf1,tf2:=MordellWeilGroup(XK4);  // Output: Z/6Z + Z  (true true), Runtime: about 1 minute
 assert tf1 and tf2; // provably correct
-R:= XK ! pi(MW.2);
-Q:= XK ! pi(MW.1);
+R:= XK ! pi(MW.2); // point of infinite order
+Q:= XK ! pi(MW.1); // point of finite order
 
 assert (XK4 ! piF(-MF.2-2*MF.1)) eq pi(MW.2); // generator of free part of XK4 comes from point in X(F), so XK4 = XF.
 
@@ -78,9 +78,8 @@ assert tf1 and tf2; // provably correct
 // We now verify 2-divisibility
 
 qq:=137;
-
 q:=Factorisation(qq*OK)[1][1];
-unif:=UniformizingElement(q);
+unif:=UniformizingElement(q); // will be used to reduce points mod q
 Fq:=ResidueClassField(q);
 Xq:=ChangeRing(XK,Fq);
 Ab:=AbelianGroup(Xq);   // Output: Z/2Z + Z/60Z
@@ -133,9 +132,9 @@ OF := Integers(F);
 assert #Factorisation(2*OF) eq 2; // so quotient is F_2
 
 qq := Factorisation(2*OK)[1][1]; // one of the two primes of K above 2
-Fqq<t>, pi := ResidueClassField(qq);  // finite field of size 2^4
+Fqq<t>, pi := ResidueClassField(qq);  // Output: finite field of size 2^4
 
-expr := ((thj^2)*(thk)^2) / (thj-thk)^2;
+expr := ((thj^2)*(thk)^2) / (thj-thk)^2; // expression we want to consider
 red := pi(expr); // reduction of expr
 assert Degree(MinimalPolynomial(red)) eq 2;  // so not defined over F2.
 
