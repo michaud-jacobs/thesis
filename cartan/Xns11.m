@@ -12,18 +12,18 @@ A<x,y,t> := AffineSpace(Rationals(),3);
 eqns := [y^2+y-(x^3-x^2-7*x+10), t^2 +4*x^3+7*x^2-6*x+19];
 X := Curve(A,eqns); // The affine model used for X_ns(11)
 
-E := EllipticCurve([0,-1,+1,-7,10]); // The curve X_ns+(11)
+Xplus := EllipticCurve([0,-1,+1,-7,10]); // The curve X_ns+(11)
 // Output: Elliptic Curve defined by y^2 + y = x^3 - x^2 - 7*x + 10 over Rational Field
 
-assert Conductor(E) eq 121;
-MW,_,tf1,tf2 := MordellWeilGroup(E);
+assert Conductor(Xplus) eq 121;
+MW,_,tf1,tf2 := MordellWeilGroup(Xplus);
 assert tf1 and tf2;  // Mordell-Weil group has been provably computed
-assert MW eq AbelianGroup([0]); // E(Q) is isomorphic to Z
+assert MW eq AbelianGroup([0]); // Xplus(Q) is isomorphic to Z
 
-rho := map<X -> E | [x,y,1]>; // degeneracy map
+rho := map<X -> Xplus | [x,y,1]>; // degeneracy map
 
 // We wish to verify that there is a pair of quadratic points at infinity
-// and that these arise as the pullback of the identity on E
+// and that these arise as the pullback of the identity on Xplus
 
 PX := ProjectiveClosure(X);
 P<xx,yy,zz,tt> := AmbientSpace(PX);
@@ -52,9 +52,9 @@ Points(inf_scheme_K);
 
 assert HasPointsOverExtension(inf_scheme_K) eq false; // sanity check
 
-rhoP := map<PX -> E | [xx,yy,tt]>; // degeneracy map from projective closure to E
+rhoP := map<PX -> Xplus | [xx,yy,tt]>; // degeneracy map from projective closure to Xplus
 assert Degree(rhoP) eq 2; // This is indeed the correct map
-pullback_scheme := Pullback(rhoP,Identity(E)); 
+pullback_scheme := Pullback(rhoP,Identity(Xplus)); 
 Points(pullback_scheme,K); // We see that we have the same points:
 // Output: {@ (0 : -1/2*a : 1 : 0), (0 : 1/2*a : 1 : 0) @}
 
