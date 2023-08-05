@@ -94,3 +94,29 @@ Dimension is 31422 for p = 13
 Dimension is 41883752 for p = 17
 
 */
+
+/////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
+
+// We now compute the final constants
+
+for p in [11,13,17] do
+    if p eq 11 then 
+        dim := 1201;
+    elif p eq 13 then 
+        dim := 31422;
+    elif p eq 17 then 
+        dim := 41883752;
+    end if;
+    Cp := (SquareRoot(3^((p-1)/2))+1)^(2*dim);
+    bound := Ceiling(Log(10,Cp));
+    print "Constant is 10^", bound, "for p =", p;
+end for;
+
+/* Output:
+
+Constant is 10^ 2930 for p = 11
+Constant is 10^ 90946 for p = 13
+Constant is 10^ 160315410 for p = 17
+
+*/
