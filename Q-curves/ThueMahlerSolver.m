@@ -9,7 +9,7 @@
 // The code was taken from the GitHub repository:
 // https://github.com/adelagherga/ThueMahler
 
-// An updated version of the solver we use below may be found there
+// The latest version of the solver we use below may be found there
 
 ////////////////////////////////////////////
 
