@@ -10,7 +10,7 @@
 // https://github.com/michaud-jacobs/thesis/blob/main/Q-curves/ThueMahlerSolver.m
 
 load "ThueMahlerSolver.m"; // see the file "ThueMahlerSolver.m" included with this code
-// The latest version of this solver can be found at https://github.com/adelagherga/ThueMahler/tree/master/Code/TMSolver
+// The latest version of this solver can be found at https://github.com/adelagherga/ThueMahler
 
 ////////////////////////////////////////////
 
