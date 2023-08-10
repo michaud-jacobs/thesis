@@ -6,7 +6,7 @@ This folder contains the following files (more description is contained within e
 - [eqn_data.m](eqn_data.m) contains equations for models and maps.
 - [model.m](model.m) obtains a new model for X_ns(13) and carries out some basic checks.
 - [saturation.m](saturation.m) carries out the saturation tests.
-- [saturation_output.txt](saturation.m) contains the output of the `saturation.m` file.
+- [saturation_output.txt](saturation_output.txt) contains the output of the `saturation.m` file.
 - [sieve.m](saturation.m) carries out the sieving step.
-- [sieve_output.txt](saturation.m) contains the output of the `sieve.m` file.
+- [sieve_output.txt](sieve_output.txt) contains the output of the `sieve.m` file.
 
