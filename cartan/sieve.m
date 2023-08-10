@@ -32,6 +32,7 @@ sieve := function(   :primes_for_sieve := [3,5,31,43,53,61,73], VerboseLevel := 
     // Each tuple consists of an indexed set of two conjugate quadratic points and their field of definition
     // We use the same code as in the "model.m" file to compute the points
 
+    print "Computing pullbacks of the seven rational points";
     quad_pts_list := [* *];
     for pt in SvnPts do
         pbS := Pullback(rho, pt); // pullback scheme including base scheme
@@ -40,10 +41,13 @@ sieve := function(   :primes_for_sieve := [3,5,31,43,53,61,73], VerboseLevel := 
         pb, K1 := PointsOverSplittingField(D);
         K2 := NumberField(AbsolutePolynomial(K1));
         d := Squarefree(Discriminant(Integers(K2)));
-        K := QuadraticField(d); // simpler form for the quadratic field
+        K<theta> := QuadraticField(d); // simpler form for the quadratic field
         ptsK := Points(D,K);
         quad_pts_list := quad_pts_list cat [*<ptsK, K> *];
+        print "Computed pair of known pullback points", ptsK, "where theta^2 =", theta^2;
+        print "+++++++";
     end for;
+    print "+++++++++++++++++++++++++++++++++++++++++";
 
     M:=3^10*5^10*13^10*29^10; // Parameter M to be used in the sieve
     A:=AbelianGroup([0,0,0]); // The group Z^3 (the Jacobian has rank 3)
@@ -102,11 +106,11 @@ sieve := function(   :primes_for_sieve := [3,5,31,43,53,61,73], VerboseLevel := 
             plQtbb:=Place(Qtbb);
             plQtb:=Place(Qtb);
 
-           if Degree(plQta) eq 1 then    // if a point is defined over Fp
-               DivQ:=plQta+plQtb;        // then form a divisor from the point and its conjugate
+            if Degree(plQta) eq 1 then    // if a point is defined over Fp
+                DivQ:=plQta+plQtb;        // then form a divisor from the point and its conjugate
             end if;
             if Degree(plQta) eq 2 then   // if a point is defined over Fp^2
-               DivQ:=Divisor(plQta);     // then form the divisor of its place
+                DivQ:=Divisor(plQta);     // then form the divisor of its place
             end if;
 
             ////////////////////////////////////////////////////////////////////////////////
