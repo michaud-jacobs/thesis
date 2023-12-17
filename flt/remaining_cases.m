@@ -155,6 +155,8 @@ Valuation(Discriminant(E),p1)*Valuation(Discriminant(E),p2) eq 20; // used to ap
 // Input: d
 // Output: primes in the range 17 to 10^7 that cannot be eliminated
 // when the Frey curve corresponds to a newform with rational eigenvalues
+// which in turn corresponds to an elliptic curve with full two-torsion 
+// (we check this afterwards)
 
 initial_bad_p := function(d);
     U<x>:=PolynomialRing(Rationals());
@@ -180,6 +182,48 @@ initial_bad_p := function(d);
     return badp;
 end function;
 
+// We need to verify that an elliptic curve with full 2-torsion corresponds to the bad newforms in each case.
+// As explained above, to check the correspondence, it is enough to verify eigenvalues at the primes used in the elimination step.
+
+// We found the elliptic curves using the LMFDB. It would also be possible to use the EllipticCurveSearch function as above,
+// but since we are specifically looking for elliptic curves with full 2-torsion, this is quite slow for certain cases
+
+// Input: d, i, K, f, T 
+// K = Q(sqrt_d), f is the newform, T are the primes used in the elimination step
+// i is used to determine which newform to consider when there are two bad newforms (when d = 33 or 57)
+// Output: true (will fail assertions otherwise)
+
+check_matching_elliptic_curve := function(d, i, K, f, T);
+    if d eq 17 then 
+        Ell := EllipticCurve([ 1, 1/2*(K.1 + 1), 1/2*(K.1 + 3), 1/2*(61*K.1 - 253), 174*K.1 - 722 ]);
+    end if;
+    if d eq 33 and i eq 1 then 
+        Ell := EllipticCurve([ 1/2*(K.1 + 3), 1/2*(-K.1 - 3), 1/2*(K.1 + 3), 1/2*(-449*K.1 - 2579), -3313*K.1 - 19032 ]);
+    end if;
+    if d eq 33 and i eq 2 then 
+        Ell := EllipticCurve([ 1/2*(K.1 + 3), 1/2*(-K.1 - 3), 0, 1/2*(13*K.1 - 77), 1/2*(-37*K.1 + 213) ]);
+    end if;
+    if d eq 41 then 
+        Ell := EllipticCurve([ 1, 1/2*(K.1 - 1), 1/2*(-K.1 + 1), 1/2*(54627*K.1 - 349775), 1/2*(12372303*K.1 - 79221395) ]);
+    end if;
+    if d eq 57 and i eq 1 then 
+        Ell := EllipticCurve([ 1/2*(K.1 + 3), 0, 0, 1/2*(-995*K.1 - 7511), -17369*K.1 - 131133 ]);
+    end if;
+    if d eq 57 and i eq 2 then 
+        Ell := EllipticCurve([ 1/2*(K.1 + 3), 0, 1/2*(K.1 + 3), 93*K.1 - 700, 1341*K.1 - 10119 ]);
+    end if;
+    if d eq 89 then 
+        Ell := EllipticCurve([ 1, -1, 0, 1/2*(-2365*K.1 - 22311), 1/2*(-133485*K.1 - 1259295) ]);
+    end if;
+    assert Conductor(Ell) eq Level(Parent(f));
+    assert #TwoTorsionSubgroup(Ell) eq 4;
+    for qq in T do 
+        assert TraceOfFrobenius(Ell,qq) eq HeckeEigenvalue(f,qq);
+    end for;
+    return true;
+end function;
+
+
 // A second function to try and eliminate any primes that initial_bad_p did not eliminated
 
 // Input: p, rational newform f, field K = Q(sqrt_d)
@@ -193,7 +237,7 @@ elim_p := function(p,f,K);
         n:=(q-1)/p;
         qq:=Factorisation(q*OK)[1][1];
         h1:=Integers() ! (HeckeEigenvalue(f,qq));
-        if h1 ne 2 and h1 ne -2 then
+        if (h1 mod p) notin {-2, 2} then
             print "Eliminated",p, "using n = ", n;
             return n;
         end if;
@@ -203,6 +247,7 @@ elim_p := function(p,f,K);
 end function;
 
 // We run these elimination steps for those d appearing in Theorem 3
+// We also check that each bad newform has a corresponding elliptic curve with full 2-torsion
 // The output is in the "remaining_cases_output.txt" file
 
 for d in [17,33,41,57,89] do
@@ -211,10 +256,11 @@ for d in [17,33,41,57,89] do
     "Initial bad primes are:", init_bad_p;
     N_ps, K := Np_possibilities(d);
     for Np in N_ps do
-        C_primes, bad_f := decomp_elim(Np,K,100); // we isolate the newforms f creating issues
+        C_primes, bad_f, T := decomp_elim(Np,K,100); // we isolate the newforms f creating issues
         i := 1;
         for f in bad_f do
             print "Considering newform", i;
+            assert check_matching_elliptic_curve(d, i, K, f, T); // check corresponing elliptic curve has full 2-torsion
             i := i+1;
             for p in init_bad_p do
                 n := elim_p(p,f,K);
